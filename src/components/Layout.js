@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Navbar from './Navbar'
-import Footer from './Myfooter'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
   return (
