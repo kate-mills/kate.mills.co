@@ -72,6 +72,11 @@ p {
   background: transparent;
   color: var(--primaryColor);
 }
+main{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 /* .gatsby-image-wrapper {
   max-height: 600px;
 } */
