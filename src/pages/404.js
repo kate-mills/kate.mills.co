@@ -5,7 +5,9 @@ import Layout from '../components/Layout'
 const error = () => {
   return (
     <Layout>
-      <h3>Sorry, we couldn't find that page. <Link to="/">back</Link></h3>
+      <h3>
+        Sorry, we couldn't find that page. <Link to="/">back</Link>
+      </h3>
     </Layout>
   )
 }
