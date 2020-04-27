@@ -8,11 +8,12 @@ const error = () => {
   return (
     <Layout>
       <header className={styles.error}>
-      <Banner title="oops it's a dead end">
-        <Link to ="/" className="btn-white">back to home page</Link>
-      </Banner>
+        <Banner title="oops it's a dead end">
+          <Link to="/" className="btn-white">
+            back to home page
+          </Link>
+        </Banner>
       </header>
-
     </Layout>
   )
 }

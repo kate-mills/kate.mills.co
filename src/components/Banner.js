@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '../css/banner.module.css'
 
-const Banner = ({title,info,children})=>{
-  return(
+const Banner = ({ title, info, children }) => {
+  return (
     <div className={styles.banner}>
       <h1>{title}</h1>
       <p>{info}</p>
@@ -11,4 +11,4 @@ const Banner = ({title,info,children})=>{
   )
 }
 
-export default Banner;
+export default Banner
