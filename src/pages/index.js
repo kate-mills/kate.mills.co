@@ -6,6 +6,7 @@ import StyledHero from '../components/StyledHero'
 import Banner from '../components/Banner'
 import About from '../components/Home/About'
 import Services from '../components/Home/Services'
+import FeaturedTours from '../components/Home/FeaturedTours'
 
 export default ({ data }) => (
   <Layout>
@@ -21,6 +22,7 @@ export default ({ data }) => (
     </StyledHero>
     <About />
     <Services />
+    <FeaturedTours />
   </Layout>
 )
 export const query = graphql`
