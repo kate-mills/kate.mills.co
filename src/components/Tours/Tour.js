@@ -3,15 +3,32 @@ import Image from 'gatsby-image'
 import styles from '../../css/tour.module.css'
 import {FaMap} from 'react-icons/fa'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import {useStaticQuery, graphql} from 'gatsby'
 
-const Tour = ({tour:{name,price,country,days,slug,images}}) => {
-  console.log("props", images)
-  let mainImage = images[0].fluid;
+const getDefaultImg = graphql`
+{
+  file(relativePath: {eq: "defaultBcg.jpeg"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`
+const Tour = ({ tour }) => {
+  const data =  useStaticQuery(getDefaultImg)
+  const defaultImg = data.file.childImageSharp.fluid
+  const { name, price, country, days, slug, images } = tour
+
+  let mainImage = images ? images[0].fluid : defaultImg
   return (
     <article className={styles.tour}>
       <div className={styles.imgContainer}>
         <Image fluid={mainImage} className={styles.img} alt="single tour" />
-        <AniLink fade to={`/tours/${slug}`} className={styles.link}>details</AniLink>
+        <AniLink fade to={`/tours/${slug}`} className={styles.link}>
+          details
+        </AniLink>
       </div>
       <div className={styles.footer}>
         <h3>{name}</h3>
