@@ -1,8 +1,8 @@
 import React from 'react'
+import styles from '../../css/items.module.css'
 import Tour from '../Tours/Tour'
 import {graphql, useStaticQuery} from 'gatsby'
 import Title from '../Title'
-import styles from '../../css/items.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 
@@ -28,7 +28,6 @@ const getTours = graphql`
 
 const FeaturedTours = () => {
   const {featuredTours:{tours}} = useStaticQuery(getTours)
-  console.log(tours)
   return (
     <section className={styles.tours}>
       <Title title="featured" subtitle="tours" />
