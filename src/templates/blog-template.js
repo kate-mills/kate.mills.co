@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import styles from "../css/single-blog.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import styles from '../css/single-blog.module.css'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const Blog = ({ data }) => {
   const {
@@ -13,28 +13,26 @@ const Blog = ({ data }) => {
   } = data.post
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
+      'embedded-asset-block': node => {
         return (
           <div className="rich">
-            <img width="400" src={node.data.target.fields.file["en-US"].url} />
+            <img width="400" src={node.data.target.fields.file['en-US'].url} />
             <p>images provided by john doe</p>
           </div>
         )
       },
-      "embedded-entry-block": node => {
+      'embedded-entry-block': node => {
         const { title, image, text } = node.data.target.fields
-        console.log(text)
-
         return (
           <div>
             <br />
-            <h1>{title["en-US"]}</h1>
+            <h1>{title['en-US']}</h1>
             <img
               width="400"
-              src={image["en-US"].fields.file["en-US"].url}
+              src={image['en-US'].fields.file['en-US'].url}
               alt=""
             />
-            {documentToReactComponents(text["en-US"])}
+            {documentToReactComponents(text['en-US'])}
             <br />
             <br />
           </div>
