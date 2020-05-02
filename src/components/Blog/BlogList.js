@@ -25,7 +25,6 @@ const getPosts = graphql`
 `
 const BlogList = () => {
   const { posts } = useStaticQuery(getPosts)
-  console.log(posts.edges)
   return (
     <section className={styles.blog}>
       <div className={styles.center}>
