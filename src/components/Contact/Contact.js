@@ -1,6 +1,6 @@
-import React from "react"
-import Title from "../Title"
-import styles from "../../css/contact.module.css"
+import React from 'react'
+import Title from '../Title'
+import styles from '../../css/contact.module.css'
 const Contact = () => {
   return (
     <section className={styles.contact}>
@@ -12,7 +12,7 @@ const Contact = () => {
           className={styles.form}
         >
           <div>
-          <label htmlFor="name">name:</label>
+            <label htmlFor="name">name:</label>
             <input
               type="text"
               name="name"
@@ -22,7 +22,7 @@ const Contact = () => {
             />
           </div>
           <div>
-          <label htmlFor="email">email:</label>
+            <label htmlFor="email">email:</label>
 
             <input
               type="email"
@@ -33,7 +33,7 @@ const Contact = () => {
             />
           </div>
           <div>
-          <label htmlFor="message">message:</label>
+            <label htmlFor="message">message:</label>
 
             <textarea
               name="message"
@@ -44,11 +44,7 @@ const Contact = () => {
             />
           </div>
           <div>
-            <input
-              type="submit"
-              value="send"
-              className={styles.submit}
-            />
+            <input type="submit" value="send" className={styles.submit} />
           </div>
         </form>
       </div>
@@ -57,4 +53,3 @@ const Contact = () => {
 }
 
 export default Contact
-

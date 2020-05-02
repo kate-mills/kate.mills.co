@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
-import {useStaticQuery, graphql} from 'gatsby'
-
+import { useStaticQuery, graphql } from 'gatsby'
 
 export const getDefaultBcg = graphql`
   {
@@ -18,11 +17,14 @@ export const getDefaultBcg = graphql`
 `
 
 const StyledHero = ({ img, className, children, home }) => {
-
-  const {defaultBcg} = useStaticQuery(getDefaultBcg)
+  const { defaultBcg } = useStaticQuery(getDefaultBcg)
 
   return (
-    <BackgroundImage className={className} fluid={img || defaultBcg.childImageSharp.fluid} home={home}>
+    <BackgroundImage
+      className={className}
+      fluid={img || defaultBcg.childImageSharp.fluid}
+      home={home}
+    >
       {children}
     </BackgroundImage>
   )
