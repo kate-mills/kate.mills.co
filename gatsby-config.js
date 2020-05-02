@@ -9,7 +9,7 @@ module.exports = {
     description: `Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure.`,
     twitterUsername: `@katie_napa`,
     image: `/defaultBcg.jpeg`,
-    siteUrl: `https://backroads-2020.netlify.com`,
+    siteUrl: `https://backroads-2020.netlify.app`,
   },
   plugins: [
     {
