@@ -34,6 +34,21 @@ module.exports = {
         //policy: [{ userAgent: '*', allow: '/' }]
       //}
     //},
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.GATSBY_AIRTABLE_API_KEY, 
+        concurrency: 5,
+        tables: [
+          {
+            baseId: process.env.GATSBY_AIRTABLE_SERVICES_BASE_ID,
+            tableName: `Services`,
+            mapping: {images: `fileNode`}
+          }
+        ]
+
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
@@ -41,5 +56,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
   ],
 }

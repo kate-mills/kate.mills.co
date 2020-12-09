@@ -19,8 +19,25 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+    services:allAirtable(filter: {table: {eq: "Services"}, data: {featured: {eq: true}}}) {
+      nodes {
+        data {
+          slug
+        }
+      }
+    }
     }
   `)
+
+  data.services.nodes.forEach(({ data }) => {
+    createPage({
+      path: `services/${data.slug}`,
+      component: path.resolve('./src/templates/service-template.js'),
+      context: {
+        slug: data.slug,
+      },
+    })
+  })
 
   data.tours.edges.forEach(({ node }) => {
     createPage({
