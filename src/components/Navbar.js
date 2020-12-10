@@ -6,11 +6,12 @@ import links from '../constants/links'
 import logo from '../images/logo.png'
 import PhoneNumber from './PhoneNumber'
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState()
   const toggleNav = () => {
     setIsOpen(isOpen => !isOpen)
   }
+  const isCurrentPage = document.location.pathname;
 
   return (
     <nav className={styles.navbar}>
@@ -31,7 +32,13 @@ const Navbar = () => {
           {links.map((item, index) => {
             return (
               <li key={index}>
-                <AniLink fade to={item.path}>
+                <AniLink fade to={item.path}
+                  className={
+                    (isCurrentPage === item.path)
+                      ? `${styles.currentPage}`
+                      : `${styles.notCurrentPage}`
+                  }
+                >
                   {item.text}
                 </AniLink>
               </li>

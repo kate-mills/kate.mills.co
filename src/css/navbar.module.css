@@ -48,6 +48,12 @@
 .nav-links a:hover {
   color: var(--primaryColor);
 }
+.nav-links a.current-page{
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--mainGrey);
+  text-underline-position: under;
+}
 .nav-social-links {
   display: none;
 }

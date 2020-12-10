@@ -12,11 +12,12 @@
   --mainText: #474b4c;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
-  --altSpacing: 0.0625rem;
+  --altSpacing: 0.0620rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainFF: 'Montserrat';
   --altFF: 'Raleway';
+  text-underline-position: under;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -97,6 +98,6 @@ main{
   border-color: var(--mainWhite);
 }
 .phone{
-  letter-spacing: var(--altSpacing);
+  letter-spacing: 0.15rem !important;
   font-size: .75rem;
 }
