@@ -25,7 +25,10 @@
 .service a:hover {
   color: var(--primaryColor);
 }
-.service h4 {
+.service div {
+  font-family: var(--mainFF);
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
   text-transform: uppercase;
 }
 .footer {

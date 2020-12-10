@@ -11,7 +11,13 @@ const Navbar = (props) => {
   const toggleNav = () => {
     setIsOpen(isOpen => !isOpen)
   }
-  const isCurrentPage = document.location.pathname;
+  const [isCurrentPage, setCurrentPage] = React.useState('/')
+
+
+
+  React.useEffect(()=>{
+    typeof window !== `undefined` && setCurrentPage(document.location.pathname);
+  }, [setCurrentPage])
 
   return (
     <nav className={styles.navbar}>
@@ -19,7 +25,7 @@ const Navbar = (props) => {
         <div className={styles.navHeader}>
           <AniLink fade to={`/`}><img src={logo} alt="ally digital solutions logo" /></AniLink>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
-            <FaAlignRight className={styles.logoIcon} />
+            <FaAlignRight aria-label="Right align" className={styles.logoIcon} />
           </button>
         </div>
         <ul
@@ -44,7 +50,7 @@ const Navbar = (props) => {
               </li>
             )
           })}
-          <PhoneNumber/>
+          <li><PhoneNumber/></li>
         </ul>
       </div>
     </nav>

@@ -33,7 +33,8 @@ const Mission = () => {
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <h4>We specialize in beauty</h4>
+          
+          <p className={styles.heading}>We specialize in beauty</p>
           <p>
             We intend to deliver our clients innovative and effective web solutions that drive brand awareness and bring new clients to their doors.
           </p>

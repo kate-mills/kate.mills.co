@@ -4,29 +4,28 @@ import styled from 'styled-components'
 const Title = ({ titleColor, subtitleColor, title, subtitle, className}) => {
   return (
     <div className={className}>
-      <h4>
+      <p className="heading">
         <span className="title">{title}</span>
         <span className="subtitle">{subtitle}</span>
-      </h4>
+      </p>
     </div>
   )
 }
 
 export default styled(Title)`
+  font-size: 2.7rem;
+  font-family: var(--mainFF);
+  font-weight: 700;
+  letter-spacing: 7px;
+  margin-bottom: 1.25rem;
+  text-align: center;
   text-transform: uppercase;
-  font-size: 2.3rem;
-  margin-bottom: 2rem;
-  h4 {
-    text-align: ${props => props.align || 'center'};
-    letter-spacing: 7px;
-    color: var(--primaryColor);
-    color: ${props => props.color || 'var(--primaryColor)'};
-  }
+
   .title {
     color: ${props => props.titleColor || 'var(--mainBlack)'};
   }
   .subtitle {
-    color: ${props => props.subtitleColor || 'var(--primaryColor)'};
+    color: ${props => props.subtitleColor || 'var(--primaryText)'};
   }
   span {
     display: block;

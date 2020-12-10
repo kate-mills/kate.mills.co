@@ -3,6 +3,7 @@
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
   width: 99vw;
+  margin-bottom: 2.5rem;
 }
 .banner h1 {
   color: var(--mainWhite);

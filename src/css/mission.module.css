@@ -22,8 +22,10 @@
 .about-img div {
   box-shadow: var(--lightShadow);
 }
-.about-info h4 {
+.about-info .heading {
   font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
