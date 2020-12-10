@@ -9,7 +9,7 @@ module.exports = {
     description: `Beautiful and innovative web solutions for spas & salons.`,
     twitterUsername: `@katie_napa`,
     image: `/defaultBg.jpg`,
-    siteUrl: `http://localhost:8000`,
+    siteUrl: `https://allydigital.netlify.app`,
   },
   plugins: [
     {
@@ -26,14 +26,14 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    //{
-      //resolve: 'gatsby-plugin-robots-txt',
-      //options: {
-        //host: 'https://backroads-2020.netlify.app',
-        //sitemap: 'https://backroads-2020.netlify.app/sitemap.xml',
-        //policy: [{ userAgent: '*', allow: '/' }]
-      //}
-    //},
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://allydigital.netlify.app',
+        sitemap: 'https://allydigital.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-source-airtable`,
       options: {
