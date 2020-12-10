@@ -1,10 +1,10 @@
 import React from 'react'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Title from '../Title'
-import styles from '../../css/services.module.css'
+import styles from '../../css/aboutus.module.css'
 import services from '../../constants/services'
 
-const Services = () => {
+const AboutUs = () => {
   return (
     <section className={styles.services}>
       <Title title="About" subtitle="Us" />
@@ -26,4 +26,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default AboutUs

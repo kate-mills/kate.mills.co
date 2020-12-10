@@ -13,7 +13,7 @@ const Services = () => {
           return (
             <article key={index} className={styles.service}>
               <span>{item.icon}</span>
-              <AniLink fade to={`/services/${item.path}`}><h4>{item.title}</h4></AniLink>
+              <AniLink fade to={`/${item.path}`}><h4>{item.title}</h4></AniLink>
               <p>{item.text}</p>
             </article>
           )

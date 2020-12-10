@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../Title'
-import styles from '../../css/about.module.css'
+import styles from '../../css/mission.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
@@ -16,7 +16,7 @@ const getAbout = graphql`
     }
   }
 `
-const About = () => {
+const Mission = () => {
   const {
     aboutImg: {
       childImageSharp: { fluid },
@@ -46,4 +46,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Mission

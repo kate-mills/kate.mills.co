@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 export const getDefaultBcg = graphql`
   {
-    defaultBcg: file(relativePath: { eq: "adobe/napa.jpeg" }) {
+    defaultBcg: file(relativePath: { eq: "background/Napa.jpeg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

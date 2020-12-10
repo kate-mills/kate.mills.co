@@ -7,7 +7,7 @@ import './src/components/layout.css'
 export const wrapRootElement = ({element}) => {
   return (
     <>
-        {element}
+      {element}
     </>
   )
 }

@@ -2,14 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CustomHero from '../components/CustomHero'
-import styles from '../css/template.module.css'
+import styles from '../css/servicetemplate.module.css'
 import Image from 'gatsby-image'
 import SEO from '../components/SEO'
 
 const ServiceTemplate = ({ data:{services} }) => {
   const {
     name,
-    //description, category, featured, slug, starting_price
     images,
     img_position,
   } = services.nodes[0].data

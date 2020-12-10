@@ -13,13 +13,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -46,11 +39,9 @@ module.exports = {
             mapping: {images: `fileNode`}
           }
         ]
-
       }
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
