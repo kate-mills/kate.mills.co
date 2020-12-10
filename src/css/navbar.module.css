@@ -1,9 +1,12 @@
-
 .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
+}
+.nav-header *,
+.nav-header * + *{
+  line-height: 21px;
 }
 .logo-btn {
   background: transparent;
@@ -25,17 +28,22 @@
   overflow: hidden;
 }
 .show-nav {
-  height: 216px;
+  height: 270px; /* 216px; */
 }
-.nav-links a {
+.nav-links a,
+.nav-links span{
   display: block;
   padding: 1rem 1.25rem;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: var(--mainBlack);
   transition: var(--mainTransition);
-  font-weight: bold;
-  letter-spacing: var(--mainSpacing);
+  font-weight: 300;
+  letter-spacing: var(--altSpacing);
+}
+.nav-links a,
+.nav-links span{
+  font-size: 0.95rem;
 }
 .nav-links a:hover {
   color: var(--primaryColor);
@@ -45,10 +53,9 @@
 }
 @media screen and (min-width: 576px) {
   .navbar {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
-
 @media screen and (min-width: 992px) {
   .logo-btn {
     display: none;
@@ -69,13 +76,13 @@
     line-height: 0;
   }
   .nav-social-links a {
-    color: var(--primaryColor);
+    color: silver;
     margin: 0 0.5rem;
     font-size: 1.2rem;
     transition: var(--mainTransition);
   }
   .nav-social-links a:hover {
-    color: var(--mainBlack);
+    color: silver;
     transform: translateY(-5px);
   }
 }

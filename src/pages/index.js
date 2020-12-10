@@ -4,34 +4,29 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import StyledHero from '../components/StyledHero'
 import Banner from '../components/Banner'
-import About from '../components/Home/About'
-import Services from '../components/Home/Services'
-import FeaturedTours from '../components/Home/FeaturedTours'
+import Mission from '../components/Home/Mission'
+import FeaturedWebServices from '../components/Home/FeaturedWebServices'
 import SEO from '../components/SEO'
 
 export default ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
+    <StyledHero position="60% bottom" gradient home="true" img={data.defaultBg.childImageSharp.fluid}>
       <Banner
-        title="continue exploring"
-        info=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis."
-      >
-        <AniLink fade to="/tours" className="btn-white">
-          explore tours
-        </AniLink>
+        title="Web solutions for beauty specialists"
+        info="Get websites created by industry experts" >
+        <AniLink fade to="/contact-us" className="btn btn-white">Get A Free Quote</AniLink>
       </Banner>
     </StyledHero>
-    <About />
-    <Services />
-    <FeaturedTours />
+    <Mission />
+    <FeaturedWebServices />
   </Layout>
 )
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+    defaultBg: file(relativePath: { eq: "background/HomeComputer.jpeg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
+        fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

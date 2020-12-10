@@ -31,14 +31,14 @@ const FeaturedTours = () => {
   } = useStaticQuery(getTours)
   return (
     <section className={styles.tours}>
-      <Title title="featured" subtitle="tours" />
+      <Title title="featured" subtitle="services" />
       <div className={styles.center}>
         {tours.map(tour => {
           return <Tour key={tour.contentful_id} tour={tour} />
         })}
       </div>
-      <AniLink fade to="/tours" className="btn-primary">
-        All Tours
+      <AniLink fade to="/projects" className="btn-primary">
+        Our Portfolio
       </AniLink>
     </section>
   )

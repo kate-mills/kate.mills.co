@@ -1,5 +1,6 @@
 .services {
-  background: var(--mainGrey);
+  /*background: var(--mainGrey);
+  color: silver;*/
   padding: 4rem 0;
 }
 .center {
@@ -17,9 +18,27 @@
   background: var(--primaryColor);
   padding: 0.5rem;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 .service h4 {
   text-transform: uppercase;
+}
+span.title{
+  color: silver;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto; 
+  text-align: center;
+  width: 75vw;
+}
+.buttons  *{
+  background: var(--mainGrey);
+  border: 3px solid var(--mainGrey);
+
 }

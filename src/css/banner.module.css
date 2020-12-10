@@ -2,22 +2,29 @@
   text-align: center;
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
+  width: 99vw;
 }
 .banner h1 {
-  font-size: 3.3rem;
+  color: var(--mainWhite);
+  font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 2rem;
   padding: 0 1rem;
-  letter-spacing: 6px;
+  letter-spacing: 3px;
+  white-space: break-spaces;
+  width: 95%;
+  margin: 2rem auto;
 }
 .banner p {
   width: 85%;
   margin: 0 auto;
   margin-bottom: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .banner h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
+    letter-spacing: 6px;
   }
   .banner p {
     width: 70%;

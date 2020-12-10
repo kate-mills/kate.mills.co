@@ -6,6 +6,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const Footer = () => {
   return (
+    <>
     <footer className={styles.footer}>
       <div className={styles.links}>
         {links.map((item, index) => {
@@ -30,11 +31,14 @@ const Footer = () => {
           )
         })}
       </div>
-      <div className={styles.copyright}>
-        copyright &copy; backroads travel company {new Date().getFullYear()} all
+        <p> (707) 266- 8106 </p>
+      <div className={styles.smallFont}>
+        copyright &copy; {new Date().getFullYear()} all
         rights reserved
       </div>
     </footer>
+      <div className={styles.smallFont}></div>
+    </>
   )
 }
 

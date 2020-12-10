@@ -1,18 +1,39 @@
+import React from 'react'
+
+import {AiOutlineHome} from "react-icons/ai"
+
 export default [
   {
+    page: "home",
+    label: "home",
+    url: '/',
+    icon: <AiOutlineHome className="icon"/>,
     path: '/',
     text: 'home',
   },
   {
-    path: '/tours',
-    text: 'tours',
+    page: "company",
+    label: "about us",
+    url: '/about',
+    icon: <AiOutlineHome className="icon"/>,
+    path: '/about',
+    text: 'about us',
   },
   {
-    path: '/blog',
-    text: 'blog',
+
+    page: "company",
+    label: "company portfolio",
+    url: '/portfolio',
+    icon: <AiOutlineHome className="icon"/>,
+    path: '/portfolio',
+    text: 'portfolio',
   },
   {
-    path: '/contact',
-    text: 'contact',
+    page: "company",
+    label: "contact us",
+    url: '/contact-us',
+    icon: <AiOutlineHome className="icon"/>,
+    path: '/contact-us',
+    text: 'contact us',
   },
 ]

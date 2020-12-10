@@ -9,7 +9,7 @@ const error = () => {
     <Layout>
       <header className={styles.error}>
         <Banner title="oops it's a dead end">
-          <AniLink fade to="/" className="btn-white">
+          <AniLink fade to="/" className="btn btn-dark">
             back to home page
           </AniLink>
         </Banner>
