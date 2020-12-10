@@ -8,7 +8,7 @@ module.exports = {
     author: `Ally Digital Solutions`,
     description: `Beautiful and innovative web solutions for spas & salons.`,
     twitterUsername: `@katie_napa`,
-    image: `/defaultBg.jpg`,
+    image: `/background/Napa.jpeg`,
     siteUrl: `https://allydigital.netlify.app`,
   },
   plugins: [
