@@ -5,17 +5,8 @@
   width: 80vw;
   margin: 0 auto;
 }
-.instructions p{
-  font-family: var(--altFF); 
-}
 .instructions p:nth-child(2){
   margin-bottom: 2.5rem;
-}
-.phone{
-  background: #f5efefb0;
-  font-family: var(--altFF); 
-  letter-spacing: var(--altSpacing);
-  margin: 0 7px;
 }
 @media screen and (min-width: 992px) {
   .center {

@@ -11,9 +11,9 @@
   text-transform: uppercase;
   color: silver;
   margin: 0.5rem 1rem;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: var(--altSpacing);
   transition: var(--mainTransition);
-  font-weight: bold;
+  font-weight: 400;
 }
 .links a:hover {
   color: var(--mainWhite);

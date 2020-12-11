@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import styles from '../../css/contact.module.css'
+import PhoneNumber from '../PhoneNumber'
 const Contact = () => {
 const asterisk = (
     <span style={{ color: 'var(--primaryColor)', paddingRight: '2px' }}>&lowast;</span>
@@ -10,7 +11,8 @@ const asterisk = (
       <Title title="get a free" subtitle="quote" />
       <div className={styles.center}>
         <div className={styles.instructions}>
-          <p>Please give us a call at<span className={styles.phone}>(707) 266-8106</span>or contact us via the submission form and we'll get back to you as soon as we can.</p>
+          <p>Please give us a call at
+             <PhoneNumber/>  or contact us via the submission form and we'll get back to you as soon as we can.</p>
           <p className={styles.thanks}> Thank you!</p>
         </div>
         <form
