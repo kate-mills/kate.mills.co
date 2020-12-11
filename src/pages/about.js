@@ -25,7 +25,7 @@ export const query = graphql`
     defaultBg: file(relativePath: { eq: "background/Napa.jpeg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }

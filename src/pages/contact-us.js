@@ -25,7 +25,7 @@ export const query = graphql`
     contactBcg: file(relativePath: { eq: "background/Contact.jpeg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
