@@ -29,8 +29,8 @@
   border-radius: 0.25rem;
 }
 .submit {
-  background-color: var(--primaryColor);
-  border-color: var(--primaryColor);
+  background-color: var(--primaryText);
+  border-color: var(--primaryText);
   text-transform: uppercase;
   color: var(--mainWhite);
   transition: var(--mainTransition);
@@ -38,8 +38,7 @@
 }
 .submit:hover {
   background: var(--barelyWhite);
-  color: var(--primaryColor);
-  border-color: var(--primaryColor);
+  color: var(--primaryText);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
