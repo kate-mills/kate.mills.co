@@ -46,7 +46,7 @@
   font-size: 0.95rem;
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: var(--primaryText);
 }
 .nav-links a.current-page{
   text-decoration-line: underline;
