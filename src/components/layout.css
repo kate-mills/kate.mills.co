@@ -15,7 +15,6 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainFF: 'Montserrat', sans-serif;
-  --altFF: 'Raleway', sans-serif;
   text-underline-position: under;
 }
 
@@ -60,7 +59,6 @@ main{
   color: var(--mainWhite);
   cursor: pointer;
   display: inline-block;
-  font-family: var(--altFF);
   font-weight: 300;
   letter-spacing: var(--mainSpacing);
   max-width: 75vw;
