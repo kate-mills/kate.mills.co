@@ -11,7 +11,7 @@ import SEO from '../components/SEO'
 export default ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <StyledHero position="60% bottom" gradient home="true" img={data.defaultBg.childImageSharp.fluid}>
+    <StyledHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Web solutions for beauty specialists"
         info="Get websites created by industry experts" >

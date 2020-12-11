@@ -10,7 +10,7 @@ const tours = ({ data }) => {
     <Layout>
       <SEO title="Portfolio" />
       <CustomHero 
-        position="1% top"
+        position="99% top"
         img={data.defaultBcg.childImageSharp.fluid}>
         <Banner title="Our Latest Projects"/>
       </CustomHero>

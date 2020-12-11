@@ -31,11 +31,9 @@ const StyledHero = ({ img, className, children, home }) => {
 }
 
 export default styled(StyledHero)`
-  min-height: ${props => (props.home ? 'calc(100vh - 65px)' : '50vh')};
-  background: ${props =>
-    props.gradient ? 'linear-gradient( rgb(243 157 145 / 40%), rgba(0, 0, 0, 0.7)) 30%'
-      : 'none'};
-  background-position: ${props => props.position ? props.position: 'center'};
+  min-height: calc(100vh - 65px);
+  background: linear-gradient( rgb(243 157 145 / 40%), rgba(0, 0, 0, 0.7)) 30%;
+  background-position: 60% bottom;
   background-size: cover;
   background-blend-mode: darken;
   opacity: 1 !important;
