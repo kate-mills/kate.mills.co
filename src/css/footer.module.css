@@ -1,19 +1,20 @@
 .footer {
   margin-top: auto;
   background: var(--mainGrey);
-  padding: 2rem;
+  padding: 1.1rem;
   text-align: center;
   color: #d9dfe1;
 }
 .links a {
+  color: silver;
   display: inline-block;
+  font-size: .8rem;
+  font-weight: 400;
+  letter-spacing: var(--altSpacing);
+  margin: 0.5rem 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: silver;
-  margin: 0.5rem 1rem;
-  letter-spacing: var(--altSpacing);
   transition: var(--mainTransition);
-  font-weight: 400;
 }
 .links a:hover {
   color: var(--mainWhite);
