@@ -2,34 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
-import { useStaticQuery, graphql } from 'gatsby'
-
-export const getDefaultBcg = graphql`
-  {
-    defaultBcg: file(relativePath: { eq: "background/Napa.jpeg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
-
-const StyledHero = ({ img, className, children, home }) => {
-  const { defaultBcg } = useStaticQuery(getDefaultBcg)
-
+const StyledHero = ({ img, className, children }) => {
   return (
     <BackgroundImage
       className={className}
-      fluid={img || defaultBcg.childImageSharp.fluid}
-      home={home}
+      fluid={img}
     >
       {children}
     </BackgroundImage>
   )
 }
-
 export default styled(StyledHero)`
   min-height: calc(100vh - 65px);
   background: linear-gradient(rgb(153 102 97 / 0.7), rgba(0, 0, 0, 0.7));
