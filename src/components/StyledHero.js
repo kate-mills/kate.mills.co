@@ -32,7 +32,7 @@ const StyledHero = ({ img, className, children, home }) => {
 
 export default styled(StyledHero)`
   min-height: calc(100vh - 65px);
-  background: linear-gradient( rgb(243 157 145 / 40%), rgba(0, 0, 0, 0.7)) 30%;
+  background: linear-gradient(rgb(153 102 97 / 0.7), rgba(0, 0, 0, 0.7));
   background-position: 60% bottom;
   background-size: cover;
   background-blend-mode: darken;
