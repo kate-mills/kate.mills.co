@@ -1,10 +1,10 @@
 import React from 'react'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import StyledHero from '../components/StyledHero'
 import Banner from '../components/Banner'
 import Mission from '../components/Home/Mission'
+import Btn from '../components/Btn'
 import FeaturedWebServices from '../components/Home/FeaturedWebServices'
 import SEO from '../components/SEO'
 
@@ -15,7 +15,7 @@ export default ({ data }) => (
       <Banner
         title="Web solutions for beauty specialists"
         info="Get websites created by industry experts" >
-        <AniLink fade to="/contact-us" className="btn btn-white">Get A Free Quote</AniLink>
+        <Btn to="/contact-us/" text="Get A Free Quote"/>
       </Banner>
     </StyledHero>
     <Mission />

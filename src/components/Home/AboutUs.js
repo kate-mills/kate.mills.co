@@ -1,8 +1,8 @@
 import React from 'react'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Title from '../Title'
 import styles from '../../css/aboutus.module.css'
 import services from '../../constants/services'
+import Btn from '../Btn'
 
 const AboutUs = () => {
   return (
@@ -20,7 +20,7 @@ const AboutUs = () => {
         })}
       </div>
       <div className={styles.buttons}>
-      <AniLink fade to="/contact-us" className="btn btn-primary">Get A Free Quote</AniLink>
+      <Btn to="/contact-us/" text="Get a free quote" colorful color="var(--primaryText)"/>
     </div>
     </section>
   )

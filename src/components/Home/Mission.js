@@ -3,7 +3,7 @@ import Title from '../Title'
 import styles from '../../css/mission.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import Btn from '../Btn'
 
 const getAbout = graphql`
   query AboutImg {
@@ -39,8 +39,7 @@ const Mission = () => {
             We intend to deliver our clients innovative and effective web solutions that drive brand awareness and bring new clients to their doors.
           </p>
           <p>While always provide exemplary customer service.</p>
-          <AniLink fade to="/contact-us" className="btn btn-primary">contact us
-          </AniLink>
+          <Btn to="/contact-us/" color='var(--primaryText)' text="contact us" colorful/>
         </article>
       </div>
     </section>
