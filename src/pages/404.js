@@ -1,17 +1,16 @@
 import React from 'react'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Layout from '../components/Layout'
-import styles from '../css/error.module.css'
 import Banner from '../components/Banner'
+import Btn from '../components/Btn'
+import SEO from '../components/SEO'
 
 const error = () => {
   return (
     <Layout>
-      <header className={styles.error}>
+      <SEO title="Oops"/>
+      <header className="short-page">
         <Banner title="oops it's a dead end">
-          <AniLink fade to="/" className="btn btn-dark">
-            back to home page
-          </AniLink>
+          <Btn to="/" text="back to home page"/>
         </Banner>
       </header>
     </Layout>

@@ -57,3 +57,11 @@ main{
   letter-spacing: 0.15rem !important;
   padding: 0 0.15rem;
 }
+/* error, thankyou */
+.short-page{
+  background: var(--primaryColor);
+  min-height: calc(100vh - 252px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
