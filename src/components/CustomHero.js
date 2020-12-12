@@ -31,8 +31,7 @@ const CustomHero = ({ img, className, children }) => {
 
 export default styled(CustomHero)`
   min-height: 50vh;
-
-  background: linear-gradient(rgb(153 102 97 / 0.7), rgba(0, 0, 0, 0.7));
+  background:  linear-gradient(rgb(96 163 188 / 0.7), rgba(0, 0, 0, 0.7));
   background-position: ${props => props.position || 'center'};
   background-size: cover;
   opacity: 1 !important;

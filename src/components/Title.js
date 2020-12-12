@@ -14,7 +14,6 @@ const Title = ({ titleColor, subtitleColor, title, subtitle, className}) => {
 
 export default styled(Title)`
   font-size: 2.7rem;
-  font-family: var(--mainFF);
   font-weight: 700;
   letter-spacing: 7px;
   margin-bottom: 1.25rem;
@@ -25,7 +24,7 @@ export default styled(Title)`
     color: ${props => props.titleColor || 'var(--mainBlack)'};
   }
   .subtitle {
-    color: ${props => props.subtitleColor || 'var(--primaryText)'};
+    color: ${props => props.subtitleColor || 'var(--primaryColor)'};
   }
   span {
     display: block;

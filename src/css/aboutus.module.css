@@ -14,6 +14,7 @@
 }
 .service span {
   background: var(--primaryColor);
+  color: var(--primaryBlack);
   padding: 0.5rem;
   display: inline-block;
   font-size: 3rem;
@@ -24,21 +25,6 @@
   letter-spacing: var(--mainSpacing);
   text-transform: uppercase;
 }
-span.title{
-  color: silver;
-}
 .buttons{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto; 
   text-align: center;
-  width: 75vw;
-}
-.buttons  *{
-  background: var(--mainGrey);
-  border: 3px solid var(--mainGrey);
-
 }

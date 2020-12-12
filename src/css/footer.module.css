@@ -1,6 +1,6 @@
 .footer {
   margin-top: auto;
-  background: var(--mainGrey);
+  background: var(--primaryBlack);
   padding: 1.1rem;
   text-align: center;
   color: #d9dfe1;
@@ -44,5 +44,5 @@
   mix-blend-mode: difference;
   margin: 0;
   padding: 5px 0;
-  color: #d9dfe1; /*#794862;*/
+  color: rgba(48, 57, 82,1.0);/* #d9dfe1; /*#794862;*/
 }

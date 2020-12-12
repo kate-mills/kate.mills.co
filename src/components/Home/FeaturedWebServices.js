@@ -21,7 +21,7 @@ const Services = () => {
         })}
       </div>
       <div className={styles.footer}>
-      <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryText)" colorful/>
+      <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryColor)" colorful/>
       </div>
     </section>
   )

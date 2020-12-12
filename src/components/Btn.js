@@ -8,13 +8,13 @@ const Btn = ({to, text, color, className}) => {
 
 export default styled(Btn)`
   background-color: ${props => props.color ?
-      props.colorful ? props.color:`transparent`
+      props.colorful ? `var(--primaryDark)`:`transparent`
       : `transparent`};
   border-width: 3px;
-  border-color: ${props =>  props.color !== `white`  ?  props.color : `white`};
+  border-color: ${props =>  props.color ? `var(--primaryDark)`: `white`};
   border-style: solid;
   color: ${props => props.color ?
-      props.colorful ? `var(--mainWhite)`: props.color
+      props.colorful ? `var(--mainWhite)`: `var(--primaryDark)`
       : `var(--mainWhite)`
       };
   cursor: pointer;
@@ -29,10 +29,10 @@ export default styled(Btn)`
   transition: all 0.3s linear;
 
   &:hover{
-    background-color: ${props => (props.colorful || !props.color) ? `#edf3f22e`: props.color };
+    background-color: ${props => (props.colorful || !props.color) ? `#edf3f22e`: `var(--primaryDark)` };
 
     color: ${props => props.color ?
-        props.colorful ? props.color: `white`
+        props.colorful ? `var(--primaryDark)`: `white`
         : `white`
         };
   }

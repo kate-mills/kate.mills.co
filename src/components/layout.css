@@ -1,24 +1,26 @@
 :root {
-  --primaryColor: #ee8275;
-  --primaryLight: #f09c91;
-  --primaryText: #af5e54;
+  --primaryLight: rgba(130, 204, 221,1.0);
+  --primaryBlue: rgba(96, 163, 188,1.0);
+  --primaryDark: rgba(60, 99, 130,1.0);
+  --primaryBlack:  rgba(10, 61, 98,1.0);
+  --primaryGrey: rgba(89, 98, 117,1.0);
+
+  --primaryColor: var(--primaryBlue);
   --mainWhite: #FFFFFF;
-  --offWhite: #f7f7f7;
-  --barelyWhite: rgb(255 255 255 / 5%);
-  --mainBlack: #333;/*#5d5252;*/
-  --mainGrey: #474b4c;
-  --darkGrey: #474b4c; /*#5a5e5f; #cfcfcf;*/
-  --mainText: #474b4c;
-  --mainTransition: all 0.3s linear;
+  --mainBlack: var(--primaryBlack); /*#333; #5d5252;*/
+  --mainGrey: rgba(89, 98, 117,1.0);
+  --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
   --altSpacing: 0.0620rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainFF: 'Montserrat', sans-serif;
-  text-underline-position: under;
+
+
+
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--mainFF);}
 
 body {
   background: var(--mainWhite);
@@ -33,7 +35,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--mainFF);
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }

@@ -20,7 +20,7 @@ const AboutUs = () => {
         })}
       </div>
       <div className={styles.buttons}>
-      <Btn to="/contact-us/" text="Get a free quote" colorful color="var(--primaryText)"/>
+      <Btn to="/contact-us/" text="Get a free quote"  color="var(--primaryColor)"/>
     </div>
     </section>
   )

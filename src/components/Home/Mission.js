@@ -39,7 +39,7 @@ const Mission = () => {
             We intend to deliver our clients innovative and effective web solutions that drive brand awareness and bring new clients to their doors.
           </p>
           <p>While always provide exemplary customer service.</p>
-          <Btn to="/contact-us/" color='var(--primaryText)' text="contact us" colorful/>
+          <Btn to="/contact-us/" color='var(--primaryColor)' text="contact us" colorful/>
         </article>
       </div>
     </section>
