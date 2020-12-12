@@ -40,14 +40,6 @@ h6 {
 p {
     margin-bottom: 1.25rem;
 }
-.defaultHero {
-  min-height: calc(100vh - 70px);
-  background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/background/Portfolio.jpeg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 main{
   min-height: 100vh;
   display: flex;
