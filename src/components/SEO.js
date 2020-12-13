@@ -18,7 +18,7 @@ const query = graphql`
     }
   }
 `
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, article, snippet, keywords }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -34,6 +34,7 @@ const SEO = ({ title, description, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
+    keywords: keywords.join(','),
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
@@ -42,6 +43,8 @@ const SEO = ({ title, description, image, article }) => {
     <Helmet title={seo.title} titleTemplate={titleTemplate} htmlAttributes={{ lang: 'en' }}>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      {seo.keywords && (<meta name="keywords" content={seo.keywords} />)}
+      {snippet && (<script type="application/ld+json">{snippet}</script>)}
 
       {/* facebook card */}
       {seo.url && <meta property="og:url" content={seo.url} />}
@@ -62,7 +65,6 @@ const SEO = ({ title, description, image, article }) => {
   )
 }
 
-
 export default SEO
 
 SEO.propTypes = {
@@ -70,11 +72,14 @@ SEO.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
+  snippet: PropTypes.string,
 }
 
 SEO.defaultProps = {
   title: null,
   description: null,
+  keywords: ['website', 'digital', 'solutions' ],
   image: null,
   article: false,
+  snippet: null,
 }
