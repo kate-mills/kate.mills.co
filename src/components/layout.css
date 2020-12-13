@@ -8,6 +8,7 @@
   --lightOnDark: rgba(147, 231, 250, 1.0);
   --darkOnLight: rgba(92, 156, 180, 1.0);
   --black: rgba(2, 12, 19, 1.0);
+  --logoColor: rgba(2, 12, 19, 0.4);
 
   --primaryColor: var(--primaryBlue);
   --mainWhite: #FFFFFF;
@@ -19,6 +20,7 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainFF: 'Montserrat', sans-serif;
+  --mainGradient: linear-gradient(45deg, transparent, var(--primaryDark), rgba(2, 12, 19, 1.0));
 }
 * {
   box-sizing: border-box;

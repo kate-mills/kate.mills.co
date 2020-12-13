@@ -3,7 +3,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink/Fade'
 import styles from '../css/navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../constants/links'
-import logo from '../images/logo.png'
+import logo from '../../static/logo.svg'
 import PhoneNumber from './PhoneNumber'
 
 const Navbar = (props) => {
@@ -23,7 +23,7 @@ const Navbar = (props) => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <AniLink fade to={`/`}><img width="243" height="34" src={logo} alt="Ally Digital Solutions Logo" /></AniLink>
+          <AniLink fade to={`/`}><img src={logo} alt="logo" /></AniLink>
           <button type="button" className={styles.toggleBtn} onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className={styles.toggleIcon} />
           </button>

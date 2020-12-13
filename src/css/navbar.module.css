@@ -1,15 +1,23 @@
 .navbar{
+  background: var(--mainGradient);
 }
 .nav-header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem 1.25rem 0.5rem 1.02rem;
+}
+.logo{
+  background: linear-gradient(var(--primaryColor, var(--primaryLight)));
+  padding: .5rem;
+}
+.logo:hover{
+  color: var(--primaryColor) !important;
 }
 .toggle-btn {
   background: transparent;
-  border: none;
-  outline-color: transparent;
+  border: unset;
+  outline: unset;
 }
 .toggle-btn:hover {
   cursor: pointer;
@@ -20,32 +28,32 @@
 }
 .nav-links {
   list-style-type: none;
-  transition: var(--mainTransition);
   height: 0;
   overflow: hidden;
+  transition: var(--mainTransition);
 }
 .show-nav {
-  height: 265px; /* 216px; */
+  height: 265px;
 }
 .nav-links a,
 .nav-links span{
   color: var(--lightOnDark);
   display: block;
-  padding: 1rem 1.25rem;
-  text-decoration: none;
   font-size: 0.95rem;
   font-weight: 300;
   letter-spacing: var(--altSpacing);
+  padding: 1rem 1.25rem;
+  text-decoration: none;
 }
 .nav-links a:hover{
   text-decoration: underline;
 }
 .nav-links a.current-page{
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: var(--primaryLight);
-  text-underline-position: under;
-  cursor: default;
+  color: var(--logoColor);
+  opacity: 1;
+  pointer-events: none;
+  text-decoration: underline;
+  text-decoration-color: var(--logoColor);
 }
 @media screen and (min-width: 576px) {
   .navbar {
@@ -57,11 +65,11 @@
     display: none;
   }
   .nav-center {
-    max-width: 1170px;
-    margin: 0 auto;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin: 0 auto;
+    max-width: 1170px;
   }
   .nav-links {
     height: auto;
