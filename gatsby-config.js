@@ -5,10 +5,12 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
-    author: `Ally Digital Solutions`,
+    titleTemplate: "%s | Ally Digital Solutions",
     description: `Web solutions for beauty specialists by industry experts.`,
+    author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
     image: `/background/Napa.jpeg`,
+    url: `https://allydigital.netlify.app`,
     siteUrl: `https://allydigital.netlify.app`,
   },
   plugins: [
@@ -16,7 +18,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Ally Digital Solutions`,
-        short_name: `ADS`,
+        short_name: `Ally`,
         description: `Web solutions for beauty specialists by industry experts.`,
         lang: `en`,
         start_url: `/`,

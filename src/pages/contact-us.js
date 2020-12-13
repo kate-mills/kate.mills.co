@@ -11,7 +11,7 @@ const contact = props => {
     <Layout>
       <SEO title="Contact" />
       <CustomHero position={`center right`} img={props.data.contactBcg.childImageSharp.fluid}>
-        <Banner title="Contact us"/>
+        <Banner title="Contact Us"/>
       </CustomHero>
       <Contact />
     </Layout>
