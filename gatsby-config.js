@@ -13,6 +13,24 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ally Digital Solutions`,
+        short_name: `ADS`,
+        description: `Web solutions for beauty specialists by industry experts.`,
+        lang: `en`,
+        start_url: `/`,
+        background_color: `#60a3bc`,
+        theme_color: `#60a3bc`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
+        crossOrigin: `use-credentials`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
