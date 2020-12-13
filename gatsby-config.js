@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
     author: `Ally Digital Solutions`,
-    description: `Beautiful and innovative web solutions for spas & salons.`,
+    description: `Web solutions for beauty specialists by industry experts.`,
     twitterUsername: `@katie_napa`,
     image: `/background/Napa.jpeg`,
     siteUrl: `https://allydigital.netlify.app`,
@@ -66,5 +66,6 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
   ],
 }
