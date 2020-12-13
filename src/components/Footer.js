@@ -34,8 +34,8 @@ const Footer = () => {
       </div>
         <p> (707) 266- 8106 </p>
       <div className={styles.smallFont}>
-        copyright &copy; {new Date().getFullYear()} all
-        rights reserved
+        Copyright &copy; {new Date().getFullYear()} All
+        Rights Reserved
       </div>
     </footer>
       <div className={styles.smallFont}></div>

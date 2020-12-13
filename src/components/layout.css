@@ -5,9 +5,13 @@
   --primaryBlack:  rgba(10, 61, 98,1.0);
   --primaryGrey: rgba(89, 98, 117,1.0);
 
+  --lightOnDark: rgba(147, 231, 250, 1.0);
+  --darkOnLight: rgba(92, 156, 180, 1.0);
+  --black: rgba(2, 12, 19, 1.0);
+
   --primaryColor: var(--primaryBlue);
   --mainWhite: #FFFFFF;
-  --mainBlack: var(--primaryBlack); /*#333; #5d5252;*/
+  --mainBlack: var(--primaryBlack);
   --mainGrey: rgba(89, 98, 117,1.0);
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
@@ -15,43 +19,53 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainFF: 'Montserrat', sans-serif;
-
-
-
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--mainFF);}
-
+* {
+  box-sizing: border-box;
+  font-family: var(--mainFF);
+  margin: 0;
+  padding: 0;
+}
 body {
-  background: var(--mainWhite);
+  background-color: var(--primaryDark); /* Dark Edges */
   color: var(--mainBlack);
   font-family: var(--mainFF);
   font-size: 1rem;
   line-height: 1.4;
+  opacity: 1; /* Dark Edges */
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 1.25rem;
+h1, h2, h3, h4, h5, h6 {
   letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
+}
+section {
+  background: var(--mainWhite);
+  transition: var(--mainTransition);
 }
 p {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.15rem;
 }
 main{
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+a{
+  color: var(--mainBlack);
+  padding: 0;
+  text-transform: uppercase;
+  text-underline-position: under;
+  transition: var(--mainTransition);
+}
+a:hover{
+  color: var(--primaryLight) !important;
 }
 .phone{
+  color: var(--black);
   letter-spacing: 0.15rem !important;
   padding: 0 0.15rem;
 }
-/* error, thankyou */
-.short-page{
+.short-page{  /* 404-page, thankyou-page */
   background: var(--primaryColor);
   min-height: calc(100vh - 252px);
   display: flex;

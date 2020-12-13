@@ -1,48 +1,38 @@
 .footer {
+  background: var(--primaryDark);
+  color: #dadada;
+  font-weight: 100;
   margin-top: auto;
-  background: var(--primaryBlack);
   padding: 1.1rem;
   text-align: center;
-  color: #d9dfe1;
 }
 .links a {
-  color: silver;
+  color: #dadada;
   display: inline-block;
   font-size: .8rem;
-  font-weight: 400;
   letter-spacing: var(--altSpacing);
   margin: 0.5rem 1rem;
   text-decoration: none;
-  text-transform: uppercase;
   transition: var(--mainTransition);
 }
-.links a:hover {
-  color: var(--mainWhite);
-}
 .icons a {
-  display: inline-block;
-  margin: 1rem;
-  font-size: 1.3rem;
   color: silver;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 1rem;
   transition: var(--mainTransition);
 }
 .icons a:hover {
-  color: var(--mainWhite);
   transform: translateY(-3px);
-
 }
 .copyright {
-  text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
   line-height: 2;
 }
 .smallFont{
-  font-weight: 300;
-
   font-size: calc(13px);
-  text-align: center;
-  mix-blend-mode: difference;
   margin: 0;
+  mix-blend-mode: difference;
   padding: 5px 0;
-  color: rgba(48, 57, 82,1.0);/* #d9dfe1; /*#794862;*/
+  text-align: center;
 }

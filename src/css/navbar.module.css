@@ -1,26 +1,23 @@
+.navbar{
+}
 .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
+  padding: 1rem 1.25rem 0.5rem 1.02rem;
 }
-.nav-header *,
-.nav-header * + *{
-  line-height: 21px;
-}
-.logo-btn {
+.toggle-btn {
   background: transparent;
   border: none;
-  outline: none;
+  outline-color: transparent;
 }
-.logo-btn:hover {
+.toggle-btn:hover {
   cursor: pointer;
 }
-.logo-icon {
-  color: var(--primaryColor);
+.toggle-icon {
+  color: var(--primaryLight);
   font-size: 1.5rem;
 }
-
 .nav-links {
   list-style-type: none;
   transition: var(--mainTransition);
@@ -28,38 +25,27 @@
   overflow: hidden;
 }
 .show-nav {
-  height: 270px; /* 216px; */
+  height: 265px; /* 216px; */
 }
 .nav-links a,
 .nav-links span{
+  color: var(--lightOnDark);
   display: block;
   padding: 1rem 1.25rem;
   text-decoration: none;
-  text-transform: uppercase;
-  color: var(--mainBlack);
-  transition: var(--mainTransition);
+  font-size: 0.95rem;
   font-weight: 300;
   letter-spacing: var(--altSpacing);
 }
-.nav-links a,
-.nav-links span{
-  font-size: 0.95rem;
-}
-.nav-links a:hover {
-  color: var(--primaryColor);
+.nav-links a:hover{
+  text-decoration: underline;
 }
 .nav-links a.current-page{
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-color: var(--mainGrey);
+  text-decoration-color: var(--primaryLight);
   text-underline-position: under;
   cursor: default;
-}
-.nav-links a.current-page{
-  color: var(--mainGrey);
-}
-.nav-social-links {
-  display: none;
 }
 @media screen and (min-width: 576px) {
   .navbar {
@@ -67,7 +53,7 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .logo-btn {
+  .toggle-btn {
     display: none;
   }
   .nav-center {
@@ -80,19 +66,5 @@
   .nav-links {
     height: auto;
     display: flex;
-  }
-  .nav-social-links {
-    display: flex;
-    line-height: 0;
-  }
-  .nav-social-links a {
-    color: silver;
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
-    transition: var(--mainTransition);
-  }
-  .nav-social-links a:hover {
-    color: silver;
-    transform: translateY(-5px);
   }
 }

@@ -21,10 +21,10 @@ export default styled(Title)`
   text-transform: uppercase;
 
   .title {
-    color: ${props => props.titleColor || 'var(--mainBlack)'};
+    color: var(--mainBlack);
   }
   .subtitle {
-    color: ${props => props.subtitleColor || 'var(--primaryColor)'};
+    color: var(--darkOnLight);
   }
   span {
     display: block;

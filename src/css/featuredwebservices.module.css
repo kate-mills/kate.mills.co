@@ -19,12 +19,6 @@
   font-size: 6rem;
   height: 0;
 }
-.service a {
-  color: var(--mainBlack);
-}
-.service a:hover {
-  color: var(--primaryColor);
-}
 .service div {
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);

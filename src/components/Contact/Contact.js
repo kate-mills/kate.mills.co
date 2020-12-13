@@ -3,9 +3,8 @@ import Title from '../Title'
 import styles from '../../css/contact.module.css'
 import PhoneNumber from '../PhoneNumber'
 const Contact = () => {
-const asterisk = (
-    <span style={{ color: 'var(--primaryColor)', paddingRight: '2px' }}>&lowast;</span>
-  )
+
+  const asterisk = ( <span style={{ fontSize: '1.5rem', color: 'var(--primaryColor)', paddingRight: '2px' }}>&lowast;</span>)
   return (
     <section className={styles.contact}>
       <Title title="get a free" subtitle="quote" />

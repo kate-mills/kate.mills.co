@@ -24,8 +24,8 @@ const Navbar = (props) => {
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           <AniLink fade to={`/`}><img width="243" height="34" src={logo} alt="Ally Digital Solutions Logo" /></AniLink>
-          <button type="button" className={styles.logoBtn} onClick={toggleNav}>
-            <FaAlignRight aria-label="Right align" className={styles.logoIcon} />
+          <button type="button" className={styles.toggleBtn} onClick={toggleNav}>
+            <FaAlignRight aria-label="Right align" className={styles.toggleIcon} />
           </button>
         </div>
         <ul

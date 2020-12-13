@@ -26,14 +26,13 @@ export default styled(Btn)`
   text-align: center;
   text-decoration: ${props => props.underline || `none`};
   text-transform: uppercase;
-  transition: all 0.3s linear;
+  transition: all var(--mainTransition);
 
   &:hover{
-    background-color: ${props => (props.colorful || !props.color) ? `#edf3f22e`: `var(--primaryDark)` };
+    background-color: ${props => (props.colorful || !props.color) ? `#edf3f22e`: `var(--primaryDark)`};
 
     color: ${props => props.color ?
         props.colorful ? `var(--primaryDark)`: `white`
-        : `white`
-        };
+        : `white`} !important;
   }
 `

@@ -30,13 +30,13 @@ const CustomHero = ({ img, className, children }) => {
 }
 
 export default styled(CustomHero)`
-  min-height: 50vh;
+  align-items: center;
   background:  linear-gradient(rgb(96 163 188 / 0.7), rgba(0, 0, 0, 0.7));
   background-position: ${props => props.position || 'center'};
   background-size: cover;
-  opacity: 1 !important;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: all 0.3s linear;
+  min-height: 50vh;
+  opacity: 1 !important;
+  transition: var(--mainTransition);
 `
