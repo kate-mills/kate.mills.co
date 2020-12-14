@@ -23,8 +23,8 @@ export default [
   },
   {
     icon: <RiComputerLine className="icon" />,
-    path: "landing-pages",
-    title: "landing pages",
+    path: "website",
+    title: "websites",
     text:
       " Grow your business, build credibility, save time, engage with clients, and the list goes on.",
   },

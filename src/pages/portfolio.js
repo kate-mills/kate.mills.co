@@ -19,16 +19,15 @@ const portfolio = ({ data }) => {
         img={data.defaultBcg.childImageSharp.fluid}>
         <Banner title="Our Latest Projects" info="Browse through some of our favorites"/>
       </CustomHero>
-      <section>
-        <Projects projects = {projects} showSearchBtns />
-        <div className="center-text" style={{margin: `1.5rem auto`}}>
-          <Btn  text="contact us" colorful color/>
+      <div>
+        <div className="center-section">
+          <Projects projects = {projects} showSearchBtns />
         </div>
-      </section>
+        <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
+      </div>
     </Layout>
   )
 }
-
 export default portfolio
 
 export const query = graphql`
@@ -42,7 +41,7 @@ export const query = graphql`
     }
     allAirtable(
       filter: { table: { eq: "Projects" } }
-      sort: { order: DESC, fields: data___date }
+      sort: { order: ASC, fields: data___number }
     ) {
       nodes {
         id
@@ -50,7 +49,7 @@ export const query = graphql`
           name
           date
           type
-          image {
+          images {
             id
             localFiles {
               childImageSharp {

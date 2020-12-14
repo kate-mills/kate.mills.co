@@ -41,9 +41,8 @@ const SearchButtons = ({ projects, setProjects, setBackToAll }) => {
     </Wrapper>
   )
 }
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   display: flex;
-  margin-top: 2rem;
   margin-bottom: 0;
   justify-content: center;
   flex-wrap: wrap;

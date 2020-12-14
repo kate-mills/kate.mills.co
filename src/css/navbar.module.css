@@ -49,11 +49,11 @@
   text-decoration: underline;
 }
 .nav-links a.current-page{
-  color: var(--logoColor);
+  color: var(--disabledColor);
   opacity: 1;
   pointer-events: none;
   text-decoration: underline;
-  text-decoration-color: var(--logoColor);
+  text-decoration-color: var(--disabledColor);
 }
 @media screen and (min-width: 576px) {
   .navbar {

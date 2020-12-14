@@ -8,7 +8,7 @@
   --lightOnDark: rgba(147, 231, 250, 1.0);
   --darkOnLight: rgba(92, 156, 180, 1.0);
   --black: rgba(2, 12, 19, 1.0);
-  --logoColor: rgba(2, 12, 19, 0.4);
+  --disabledColor:rgba(96, 163, 188,0.9); /*rgba(2, 12, 19, 0.7);*/
 
   --primaryColor: var(--primaryBlue);
   --mainWhite: #FFFFFF;
@@ -74,6 +74,12 @@ a:hover{
   justify-content: center;
   align-items: center;
 }
-.center-text{
+.footer-btn{
   text-align: center;
+  padding-bottom: 3rem;
+  background: var(--mainWhite);
+}
+img {
+  width: 100%;
+  display: block;
 }

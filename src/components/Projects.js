@@ -24,7 +24,7 @@ const Projects = ({
       <div className="section-center">
         {projects.map(item => {
           const { name, type } = item.data
-          const fluid = item.data.image.localFiles[0].childImageSharp.fluid
+          const fluid = item.data.images.localFiles[0].childImageSharp.fluid
           return (
             <article key={item.id}>
               <div className="container">
@@ -56,12 +56,13 @@ const Wrapper = styled.section`
     .img {
       height: 20rem;
       border-radius: 0.25rem;
+      opacity: 0.1;
       transition: all 0.3s linear;
     }
     article {
       background: var(--primaryLight);
-      box-shadow: var(--lightShadow);
       border-radius: 0.25rem;
+      box-shadow: var(--lightShadow);
       transition: all 0.3s linear;
     }
     article:hover {
@@ -73,26 +74,26 @@ const Wrapper = styled.section`
       border-radius: 0.25rem;
       background: var(--primaryColor);
       &:hover .img {
-        opacity: 0.2;
+        opacity: 0.8;
       }
       .info {
-        position: absolute;
-        top: 50%;
+        color: var(--black);
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        opacity: 0;
-        transition: all 0.3s linear;
-        color: var(--mainWhite);
+        opacity: 1;
+        position: absolute;
         text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s linear;
+        width: 100%;
         p {
+          color: var(--black);
           margin-bottom: 0.5rem;
-          color: var(--mainWhite);
           text-transform: uppercase;
         }
       }
       &:hover .info {
-        opacity: 1;
+        opacity: 0;
       }
     }
     @media (min-width: 768px) {
