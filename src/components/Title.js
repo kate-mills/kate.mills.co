@@ -13,9 +13,10 @@ const Title = ({ titleColor, subtitleColor, title, subtitle, className}) => {
 }
 
 export default styled(Title)`
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 7px;
+  margin-top: 0;
   margin-bottom: 1.25rem;
   text-align: center;
   text-transform: uppercase;
