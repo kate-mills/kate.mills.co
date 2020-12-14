@@ -1,5 +1,5 @@
 <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="211" height="40" viewbox="0 0 175 19" role="presentation" aria-hidden="true">
-  <style> text{ fill:rgba(2, 12, 19, 0.4); font-family:'Montserrat', sans-serif; font-size:24px; } </style>
+  <style> text{ fill:#82ccdd;font-family:'Montserrat', sans-serif; font-size:24px; } </style>
   <text x="0" y="30">Ally</text>
   <text x="41" y="30">Digital</text>
   <text x="110" y="30">Solutions</text>
