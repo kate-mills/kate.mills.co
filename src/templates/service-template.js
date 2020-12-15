@@ -6,14 +6,15 @@ import styles from '../css/servicetemplate.module.css'
 import Image from 'gatsby-image'
 import SEO from '../components/SEO'
 
-const ServiceTemplate = ({ data:{services} }) => {
+const ServiceTemplate = ({ data:{service, projects}, pageContext  }) => {
   const {
     name,
     images,
     img_position,
-  } = services.nodes[0].data
+  } = service.nodes[0].data
 
-  const [mainImg, ...serviceImages] = images.localFiles
+  const mainImg = images.localFiles[3]
+  const [...projectImages] = projects.nodes.map(({data})=>data.images.localFiles[0])
 
   return (
     <Layout>
@@ -22,7 +23,8 @@ const ServiceTemplate = ({ data:{services} }) => {
       <section className={styles.template}>
         <div className={styles.center}>
           <div className={styles.images}>
-            {serviceImages.map((item, index)=>{
+            {projectImages.map((item, index)=>{
+              console.log('item', item);
               return (
                 <Image
                   key={index}
@@ -43,7 +45,7 @@ export default ServiceTemplate
 
 export const getService = graphql`
   query ($slug: String) {
-    services:allAirtable(filter: {data: {slug: {eq: $slug}}}) {
+    service:allAirtable(filter: {data: {slug: {eq: $slug}}}) {
       nodes {
         data {
           name
@@ -54,7 +56,6 @@ export const getService = graphql`
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid
-                  srcSet
                 }
               }
             }
@@ -66,5 +67,22 @@ export const getService = graphql`
         }
       }
     }
+    projects: allAirtable(filter: {table: {eq: "Projects"}, data: {type: {eq: $slug}}}) {
+      nodes {
+        id
+        data {
+          name
+          images {
+            localFiles {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+             }
+           }
+         }
+       }
+     }
+   }
   } 
 `
