@@ -3,7 +3,8 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import CustomHero from '../components/CustomHero'
 import Banner from '../components/Banner'
-import Projects from '../components/Projects'
+import SearchProjects from '../components/Projects/SearchProjects'
+import Projects from '../components/Projects/Projects'
 import Btn from '../components/Btn'
 import SEO from '../components/SEO'
 
@@ -21,10 +22,11 @@ const portfolio = ({ data }) => {
       </CustomHero>
       <div>
         <div className="center-section">
-          <Projects projects = {projects} showSearchBtns />
+          <SearchProjects projects = {projects} showSearchBtns />
         </div>
         <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
       </div>
+      <Projects/>
     </Layout>
   )
 }
