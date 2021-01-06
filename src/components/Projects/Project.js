@@ -4,8 +4,7 @@ import styles from '../../css/project.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const getDefaultImg = graphql`
-  {
+const getDefaultImg = graphql` {
     file(relativePath: { eq: "background/Napa.jpeg" }) {
       childImageSharp {
         fluid {
