@@ -21,8 +21,8 @@ export default class ProjectList extends Component {
       <section className={styles.projects}>
         <Title title="our" subtitle="projects" />
         <div className={styles.center}>
-          {this.state.sortedProjects.map(({ data }) => {
-            return <Project key={data.id} project={data} />
+          {this.state.sortedProjects.map(({ data }, id) => {
+            return <Project key={id} project={data} />
           })}
         </div>
       </section>
