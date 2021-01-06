@@ -4,9 +4,10 @@ import Layout from '../components/Layout'
 import CustomHero from '../components/CustomHero'
 import styles from '../css/servicetemplate.module.css'
 import Image from 'gatsby-image'
+import ProjectList from '../components/Projects/ProjectList'
 import SEO from '../components/SEO'
 
-const ServiceTemplate = ({ data:{service, projects}, pageContext  }) => {
+const ServiceTemplate = ({ data:{service, projects} }) => {
   const {
     name,
     images,
@@ -21,10 +22,10 @@ const ServiceTemplate = ({ data:{service, projects}, pageContext  }) => {
       <SEO title={name} />
       <CustomHero position={`${img_position}`} img={mainImg.childImageSharp.fluid}/>
       <section className={styles.template}>
+       <ProjectList projects={projects.nodes}/>
         <div className={styles.center}>
           <div className={styles.images}>
             {projectImages.map((item, index)=>{
-              console.log('item', item);
               return (
                 <Image
                   key={index}
@@ -71,6 +72,8 @@ export const getService = graphql`
       nodes {
         id
         data {
+          type
+          slug
           name
           images {
             localFiles {

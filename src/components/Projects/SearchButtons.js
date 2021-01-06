@@ -29,6 +29,7 @@ const SearchButtons = ({ projects, setProjects, setBackToAll }) => {
       {types.map((type, typeIndex) => {
         return (
           <button
+            style={{background: 'white'}}
             key={typeIndex}
             className={index === typeIndex ? "active" : undefined}
             onClick={() => showProjects(type, typeIndex)}

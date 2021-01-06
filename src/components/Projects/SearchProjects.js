@@ -1,10 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "gatsby-image"
+import styles from '../../css/project.module.css'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import SearchButtons from "./SearchButtons"
 
 const Projects = ({
   projects: data,
+  slug,
   title,
   showSearchBtns,
 }) => {
@@ -23,16 +26,15 @@ const Projects = ({
       )}
       <div className="section-center">
         {projects.map(item => {
-          const { name, type } = item.data
+          const { slug, name, type } = item.data
           const fluid = item.data.images.localFiles[0].childImageSharp.fluid
           return (
-            <article key={item.id}>
-              <div className="container">
-                <Image fluid={fluid} className="img" />
-                <div className="info">
-                  <p>- {type} -</p>
-                  <h3>{name}</h3>
-                </div>
+            <article className={styles.project} key={item.id}>
+              <div className={styles.imgContainer}>
+                <Image fluid={fluid} className={styles.img} alt="single project" />
+                <AniLink fade to={`/${type}/${slug}`} className={styles.link}>
+                  details
+                </AniLink>
               </div>
             </article>
           )
@@ -56,11 +58,11 @@ const Wrapper = styled.section`
     .img {
       height: 20rem;
       border-radius: 0.25rem;
-      opacity: 0.1;
+      opacity: 0.7;
       transition: all 0.3s linear;
     }
     article {
-      background: var(--primaryLight);
+      background: var(--mainWhite);
       border-radius: 0.25rem;
       box-shadow: var(--lightShadow);
       transition: all 0.3s linear;
@@ -74,12 +76,12 @@ const Wrapper = styled.section`
       border-radius: 0.25rem;
       background: var(--primaryColor);
       &:hover .img {
-        opacity: 0.8;
+        opacity: 0.2;
       }
       .info {
         color: var(--black);
         left: 50%;
-        opacity: 1;
+        opacity: 0;
         position: absolute;
         text-align: center;
         top: 50%;
@@ -87,13 +89,19 @@ const Wrapper = styled.section`
         transition: all 0.3s linear;
         width: 100%;
         p {
-          color: var(--black);
+          color: var(--mainWhite);
           margin-bottom: 0.5rem;
           text-transform: uppercase;
         }
+        h3, a{
+          color: var(--mainWhite);
+        }
+        a:hover{
+          color: var(--mainBlack) !important;
+        }
       }
       &:hover .info {
-        opacity: 0;
+        opacity: 1;
       }
     }
     @media (min-width: 768px) {

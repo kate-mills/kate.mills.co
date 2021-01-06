@@ -3,16 +3,13 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CustomHero from '../components/CustomHero'
 import styles from '../css/servicetemplate.module.css'
-//import Image from 'gatsby-image'
 import SEO from '../components/SEO'
 
-const ProjectTemplate = ({ data:{projects}, pageContext  }) => {
+const ProjectTemplate = ({ data:{projects} } ) => {
   const {
     name,
     images,
   } = projects.nodes[0].data
-
-  console.log('projects', pageContext)
 
   return (
     <Layout>

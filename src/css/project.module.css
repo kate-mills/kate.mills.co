@@ -10,13 +10,15 @@
   background: var(--primaryColor);
   transition: var(--mainTransition);
 }
+.img-container:hover{
+  height: 100%;
+}
 .img {
   transition: var(--mainTransition);
 }
 .img-container:hover .img {
   opacity: 0.3;
 }
-
 .link {
   position: absolute;
   top: 50%;
@@ -38,39 +40,4 @@
 }
 .img-container:hover .link {
   opacity: 1;
-}
-.footer {
-  padding: 1rem;
-  border: 2px solid var(--primaryDark);
-  text-align: center;
-}
-.footer p {
-  text-transform: capitalize;
-  margin-bottom: 0;
-}
-.info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-transform: uppercase;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-.info h6,
-.info p {
-  margin-bottom: 0;
-}
-.country {
-  text-transform: capitalize;
-  color: var(--primaryColor);
-  display: flex;
-  align-items: center;
-}
-.icon {
-  margin-right: 0.4rem;
-}
-.details {
-  color: var(--mainBlack);
-  text-transform: uppercase;
-  text-align: right;
 }

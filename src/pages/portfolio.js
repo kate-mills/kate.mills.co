@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import CustomHero from '../components/CustomHero'
 import Banner from '../components/Banner'
 import SearchProjects from '../components/Projects/SearchProjects'
-import Projects from '../components/Projects/Projects'
 import Btn from '../components/Btn'
 import SEO from '../components/SEO'
 
@@ -20,13 +19,10 @@ const portfolio = ({ data }) => {
         img={data.defaultBcg.childImageSharp.fluid}>
         <Banner title="Our Latest Projects" info="Browse through some of our favorites"/>
       </CustomHero>
-      <div>
-        <div className="center-section">
-          <SearchProjects projects = {projects} showSearchBtns />
-        </div>
-        <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
+      <div className="center-section">
+        <SearchProjects projects = {projects} showSearchBtns />
       </div>
-      <Projects/>
+      <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
     </Layout>
   )
 }
@@ -49,6 +45,7 @@ export const query = graphql`
         id
         data {
           name
+          slug
           date
           type
           images {
