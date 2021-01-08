@@ -52,7 +52,7 @@
     width: 80%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .img-container::before {
     content: "";
     position: absolute;
@@ -62,7 +62,6 @@
     box-sizing: border-box;
     top: -16px;
     left: -16px;
-    z-index: -1;
   }
 }
 
