@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
+import { useGlobalContext } from '../context/context';
 
 import { useStaticQuery, graphql } from 'gatsby'
 
@@ -17,12 +18,14 @@ export const getDefaultBcg = graphql`
 `
 
 const CustomHero = ({ img, className, children }) => {
+  const { closeSubmenu } = useGlobalContext();
   const { defaultBcg } = useStaticQuery(getDefaultBcg)
 
   return (
     <BackgroundImage
       className={className}
       fluid={img || defaultBcg.childImageSharp.fluid}
+      onMouseOver={closeSubmenu}
     >
       {children}
     </BackgroundImage>
