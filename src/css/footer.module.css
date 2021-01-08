@@ -2,9 +2,12 @@
   background: var(--primaryDark);
   color: #dadada;
   font-weight: 100;
+  padding: 1rem;
   margin-top: auto;
-  padding: 1.1rem;
   text-align: center;
+  border-top: 1px solid grey;
+  border-radius: 5px;
+  border-bottom: unset;
 }
 .links a {
   color: #dadada;
@@ -35,16 +38,4 @@
   mix-blend-mode: difference;
   padding: 5px 0;
   text-align: center;
-}
-.footer::after {
-  background: var(--primaryLight);
-  content: '';
-  position: absolute;
-  width: 100%;
-  height:10%;
-  bottom: 9px;
-  left: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
