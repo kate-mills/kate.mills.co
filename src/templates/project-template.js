@@ -1,21 +1,42 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Image from 'gatsby-image'
 import CustomHero from '../components/CustomHero'
 import styles from '../css/servicetemplate.module.css'
 import SEO from '../components/SEO'
+import { useGlobalContext } from '../context/context';
 
 const ProjectTemplate = ({ data:{projects} } ) => {
+  const { closeSubmenu } = useGlobalContext();
   const {
     name,
-    images,
+    images
   } = projects.nodes[0].data
+
+  const [...projectImages] = projects.nodes.map(({data})=>data.images.localFiles[0])
 
   return (
     <Layout>
       <SEO title={name} />
-      <CustomHero position="top center" img={images.localFiles[0].childImageSharp.fluid}/>
-      <section className={styles.template}>
+      <section className={styles.templateBg} onMouseOver={closeSubmenu}>
+        <div className={styles.heroCenter}>
+          <h1 className={styles.center}>{name}</h1>
+        <div className={styles.singleProjectImg}>
+          {
+            projectImages.map((img, index)=>{
+              return(
+                <Image
+                  key={index}
+                  fluid={img.childImageSharp.fluid}
+                  alt=""
+                  className={styles.image}
+                />
+              )
+            })
+          }
+        </div>
+        </div>
       </section>
     </Layout>
   )
@@ -49,4 +70,5 @@ export const getProject = graphql`
       }
     }
   } 
+
 `
