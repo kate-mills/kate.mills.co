@@ -31,7 +31,9 @@ const Submenu = () => {
           {links.map((link, index) => {
             const { url, icon, label } = link
             return (
-              <AniLink key={index} to={url} className={styles.subLink}>
+              <AniLink key={index} to={url} className={styles.subLink}
+                onClick={closeSubmenu}
+              >
                 {icon}
                 {label}
               </AniLink>
