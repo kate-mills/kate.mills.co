@@ -1,7 +1,7 @@
 /* links */
 .submenu {
   display: unset;
-  background: var(--primaryDark);
+  background: var(--primaryBlack);
   box-shadow: var(--darkShhadow) !important;
   position: absolute;
   top: 4rem;
@@ -14,16 +14,16 @@
   transition: var(--mainTransition);
 }
 .submenu section{
-  background: var(--primaryDark);
+  background: var(--primaryBlack);
 }
 .submenu::before {
   content: '';
   display: block;
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid var(--clr-white);
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid var(--clr-white);
   position: absolute;
   top: -5px;
   left: 50%;
@@ -45,18 +45,19 @@
 .submenu-center .subLink {
   width: 10rem;
   display: block;
-  color: var(--lightOnDark);
+  color: var(--hoverColor);
   text-transform: capitalize;
   display: flex;
   align-items: center;
 }
 .submenu-center:hover .subLink:hover{
   cursor: pointer !important;
+  color: var(--hoverColor);
   text-decoration: underline;
 }
 .submenu-center svg {
   margin-right: 1rem;
-  color: var(--lightOnDark);
+  color: var(--hoverColor);
 }
 .caret {
   display: block;

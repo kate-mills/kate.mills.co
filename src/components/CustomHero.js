@@ -34,12 +34,12 @@ const CustomHero = ({ img, className, children }) => {
 
 export default styled(CustomHero)`
   align-items: center;
-  background:  linear-gradient(rgb(96 163 188 / 0.7), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(45deg, black, transparent) 60% 100% / cover;
   background-position: ${props => props.position || 'center'};
   background-size: cover;
   display: flex;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 60vh;
   opacity: 1 !important;
   transition: var(--mainTransition);
 `

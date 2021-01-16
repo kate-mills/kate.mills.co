@@ -2,41 +2,44 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CustomHero from '../components/CustomHero'
+import Banner from '../components/Banner'
+import Btn from '../components/Btn'
 import styles from '../css/servicetemplate.module.css'
-import Image from 'gatsby-image'
 import ProjectList from '../components/Projects/ProjectList'
 import SEO from '../components/SEO'
+import Title from '../components/Title'
 
-const ServiceTemplate = ({ data:{service, projects} }) => {
+const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   const {
     name,
-    images,
+    why,
     img_position,
   } = service.nodes[0].data
-
-  const mainImg = images.localFiles[3]
-  const [...projectImages] = projects.nodes.map(({data})=>data.images.localFiles[0])
+  const why_list = why.split('.').filter((item)=>item.length > 0)
 
   return (
     <Layout>
       <SEO title={name} />
-      <CustomHero position={`${img_position}`} img={mainImg.childImageSharp.fluid}/>
+      <CustomHero position={`${img_position}`} img={defaultBg.childImageSharp.fluid}>
+        <Banner title={name}>
+          <Btn to="/portfolio/" text="View all projects"/>
+        </Banner>
+      </CustomHero>
       <section className={styles.template}>
-       <ProjectList projects={projects.nodes}/>
-        <div className={styles.center}>
-          <div className={styles.images}>
-            {projectImages.map((item, index)=>{
-              return (
-                <Image
-                  key={index}
-                  fluid={item.childImageSharp.fluid}
-                  alt=""
-                  className={styles.image}
-                />
-              )
-            })}
-          </div>
+        <div className="coloredBg section-center">
+          <Title title="The" subtitle="Benefits" />
+        <div className={styles.whyList}>
+          <ul data-bullet-list>
+            {
+              why_list.map((s, index) =>{
+                return(<li key={index}><p>{s}.</p></li>)
+              })
+            }
+          </ul>
         </div>
+        </div>
+       <ProjectList projects={projects.nodes}/>
+       <div className="whiteBg section-center centered"> <Btn to={`/portfolio/`} text={`View all projects`} colorful color/> </div>
       </section>
     </Layout>
   )
@@ -50,18 +53,9 @@ export const getService = graphql`
       nodes {
         data {
           name
+          why
           description
           category
-          images {
-            localFiles {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          img_position
           starting_price
           featured
           slug
@@ -87,5 +81,12 @@ export const getService = graphql`
        }
      }
    }
+    defaultBg: file(relativePath: { eq: "background/HomeAlly.png" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   } 
 `

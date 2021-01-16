@@ -22,7 +22,7 @@
 }
 .formControl,
 .submit {
-  border: 1px solid var(--mainBlack);
+  border: 1px solid var(--primaryBlack);
   border-radius: 0.25rem;
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -33,7 +33,7 @@
   background-color: var(--primaryDark);
   border-color: var(--primaryColor);
   text-transform: uppercase;
-  color: var(--mainWhite);
+  color: var(--primaryWhite);
   transition: var(--mainTransition);
   cursor: pointer;
 }

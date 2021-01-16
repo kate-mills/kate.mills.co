@@ -10,7 +10,7 @@ export default [
   {
     icon: <GiKeyboard className="icon" />,
     title: "blogs",
-    path: "blog",
+    path: "blogs",
     text:
       " Increase your online visibility with a blog.  More content means more opportunities to show up in search engines and drive new visitors to your website.",
   },
@@ -24,7 +24,7 @@ export default [
   {
     icon: <RiComputerLine className="icon" />,
     path: "website",
-    title: "website",
+    title: "websites",
     text:
       " Grow your business, build credibility, save time, engage with clients, and the list goes on.",
   },

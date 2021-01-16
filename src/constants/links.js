@@ -17,8 +17,8 @@ const sublinks = [
     path: '/portfolio/',
     links: [
       { label: 'e-commerce', icon: <BiCartAlt />, url: '/e-commerce/' },
-      { label: 'blog', icon: <BiChat />, url: '/blog/' },
-      { label: 'website', icon: <BiChart />, url: '/website/' },
+      { label: 'blogs', icon: <BiChat />, url: '/blogs/' },
+      { label: 'websites', icon: <BiChart />, url: '/websites/' },
       { label: 'all projects', icon: <BiCoffee />, url: '/portfolio/' },
     ],
   },

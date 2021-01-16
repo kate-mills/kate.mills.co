@@ -26,7 +26,7 @@ const Projects = ({
       )}
       <div className="section-center">
         {projects.map(item => {
-          const { slug, name, type } = item.data
+          const { slug, type } = item.data
           const fluid = item.data.images.localFiles[0].childImageSharp.fluid
           return (
             <article className={styles.project} key={item.id}>
@@ -45,7 +45,7 @@ const Projects = ({
 }
 
 const Wrapper = styled.section`
-  background: var(--mainWhite);
+  background: var(--primaryWhite);
   .section-center {
     margin-top: 4rem;
     margin-right: .5rem;
@@ -57,13 +57,13 @@ const Wrapper = styled.section`
     grid-gap: 2rem;
     .img {
       height: 20rem;
-      border-radius: 0.25rem;
+      border-radius: var(--radius);
       opacity: 0.7;
       transition: all 0.3s linear;
     }
     article {
-      background: var(--mainWhite);
-      border-radius: 0.25rem;
+      background: var(--primaryWhite);
+      border-radius: var(--radius);
       box-shadow: var(--lightShadow);
       transition: all 0.3s linear;
     }
@@ -73,13 +73,13 @@ const Wrapper = styled.section`
     .container {
       position: relative;
       overflow: hidden;
-      border-radius: 0.25rem;
+      border-radius: var(--radius);
       background: var(--primaryColor);
       &:hover .img {
         opacity: 0.2;
       }
       .info {
-        color: var(--black);
+        color: var(--primaryBlack);
         left: 50%;
         opacity: 0;
         position: absolute;
@@ -89,15 +89,15 @@ const Wrapper = styled.section`
         transition: all 0.3s linear;
         width: 100%;
         p {
-          color: var(--mainWhite);
+          color: var(--primaryWhite);
           margin-bottom: 0.5rem;
           text-transform: uppercase;
         }
         h3, a{
-          color: var(--mainWhite);
+          color: var(--primaryWhite);
         }
         a:hover{
-          color: var(--mainBlack) !important;
+          color: var(--primaryBlack) !important;
         }
       }
       &:hover .info {

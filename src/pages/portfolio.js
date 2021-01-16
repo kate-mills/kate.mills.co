@@ -30,7 +30,7 @@ export default portfolio
 
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: { eq: "background/Portfolio.jpeg" }) {
+    defaultBcg: file(relativePath: { eq: "More/17.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

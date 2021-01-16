@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
+import { useGlobalContext } from '../context/context';
 
 const StyledHero = ({ img, className, children }) => {
+  const { closeSubmenu } = useGlobalContext();
   return (
     <BackgroundImage
+      onMouseOver={closeSubmenu}
       className={className}
       fluid={img}
     >
@@ -13,11 +16,10 @@ const StyledHero = ({ img, className, children }) => {
   )
 }
 export default styled(StyledHero)`
-  min-height: calc(100vh - 65px);
-  background:  linear-gradient(rgb(96 163 188 / 0.7), rgba(0, 0, 0, 0.7));
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(45deg, black, transparent);
   background-position: 60% bottom;
   background-size: cover;
-  background-blend-mode: darken;
   opacity: 1 !important;
   display: flex;
   justify-content: center;

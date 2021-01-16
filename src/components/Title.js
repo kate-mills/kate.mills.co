@@ -22,10 +22,10 @@ export default styled(Title)`
   text-transform: uppercase;
 
   .title {
-    color: var(--mainBlack);
+    color: var(--primaryBlack);
   }
   .subtitle {
-    color: var(--darkOnLight);
+    color: var(--safestColor);
   }
   span {
     display: block;

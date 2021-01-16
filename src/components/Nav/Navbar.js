@@ -8,7 +8,7 @@ import PhoneNumber from '../PhoneNumber'
 import {useGlobalContext} from '../../context/context'
 
 const Navbar = (props) => {
-  const {openSidebar, closeSidebar, openSubmenu, closeSubmenu} = useGlobalContext()
+  const {  openSubmenu } = useGlobalContext()
 
   const [isOpen, setIsOpen] = useState()
   const toggleNav = () => {

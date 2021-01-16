@@ -1,6 +1,7 @@
 .services {
-  color: var(--mainBlack);
+  color: var(--primaryBlack);
   padding: 4rem 0;
+  background: var(--hoverColor);
 }
 .center {
   width: 80vw;
@@ -23,6 +24,10 @@
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
   text-transform: uppercase;
+}
+.service a:hover{
+  color: var(--primaryColor) !important;
+  text-decoration: underline;
 }
 .footer {
   text-align: center;

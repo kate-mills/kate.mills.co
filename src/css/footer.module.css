@@ -1,6 +1,6 @@
 .footer {
-  background: var(--primaryDark);
-  color: #dadada;
+  background-color: var(--primaryBlack);
+  color: var(--safestColor);
   font-weight: 100;
   padding: 1rem;
   margin-top: auto;
@@ -9,8 +9,11 @@
   border-radius: 5px;
   border-bottom: unset;
 }
+.footer > div{
+  color: var(--safestColor);
+}
 .links a {
-  color: #dadada;
+  color: var(--safestColor) !important;
   display: inline-block;
   font-size: .8rem;
   letter-spacing: var(--altSpacing);
@@ -19,7 +22,7 @@
   transition: var(--mainTransition);
 }
 .icons a {
-  color: silver;
+  color: var(--safestColor);
   display: inline-block;
   font-size: 1.3rem;
   margin: 1rem;
@@ -27,6 +30,7 @@
 }
 .icons a:hover {
   transform: translateY(-3px);
+  color: #9CCC65!important
 }
 .copyright {
   letter-spacing: var(--mainSpacing);
@@ -35,7 +39,8 @@
 .smallFont{
   font-size: calc(13px);
   margin: 0;
-  mix-blend-mode: difference;
+  /*mix-blend-mode: difference;*/
+  color: var(--primaryColor);
   padding: 5px 0;
   text-align: center;
 }

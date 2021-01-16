@@ -11,11 +11,11 @@ export default styled(Btn)`
       props.colorful ? `var(--primaryDark)`:`transparent`
       : `transparent`};
   border-width: 3px;
-  border-color: ${props =>  props.color ? `var(--primaryDark)`: `white`};
+  border-color: ${props =>  props.color ? `var(--primaryDark)`: `var(--safestColor)`};
   border-style: solid;
   color: ${props => props.color ?
-      props.colorful ? `var(--mainWhite)`: `var(--primaryDark)`
-      : `var(--mainWhite)`
+      props.colorful ? `var(--primaryWhite)`:props.color 
+      : `var(--safestColor)`
       };
   cursor: pointer;
   display: inline-block;
@@ -32,7 +32,9 @@ export default styled(Btn)`
     background-color: ${props => (props.colorful || !props.color) ? `#edf3f22e`: `var(--primaryDark)`};
 
     color: ${props => props.color ?
-        props.colorful ? `var(--primaryDark)`: `white`
-        : `white`} !important;
+        props.hover ?   props.hover
+        : props.colorful ? `var(--primaryDark)`: `var(--safestColor)`
+        : `var(--safestColor)`} !important;
+
   }
 `

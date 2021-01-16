@@ -3,15 +3,18 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Image from 'gatsby-image'
 import CustomHero from '../components/CustomHero'
+import Banner from '../components/Banner'
 import styles from '../css/servicetemplate.module.css'
 import SEO from '../components/SEO'
-import { useGlobalContext } from '../context/context';
+import Btn from '../components/Btn'
+//import Title from '../components/Title'
 
-const ProjectTemplate = ({ data:{projects} } ) => {
-  const { closeSubmenu } = useGlobalContext();
+const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
   const {
     name,
-    images
+    desc,
+    type,
+    url
   } = projects.nodes[0].data
 
   const [...projectImages] = projects.nodes.map(({data})=>data.images.localFiles[0])
@@ -19,9 +22,16 @@ const ProjectTemplate = ({ data:{projects} } ) => {
   return (
     <Layout>
       <SEO title={name} />
-      <section className={styles.templateBg} onMouseOver={closeSubmenu}>
-        <div className={styles.heroCenter}>
-          <h1 className={styles.center}>{name}</h1>
+      <CustomHero img={defaultBg.childImageSharp.fluid}>
+        <Banner title={name} info={desc || " "}>
+          <Btn to={`/${type}/`} text={`View all ${type}`} colorful color="green" hover="white"/>
+        </Banner>
+        </CustomHero>
+      <section className={styles.template}>
+        <p className="centered">
+          <a href={url} className={styles.url}>Check out {name} </a>
+        </p>
+        <div className={styles.projects}>
         <div className={styles.singleProjectImg}>
           {
             projectImages.map((img, index)=>{
@@ -37,7 +47,8 @@ const ProjectTemplate = ({ data:{projects} } ) => {
           }
         </div>
         </div>
-      </section>
+          <div className="whiteBg section-center centered"> <Btn to={`/portfolio/`} text={`View all projects`} colorful color/> </div>
+        </section>
     </Layout>
   )
 }
@@ -50,8 +61,9 @@ export const getProject = graphql`
       nodes {
         data {
           name
-          description
-          category
+          desc
+          type
+          url
           images {
             localFiles {
               childImageSharp {
@@ -69,6 +81,12 @@ export const getProject = graphql`
         }
       }
     }
+    defaultBg: file(relativePath: { eq: "background/HomeAlly.png" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   } 
-
 `

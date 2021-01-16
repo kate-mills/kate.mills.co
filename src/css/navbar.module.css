@@ -1,5 +1,5 @@
 .navbar{
-  background: var(--mainGradient);
+  background: linear-gradient(45deg, black, transparent) 60% 100% / cover;
 }
 .nav-header {
   align-items: center;
@@ -8,14 +8,13 @@
   padding: 1rem 1.25rem 0.5rem 1.02rem;
 }
 .logo{
-  background: linear-gradient(var(--primaryColor, var(--primaryLight)));
   padding: .5rem;
 }
 .logo:hover{
   color: var(--primaryColor) !important;
 }
 .toggle-btn {
-  background: transparent;
+  background: inherit !important;
   border: unset;
   outline: unset;
 }
@@ -23,7 +22,7 @@
   cursor: pointer;
 }
 .toggle-icon {
-  color: var(--primaryLight);
+  color: var(--safestColor);
   font-size: 1.5rem;
 }
 .nav-links {
@@ -37,7 +36,7 @@
 }
 .nav-links a,
 .nav-links span{
-  color: var(--lightOnDark);
+  color: var(--safestColor);
   display: block;
   font-size: 0.95rem;
   font-weight: 300;
@@ -49,11 +48,11 @@
   text-decoration: underline;
 }
 .nav-links a.current-page{
-  color: var(--disabledColor);
+  color: var(--saferColor);
   opacity: 1;
   pointer-events: none;
   text-decoration: underline;
-  text-decoration-color: var(--disabledColor);
+  text-decoration-color: var(--saferColor);
 }
 @media screen and (min-width: 576px) {
   .navbar {
