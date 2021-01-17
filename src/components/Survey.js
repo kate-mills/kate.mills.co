@@ -51,7 +51,7 @@ const Survey = ({ title }) => {
   return (
     <Wrapper className="section">
       <div className="container">
-        <Title title="survey"></Title>
+        <Title title="vote for your" subtitle="favorite"></Title>
         <h3>Your favorite social media platform?</h3>
         {loading ? (
           <LoadingGif />

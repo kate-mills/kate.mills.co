@@ -5,9 +5,22 @@ import CustomHero from '../components/CustomHero'
 import Banner from '../components/Banner'
 import Btn from '../components/Btn'
 import styles from '../css/servicetemplate.module.css'
-import ProjectList from '../components/Projects/ProjectList'
 import SEO from '../components/SEO'
 import Title from '../components/Title'
+import SearchProjects from '../components/Projects/SearchProjects'
+
+export  const nameFormatter = (str) => {
+    const  pattern = /s$/; // match s at the end of the word
+    const  endsInS = str.match(pattern); 
+    let formatName = str;
+    if (endsInS){
+      formatName = str.slice(0, -1);
+    }
+    else{
+      formatName = 'Shopping Cart'
+    }
+    return formatName;
+  }
 
 const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   const {
@@ -16,10 +29,11 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
     img_position,
   } = service.nodes[0].data
   const why_list = why.split('.').filter((item)=>item.length > 0)
+  const singularName = nameFormatter(name);
 
   return (
     <Layout>
-      <SEO title={name} />
+      <SEO title={name}/>
       <CustomHero position={`${img_position}`} img={defaultBg.childImageSharp.fluid}>
         <Banner title={name}>
           <Btn to="/portfolio/" text="View all projects"/>
@@ -27,7 +41,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       </CustomHero>
       <section className={styles.template}>
         <div className="coloredBg section-center">
-          <Title title="The" subtitle="Benefits" />
+          <Title title="The Benefits of having a" subtitle={singularName}/>
         <div className={styles.whyList}>
           <ul data-bullet-list>
             {
@@ -38,8 +52,8 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
           </ul>
         </div>
         </div>
-       <ProjectList projects={projects.nodes}/>
-       <div className="whiteBg section-center centered"> <Btn to={`/portfolio/`} text={`View all projects`} colorful color/> </div>
+        <SearchProjects projects={projects.nodes}/>
+        <div className="footer-btn"><Btn to="/portfolio/" text="view all projects" colorful color/></div>
       </section>
     </Layout>
   )
