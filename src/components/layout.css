@@ -37,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: var(--mainSpacing);
   margin-bottom: 1.25rem;
 }
-/*nav{ background: var(--primaryBlack); }*/
 section {
   background: var(--primaryWhite);
   transition: var(--mainTransition);
@@ -114,9 +113,10 @@ ul[data-bullet-list] li>*:first-child::before{
   text-align: right;
   white-space: pre;
 }
-
 .centered {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 .whiteBg {
   background: var(--primaryWhite);

@@ -19,9 +19,7 @@ const portfolio = ({ data }) => {
         img={data.defaultBcg.childImageSharp.fluid}>
         <Banner title="Our Latest Projects" info="Browse through some of our favorites"/>
       </CustomHero>
-      <div className="center-section">
-        <SearchProjects projects = {projects} showSearchBtns />
-      </div>
+      <SearchProjects projects = {projects} showSearchBtns />
       <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
     </Layout>
   )

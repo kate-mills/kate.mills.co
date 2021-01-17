@@ -47,10 +47,6 @@ const Projects = ({
 const Wrapper = styled.section`
   background: var(--primaryWhite);
   .section-center {
-    margin-top: 4rem;
-    margin-right: .5rem;
-    margin-left: .6rem;
-    padding-bottom: 4rem;
     display: grid;
     gap: 2rem;
     /* safari workaround */

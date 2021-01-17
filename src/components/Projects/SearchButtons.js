@@ -29,7 +29,7 @@ const SearchButtons = ({ projects, setProjects, setBackToAll }) => {
       {types.map((type, typeIndex) => {
         return (
           <button
-            style={{background: 'white'}}
+            style={{background: 'var(--hoverColor)', padding: '1rem 2rem', borderRadius: 'var(--radius)'}}
             key={typeIndex}
             className={index === typeIndex ? "active" : undefined}
             onClick={() => showProjects(type, typeIndex)}
@@ -43,14 +43,18 @@ const SearchButtons = ({ projects, setProjects, setBackToAll }) => {
 }
 const Wrapper = styled.div`
   display: flex;
-  margin-bottom: 0;
+  max-width: fit-content;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border-color: var(--primaryBlack);
+  margin: 0 auto;
+  margin-bottom: 2rem;
   justify-content: center;
   flex-wrap: wrap;
   button {
-    color: var(--primaryDark);
+    color: var(--primaryBlack);
     margin: 0.5rem;
     text-transform: capitalize;
-    border: transparent;
     letter-spacing: var(--spacing);
     font-size: 1.3rem;
     padding: 0.25rem;
@@ -60,7 +64,9 @@ const Wrapper = styled.div`
   }
   button:hover,
   button.active {
-    box-shadow: 0px 1.5px 0 var(--primaryDark);
+    text-decoration: underline;
+    font-weight: 300;
+    color: var(--primaryDark);
   }
 `
 export default SearchButtons

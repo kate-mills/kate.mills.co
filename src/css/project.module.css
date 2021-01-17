@@ -21,7 +21,7 @@
 }
 .link {
   position: absolute;
-  top: 50%;
+  top: 32%; /* more centered at 32% instead of 50% */
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
