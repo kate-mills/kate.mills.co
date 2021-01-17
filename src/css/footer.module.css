@@ -30,7 +30,7 @@
 }
 .icons a:hover {
   transform: translateY(-3px);
-  color: #9CCC65!important
+  color: var(--primaryColor) !important
 }
 .copyright {
   letter-spacing: var(--mainSpacing);
