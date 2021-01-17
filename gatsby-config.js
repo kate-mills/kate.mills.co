@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#60a3bc`,
         theme_color: `#60a3bc`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/icongreen.png`,
         icon_options: {
           purpose: `any maskable`,
         },
