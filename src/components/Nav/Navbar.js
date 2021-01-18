@@ -10,11 +10,13 @@ import {useGlobalContext} from '../../context/context'
 const Navbar = (props) => {
   const {  openSubmenu } = useGlobalContext()
 
+  const [isCurrentPage, setCurrentPage] = React.useState('/')
   const [isOpen, setIsOpen] = useState()
+  const [allowPointerEvents, setAllowPointerEvents] = useState(false)
+
   const toggleNav = () => {
     setIsOpen(isOpen => !isOpen)
   }
-  const [isCurrentPage, setCurrentPage] = React.useState('/')
 
 
   const displaySubmenu = (e)=>{
@@ -25,8 +27,17 @@ const Navbar = (props) => {
     openSubmenu(page_name, {center, bottom});
   };
 
+  const checkPathname = (pth) => {
+    let actualPath = document.location.pathname
+    if ( pth === actualPath || pth+'/' === actualPath){
+      return true;
+    }
+    return false;
+  }
+
   React.useEffect(()=>{
     typeof window !== `undefined` && setCurrentPage(document.location.pathname);
+    typeof window !==  `undefined` && checkPathname('/portfolio') && setAllowPointerEvents(true);
   }, [setCurrentPage])
 
   return (
@@ -52,7 +63,7 @@ const Navbar = (props) => {
                   onMouseOver={displaySubmenu}
                   className={
                     (isCurrentPage === item.path)
-                      ? `${styles.currentPage}`
+                      ? {allowPointerEvents} ? `${styles.allowPointer}`: `${styles.currentPage}`
                       : `${styles.notCurrentPage}`
                   }
                 >

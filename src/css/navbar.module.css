@@ -47,6 +47,12 @@
 .nav-links a:hover{
   text-decoration: underline;
 }
+.nav-links a.allow-pointer{
+  color: var(--saferColor);
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-color: var(--saferColor);
+}
 .nav-links a.current-page{
   color: var(--saferColor);
   opacity: 1;
