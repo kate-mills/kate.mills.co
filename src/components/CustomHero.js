@@ -42,4 +42,7 @@ export default styled(CustomHero)`
   min-height: 60vh;
   opacity: 1 !important;
   transition: var(--mainTransition);
+  @media(max-width: 570px){
+    min-height: 50vh;
+  }
 `
