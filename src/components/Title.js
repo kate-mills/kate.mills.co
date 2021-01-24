@@ -25,7 +25,7 @@ export default styled(Title)`
     color: ${props => props.titleColor || 'var(--primaryBlack)'};
   }
   .subtitle {
-    color: ${props => props.subTitleColor || 'var(--primaryColor)'};
+    color: ${props => props.subTitleColor || 'var(--mediumGreen)'};
   }
   span {
     display: block;

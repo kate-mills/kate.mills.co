@@ -20,9 +20,7 @@ export default ({ data }) => (
       </Banner>
     </StyledHero>
     <Mission />
-    <div className="border"/>
     <FeaturedWebServices />
-    <div className="border"/>
     <Survey/>
   </Layout>
 )
