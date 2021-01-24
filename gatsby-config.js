@@ -22,7 +22,7 @@ module.exports = {
         description: `Web solutions for beauty specialists by industry experts.`,
         lang: `en`,
         start_url: `/`,
-        background_color: `#60a3bc`,
+        background_color: `#fee9dd`,
         theme_color: `#fee9dd`,
         display: `standalone`,
         icon: `src/images/icon.png`,
@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://allydigital.netlify.app',
-        sitemap: 'https://allydigital.netlify.app/sitemap.xml',
+        host: 'https://allydigitalsolutions.com',
+        sitemap: 'https://allydigitalsolutions.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
