@@ -83,7 +83,7 @@ export const getService = graphql`
        }
      }
    }
-    defaultBg: file(relativePath: { eq: "backgrounds/black-fabric.png" }) {
+    defaultBg: file(relativePath: { eq: "backgrounds/black-fabric.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

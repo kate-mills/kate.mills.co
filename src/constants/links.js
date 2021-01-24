@@ -1,4 +1,4 @@
-import { BiCoffee, BiCartAlt, BiChart, BiChat  } from "react-icons/bi";
+import { BiChart } from "react-icons/bi";
 import React from 'react';
 
 const sublinks = [
@@ -16,10 +16,10 @@ const sublinks = [
     page: 'portfolio',
     path: '/portfolio/',
     links: [
-      { label: 'e-commerce', icon: <BiCartAlt />, url: '/e-commerce/' },
-      { label: 'blogs', icon: <BiChat />, url: '/blogs/' },
+      { label: 'e-commerce', icon: <BiChart />, url: '/e-commerce/' },
+      { label: 'blogs', icon: <BiChart />, url: '/blogs/' },
       { label: 'websites', icon: <BiChart />, url: '/websites/' },
-      { label: 'all projects', icon: <BiCoffee />, url: '/portfolio/' },
+      { label: 'all projects', icon: <BiChart />, url: '/portfolio/' },
     ],
   },
   {

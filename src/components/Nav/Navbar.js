@@ -18,7 +18,6 @@ const Navbar = (props) => {
     setIsOpen(isOpen => !isOpen)
   }
 
-
   const displaySubmenu = (e)=>{
     const page_name = e.target.textContent;           // I get this text
     const tempBtn = e.target.getBoundingClientRect(); // I get object with coordinates

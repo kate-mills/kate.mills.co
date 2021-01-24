@@ -26,7 +26,7 @@ export default ({ data }) => (
 )
 export const query = graphql`
   query {
-    defaultBg: file(relativePath: { eq: "backgrounds/home-hero.png" }) {
+    defaultBg: file(relativePath: { eq: "backgrounds/home-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
