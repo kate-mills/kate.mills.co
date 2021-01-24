@@ -13,7 +13,7 @@ export default ({ data }) => (
     <CustomHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Digital by industry experts"
-        info="located in Napa Valley" >
+        info="LOCATED IN NAPA VALLEY" >
         <Btn to="/portfolio/" text="View our portfolio"/>
       </Banner>
     </CustomHero>
@@ -22,7 +22,7 @@ export default ({ data }) => (
 )
 export const query = graphql`
   query {
-    defaultBg: file(relativePath: { eq: "More/16.png" }) {
+    defaultBg: file(relativePath: { eq: "backgrounds/about-hero.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

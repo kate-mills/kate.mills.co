@@ -9,26 +9,26 @@ import Title from '../Title'
 const Projects = ({
   projects: data,
   slug,
-  title,
   showSearchBtns,
 }) => {
   const [projects, setProjects] = React.useState(data)
+  const [title, setTitle] = React.useState('All')
 
   const setBackToAll = () => { setProjects(data) }
-  
-  return (
-    <>
-      <div className={styles.centerTitle}><Title title="Filter" subtitle="Projects" /></div>
-      <p className={styles.centerInfo}>Click below to filter projects by category</p>
-    <Wrapper className={styles.center}>
-      {showSearchBtns && (
+
+  const headerAndBtns = (<div className={styles.centerTitle}><Title title={title} subtitle="Projects"/>
+    <p className={styles.centerInfo}>Click below to filter projects by category</p>
         <SearchButtons
+          setTitle={setTitle}
           projects={data}
           setProjects={setProjects}
           setBackToAll={setBackToAll}
         />
-      )}
-
+    </div>
+  )
+  return (
+    <Wrapper className={styles.center}>
+      {showSearchBtns && ( headerAndBtns) }
       <div className="section-center">
         {projects.map(item => {
           const { slug, type } = item.data
@@ -46,7 +46,6 @@ const Projects = ({
         })}
       </div>
     </Wrapper>
-    </>
   )
 }
 

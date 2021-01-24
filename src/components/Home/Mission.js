@@ -7,7 +7,7 @@ import Btn from '../Btn'
 
 const getAbout = graphql`
   query AboutImg {
-    aboutImg: file(relativePath: { eq: "background/About.jpeg" }) {
+    aboutImg: file(relativePath: { eq: "About.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_tracedSVG

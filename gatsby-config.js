@@ -9,9 +9,9 @@ module.exports = {
     description: `Web solutions for beauty specialists by industry experts.`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
-    image: `/background/Napa.jpeg`,
-    url: `https://allydigital.netlify.app`,
-    siteUrl: `https://allydigital.netlify.app`,
+    image: `/backgrounds/home-hero.png`,
+    url: `https://allydigitalsolutions.com`,
+    siteUrl: `https://allydigitalsolutions.com`,
   },
   plugins: [
     {
@@ -23,9 +23,9 @@ module.exports = {
         lang: `en`,
         start_url: `/`,
         background_color: `#60a3bc`,
-        theme_color: `#60a3bc`,
+        theme_color: `#fee9dd`,
         display: `standalone`,
-        icon: `src/images/icongreen.png`,
+        icon: `src/images/icon.png`,
         icon_options: {
           purpose: `any maskable`,
         },

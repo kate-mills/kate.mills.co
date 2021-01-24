@@ -1,15 +1,23 @@
 :root {
-  --primaryLight: #84E4A8; /* light green */ 
 
-  --primaryColor: #FAB6AB; /* pink */
-  --primaryDark: rgb(54 96 85);
-  --primaryBlack: #374440; /* #374440 */ 
-  --primaryWhite: rgb(255 255 255); 
-  --safeColor:  #84E4A8; /* lightest green */
-  --safestColor:  rgb(255 255 255); /* white */
-  --hoverColor: #84E4A8;
-  --mediumGreen: #167544;
-  --mediumSafe: #25c673;
+  --color1: #9e9196;  /* dark grey 1 */
+  --color2: #373339;   /* black */
+  --color3: #fee9dd;   /* cream */
+  --color4: #e39c99;   /* pink  */
+  --color5: #7a504f;   /* maroon */
+  --color6: #9d9692;   /* dark grey 2*/
+  --color7: #e8d4d0;   /* beige */
+  --color8: #fdfdfc; /* white */
+
+  --primaryLight: var(--color3);
+  --primaryColor: var(--color5); /* pink */
+  --primaryDark: var(--color5);
+  --primaryBlack: var(--color2);
+  --primaryWhite: var(--color8);
+  --safeColor:  var(--color3);
+  --safestColor: var(--color7);
+  --hoverColor: var(--color3);
+  --mediumGreen: var(--color6);
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;

@@ -8,19 +8,7 @@ import styles from '../css/servicetemplate.module.css'
 import SEO from '../components/SEO'
 import Title from '../components/Title'
 import SearchProjects from '../components/Projects/SearchProjects'
-
-export  const nameFormatter = (str) => {
-    const  pattern = /s$/; // match s at the end of the word
-    const  endsInS = str.match(pattern); 
-    let formatName = str;
-    if (endsInS){
-      formatName = str.slice(0, -1);
-    }
-    else{
-      formatName = 'Shopping Cart'
-    }
-    return formatName;
-  }
+import {typeFormatter} from '../utils/helpers'
 
 const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   const {
@@ -29,7 +17,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
     img_position,
   } = service.nodes[0].data
   const why_list = why.split('.').filter((item)=>item.length > 0)
-  const singularName = nameFormatter(name);
+  const singularName = typeFormatter(name);
 
   return (
     <Layout>
@@ -42,7 +30,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       <section className={styles.template}>
         <div className="coloredBg section-center">
           <Title title="The Benefits of having a" subtitle={singularName}/>
-        <div className={styles.whyList}>
+        <div className={styles.benefitList}>
           <ul data-bullet-list>
             {
               why_list.map((s, index) =>{
@@ -53,8 +41,8 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
         </div>
         </div>
         <SearchProjects projects={projects.nodes}/>
-        <div className="footer-btn"><Btn to="/portfolio/" text="view all projects" colorful color/></div>
       </section>
+        <div className="footer-btn"><Btn to="/portfolio/" text="view all projects" colorful color/></div>
     </Layout>
   )
 }
@@ -95,7 +83,7 @@ export const getService = graphql`
        }
      }
    }
-    defaultBg: file(relativePath: { eq: "background/HomeAlly.png" }) {
+    defaultBg: file(relativePath: { eq: "backgrounds/black-fabric.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

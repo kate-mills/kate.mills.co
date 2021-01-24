@@ -24,7 +24,7 @@ const contact = props => {
     <Layout>
       <SEO title="Contact" snippet={snippet}/>
       <CustomHero position={`center right`} img={props.data.contactBcg.childImageSharp.fluid}>
-        <Banner title="Contact Us"/>
+        <Banner title="Contact Us" info="dev@allydigitalsolutions.com" />
       </CustomHero>
       <Contact />
     </Layout>
@@ -35,7 +35,7 @@ export default contact
 
 export const query = graphql`
   query {
-    contactBcg: file(relativePath: { eq: "More/15.png" }) {
+    contactBcg: file(relativePath: { eq: "backgrounds/contact-hero.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

@@ -39,7 +39,7 @@ export default styled(CustomHero)`
   background-size: cover;
   display: flex;
   justify-content: center;
-  min-height: 60vh;
+  min-height: 40vh;
   opacity: 1 !important;
   transition: var(--mainTransition);
   @media(max-width: 570px){

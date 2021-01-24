@@ -23,7 +23,7 @@ export default [
   },
   {
     icon: <RiComputerLine className="icon" />,
-    path: "website",
+    path: "websites",
     title: "websites",
     text:
       " Grow your business, build credibility, save time, engage with clients, and the list goes on.",

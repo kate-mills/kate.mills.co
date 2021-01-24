@@ -23,15 +23,13 @@ const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
     <Layout>
       <SEO title={name} />
       <CustomHero img={defaultBg.childImageSharp.fluid}>
-        <Banner title={name} info={desc || " "}>
-          <Btn to={`/${type}/`} text={`View all ${type}`} colorful color="green" hover="white"/>
-        </Banner>
+        <Banner title={name} info={desc || " "}> </Banner>
         </CustomHero>
       <section className={styles.template}>
         <p className="centered">
-          <a href={url} className={styles.url}>Check out {name} </a>
+          <a href={url} className={styles.url}>Go to {name} </a>
         </p>
-        <div className={styles.projects}>
+        <div className={styles.project}>
         <div className={styles.singleProjectImg}>
           {
             projectImages.map((img, index)=>{
@@ -47,7 +45,9 @@ const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
           }
         </div>
         </div>
-          <div className="whiteBg section-center centered"> <Btn to={`/portfolio/`} text={`View all projects`} colorful color/> </div>
+        <div className="whiteBg section-center centered">
+          <Btn to={`/${type}/`} text={`View all ${type}`} colorful  color/>
+        <Btn to={`/portfolio/`} text={`View all projects`} colorful color/> </div>
         </section>
     </Layout>
   )
@@ -81,7 +81,7 @@ export const getProject = graphql`
         }
       }
     }
-    defaultBg: file(relativePath: { eq: "background/HomeAlly.png" }) {
+    defaultBg: file(relativePath: { eq: "backgrounds/black-fabric.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

@@ -15,7 +15,7 @@ export default ({ data }) => (
     <StyledHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Web solutions for beauty specialists"
-        info="Get websites created by industry experts" >
+        info="GET WEBSITES CREATED BY INDUSTRY EXPERTS" >
         <Btn to="/contact-us/" text="Get A Free Quote" />
       </Banner>
     </StyledHero>
@@ -26,7 +26,7 @@ export default ({ data }) => (
 )
 export const query = graphql`
   query {
-    defaultBg: file(relativePath: { eq: "background/ally/Home2.png" }) {
+    defaultBg: file(relativePath: { eq: "backgrounds/home-hero.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

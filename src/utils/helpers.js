@@ -1,4 +1,3 @@
-
 export const getServiceCategories = (services) => {
   let tempServices = services.map(service => {
     return service.data.category
@@ -13,4 +12,17 @@ export const getServiceCategories = (services) => {
 export const filterForFeaturedServices = (services) =>{
   return services.filter(service => { return service.data.featured === true; })
 };
+
+export  const typeFormatter = (str) => {
+    const  pattern = /s$/; // match s at the end of the word
+    const  endsInS = str.match(pattern); 
+    let formatName = str;
+    if (endsInS){
+      formatName = str.slice(0, -1);
+    }
+    else if (formatName=== 'e-commerce'){
+      formatName = 'Shopping Cart'
+    }
+    return formatName;
+  }
 

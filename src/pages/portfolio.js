@@ -17,7 +17,7 @@ const portfolio = ({ data }) => {
       <CustomHero 
         position="99% top"
         img={data.defaultBcg.childImageSharp.fluid}>
-        <Banner title="Latest Projects" info="Browse through some of our favorites"/>
+        <Banner title="Latest Projects" info="BROWSE THROUGH SOME OF OUR FAVORITES"/>
       </CustomHero>
       <SearchProjects projects = {projects} showSearchBtns />
       <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
@@ -28,7 +28,7 @@ export default portfolio
 
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: { eq: "More/17.png" }) {
+    defaultBcg: file(relativePath: { eq: "backgrounds/portfolio-hero.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

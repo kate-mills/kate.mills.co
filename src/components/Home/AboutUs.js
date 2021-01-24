@@ -12,7 +12,7 @@ const AboutUs = () => {
         {services.map((item, index) => {
           return (
             <article key={index} className={styles.service}>
-              <span>{item.icon}</span>
+              <span className={styles.icon}>{item.icon}</span>
               <div>{item.title}</div>
               <p>{item.text}</p>
             </article>
