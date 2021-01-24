@@ -1,14 +1,15 @@
 :root {
-  --primaryLight: rgb(231 221 189); /* Unused */
+  --primaryLight: #84E4A8; /* light green */ 
 
-  --primaryColor: rgb(110 144 132);
+  --primaryColor: #FAB6AB; /* pink */
   --primaryDark: rgb(54 96 85);
-  --primaryBlack: rgb(23 58 56);
-  --primaryWhite: rgb(252 252 251);
-  --safeColor: #927a5e;
-  --saferColor: #b69875;
-  --safestColor: #e3bd92;
-  --hoverColor: oldlace;
+  --primaryBlack: #374440; /* #374440 */ 
+  --primaryWhite: rgb(255 255 255); 
+  --safeColor:  #84E4A8; /* lightest green */
+  --safestColor:  rgb(255 255 255); /* white */
+  --hoverColor: #84E4A8;
+  --mediumGreen: #167544;
+  --mediumSafe: #25c673;
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
@@ -134,6 +135,9 @@ ul[data-bullet-list] li>*:first-child::before{
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+div.border{
+  border-bottom: calc(5vh) solid var(--primaryBlack);
 }
 @media screen and (min-width: 992px) {
   .section-center {

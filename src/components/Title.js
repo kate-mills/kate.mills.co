@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Title = ({ titleColor, subtitleColor, title, subtitle, className}) => {
+const Title = ({ title, subtitle, className}) => {
   return (
     <div className={className}>
       <p className="heading">
@@ -22,10 +22,10 @@ export default styled(Title)`
   text-transform: uppercase;
 
   .title {
-    color: var(--primaryBlack);
+    color: ${props => props.titleColor || 'var(--primaryBlack)'};
   }
   .subtitle {
-    color: var(--safestColor);
+    color: ${props => props.subTitleColor || 'var(--primaryColor)'};
   }
   span {
     display: block;

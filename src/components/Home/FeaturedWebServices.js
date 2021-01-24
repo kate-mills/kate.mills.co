@@ -8,7 +8,10 @@ import Btn from '../Btn'
 const Services = () => {
   return (
     <section className={styles.services}>
-      <Title title="Featured" subtitle="Services" />
+      <Title
+        title="Featured"
+        subtitle="Services"
+      />
       <div className={styles.center}>
         {features.map((item, index) => {
           return (

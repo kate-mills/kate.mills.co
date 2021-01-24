@@ -4,6 +4,7 @@ import Image from "gatsby-image"
 import styles from '../../css/project.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import SearchButtons from "./SearchButtons"
+import Title from '../Title'
 
 const Projects = ({
   projects: data,
@@ -16,7 +17,10 @@ const Projects = ({
   const setBackToAll = () => { setProjects(data) }
   
   return (
-    <Wrapper className="section">
+    <>
+      <div className={styles.centerTitle}><Title title="Filter" subtitle="Projects" /></div>
+      <p className={styles.centerInfo}>Click below to filter projects by category</p>
+    <Wrapper className={styles.center}>
       {showSearchBtns && (
         <SearchButtons
           projects={data}
@@ -24,6 +28,7 @@ const Projects = ({
           setBackToAll={setBackToAll}
         />
       )}
+
       <div className="section-center">
         {projects.map(item => {
           const { slug, type } = item.data
@@ -41,6 +46,7 @@ const Projects = ({
         })}
       </div>
     </Wrapper>
+    </>
   )
 }
 
@@ -70,33 +76,10 @@ const Wrapper = styled.section`
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);
-      background: var(--primaryColor);
       &:hover .img {
         opacity: 0.2;
       }
-      .info {
-        color: var(--primaryBlack);
-        left: 50%;
-        opacity: 0;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s linear;
-        width: 100%;
-        p {
-          color: var(--primaryWhite);
-          margin-bottom: 0.5rem;
-          text-transform: uppercase;
-        }
-        h3, a{
-          color: var(--primaryWhite);
-        }
-        a:hover{
-          color: var(--primaryBlack) !important;
-        }
-      }
-      &:hover .info {
+      &:hover {
         opacity: 1;
       }
     }
@@ -120,10 +103,13 @@ const Wrapper = styled.section`
   }
   a {
     display: block;
-    width: 9rem;
+    /*width: 9rem;*/
     text-align: center;
-    margin: 0 auto;
-    margin-top: 3rem;
+    background: var(--primaryBlack);
+    color: var(--primaryWhite);
+  }
+  a:hover{
+    border-color: var(--primaryWhite);
   }
 `
 export default Projects

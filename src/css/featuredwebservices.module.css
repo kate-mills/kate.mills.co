@@ -1,7 +1,6 @@
 .services {
   color: var(--primaryBlack);
   padding: 4rem 0;
-  background: var(--hoverColor);
 }
 .center {
   width: 80vw;

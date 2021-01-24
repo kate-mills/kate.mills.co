@@ -3,7 +3,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink/Fade'
 import styles from '../../css/navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../../constants/links'
-import logo from '../../../static/logo.svg'
+import logo from '../../../static/logo.png'
 import PhoneNumber from '../PhoneNumber'
 import {useGlobalContext} from '../../context/context'
 

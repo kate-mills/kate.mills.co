@@ -15,7 +15,7 @@ const LoadingGif = () => {
         viewBox="0 0 24 30"
         style={{  margin: "0 auto", width: "100%",enableBackground: "new 0 0 50 50", space: "preserve" }}
       >
-        <rect x="0" y="10" width="4" height="10" fill="#927A5B" opacity="0.2">
+        <rect x="0" y="10" width="4" height="10" fill="var(--primaryColor)" opacity="0.2">
           <animate
             attributeName="opacity"
             attributeType="XML"
@@ -41,7 +41,7 @@ const LoadingGif = () => {
             repeatCount="indefinite"
           />
         </rect>
-        <rect x="8" y="10" width="4" height="10" fill="#927A5B" opacity="0.2">
+        <rect x="8" y="10" width="4" height="10" fill="var(--primaryColor)" opacity="0.2">
           <animate
             attributeName="opacity"
             attributeType="XML"
@@ -67,7 +67,7 @@ const LoadingGif = () => {
             repeatCount="indefinite"
           />
         </rect>
-        <rect x="16" y="10" width="4" height="10" fill="#927A5B" opacity="0.2">
+        <rect x="16" y="10" width="4" height="10" fill="var(--primaryColor)" opacity="0.2">
           <animate
             attributeName="opacity"
             attributeType="XML"
