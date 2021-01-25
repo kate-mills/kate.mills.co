@@ -6,6 +6,7 @@ import links from '../../constants/links'
 import logo from '../../images/logo.png'
 import PhoneNumber from '../PhoneNumber'
 import {useGlobalContext} from '../../context/context'
+import NavSubmenu from './Submenu'
 
 const Navbar = (props) => {
   const {  openSubmenu } = useGlobalContext()
@@ -48,6 +49,8 @@ const Navbar = (props) => {
             <FaAlignRight aria-label="Right align" className={styles.toggleIcon} />
           </button>
         </div>
+        <NavSubmenu/>
+
         <ul
           className={
             isOpen

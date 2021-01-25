@@ -11,7 +11,7 @@ import Survey from '../components/Survey'
 
 export default ({ data }) => (
   <Layout>
-    <SEO />
+    <SEO title="Home"/>
     <StyledHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Web solutions for beauty specialists"
@@ -20,7 +20,9 @@ export default ({ data }) => (
       </Banner>
     </StyledHero>
     <Mission />
-    <FeaturedWebServices />
+    <div className="whiteBg">
+        <FeaturedWebServices />
+    </div>
     <Survey/>
     <section className="footer-btn">
       <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryColor)" colorful/>

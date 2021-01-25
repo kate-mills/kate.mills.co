@@ -29,7 +29,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       </CustomHero>
       <section className={styles.template}>
         <div className="coloredBg section-center">
-          <Title title="Benefits of a" subtitle={singularName}/>
+          <Title title="Benefits of a" subtitle={singularName} subTitleColor="var(--primaryLight)"/>
         <div className={styles.benefitList}>
           <ul data-bullet-list>
             {

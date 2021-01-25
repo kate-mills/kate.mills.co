@@ -6,7 +6,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink/Fade'
 
 const Services = () => {
   return (
-    <section className={styles.services}>
+    <section className={`${styles.services} section-center`}>
       <Title
         title="Featured"
         subtitle="Services"

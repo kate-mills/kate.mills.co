@@ -63,20 +63,17 @@ const Survey = ({ title }) => {
                 fields: { name, votes },
               } = item
               return (
-                <li 
-                  key={id}
-                  onClick={()=> giveVote(id)} onKeyPress={giveVote(id)}
-                  role="button"
-                  tabindex='0'
-                >
-                  <div className="key">
+                <li key={id}>
+                  <div className="key" onClick={()=>giveVote(id)}>
                     {name.toUpperCase().substring(0, 2)}
                   </div>
-                  <div>
+                  <div onClick={()=>giveVote(id)}>
                     <h4>{name}</h4>
                     <p>{votes} votes</p>
                   </div>
-                  <FaVoteYea aria-hidden="true" />
+                  <button aria-label={`Vote for ${name}`}>
+                    <FaVoteYea aria-hidden="true" onClick={() => giveVote(id)} />
+                  </button>
                 </li>
               )
             })}
@@ -127,13 +124,13 @@ const Wrapper = styled.section`
         color: var(--primaryWhite);
         cursor: pointer;
         font-size: 1.5rem;
-        background: var(--primaryGrey);
+        background: var(--primaryColor);
         padding: 0.5rem 1rem;
         border-radius: var(--radius);
       }
       p {
         margin-bottom: 0;
-        color: var(--primaryBlack);
+        color: var(--accentColor);
         letter-spacing: var(--spacing);
         cursor: pointer;
       }
@@ -141,7 +138,7 @@ const Wrapper = styled.section`
         margin-bottom: 0;
         cursor: pointer;
       }
-      svg {
+      button {
         background: transparent;
         border-color: transparent;
         font-size: 2rem;

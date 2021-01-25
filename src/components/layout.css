@@ -16,6 +16,7 @@
   --primaryBlack: var(--color2); /* black */
   --primaryWhite: var(--color8); /* white */
   --primaryGrey: var(--color1);  /* lavendar grey */
+  --accentColor: var(--color6); /* dark grey */
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
@@ -75,7 +76,7 @@ a:hover{
   white-space: pre-line;
 }
 .short-page{  /* 404-page, thankyou-page */
-  background: var(--primaryColor);
+  background: var(--primaryBlack);
   min-height: calc(100vh - 252px);
   display: flex;
   justify-content: center;
@@ -101,6 +102,7 @@ ul[data-bullet-list] {
   line-height: 27px;
   list-style:none;
   margin: 0 20px;
+  padding-bottom: 1rem;
 }
 ul[data-bullet-list] > li p{
   margin: 7.5px auto;
@@ -130,7 +132,9 @@ ul[data-bullet-list] li>*:first-child::before{
   background: var(--primaryWhite) !important;
 }
 .coloredBg{
-  background: var(--primaryLight) !important;
+  background: var(--primaryGrey) !important;
+  width: 70% !important;
+  border-radius: var(--radius);
 }
 
 /* section */
@@ -146,6 +150,7 @@ ul[data-bullet-list] li>*:first-child::before{
 div.border{
   border-bottom: calc(5vh) solid var(--primaryBlack);
 }
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
