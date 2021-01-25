@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
-    titleTemplate: "%s | Ally Digital Solutions",
+    titleTemplate: `%s | Ally Digital Solutions`,
     description: `Web solutions for beauty specialists by industry experts.`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,

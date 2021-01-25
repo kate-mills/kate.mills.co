@@ -2,7 +2,6 @@ import React from 'react'
 import Title from '../Title'
 import styles from '../../css/aboutus.module.css'
 import services from '../../constants/services'
-import Btn from '../Btn'
 
 const AboutUs = () => {
   return (

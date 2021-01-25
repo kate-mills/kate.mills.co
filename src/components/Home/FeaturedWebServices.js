@@ -3,7 +3,6 @@ import Title from '../Title'
 import styles from '../../css/featuredwebservices.module.css'
 import features from '../../constants/featured-web-services'
 import AniLink from 'gatsby-plugin-transition-link/AniLink/Fade'
-import Btn from '../Btn'
 
 const Services = () => {
   return (
