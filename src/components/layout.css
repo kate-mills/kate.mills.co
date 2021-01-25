@@ -1,6 +1,6 @@
 :root {
 
-  --color1: #9e9196;  /* dark grey 1 */
+  --color1: #9e9196;  /* lavendar grey */
   --color2: #373339;   /* black */
   --color3: #fee9dd;   /* cream */
   --color4: #e39c99;   /* pink  */
@@ -9,15 +9,13 @@
   --color7: #e8d4d0;   /* beige */
   --color8: #fdfdfc; /* white */
 
-  --primaryLight: var(--color3);
-  --primaryColor: var(--color5); /* pink */
-  --primaryDark: var(--color5);
-  --primaryBlack: var(--color2);
-  --primaryWhite: var(--color8);
-  --safeColor:  var(--color3);
-  --safestColor: var(--color7);
-  --hoverColor: var(--color3);
-  --mediumGreen: var(--color6);
+  --safestColor: var(--color7);  /* beige */
+  --primaryLight: var(--color3); /* cream */
+  --primaryColor: var(--color5); /* maroon */
+  --primaryDark: var(--color1);  /* lavendar grey */
+  --primaryBlack: var(--color2); /* black */
+  --primaryWhite: var(--color8); /* white */
+  --primaryGrey: var(--color1);  /* lavendar grey */
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
@@ -43,7 +41,8 @@ body {
   opacity: 1; /* Dark Edges */
 }
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: var(--mainSpacing);
+  font-weight: 200 !important;
+  letter-spacing: var(--mainSpacing) !important;
   margin-bottom: 1.25rem;
 }
 section {
@@ -66,12 +65,14 @@ a{
   transition: var(--mainTransition);
 }
 a:hover{
-  color: var(--hoverColor) !important;
+  color: var(--primaryLight) !important;
 }
 .phone{
-  color: var(--black);
-  letter-spacing: 0.15rem !important;
-  padding: 0 0.15rem;
+  color: var(--primaryColor);
+  font-family: var(--mainFont);
+  letter-spacing: 0.20rem !important;
+  padding: 0 0.5rem;
+  white-space: pre-line;
 }
 .short-page{  /* 404-page, thankyou-page */
   background: var(--primaryColor);
@@ -97,7 +98,6 @@ ul[data-bullet-list] {
   display: block;
   font-style: normal;
   font-size: 15px;
-  font-weight: 300;
   line-height: 27px;
   list-style:none;
   margin: 0 20px;
@@ -106,7 +106,6 @@ ul[data-bullet-list] > li p{
   margin: 7.5px auto;
   padding: 0 0 .2rem;
   white-space: pre-line;
-  font-weight: 400;
 }
 ul[data-bullet-list] > li:first-child  p{ 
   padding: .4rem 0 .2rem;
@@ -128,10 +127,10 @@ ul[data-bullet-list] li>*:first-child::before{
   padding: 0;
 }
 .whiteBg {
-  background: var(--primaryWhite);
+  background: var(--primaryWhite) !important;
 }
 .coloredBg{
-  background: var(--hoverColor);
+  background: var(--primaryLight) !important;
 }
 
 /* section */

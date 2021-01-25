@@ -1,6 +1,6 @@
 import React from "react"
+import { BiChart } from "react-icons/bi";
 import {
-  GiKeyboard,
   GiShoppingCart,
 } from "react-icons/gi"
 
@@ -8,7 +8,7 @@ import { RiComputerLine } from "react-icons/ri";
 
 export default [
   {
-    icon: <GiKeyboard className="icon" />,
+    icon: <BiChart className="icon" />,
     title: "blogs",
     path: "blogs",
     text:

@@ -1,7 +1,7 @@
 .services {
   color: var(--primaryBlack);
   padding: 4rem 0;
-  background: var(--primaryLight);
+  background: var(--primaryGrey);
 }
 .center {
   width: 80vw;
@@ -13,17 +13,24 @@
 .service {
   margin: 2rem 0;
   text-align: center;
+  background: var(--safestColor);
 }
 .service span {
-  color: var(--primaryBlack);
-  display: inline-block;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 1rem auto;
   font-size: 6rem;
-  height: 0;
+  border-radius: 10px;
 }
 .service div {
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
   text-transform: uppercase;
+}
+.service p {
+  text-align: left;
+  margin: 0 3rem 1.5rem;
 }
 .service a:hover{
   color: var(--primaryColor) !important;

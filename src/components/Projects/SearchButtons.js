@@ -66,7 +66,6 @@ const Wrapper = styled.div`
   button:hover,
   button.active {
     box-shadow: 0px 1.5px 0 var(--primaryBlack);
-    font-weight: 300;
     color: var(--primaryBlack);
   }
 `

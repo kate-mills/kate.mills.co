@@ -53,7 +53,7 @@
 }
 .submenu-center:hover .subLink:hover{
   cursor: pointer !important;
-  color: var(--hoverColor);
+  color: var(--primaryLight);
   text-decoration: underline;
 }
 .submenu-center svg {

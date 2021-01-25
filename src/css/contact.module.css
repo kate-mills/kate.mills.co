@@ -20,6 +20,11 @@
   margin-bottom: 0.5rem;
   text-transform: capitalize;
 }
+.required {
+  color: var(--primaryDark);
+  font-size: 1.5rem;
+  padding-right: 2px;
+}
 .formControl,
 .submit {
   border: 1px solid var(--primaryBlack);
@@ -30,7 +35,8 @@
   width: 100%;
 }
 .submit {
-  background-color: var(--primaryDark);
+  background-color: var(--primaryColor);
+  outline: none;
   border-color: var(--primaryColor);
   text-transform: uppercase;
   color: var(--primaryWhite);
@@ -46,14 +52,14 @@ textarea:focus{
   color: var(--primaryColor);
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--mainGrey);
-  opacity: 0.7; /* Firefox */
+  color: var(--primaryBlack);
+  opacity: 0.8; /* Firefox */
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: var(--mainGrey);
-  opacity: 0.7;
+  color: var(--primaryBlack);
+  opacity: 0.8;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: var(--mainGrey);
-  opacity: 0.7;
+  color: var(--primaryBlack);
+  opacity: 0.8;
 }

@@ -124,7 +124,7 @@ const Wrapper = styled.section`
         color: var(--primaryWhite);
         cursor: pointer;
         font-size: 1.5rem;
-        background: var(--mediumGreen);
+        background: var(--primaryGrey);
         padding: 0.5rem 1rem;
         border-radius: var(--radius);
       }

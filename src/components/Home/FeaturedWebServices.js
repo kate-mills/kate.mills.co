@@ -11,6 +11,7 @@ const Services = () => {
       <Title
         title="Featured"
         subtitle="Services"
+        subTitleColor="var(--primaryLight)"
       />
       <div className={styles.center}>
         {features.map((item, index) => {
@@ -18,13 +19,10 @@ const Services = () => {
             <article key={index} className={styles.service}>
               <span>{item.icon}</span>
               <AniLink fade to={`/${item.path}/`}><div>{item.title}</div></AniLink>
-              <p>{item.text}</p>
+              <p className={styles.text}>{item.text}</p>
             </article>
           )
         })}
-      </div>
-      <div className={styles.footer}>
-      <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryColor)" colorful/>
       </div>
     </section>
   )

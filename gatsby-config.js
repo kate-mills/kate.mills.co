@@ -9,7 +9,7 @@ module.exports = {
     description: `Web solutions for beauty specialists by industry experts.`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
-    image: `/backgrounds/home-hero.png`,
+    image: `/About.jpeg`,
     url: `https://allydigitalsolutions.com`,
     siteUrl: `https://allydigitalsolutions.com`,
   },

@@ -22,6 +22,9 @@ export default ({ data }) => (
     <Mission />
     <FeaturedWebServices />
     <Survey/>
+    <section className="footer-btn">
+      <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryColor)" colorful/>
+    </section>
   </Layout>
 )
 export const query = graphql`

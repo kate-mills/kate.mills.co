@@ -19,7 +19,9 @@ const portfolio = ({ data }) => {
         img={data.defaultBcg.childImageSharp.fluid}>
         <Banner title="Latest Projects" info="BROWSE THROUGH SOME OF OUR FAVORITES"/>
       </CustomHero>
+    <section className="section">
       <SearchProjects projects = {projects} showSearchBtns />
+    </section>
       <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
     </Layout>
   )

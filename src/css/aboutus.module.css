@@ -25,6 +25,7 @@
   letter-spacing: var(--mainSpacing);
   text-transform: uppercase;
 }
-.buttons{
-  text-align: center;
+.service  p{
+  margin-left: 10%;
+  text-align: left;
 }
