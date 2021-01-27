@@ -42,8 +42,8 @@
   color: var(--primaryWhite);
   transition: var(--mainTransition);
   cursor: pointer;
-  padding: 1rem;
-  width: 70%;
+  padding: .65rem;
+  width: 100%;
 }
 input:focus,
 textarea:focus{
