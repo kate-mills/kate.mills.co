@@ -9,11 +9,11 @@ import SEO from '../components/SEO'
 
 export default ({ data }) => (
   <Layout>
-    <SEO title="About Us" />
+    <SEO title="About Us" description="Websites, Blogs, and Social Media for Spas, Salons, and Beauty Businesses. Home office in Napa Valley."/>
     <CustomHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Digital by industry experts"
-        info="LOCATED IN NAPA VALLEY" >
+        info="HOME OFFICE IN NAPA VALLEY" >
         <Btn to="/portfolio/" text="View our portfolio"/>
       </Banner>
     </CustomHero>
