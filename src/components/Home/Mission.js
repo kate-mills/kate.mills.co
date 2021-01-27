@@ -25,18 +25,18 @@ const Mission = () => {
 
   return (
     <section className={styles.about}>
-          <Title title="our" subtitle="mission" />
+          <Title title="industry" subtitle="experts" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            <Img fluid={fluid} alt="awesome landscape" />
+            <Img fluid={fluid} alt="Profile photo of two developers debugging javascript code." />
           </div>
         </article>
         <article className={styles.aboutInfo}>
           
-          <p className={styles.heading}>We specialize in beauty</p>
+          <p className={styles.heading}>Salons, Spas, and Professionals</p>
           <p>
-            We intend to deliver our clients innovative and effective web solutions that drive brand awareness and bring new clients to their doors.
+            We deliver innovative and effective web solutions that drive brand awareness and bring new clients to your doors.
           </p>
           <p>While always provide exemplary customer service.</p>
           <Btn to="/contact-us/" color colorful text="contact us"/>

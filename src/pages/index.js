@@ -14,8 +14,8 @@ export default ({ data }) => (
     <SEO title="Home"/>
     <StyledHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
-        title="Web solutions for beauty specialists"
-        info="GET WEBSITES CREATED BY INDUSTRY EXPERTS" >
+        title="The beauty industry is Our specialty"
+        info="WEBSITES & SOCIAL MEDIA CREATED BY INDUSTRY EXPERTS" >
         <Btn to="/contact-us/" text="Get A Free Quote" />
       </Banner>
     </StyledHero>
