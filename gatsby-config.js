@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
     titleTemplate: `%s | Ally Digital Solutions`,
-    description: `Web solutions for beauty specialists by industry experts.`,
+    description: `Websites, Blogs, and Social Media for Spas, Salons, Beauty Businesses and, Professionals.`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
     image: `/About.jpeg`,
