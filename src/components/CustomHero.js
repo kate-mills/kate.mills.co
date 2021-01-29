@@ -21,7 +21,7 @@ const CustomHero = ({ img, className, children }) => {
 
 export default styled(CustomHero)`
   align-items: center;
-  background: linear-gradient(45deg, var(--primaryColor), transparent);
+  background: linear-gradient(45deg, var(--primaryBlack), transparent) 99% 0% / cover;
   background-position: ${props => props.position || 'center'};
   background-size: cover;
   display: flex;
