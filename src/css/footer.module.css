@@ -4,9 +4,6 @@
   padding: 1rem;
   margin-top: auto;
   text-align: center;
-  border-top: 1px solid grey;
-  border-radius: 5px;
-  border-bottom: unset;
 }
 .footer > div{
   color: var(--safestColor);
@@ -38,7 +35,6 @@
 .smallFont{
   font-size: calc(13px);
   margin: 0;
-  /*mix-blend-mode: difference;*/
   color: var(--primaryColor);
   padding: 5px 0;
   text-align: center;
