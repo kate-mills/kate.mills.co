@@ -8,6 +8,7 @@
   --color6: #9d9692;   /* dark grey 2*/
   --color7: #e8d4d0;   /* beige */
   --color8: #fdfdfc; /* white */
+  --brightWhite: #fbfafa;
 
   --safestColor: var(--color7);  /* beige */
   --primaryLight: var(--color3); /* cream */
@@ -17,6 +18,7 @@
   --primaryWhite: var(--color8); /* white */
   --primaryGrey: var(--color1);  /* lavendar grey */
   --accentColor: var(--color6); /* dark grey */
+  --brightWhite: var(--primaryWhite);
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;

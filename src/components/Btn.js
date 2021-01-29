@@ -8,14 +8,14 @@ const Btn = ({to, text, color, className}) => {
 
 export default styled(Btn)`
   background-color: ${props => props.color ?
-      props.colorful ? `var(--safestColor)`:`transparent`
+      props.colorful ? `var(--brightWhite)`:`transparent`
       : `transparent`};
   border-width: 3px;
-  border-color: ${props =>  props.color ? `var(--primaryGrey)`: `var(--safestColor)`};
+  border-color: ${props =>  props.color ? `var(--primaryGrey)`: `var(--brightWhite)`};
   border-style: solid;
   color: ${props => props.color ?
       props.colorful ? `var(--primaryColor)`:props.color 
-      : `var(--safestColor)`
+      : `var(--brightWhite)`
       };
   cursor: pointer;
   display: inline-block;
@@ -33,8 +33,8 @@ export default styled(Btn)`
 
     color: ${props => props.color ?
         props.hover ?   props.hover
-        : props.colorful ? `var(--primaryGrey)`: `var(--safestColor)`
-        : `var(--safestColor)`} !important;
+        : props.colorful ? `var(--primaryGrey)`: `var(--brightWhite)`
+        : `var(--brightWhite)`} !important;
 
   }
 `
