@@ -17,12 +17,10 @@ export default ({ data }) => (
         <Btn to="/portfolio/" text="View our portfolio"/>
       </Banner>
     </CustomHero>
-    <section className="section-center">
       <AboutUs />
-    <div className="section-center footer-btn">
-      <Btn to="/contact-us/" text="Get a free quote" colorful color="var(--primaryBlack)"/>
-    </div>
-    </section>
+      <div className="footer-btn">
+      <Btn  to="/contact-us/" text="Get a free quote" colorful color="var(--primaryBlack)"/>
+      </div>
   </Layout>
 )
 export const query = graphql`
