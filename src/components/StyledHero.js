@@ -17,7 +17,7 @@ const StyledHero = ({ img, className, children }) => {
 }
 export default styled(StyledHero)`
   min-height: calc(100vh - 64px);
-  background: linear-gradient(45deg, black, transparent);
+  background: linear-gradient(45deg, var(--primaryColor), transparent);
   background-position: 60% bottom;
   background-size: cover;
   opacity: 1 !important;
