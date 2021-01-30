@@ -11,15 +11,16 @@
   text-transform: uppercase;
   padding: 0 1rem;
   letter-spacing: 3px;
-  white-space: break-spaces;
   width: 95%;
   margin: 2rem auto;
+  white-space: pre-wrap !important;
 }
 .banner p {
-  width: 85%;
+  width: 90%;
   color: var(--brightWhite);
   margin: 0 auto;
   margin-bottom: 2rem;
+  white-space: pre-wrap !important;
 }
 @media screen and (min-width: 768px) {
   .banner{
@@ -32,6 +33,6 @@
     letter-spacing: 6px;
   }
   .banner p {
-    width: 70%;
+    width: 75%;
   }
 }
