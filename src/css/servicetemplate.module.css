@@ -32,6 +32,9 @@ a.url:hover{
   color: var(--primaryColor) !important;
   text-decoration: underline;
 }
+.hide-mobile {
+  display: none;
+}
 @media screen and (min-width: 992px) {
   .desc {
     width: 70vw;
@@ -41,6 +44,9 @@ a.url:hover{
     height: 45%;
   }
   .why-list{ width: 50%; }
+  .hide-mobile {
+    display: inline-block;
+  }
 }
 @media screen and (min-width: 1200px) {
   .center {
@@ -57,4 +63,7 @@ a.url:hover{
     height: 35%;
   }
   .why-list{ width: 30%; }
+  .hide-mobile {
+    display: inline-block;
+  }
 }

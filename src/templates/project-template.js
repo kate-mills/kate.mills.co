@@ -45,8 +45,10 @@ const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
           }
         </div>
         </div>
-        <div className="whiteBg section-center centered">
-          <Btn to={`/${type}/`} text={`View all ${type}`} colorful  color/>
+        <div className="footer-btn">
+          <div  className={styles.hideMobile}>
+            <Btn to={`/${type}/`} text={`View all ${type}`} colorful  color/>
+          </div>
         <Btn to={`/portfolio/`} text={`View all projects`} colorful color/> </div>
         </section>
     </Layout>
