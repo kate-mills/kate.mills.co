@@ -5,7 +5,13 @@
 }
 
 /* Specific to a service type */
+.benefit-container{
+  width: fit-content !important;
+  padding: 1rem 1.5rem 0;
+  white-space: pre-wrap;
+}
 .benefit-list{ margin: 0 auto;  margin-bottom: 6rem; width: fit-content;}
+
 
 
 /* Specific to each individual project */
