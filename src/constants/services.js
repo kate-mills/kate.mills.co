@@ -3,35 +3,32 @@ import {
   GiCompass,
   GiDiamondHard,
   GiBullseye,
-  //GiStabbedNote, GiBank, GiPiggyBank, GiRoundStar,GiBriefcase,
 } from "react-icons/gi"
 
 import { FaRegHandshake } from "react-icons/fa"
 
 export default [
   {
-    icon: <GiCompass className="icon" />,
-    title: "mission",
+    icon: <GiDiamondHard className="icon" />,
+    title: "passion",
     text:
-      " We intend to deliver our clients innovative and effective web solutions that drive brand awareness and bring new clients to their doors.",
+      "We passionately offer web development services for salons, spas, and beauty professionals that enhance daily operations and make their business shine.",
   },
   {
-    icon: <GiDiamondHard className="icon" />,
-    title: "vision",
+    icon: <GiCompass className="icon" />,
+    title: "Growth",
     text:
-      "  Develop beautiful responsive custom digital solutions for salons and spas with exemplary customer service.",
+      "We deliver innovative and effective web solutions that drive brand awareness and bring new clients to your door.",
   },
   {
     icon: <GiBullseye className="icon" />,
-    //icon: <GiStabbedNote className="icon" />,
     title: "results",
     text:
-      " Through our innovative web solutions, we will build and enhance an everlasting bond between you and your customer.",
+      "Through our innovative web solutions, we will build and enhance an everlasting bond between you and your customer.",
   },
-  {
-    icon: <FaRegHandshake className="icon" />,
+  { icon: <FaRegHandshake className="icon" />,
     title: "partnership",
     text:
-      " We value a true partnership with all of our clients and treat your success as necessary as our own.",
+      "We value a true partnership with all of our clients and treat your success as necessary as our own.",
   },
 ]

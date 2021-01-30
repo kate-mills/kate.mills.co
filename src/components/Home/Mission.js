@@ -25,7 +25,7 @@ const Mission = () => {
 
   return (
     <section className={styles.about}>
-          <Title title="industry" subtitle="experts" />
+      <Title title="about" subtitle="us" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
@@ -34,11 +34,11 @@ const Mission = () => {
         </article>
         <article className={styles.aboutInfo}>
           
-          <p className={styles.heading}>Salons, Spas, and Professionals</p>
+          <p className={styles.heading}>Stand out online!</p>
           <p>
-            We deliver innovative and effective web solutions that drive brand awareness and bring new clients to your doors.
+            We passionately offer web development services to small businesses in the beauty industry that bring more clients to your door and drive brand awareness.
           </p>
-          <p>While always provide exemplary customer service.</p>
+          <p>Not just another template, but a site to be proud of, enhances daily operations and will make your business shine.</p>
           <Btn to="/contact-us/" color colorful text="contact us"/>
         </article>
       </div>
