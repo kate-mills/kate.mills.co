@@ -29,12 +29,11 @@ const Submenu = () => {
         <div className={styles.caret}></div>
         <div className={`${styles.submenuCenter} ${styles[columns]}`}>
           {links.map((link, index) => {
-            const { url, icon, label } = link
+            const { url, label } = link
             return (
               <AniLink key={index} to={url} className={styles.subLink}
                 onClick={closeSubmenu}
               >
-                {icon}
                 {label}
               </AniLink>
             )

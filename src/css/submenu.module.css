@@ -1,20 +1,20 @@
 /* links */
 .submenu {
   background: var(--primaryBlack);
-  box-shadow: var(--darkShhadow) !important;
   position: absolute;
   top: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 60%;
+  transform: translateX(-41%) translateY(-5%);
   z-index: 3;
   display: none;
-  padding: 1.2rem;
   border-radius:5px;
-  transition: display 3s ease;
+  padding: .5rem .5rem 1rem;
+  border-top: 2px solid rgb(158 145 150 / 10%);
 }
 .submenu section{
   background: var(--primaryBlack);
-  transition: var(--mainTransition);
+  border-radius: var(--radius);
+  padding-right: 10px;
 }
 .submenu::before {
   content: '';
@@ -31,10 +31,11 @@
 }
 .submenu.show {
   display: block;
+  height: fit-content;
 }
 .submenu-center {
   display: grid;
-  gap: 0.25rem 1rem;
+  gap: 0.5rem 1rem;
 }
 .colTwo {
   grid-template-columns: repeat(1, 1fr);
@@ -43,22 +44,19 @@
   margin-bottom: 1.5rem;
 }
 .submenu-center .subLink {
-  width: 10rem;
+  width: fit-content;
   display: block;
   color: var(--safestColor);
   text-decoration: none;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
+  text-transform: uppercase;
+  margin-left: .5rem;
+  font-size: 0.95rem;
+  letter-spacing: var(--altSpacing);
 }
 .submenu-center:hover .subLink:hover{
   cursor: pointer !important;
   color: var(--primaryLight);
   text-decoration: underline;
-}
-.submenu-center svg {
-  margin-right: 1rem;
-  color: var(--primaryColor);
 }
 .caret {
   display: block;
@@ -66,7 +64,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid var(--primaryColor);
+  border-bottom: 5px solid transparent;
   position: absolute;
   top: 0;
   left: 50%;
