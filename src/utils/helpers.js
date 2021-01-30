@@ -20,9 +20,6 @@ export  const typeFormatter = (str) => {
     if (endsInS){
       formatName = str.slice(0, -1);
     }
-    else if (formatName=== 'e-commerce'){
-      formatName = 'Shopping Cart'
-    }
     else if (formatName==='ecommerce'){
       formatName = 'Shopping Cart'
     }
