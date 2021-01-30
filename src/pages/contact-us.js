@@ -24,7 +24,7 @@ const contact = props => {
     <Layout>
       <SEO title="Contact" snippet={snippet}/>
       <CustomHero position={`center right`} img={props.data.contactBcg.childImageSharp.fluid}>
-        <Banner title="Contact Us" info="dev@allydigitalsolutions.com" />
+        <Banner title="Contact Us"/>
       </CustomHero>
       <Contact />
     </Layout>
