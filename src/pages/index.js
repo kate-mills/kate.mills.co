@@ -14,8 +14,8 @@ export default ({ data }) => (
     <SEO title="Home"/>
     <StyledHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
-        title="Digital by Beauty Industry Specialists"
-        info="WEBSITES - BLOGS - E-COMMERCE - SOCIAL MEDIA" >
+        title="Web Designs by Beauty Industry Specialists"
+        info="E-COMMERCE | SOCIAL MEDIA | WEBSITES | BLOGS" >
         <Btn to="/contact-us/" text="Get A Free Quote" />
       </Banner>
     </StyledHero>
@@ -31,7 +31,7 @@ export default ({ data }) => (
 )
 export const query = graphql`
   query {
-    defaultBg: file(relativePath: { eq: "Hero/6.jpg" }) {
+    defaultBg: file(relativePath: { eq: "Hero/index-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
