@@ -10,7 +10,7 @@ import { FaRegHandshake } from "react-icons/fa"
 export default [
   {
     icon: <GiDiamondHard className="icon" />,
-    title: "passion",
+    title: "Shine",
     text:
       "We passionately offer web development services for salons, spas, and beauty professionals that enhance daily operations and make their business shine.",
   },
@@ -18,13 +18,13 @@ export default [
     icon: <GiCompass className="icon" />,
     title: "Growth",
     text:
-      "We deliver innovative and effective web solutions that drive brand awareness and bring new clients to your door.",
+      "We deliver effective web designs that drive brand awareness and bring new clients to your door.",
   },
   {
     icon: <GiBullseye className="icon" />,
     title: "results",
     text:
-      "Through our innovative web solutions, we will build and enhance an everlasting bond between you and your customer.",
+    "We will build and enhance an everlasting bond between you and your customer through our innovative web solutions.",
   },
   { icon: <FaRegHandshake className="icon" />,
     title: "partnership",
