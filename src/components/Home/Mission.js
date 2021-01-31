@@ -36,7 +36,7 @@ const Mission = () => {
           
           <p className={styles.heading}>Stand out online!</p>
           <p>
-            We passionately offer web development services to small businesses in the beauty industry that bring more clients to your door and drive brand awareness.
+            We offer web development services to small businesses in the beauty industry that bring more clients to your door and drive brand awareness.
           </p>
           <p>Not just another template, but a site to be proud of, enhances daily operations and will make your business shine.</p>
           <Btn to="/contact-us/" color colorful text="contact us"/>
