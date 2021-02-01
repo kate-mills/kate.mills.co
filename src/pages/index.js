@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import StyledHero from '../components/StyledHero'
 import Banner from '../components/Banner'
-import Mission from '../components/Home/Mission'
+import AboutUs from '../components/Home/AboutUs'
 import Btn from '../components/Btn'
 import FeaturedWebServices from '../components/Home/FeaturedWebServices'
 import SEO from '../components/SEO'
@@ -19,7 +19,7 @@ export default ({ data }) => (
         <Btn to="/contact-us/" text="Get A Free Quote" />
       </Banner>
     </StyledHero>
-    <Mission />
+    <AboutUs />
     <div className="whiteBg">
         <FeaturedWebServices />
     </div>

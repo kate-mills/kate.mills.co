@@ -8,8 +8,8 @@ const Services = () => {
   return (
     <section className={`${styles.services} section-center`}>
       <Title
-        title="Featured"
-        subtitle="Services"
+        title="Web"
+        subtitle="Design"
         subTitleColor="var(--primaryLight)"
       />
       <div className={styles.center}>

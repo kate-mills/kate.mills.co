@@ -1,33 +1,32 @@
 import React from "react"
-import {
-  GiCompass,
-  GiDiamondHard,
-  GiBullseye,
-} from "react-icons/gi"
 
+import { GiBullseye, } from "react-icons/gi"
+import {HiOutlineSparkles} from "react-icons/hi"
 import { FaRegHandshake } from "react-icons/fa"
+import { GrGrow } from "react-icons/gr"
+
 
 export default [
   {
-    icon: <GiDiamondHard className="icon" />,
-    title: "Shine",
+    icon: <HiOutlineSparkles className="icon" />,
+    title: "Elevate",
     text:
-      "We passionately offer web development services for salons, spas, and beauty professionals that enhance daily operations and make their business shine.",
+      "Elevate your online presence with specialized web design for the beauty industry.",
   },
   {
-    icon: <GiCompass className="icon" />,
-    title: "Growth",
+    icon: <GrGrow className="icon" />,
+    title: "Grow",
     text:
-      "We deliver effective web designs that drive brand awareness and bring new clients to your door.",
+      "Solutions delivered to drive brand awareness and bring new clients to your door.",
   },
   {
-    icon: <GiBullseye className="icon" />,
-    title: "results",
+    icon:<FaRegHandshake className="icon" />,
+    title: "Bonds",
     text:
-    "We will build and enhance an everlasting bond between you and your customer through our innovative web solutions.",
+    "Build and enhance an everlasting bond between you and your customer via innovative web solutions.",
   },
-  { icon: <FaRegHandshake className="icon" />,
-    title: "partnership",
+  { icon: <GiBullseye className="icon" />,
+    title: "Success",
     text:
       "We value a true partnership with all of our clients and treat your success as necessary as our own.",
   },
