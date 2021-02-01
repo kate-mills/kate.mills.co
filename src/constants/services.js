@@ -5,13 +5,12 @@ import {HiOutlineSparkles} from "react-icons/hi"
 import { FaRegHandshake } from "react-icons/fa"
 import { GrGrow } from "react-icons/gr"
 
-
 export default [
   {
     icon: <HiOutlineSparkles className="icon" />,
-    title: "Elevate",
+    title: "Highlight",
     text:
-      "Elevate your online presence with specialized web design for the beauty industry.",
+      "Highlight your business with a website, store, blog, & more.",
   },
   {
     icon: <GrGrow className="icon" />,

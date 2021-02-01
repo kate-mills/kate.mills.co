@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 import { useGlobalContext } from '../context/context';
 
-import { useStaticQuery, graphql } from 'gatsby'
-
 const CustomHero = ({ img, className, children }) => {
   const { closeSubmenu } = useGlobalContext();
 

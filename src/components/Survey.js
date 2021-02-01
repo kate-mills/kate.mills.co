@@ -64,15 +64,15 @@ const Survey = ({ title }) => {
               } = item
               return (
                 <li key={id}>
-                  <div className="key" onClick={()=>giveVote(id)}>
+                  <div onClick={()=>giveVote(id)} role="button" aria-hidden="true">
                     {name.toUpperCase().substring(0, 2)}
                   </div>
-                  <div onClick={()=>giveVote(id)}>
+                  <div onClick={()=>giveVote(id)} role="button" aria-hidden="true">
                     <h4>{name}</h4>
                     <p>{votes} votes</p>
                   </div>
                   <button aria-label={`Vote for ${name}`}>
-                    <FaVoteYea aria-hidden="true" onClick={() => giveVote(id)} />
+                    <FaVoteYea aria-hidden="true" onClick={() => giveVote(id)} role="button"/>
                   </button>
                 </li>
               )
