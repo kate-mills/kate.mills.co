@@ -12,7 +12,7 @@ const Projects = ({
   showSearchBtns,
 }) => {
   const [projects, setProjects] = React.useState(data)
-  const [title, setTitle] = React.useState('All')
+  const [title, setTitle] = React.useState('Filter')
 
   const setBackToAll = () => { setProjects(data) }
 
