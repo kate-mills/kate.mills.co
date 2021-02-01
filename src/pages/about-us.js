@@ -19,8 +19,8 @@ export default ({ data }) => (
     </CustomHero>
       <Mission />
       <div className="footer-btn">
-      <Btn  to="/contact-us/" text="Get a free quote" colorful color="var(--primaryBlack)"/>
-      </div>
+        <Btn to="/portfolio/" color colorful text="latest projects"/>
+     </div>
   </Layout>
 )
 export const query = graphql`

@@ -39,7 +39,7 @@ const Mission = () => {
             We offer web development services to small businesses in the beauty industry that bring more clients to your door and drive brand awareness.
           </p>
           <p>Not just another template, but a site to be proud of, enhances daily operations and will make your business shine.</p>
-          <Btn to="/portfolio/" color colorful text="latest projects"/>
+          <Btn to="/contact-us/" color colorful text="Free Quote" />
         </article>
       </div>
     </section>
