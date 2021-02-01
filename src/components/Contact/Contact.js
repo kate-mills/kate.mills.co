@@ -6,7 +6,7 @@ const Contact = () => {
   const asterisk = <span className={styles.required}>&lowast;</span>;
   return (
     <section className={styles.contact}>
-      <Title title="get a free" subtitle="quote" />
+      <Title title="free" subtitle="quote" />
       <div className={styles.center}>
         <div className={styles.instructions}>
           <p>Please give us a call at<PhoneNumber/>or contact us via the submission form and we'll get back to you as soon as we can.</p>
