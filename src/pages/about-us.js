@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 
 export default ({ data }) => (
   <Layout>
-    <SEO title="About Us" description="Websites, Blogs, and Social Media for Spas, Salons, and Beauty Businesses. Home office in Napa Valley."/>
+    <SEO title="About Us" description="Home Office in Napa Valley - Highlight your business with a website, web-store, blog, & more."/>
     <CustomHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Digital by industry experts"

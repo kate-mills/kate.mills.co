@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
     titleTemplate: `%s | Ally Digital Solutions`,
-    description: `Websites, Blogs, and Social Media for Spas, Salons, Beauty Businesses and, Professionals.`,
+    description: `Elevate your online presence with specialized web design for the beauty industry.`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
     image: `/About.jpeg`,
@@ -19,11 +19,11 @@ module.exports = {
       options: {
         name: `Ally Digital Solutions`,
         short_name: `Ally`,
-        description: `Web solutions for beauty specialists by industry experts.`,
+        description: `Elevate your online presence with specialized web design for the beauty industry.`,
         lang: `en`,
         start_url: `/`,
-        background_color: `#fee9dd`,
-        theme_color: `#fee9dd`,
+        background_color: `#9e9196`,
+        theme_color: `#9e9196`,
         display: `standalone`,
         icon: `src/images/icon.png`,
         icon_options: {
