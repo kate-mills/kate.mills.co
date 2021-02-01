@@ -64,7 +64,7 @@ const Survey = ({ title }) => {
               } = item
               return (
                 <li key={id}>
-                  <div onClick={()=>giveVote(id)} role="button" aria-hidden="true">
+                  <div className="key" onClick={()=>giveVote(id)} role="button" aria-hidden="true">
                     {name.toUpperCase().substring(0, 2)}
                   </div>
                   <div onClick={()=>giveVote(id)} role="button" aria-hidden="true">
