@@ -121,7 +121,7 @@ const Wrapper = styled.section`
       grid-gap: 0 3rem;
       align-items: center;
       .key {
-        color: var(--primaryWhite);
+        color: var(--primaryBlack);
         cursor: pointer;
         font-size: 1.5rem;
         background: var(--primaryColor);

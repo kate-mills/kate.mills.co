@@ -1,21 +1,20 @@
 @import url("https://use.typekit.net/jrs5cnv.css");
 :root {
-
   --color1: #919299;   /* silver grey */
   --color2: #000000;   /* black */
-  --color3: #efedea;   /* cream */
+  --color3: #eeeae7;   /* cream */
   --color4: #f5e7e9;   /* primary light Pink */
   --color5: #f5e7e9;   /* primary light pink */
   --btnColor: #fa8f83; /*  primary dark  pink */
   --color6: rgba(34,34,34,.4); /* dark grey 2*/
-  --color7: #efedea;   /* beige */
+  --color7: #eeeae7;   /* cream */
   --greenSilver: #9e9b88; /* greenish silver */
   --color8: #ffffff; /* white */
+  --tealGreen: hsl(180deg 33% 72%);
+  --favoriteColor: rgb(255 161 177);
 
-  --teelGreen: #759c9a;
 
-
-  --safestColor: var(--color7);  /* beige */
+  --safestColor: var(--primaryColor); /* gold */
   --primaryLight: var(--color3); /* cream */
   --primaryColor: var(--color5); /* maroon */
   --primaryDark: var(--color1);  /* lavendar grey */
@@ -31,7 +30,7 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
-  --scriptFF: cortado, sans-serif; 
+  --scriptFF: cortado, sans-serif;  /* cursive */
   --mainFF: 'Karla', sans-serif;
   --headFF: 'Montserrat', sans-serif;
   --serifFF: baskerville-urw, serif;
@@ -60,7 +59,7 @@ nav{
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 200 !important;
-  font-family: var(--mainFF);
+  font-family: var(--scriptFF);
   letter-spacing: var(--mainSpacing) !important;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;

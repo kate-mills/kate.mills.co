@@ -1,14 +1,16 @@
 .banner {
   text-align: center;
+  font-family: var(--scriptFF) !important;
   letter-spacing: var(--mainSpacing);
   width: 99vw;
   margin-bottom: 2.5rem;
   background-clip: content-box;
+  background: var(--primaryColor);
 }
 .banner h1 {
-  color: var(--brightWhite);
+  color: var(--primaryBlack);
   font-size: 2.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 0 1rem;
   letter-spacing: 3px;
   width: 95%;
@@ -17,7 +19,7 @@
 }
 .banner p {
   width: 90%;
-  color: var(--brightWhite);
+  color: var(--primaryBlack);
   margin: 0 auto;
   margin-bottom: 2rem;
   white-space: pre-wrap !important;

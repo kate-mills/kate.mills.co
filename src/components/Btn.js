@@ -8,9 +8,9 @@ const Btn = ({to, text, color, className}) => {
 
 export default styled(Btn)`
   background-color: ${props => props.backgroundColor ? props.backgroundColor:`transparent`};
-  background-color: var(--btnColor);
+  background-color: var(--primaryColor);
   border-width: 3px;
-  border-color: ${props =>  props.borderColor ? props.borderColor: `var(--btnColor)`};
+  border-color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryBlack)`};
   border-style: solid;
   color:var(--primaryBlack);
   cursor: pointer;
@@ -28,10 +28,11 @@ export default styled(Btn)`
   font-style: normal;
 
   &:hover{
-    background-color: var(--primaryWhite);
-    color: var(--primaryBlack) !important;
     border-color: var(--primaryBlack);
+    color: var(--primaryBlack) !important;
+    cursor: pointer;
   }
 `
   //font-family: brandon-grotesque, sans-serif;*/
+  //*background-color: var(--primaryWhite); color: var(--primaryBlack) !important;*/
 
