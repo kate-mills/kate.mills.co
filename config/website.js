@@ -1,4 +1,4 @@
-//56071076
+56071076
 
 
 module.exports = {
@@ -14,14 +14,14 @@ module.exports = {
 
   // JSONLD / Manifest
   favicon: 'static/favicon.png', // Used for manifest favicon generation
-  shortName: 'Ally', // shortname for manifest. MUST be shorter than 12 characters
+  shortName: 'allydigital', // shortname for manifest. MUST be shorter than 12 characters
   author: 'kate-mills', // Author for schemaORGJSONLD
   themeColor: '#f5e7e9',
   backgroundColor: '#FFFF',
 
   twitter: '@kateinnapa', // Twitter Username
-  facebook: 'katemillsco', // Facebook Site Name
-  googleAnalyticsID: '',
+  facebook: 'allydigitalsolutions', // Facebook Site Name
+  googleAnalyticsID: 'G-Q9YRM6NEPV',
 
   skipNavId: 'reach-skip-nav', // ID for the "Skip to content" a11y feature
 }
