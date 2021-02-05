@@ -35,8 +35,8 @@
   margin: 0 3rem 1.5rem;
 }
 .service a:hover{
-  color: var(--primaryColor) !important;
-  text-decoration: underline;
+  color: var(--tealGreen) !important;
+  text-decoration: none;
 }
 .footer {
   text-align: center;

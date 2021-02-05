@@ -10,7 +10,7 @@ export default styled(Btn)`
   background-color: ${props => props.backgroundColor ? props.backgroundColor:`transparent`};
   background-color: var(--primaryColor);
   border-width: 3px;
-  border-color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryBlack)`};
+  border-color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryColor)`};
   border-style: solid;
   color:var(--primaryBlack);
   cursor: pointer;
@@ -29,6 +29,7 @@ export default styled(Btn)`
 
   &:hover{
     border-color: var(--primaryBlack);
+    background-color: transparent;
     color: var(--primaryBlack) !important;
     cursor: pointer;
   }

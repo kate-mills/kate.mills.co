@@ -5,7 +5,7 @@
   width: 99vw;
   margin-bottom: 2.5rem;
   background-clip: content-box;
-  background: var(--primaryColor);
+  /*background: var(--primaryColor);*/
 }
 .banner h1 {
   color: var(--primaryBlack);

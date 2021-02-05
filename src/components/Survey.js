@@ -91,6 +91,7 @@ const Wrapper = styled.section`
     margin: .10rem auto;
     margin-bottom: .25rem;
     h3 {
+      font-size: 1.5rem;
       text-align: center;
       color: var(--primaryBlack);
       margin-bottom: 4rem;
@@ -121,12 +122,13 @@ const Wrapper = styled.section`
       grid-gap: 0 3rem;
       align-items: center;
       .key {
+        background: var(--primaryColor);
+        border-radius: var(--radius);
         color: var(--primaryBlack);
         cursor: pointer;
+        font-family: 'baskerville-urw';
         font-size: 1.5rem;
-        background: var(--primaryColor);
         padding: 0.5rem 1rem;
-        border-radius: var(--radius);
       }
       p {
         margin-bottom: 0;
@@ -135,6 +137,7 @@ const Wrapper = styled.section`
         cursor: pointer;
       }
       h4 {
+        font-size: 1.2rem;
         margin-bottom: 0;
         cursor: pointer;
       }

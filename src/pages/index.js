@@ -15,7 +15,7 @@ export default ({ data }) => (
     <StyledHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Web Design for the beauty industry"
-        info="Elevate your online presence with specialized digital solutions." >
+        info="Websites, blogs, e-commerce, and more. Elevate your online presence with specialized digital solutions." >
         <Btn to="/contact-us/" text="Free Quote" />
       </Banner>
     </StyledHero>
