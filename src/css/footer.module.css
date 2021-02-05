@@ -32,9 +32,9 @@
   transform: translateY(-1px);
   color: var(--favoriteColor) !important
 }
-.phone[
+.phone{
   color: var(--primaryWhite);
-]
+}
 .copyright {
   letter-spacing: var(--mainSpacing);
   line-height: 2;
