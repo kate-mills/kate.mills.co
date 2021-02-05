@@ -1,5 +1,8 @@
 /* links */
 .submenu {
+  font-family: var(--navFF);
+  font-weight: 300;
+  font-size: 0.80rem;
   background: var(--primaryBlack);
   position: absolute;
   top: 4rem;
@@ -7,7 +10,7 @@
   transform: translateX(-41%) translateY(-5%);
   z-index: 3;
   display: none;
-  border-radius:5px;
+  border-radius:0;
   padding: .5rem .5rem 1rem;
   border-top: 2px solid rgb(158 145 150 / 10%);
 }
@@ -46,17 +49,16 @@
 .submenu-center .subLink {
   width: fit-content;
   display: block;
-  color: var(--safestColor);
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   margin-left: .5rem;
-  font-size: 0.95rem;
   letter-spacing: var(--altSpacing);
 }
 .submenu-center:hover .subLink:hover{
   cursor: pointer !important;
   color: var(--primaryLight);
-  text-decoration: underline;
+  text-decoration: none;
 }
 .caret {
   display: block;
