@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'gatsby-image'
 import styles from '../../css/project.module.css'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
 const getDefaultImg = graphql` {
     file(relativePath: { eq: "background/Napa.jpeg" }) {
@@ -25,9 +24,9 @@ const Project = ({ project }) => {
     <article className={styles.project}>
       <div className={styles.imgContainer}>
         <Image fluid={mainImage} className={styles.img} alt="single project" />
-        <AniLink fade to={`/${type}/${slug}`} className={styles.link}>
+        <Link to={`/${type}/${slug}`} className={styles.link}>
           details
-        </AniLink>
+        </Link>
       </div>
     </article>
   )

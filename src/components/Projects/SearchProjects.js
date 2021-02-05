@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import styles from '../../css/project.module.css'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import SearchButtons from "./SearchButtons"
+import {Link} from 'gatsby'
 import Title from '../Title'
 
 const Projects = ({
@@ -37,9 +37,9 @@ const Projects = ({
             <article className={styles.project} key={item.id}>
               <div className={styles.imgContainer}>
                 <Image fluid={fluid} className={styles.img} alt="single project" />
-                <AniLink fade to={`/${type}/${slug}`} className={styles.link}>
+                <Link to={`/${type}/${slug}`} className={styles.link}>
                   details
-                </AniLink>
+                </Link>
               </div>
             </article>
           )
