@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+//import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import {Link} from 'gatsby'
 
 const Btn = ({to, text, color, className}) => {
-  return <AniLink fade to={to} className={`${className}`}>{text}</AniLink>
+  return <Link fade to={to} className={`${className}`}>{text}</Link>
 }
 
 export default styled(Btn)`

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useGlobalContext } from '../../context/context'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+//import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import {Link} from 'gatsby'
 import styles from '../../css/submenu.module.css'
 
 const Submenu = () => {
@@ -31,11 +32,11 @@ const Submenu = () => {
           {links.map((link, index) => {
             const { url, label } = link
             return (
-              <AniLink key={index} to={url} className={styles.subLink}
+              <Link key={index} to={url} className={styles.subLink}
                 onClick={closeSubmenu}
               >
                 {label}
-              </AniLink>
+              </Link>
             )
           })}
         </div>
