@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaTwitterSquare, FaInstagram } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 export default [
   {
