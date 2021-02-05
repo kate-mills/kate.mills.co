@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import StyledHero from '../components/StyledHero'
+import PinkHero from '../components/PinkHero'
 import Banner from '../components/Banner'
 import AboutUs from '../components/Home/AboutUs'
 import Btn from '../components/Btn'
@@ -12,13 +12,13 @@ import Survey from '../components/Survey'
 export default ({ data }) => (
   <Layout>
     <SEO/>
-    <StyledHero img={data.defaultBg.childImageSharp.fluid}>
+    <PinkHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Web Design for the beauty industry"
         info="Websites, blogs, e-commerce, and more. Elevate your online presence with specialized digital solutions." >
-        <Btn to="/contact-us/" text="Free Quote" />
+        <Btn to="/contact-us/" text="Free Quote"/>
       </Banner>
-    </StyledHero>
+    </PinkHero>
     <AboutUs />
     <div className="whiteBg">
         <FeaturedWebServices />
@@ -31,7 +31,7 @@ export default ({ data }) => (
 )
 export const query = graphql`
   query {
-    defaultBg: file(relativePath: { eq: "Hero/index-hero.jpg" }) {
+    defaultBg: file(relativePath: { eq: "primary-pink.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
