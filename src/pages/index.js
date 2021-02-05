@@ -11,7 +11,7 @@ import Survey from '../components/Survey'
 
 export default ({ data }) => (
   <Layout>
-    <SEO title="Home"/>
+    <SEO/>
     <StyledHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Web Design for the beauty industry"

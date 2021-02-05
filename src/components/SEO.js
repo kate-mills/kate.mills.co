@@ -26,9 +26,15 @@ const SEO = ({ title, description }) => {
     image,
     twitterUsername,
   } = site.siteMetadata
+  const seo = {}
 
+  if (title) {
+    seo.siteTitle = `${title} | ${siteTitle}`
+  } else {
+    seo.siteTitle = `${siteTitle}`
+  }
   return (
-    <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: 'en' }}>
+    <Helmet title={seo.siteTitle} htmlAttributes={{ lang: 'en' }}>
       <meta name="description" content={description || siteDesc} />
       <meta name="image" content={image} />
 
