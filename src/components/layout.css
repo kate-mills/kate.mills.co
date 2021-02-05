@@ -1,14 +1,18 @@
 :root {
 
-  --color1: #9e9196;  /* lavendar grey */
-  --color2: #373339;   /* black */
-  --color3: #fee9dd;   /* cream */
-  --color4: #e39c99;   /* pink  */
-  --color5: #7a504f;   /* maroon */
-  --color6: #9d9692;   /* dark grey 2*/
-  --color7: #e8d4d0;   /* beige */
-  --color8: #fdfdfc; /* white */
-  --brightWhite: #fbfafa;
+  --color1: #919299;   /* silver grey */
+  --color2: #000000;   /* black */
+  --color3: #efedea;   /* cream */
+  --color4: #f5e7e9;   /* primary light Pink */
+  --color5: #f5e7e9;   /* primary light pink */
+  --btnColor: #fa8f83; /*  primary dark  pink */
+  --color6: rgba(34,34,34,.4); /* dark grey 2*/
+  --color7: #efedea;   /* beige */
+  --greenSilver: #9e9b88; /* greenish silver */
+  --color8: #ffffff; /* white */
+
+  --teelGreen: #759c9a;
+
 
   --safestColor: var(--color7);  /* beige */
   --primaryLight: var(--color3); /* cream */
@@ -25,7 +29,7 @@
   --altSpacing: 0.0620rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainFF: 'Montserrat', sans-serif;
+  --mainFF: 'Karla', sans-serif;
   --radius: 0.25rem;
   --maxWidth: 40rem;
 }
@@ -36,7 +40,7 @@
   padding: 0;
 }
 body {
-  background-color: var(--primaryBlack); /* Dark Edges */
+  background-color: var(--primaryWhite);
   color: var(--primaryBlack);
   font-family: var(--mainFF);
   font-size: 1rem;
@@ -70,10 +74,10 @@ a{
   transition: var(--mainTransition);
 }
 a:hover{
-  color: var(--primaryLight) !important;
+  color: var(--primaryGrey) !important;
 }
 .phone{
-  color: var(--primaryColor);
+  color: var(--primaryBlack);
   font-family: var(--mainFont);
   letter-spacing: 0.20rem !important;
   padding: 0 0.5rem;

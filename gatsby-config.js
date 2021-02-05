@@ -22,8 +22,8 @@ module.exports = {
         description: `Elevate your online presence with specialized web design for the beauty industry.`,
         lang: `en`,
         start_url: `/`,
-        background_color: `#9e9196`,
-        theme_color: `#9e9196`,
+        background_color: `#ffff`,
+        theme_color: `#f5e7e9`,
         display: `standalone`,
         icon: `src/images/icon.png`,
         icon_options: {

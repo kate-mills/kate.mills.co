@@ -11,7 +11,6 @@ import NavSubmenu from './Submenu'
 const Navbar = (props) => {
   const {  openSubmenu } = useGlobalContext()
 
-  const [isCurrentPage, setCurrentPage] = React.useState('/')
   const [isOpen, setIsOpen] = useState()
   const [allowPointerEvents, setAllowPointerEvents] = useState(false)
 
@@ -36,15 +35,14 @@ const Navbar = (props) => {
   }
 
   React.useEffect(()=>{
-    typeof window !== `undefined` && setCurrentPage(document.location.pathname);
     typeof window !==  `undefined` && checkPathname('/portfolio') && setAllowPointerEvents(true);
-  }, [setCurrentPage])
+  }, [])
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <AniLink fade to={`/`}><img width="211" height="40" src={logo} alt="logo" /></AniLink>
+          <AniLink fade to={`/`} className={styles.logo}><img width="211" height="40" src={logo} alt="logo" /></AniLink>
           <button type="button" className={styles.toggleBtn} onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className={styles.toggleIcon} />
           </button>
@@ -63,11 +61,6 @@ const Navbar = (props) => {
               <li key={index}>
                 <AniLink fade to={item.path}
                   onMouseOver={displaySubmenu}
-                  className={
-                    (isCurrentPage === item.path)
-                      ? {allowPointerEvents} ? `${styles.allowPointer}`: `${styles.currentPage}`
-                      : `${styles.notCurrentPage}`
-                  }
                 >
                   {item.page}
                 </AniLink>
