@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../css/footer.module.css'
 import links from '../constants/links'
 import socialIcons from '../constants/social-icons'
-import AniLink from 'gatsby-plugin-transition-link/AniLink/Fade'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Footer = () => {
   return (

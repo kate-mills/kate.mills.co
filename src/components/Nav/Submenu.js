@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useGlobalContext } from '../../context/context'
-import AniLink from 'gatsby-plugin-transition-link/AniLink/Fade'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styles from '../../css/submenu.module.css'
 
 const Submenu = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import AniLink from 'gatsby-plugin-transition-link/AniLink/Fade'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styles from '../../css/navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../../constants/links'
