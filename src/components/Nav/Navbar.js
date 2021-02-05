@@ -12,7 +12,6 @@ const Navbar = (props) => {
   const {  openSubmenu } = useGlobalContext()
 
   const [isOpen, setIsOpen] = useState()
-  const [allowPointerEvents, setAllowPointerEvents] = useState(false)
 
   const toggleNav = () => {
     setIsOpen(isOpen => !isOpen)
@@ -25,18 +24,6 @@ const Navbar = (props) => {
     const bottom = (tempBtn.bottom - 3);             // bottom of anilink - 3px
     openSubmenu(page_name, {center, bottom});
   };
-
-  const checkPathname = (pth) => {
-    let actualPath = document.location.pathname
-    if ( pth === actualPath || pth+'/' === actualPath){
-      return true;
-    }
-    return false;
-  }
-
-  React.useEffect(()=>{
-    typeof window !==  `undefined` && checkPathname('/portfolio') && setAllowPointerEvents(true);
-  }, [])
 
   return (
     <nav className={styles.navbar}>
