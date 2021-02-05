@@ -1,4 +1,5 @@
 .footer {
+  font-family: var(--mainFF);
   background-color: var(--primaryBlack);
   color: var(--safestColor);
   padding: 4rem;
@@ -31,6 +32,9 @@
   transform: translateY(-1px);
   color: var(--favoriteColor) !important
 }
+.phone[
+  color: var(--primaryWhite);
+]
 .copyright {
   letter-spacing: var(--mainSpacing);
   line-height: 2;
