@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
     titleTemplate: `%s | Ally Digital Solutions`,
-    description: `Elevate your online presence with specialized web design for the beauty industry.`,
+    description: `We develop custom websites, blogs, e-commerce, and more. Elevate your online presence with specialized web design for the beauty industry.`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
     image: `/About.jpeg`,
@@ -86,5 +86,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-transition-link`,
   ],
 }
