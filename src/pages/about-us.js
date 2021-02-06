@@ -13,7 +13,7 @@ export default ({ data }) => (
     <CustomHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Digital by industry experts"
-        info="HOME OFFICE IN NAPA VALLEY" >
+        info="Home office in Napa Valley" >
       </Banner>
     </CustomHero>
       <Mission />

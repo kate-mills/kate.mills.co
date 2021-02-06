@@ -32,7 +32,7 @@ const Footer = () => {
           )
         })}
       </div>
-        <p className={styles.phone}>(707) 266- 8106</p>
+        <p className={`phone ${styles.phone}`}>(707) 266- 8106</p>
       <div className={styles.smallFont}>
         Copyright &copy; {new Date().getFullYear()} All
         Rights Reserved

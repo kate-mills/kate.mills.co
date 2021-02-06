@@ -21,33 +21,20 @@
   --primaryGrey: var(--color1);  /* lavendar grey */
   --brightWhite: var(--primaryWhite);
   --accentColor: var(--color6); /* dark grey */
-
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
   --altSpacing: 0.0620rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-
-
-  /* UNUSED  FONTS */
-  /*--lustFancyFF: lust-script, sans-serif;  */
-  /*--lustFF: lust-didone-fine,sans-serif;  */
-  /*--scriptFF: cortado, sans-serif; /* cursive */
-  /* --mainFF:'Montserrat', sans-serif; */
-  /*--mainFF: all-round-gothic, sans-serif;*/
-  /*--navFF: 'Karla', sans-serif;*/
-/*font-family: brandon-grotesque, sans-serif;*/
-  /* END UNUSED  FONTS */
-
+  --radius: 0.25rem;
+  --maxWidth: 40rem;
   /* START FONTS */
   --mainFF: aileron, sans-serif;
   --lustDisplay:lust-display-didone, serif; /* 400 */
   --scriptFF:  shelby, sans-serif;
   --serifFF: baskerville-urw, serif;
+  --pFF:  bree, sans-serif; /* 400 */
   /* END FONTS */
-
-  --radius: 0.25rem;
-  --maxWidth: 40rem;
 }
 * {
   box-sizing: border-box;
@@ -61,7 +48,7 @@ body {
   font-family: var(--serifFF);
   font-size: 1rem;
   line-height: 1.4;
-  opacity: 1; /* Dark Edges */
+  opacity: 1;
 }
 p, div{
   font-family: var(--serifFF);
@@ -74,9 +61,11 @@ nav a {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--scriptFF);
   font-size: 3.2rem;
-  letter-spacing: var(--mainSpacing) !important;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
+}
+h2, h3, h4, h5, h6{
+  letter-spacing: var(--mainSpacing) !important;
 }
 section {
   background: var(--primaryWhite);
@@ -104,7 +93,7 @@ a:hover{
 .phone{
   color: var(--primaryBlack);
   font-family: var(--serifFF);
-  letter-spacing: 0.20rem !important;
+  letter-spacing: 0.1rem !important;
   line-height: .5rem;
   padding: 0 0.5rem;
   white-space: pre-line;

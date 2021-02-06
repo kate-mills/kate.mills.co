@@ -2,7 +2,6 @@
   text-align: center;
   margin: 0 auto;
   text-align: center;
-  letter-spacing: var(--mainSpacing);
   width: 94vw;
   margin-bottom: 2.5rem;
   background-clip: content-box;
@@ -10,17 +9,18 @@
 }
 .banner h1 {
   color: var(--primaryBlack);
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--scriptFF);
   font-size: 3.5rem;
   padding: 0 1rem;
-  letter-spacing: 3px;
   width: 99%;
   margin: 2rem auto;
   white-space: pre-wrap !important;
 }
 .banner p {
-  font-family: var(--mainFF);
+  font-family: var(--pFF);
+  font-size: 1.3rem;
+  font-weight: 300;
   width: 90%;
   color: var(--primaryBlack);
   margin: 0 auto;
@@ -35,7 +35,7 @@
   }
   .banner h1 {
     font-size: 5rem;
-    letter-spacing: 6px;
+    letter-spacing: var(--mainSpacing);
   }
   .banner p {
     width: 75%;
