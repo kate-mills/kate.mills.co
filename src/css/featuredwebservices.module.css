@@ -37,7 +37,7 @@
   margin: 0 3rem 1.5rem;
 }
 .service a:hover{
-  color: var(--accentColor) !important;
+  color: var(--primaryGrey) !important;
   text-decoration: none;
 }
 .footer {

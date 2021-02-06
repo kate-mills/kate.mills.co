@@ -132,7 +132,6 @@ const Wrapper = styled.section`
       }
       p {
         margin-bottom: 0;
-        color: var(--accentColor);
         color: var(--favoriteColor);
         letter-spacing: var(--spacing);
         cursor: pointer;

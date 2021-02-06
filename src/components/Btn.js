@@ -18,7 +18,7 @@ export default styled(Btn)`
   letter-spacing: 0.3rem;
   max-width: 75vw;
   margin: 1rem;
-  padding: .8rem 5rem;
+  padding: .8rem 5.5rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
