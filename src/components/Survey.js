@@ -51,7 +51,7 @@ const Survey = ({ title }) => {
   return (
     <Wrapper className="section">
       <div className="container">
-        <Title title="vote for your" subtitle="favorite"></Title>
+        <Title title="Your" subtitle="vote"></Title>
         <h3>Your favorite social media platform?</h3>
         {loading ? (
           <LoadingGif />
@@ -91,7 +91,7 @@ const Wrapper = styled.section`
     margin: .10rem auto;
     margin-bottom: .25rem;
     h3 {
-      font-size: 1.5rem;
+      font-size: 2.3rem;
       text-align: center;
       color: var(--primaryBlack);
       margin-bottom: 4rem;
@@ -133,11 +133,13 @@ const Wrapper = styled.section`
       p {
         margin-bottom: 0;
         color: var(--accentColor);
+        color: var(--favoriteColor);
         letter-spacing: var(--spacing);
         cursor: pointer;
       }
       h4 {
-        font-size: 1.2rem;
+        font-family: var(--serifFF);
+        font-size: 1.3rem;
         margin-bottom: 0;
         cursor: pointer;
       }

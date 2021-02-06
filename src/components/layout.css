@@ -12,8 +12,6 @@
   --color8: #ffffff; /* white */
   --tealGreen: hsl(180deg 33% 72%);
   --favoriteColor: rgb(255 161 177);
-
-
   --safestColor: var(--primaryColor); /* gold */
   --primaryLight: var(--color3); /* cream */
   --primaryColor: var(--color5); /* maroon */
@@ -30,10 +28,22 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
-  --scriptFF: cortado, sans-serif;  /* cursive */
-  --mainFF:'Montserrat', sans-serif;
+
+  /* UNUSED  FONTS */
+  /*--lustFancyFF: lust-script, sans-serif;  */
+  /*--lustFF: lust-didone-fine,sans-serif;  */
+  /*--scriptFF: cortado, sans-serif; /* cursive */
+  /* --mainFF:'Montserrat', sans-serif; */
+  /* END UNUSED  FONTS */
+
+  /* START FONTS */
+  --mainFF: all-round-gothic, sans-serif;
+  --lustDisplay:lust-display-didone, serif; /* 400 */
+  --scriptFF:  shelby, sans-serif;
   --navFF: 'Karla', sans-serif;
   --serifFF: baskerville-urw, serif;
+  /* END FONTS */
+
   --radius: 0.25rem;
   --maxWidth: 40rem;
 }
@@ -60,8 +70,8 @@ nav a {
   font-size: 0.8rem !important;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 200 !important;
   font-family: var(--scriptFF);
+  font-size: 3.2rem;
   letter-spacing: var(--mainSpacing) !important;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
@@ -91,7 +101,7 @@ a:hover{
 }
 .phone{
   color: var(--primaryBlack);
-  font-family: serif;
+  font-family: var(--serifFF);
   letter-spacing: 0.20rem !important;
   line-height: .5rem;
   padding: 0 0.5rem;
