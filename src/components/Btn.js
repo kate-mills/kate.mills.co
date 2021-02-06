@@ -28,9 +28,9 @@ export default styled(Btn)`
   font-style: normal;
 
   &:hover{
-    border-color: var(--primaryBlack);
+    border-color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryDark)`};
+    color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryDark)`} !important;
     background-color: transparent;
-    color: var(--primaryBlack) !important;
     cursor: pointer;
   }
 `

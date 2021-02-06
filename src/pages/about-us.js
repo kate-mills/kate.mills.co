@@ -14,7 +14,6 @@ export default ({ data }) => (
       <Banner
         title="Digital by industry experts"
         info="HOME OFFICE IN NAPA VALLEY" >
-        <Btn to="/portfolio/" text="View our portfolio"/>
       </Banner>
     </CustomHero>
       <Mission />

@@ -18,12 +18,14 @@ export default styled(Title)`
   margin-top: 0;
   margin-bottom: 1.25rem;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   .title {
+    font-family: var(--lustDisplay);
     color: ${props => props.titleColor || 'var(--primaryBlack)'};
   }
   .subtitle {
+    font-family: var(--lustDisplay);
     color: ${props => props.subTitleColor || 'var(--primaryGrey)'};
   }
   span {
