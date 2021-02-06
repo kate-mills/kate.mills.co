@@ -21,7 +21,7 @@
   text-transform: capitalize;
 }
 .required {
-  color: var(--primaryDark);
+  color: var(--favoriteColor);
   font-size: 1.5rem;
   padding-right: 2px;
 }
@@ -35,15 +35,15 @@
   width: 100%;
 }
 .submit {
-  background-color: var(--primaryColor);
+  background-color: var(--primaryBlack);
   outline: none;
-  border-color: var(--primaryColor);
+  border-color: var(--primaryBlack);
   text-transform: uppercase;
   color: var(--primaryWhite);
   transition: var(--mainTransition);
   cursor: pointer;
-  padding: .65rem;
-  width: 100%;
+  padding: 0.65rem 0.75rem;
+  width: 100% !important;
 }
 input:focus,
 textarea:focus{
@@ -51,7 +51,7 @@ textarea:focus{
 }
 .submit:hover {
   background: transparent;
-  color: var(--primaryColor);
+  color: var(--primaryBlack);
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--primaryBlack);
