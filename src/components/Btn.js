@@ -7,7 +7,6 @@ const Btn = ({to, text, color, className}) => {
 }
 
 export default styled(Btn)`
-  background-color: ${props => props.backgroundColor ? props.backgroundColor:`transparent`};
   background-color: var(--primaryColor);
   border-width: 3px;
   border-color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryColor)`};
@@ -15,17 +14,17 @@ export default styled(Btn)`
   color:var(--primaryBlack);
   cursor: pointer;
   display: ${props => props.display ?  props.display: `inline-block` };
-  letter-spacing: 0.3rem;
-  max-width: 75vw;
-  margin: 1rem;
-  padding: .8rem 5.5rem;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all var(--mainTransition);
-  font-family: var(--mainFF);
+  font-family: var(--pFF);
   font-weight: 700;
   font-style: normal;
+  font-size: 1.3rem;
+  margin: 1rem;
+  max-width: 75vw;
+  padding: .8rem 6rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: all var(--mainTransition);
 
   &:hover{
     border-color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryDark)`};

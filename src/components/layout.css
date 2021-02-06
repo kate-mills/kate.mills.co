@@ -15,10 +15,10 @@
   --safestColor: var(--primaryColor); /* gold */
   --primaryLight: var(--color3); /* cream */
   --primaryColor: var(--color5); /* maroon */
-  --primaryDark: rgb(34 34 34 / 72%);  /* lavendar grey */
+  --primaryDark:  #333;
   --primaryBlack: var(--color2); /* black */
   --primaryWhite: var(--color8); /* white */
-  --primaryGrey: var(--color1);  /* lavendar grey */
+  --primaryGrey: var(--color1);  /* silver grey */
   --brightWhite: var(--primaryWhite);
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
