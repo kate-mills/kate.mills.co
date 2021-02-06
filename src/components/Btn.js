@@ -34,6 +34,3 @@ export default styled(Btn)`
     cursor: pointer;
   }
 `
-  //font-family: brandon-grotesque, sans-serif;*/
-  //*background-color: var(--primaryWhite); color: var(--primaryBlack) !important;*/
-
