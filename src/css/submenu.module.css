@@ -1,6 +1,5 @@
 /* links */
 .submenu {
-  font-family: var(--navFF);
   font-weight: 300;
   font-size: 0.80rem;
   background: var(--primaryBlack);
@@ -16,6 +15,7 @@
 .submenu section{
   background: var(--primaryBlack);
   padding-right: 10px;
+  font-family: var(--mainFF) !important;
 }
 .submenu::before {
   content: '';

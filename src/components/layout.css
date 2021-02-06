@@ -34,13 +34,15 @@
   /*--lustFF: lust-didone-fine,sans-serif;  */
   /*--scriptFF: cortado, sans-serif; /* cursive */
   /* --mainFF:'Montserrat', sans-serif; */
+  /*--mainFF: all-round-gothic, sans-serif;*/
+  /*--navFF: 'Karla', sans-serif;*/
+/*font-family: brandon-grotesque, sans-serif;*/
   /* END UNUSED  FONTS */
 
   /* START FONTS */
-  --mainFF: all-round-gothic, sans-serif;
+  --mainFF: aileron, sans-serif;
   --lustDisplay:lust-display-didone, serif; /* 400 */
   --scriptFF:  shelby, sans-serif;
-  --navFF: 'Karla', sans-serif;
   --serifFF: baskerville-urw, serif;
   /* END FONTS */
 
@@ -65,7 +67,7 @@ p, div{
   font-family: var(--serifFF);
 }
 nav a {
-  font-family: var(--navFF) !important;
+  font-family: var(--mainFF) !important;
   line-height: 1.5rem !important;
   font-size: 0.8rem !important;
 }

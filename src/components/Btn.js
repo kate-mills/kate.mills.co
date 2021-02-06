@@ -23,7 +23,7 @@ export default styled(Btn)`
   text-decoration: none;
   text-transform: uppercase;
   transition: all var(--mainTransition);
-  font-family: aileron, sans-serif;
+  font-family: var(--mainFF);
   font-weight: 700;
   font-style: normal;
 
