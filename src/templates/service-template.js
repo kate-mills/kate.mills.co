@@ -24,7 +24,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       <SEO title={name}/>
       <CustomHero position={`${img_position}`} img={defaultBg.childImageSharp.fluid}>
         <Banner title={name}>
-          <Btn to="/portfolio/" text="View all projects"/>
+          <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)"/>
         </Banner>
       </CustomHero>
       <section className={styles.template}>
