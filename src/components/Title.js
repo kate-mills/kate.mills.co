@@ -21,11 +21,11 @@ export default styled(Title)`
   text-transform: capitalize;
 
   .title {
-    font-family: var(--lustDisplay);
+    font-family: var(--mainFF);;
     color: ${props => props.titleColor || 'var(--primaryBlack)'};
   }
   .subtitle {
-    font-family: var(--lustDisplay);
+    font-family: var(--mainFF);;
     color: ${props => props.subTitleColor || 'var(--primaryGrey)'};
   }
   span {

@@ -9,7 +9,7 @@
 }
 .banner h1 {
   color: var(--primaryBlack);
-  font-weight: 600;
+  font-weight: 400;
   font-family: var(--scriptFF);
   font-size: 3.5rem;
   padding: 0 1rem;

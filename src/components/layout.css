@@ -29,7 +29,9 @@
   --maxWidth: 40rem;
   /* START FONTS */
   --mainFF: aileron, sans-serif;
-  --lustDisplay:lust-display-didone, serif; /* 400 */
+  /*--lustDisplay:lust-display-didone, serif; /* 400 */
+  /*--lustDisplay: itc-benguiat, serif; /* 500 */
+  /*--lustDisplay: aileron, sans-serif;*/
   --scriptFF:  shelby, sans-serif;
   --serifFF: baskerville-urw, serif;
   --pFF:  bree, sans-serif; /* 400 */

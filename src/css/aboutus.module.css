@@ -21,10 +21,10 @@
   margin-bottom: 1.5rem;
 }
 .service div {
-  font-family: var(--scriptFF);
-  font-size: 3rem;
+  font-family: var(--pFF);
+  font-size: 1.1rem;
+  letter-spacing: 0.01rem;
   margin-bottom: 1.25rem;
-  letter-spacing: var(--mainSpacing);
   text-transform: lowercase;
 }
 .service  p{

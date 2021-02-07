@@ -89,12 +89,12 @@ const Wrapper = styled.section`
     width: 90vw;
     max-width: var(--max-width);
     margin: .10rem auto;
-    margin-bottom: .25rem;
     h3 {
-      font-size: 2.3rem;
-      text-align: center;
       color: var(--primaryBlack);
+      font-size: 2.3rem;
+      font-weight: 400;
       margin-bottom: 4rem;
+      text-align: center;
     }
     ul {
       margin-top: 2rem;
@@ -115,6 +115,7 @@ const Wrapper = styled.section`
     li {
       background: var(--primaryWhite);
       border-radius: var(--radius);
+      font-family: var(--serifFF);
       padding: 0.75rem 1rem;
       display: grid;
       grid-template-columns: auto 1fr auto;
@@ -126,21 +127,22 @@ const Wrapper = styled.section`
         border-radius: var(--radius);
         color: var(--primaryBlack);
         cursor: pointer;
-        font-family: 'baskerville-urw';
         font-size: 1.5rem;
         padding: 0.5rem 1rem;
       }
-      p {
-        margin-bottom: 0;
-        color: var(--favoriteColor);
-        letter-spacing: var(--spacing);
+      p, h4 {
         cursor: pointer;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      p {
+        color: var(--favoriteColor);
       }
       h4 {
-        font-family: var(--serifFF);
-        font-size: 1.3rem;
-        margin-bottom: 0;
-        cursor: pointer;
+        font-size: 1.7rem;
+        position: relative;
+        top: 7px;
+        letter-spacing: 2px !important;
       }
       button {
         background: transparent;
