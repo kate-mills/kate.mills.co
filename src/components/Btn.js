@@ -7,29 +7,36 @@ const Btn = ({to, text, color, className}) => {
 }
 
 export default styled(Btn)`
-  background-color: var(--primaryColor);
+  background-color: ${props =>  props.borderColor ? `var(--primaryBlack)`: `var(--primaryColor)`};
   border-width: 3px;
   border-color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryColor)`};
   border-style: solid;
   color:var(--primaryBlack);
+  color: ${props =>  props.borderColor ? `var(--primaryWhite)`: `var(--primaryBlack)`};
   cursor: pointer;
   display: ${props => props.display ?  props.display: `inline-block` };
-  font-family: var(--pFF);
-  font-weight: 700;
+  font-family: var(--mainFF);
+  font-weight: 300;
   font-style: normal;
-  font-size: 1.3rem;
-  margin: 1rem;
+  font-size: 1rem;
   max-width: 75vw;
-  padding: .8rem 6rem;
+  padding: .4rem 3rem;
   text-align: center;
   text-decoration: none;
-  text-transform: lowercase;
+  text-transform: capitalize;
   transition: all var(--mainTransition);
 
   &:hover{
-    border-color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryDark)`};
+    border-color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryBlack)`};
     color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryDark)`} !important;
     background-color: transparent;
     cursor: pointer;
+  }
+  @media(min-width: 768px){
+    font-family: var(--pFF);
+    font-style: normal;
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: .8rem 6rem;
   }
 `

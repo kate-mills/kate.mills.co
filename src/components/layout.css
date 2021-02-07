@@ -27,19 +27,17 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --radius: 0.25rem;
   --maxWidth: 40rem;
+
   /* START FONTS */
-  --mainFF: aileron, sans-serif;
-  /*--lustDisplay:lust-display-didone, serif; /* 400 */
-  /*--lustDisplay: itc-benguiat, serif; /* 500 */
-  /*--lustDisplay: aileron, sans-serif;*/
-  --scriptFF:  shelby, sans-serif;
-  --serifFF: baskerville-urw, serif;
-  --pFF:  bree, sans-serif; /* 400 */
-  /* END FONTS */
+  --pFF:  bree, sans-serif;           /* 300 */
+  --serifFF: baskerville-urw, serif;  /* 400 */
+  --scriptFF:  shelby, sans-serif;    /* 400 */ 
+  --mainFF: aileron, sans-serif;      /* 300,700 */
 }
 * {
   box-sizing: border-box;
   font-family: var(--mainFF);
+  font-weight: 300;
   margin: 0;
   padding: 0;
 }
@@ -48,20 +46,22 @@ body {
   color: var(--primaryBlack);
   font-family: var(--serifFF);
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.4;
   opacity: 1;
 }
 p, div{
   font-family: var(--serifFF);
+  font-weight: 400;
 }
 nav a {
   font-family: var(--mainFF) !important;
-  line-height: 1.5rem !important;
   font-size: 0.8rem !important;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--scriptFF);
   font-size: 3.2rem;
+  font-weight: 400;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
 }
@@ -93,9 +93,9 @@ a:hover{
 }
 .phone{
   color: var(--primaryBlack);
-  font-family: var(--serifFF);
-  letter-spacing: 0.1rem !important;
-  line-height: .5rem;
+  font-family: inherit;
+  letter-spacing: var(--altSpacing) !important;
+  line-height: inherit !important;
   padding: 0 0.5rem;
   white-space: pre-line;
 }
@@ -107,7 +107,6 @@ a:hover{
   align-items: center;
 }
 .footer-btn{
-  font-family: var(--serifFF);
   text-align: center;
   padding-bottom: 3rem;
   background: var(--primaryWhite);
@@ -131,7 +130,8 @@ ul[data-bullet-list] {
 }
 ul[data-bullet-list] > li p{
   margin: 7.5px auto;
-  font-family: var(--serifFF);
+  font-family: var(--pFF);
+  font-weight: 300;
   padding: 0 0 .2rem;
   white-space: pre-line;
 }
@@ -166,6 +166,8 @@ ul[data-bullet-list] li>*:first-child::before{
 /* section */
 .section {
   padding: 5rem 0;
+  font-family: var(--pFF);
+  font-weight: 300;
   position: relative;
 }
 .section-center {
@@ -180,8 +182,5 @@ div.border{
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
-  }
-  .phone{
-    line-height: 1.5rem;
   }
 }

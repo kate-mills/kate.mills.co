@@ -1,5 +1,6 @@
 .footer {
-  font-family: var(--mainFF);
+  font-family: var(--pFF);
+  font-weight: 300;
   background-color: var(--primaryBlack);
   color: var(--safestColor);
   padding: 4rem;
@@ -35,12 +36,12 @@
 .phone{
   color: var(--primaryWhite);
 }
-.copyright {
-  letter-spacing: var(--mainSpacing);
-  line-height: 2;
+.phone:hover{
+  cursor: pointer;
 }
 .smallFont{
-  font-size: calc(13px);
+  font-family: var(--pFF);
+  font-size: 0.85rem;
   margin: 0;
   color: var(--primaryWhite);
   padding: 5px 0;

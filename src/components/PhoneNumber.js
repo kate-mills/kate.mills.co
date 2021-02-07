@@ -4,6 +4,9 @@ import {Telephone} from '../constants/contact-info'
 
 export default (props)=>{
   return(
-    <span className="phone">{Telephone}</span>
+    <a href="tel:707-226-8106" title="Call or Text" className="phone">{Telephone}</a>
   )
 }
+
+
+

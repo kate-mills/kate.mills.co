@@ -16,7 +16,7 @@ export default ({ data }) => (
       <Banner
         title="Web design for the beauty industry."
         info="Websites, blogs, e-commerce, and more. Elevate your online presence with specialized digital solutions." >
-        <Btn to="/contact-us/" text="Free Quote" borderColor="var(--primaryBlack)"/>
+        <Btn to="/contact-us/" text="Contact us" borderColor="var(--primaryBlack)"/>
       </Banner>
     </PinkHero>
     <AboutUs />
