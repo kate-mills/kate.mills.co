@@ -36,7 +36,9 @@ const Mission = () => {
           
           <p className={styles.heading}>About us</p>
           <p>
-            We provide web development services to small businesses in the beauty industry.  Our industry-experienced solutions highlight your business, drive brand awareness and bring more clients to your door.
+            We're an independent web development company located in Napa, California, and cater to small businesses in the beauty industry.
+            Our custom solutions are designed to highlight your business so you stand out in searches, drive brand awareness, so your clients & potential clients recognize you, and bring more clients to your door.
+            We're all about making you look good.
           </p>
           <p>We value a true partnership with all of our clients and treat your success as necessary as our own.
           </p>
