@@ -14,12 +14,12 @@ export default ({ data }) => (
       <Banner
         title="Digital by industry experts"
         info="Home office in Napa Valley" >
-
+        <Btn to="/contact-us/" borderColor="var(--primaryBlack)" text="contact us"/>
       </Banner>
     </CustomHero>
       <Mission />
       <div className="footer-btn">
-        <Btn to="/portfolio/" color colorful text="latest projects"/>
+        <Btn to="/portfolio/" color colorful text="our portfolio"/>
      </div>
   </Layout>
 )

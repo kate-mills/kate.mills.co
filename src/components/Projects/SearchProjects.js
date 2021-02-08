@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import styles from '../../css/project.module.css'
 import SearchButtons from "./SearchButtons"
-import {Link} from 'gatsby'
+import {navigate} from 'gatsby'
 import Title from '../Title'
 
 const Projects = ({
@@ -31,15 +31,16 @@ const Projects = ({
       {showSearchBtns && ( headerAndBtns) }
       <div className="section-center">
         {projects.map(item => {
+          console.log(item)
           const { slug, type } = item.data
           const fluid = item.data.images.localFiles[0].childImageSharp.fluid
           return (
-            <article className={styles.project} key={item.id}>
+            <article className={styles.project} key={item.id} onClick={()=>navigate(`/${type}/${slug}`)} onKeyPress={()=>navigate(`/${type}/${slug}`)} aria-hidden="true">
               <div className={styles.imgContainer}>
                 <Image fluid={fluid} className={styles.img} alt="single project" />
-                <Link to={`/${type}/${slug}`} className={styles.link}>
+                <span className={styles.link}>
                   details
-                </Link>
+                </span>
               </div>
             </article>
           )
