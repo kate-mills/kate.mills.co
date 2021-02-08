@@ -32,7 +32,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 3px solid var(--favoriteColor);
+  border: 3px solid var(--primaryBlack);
   box-sizing: border-box;
   top: -16px;
   left: -16px;
