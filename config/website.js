@@ -1,13 +1,10 @@
-256071076
-
-
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
   title: 'Ally Digital Solutions', // Navigation and Site Title
   titleAlt: 'Ally Digital Solutions', // Title for JSONLD
   description: 'We develop custom websites, blogs, e-commerce, and more. Elevate your online presence with specialized web design for the beauty industry.',
   headline: 'Elevate your online presence with specialized web design for the beauty industry.', // Headline for schema.org JSONLD
-  url: 'https://allydigitalsolutions.com', // Domain of your site. No trailing slash!
+  url: 'https://allydigital.netlify.app', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   logo: '/images/icon.png', // Used for SEO
   ogLanguage: 'en_US', // Facebook Language

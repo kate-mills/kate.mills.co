@@ -31,7 +31,6 @@ const Projects = ({
       {showSearchBtns && ( headerAndBtns) }
       <div className="section-center">
         {projects.map(item => {
-          console.log(item)
           const { slug, type } = item.data
           const fluid = item.data.images.localFiles[0].childImageSharp.fluid
           return (

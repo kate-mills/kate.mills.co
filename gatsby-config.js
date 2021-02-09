@@ -10,8 +10,8 @@ module.exports = {
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
     image: `/About.jpeg`,
-    url: `https://allydigitalsolutions.com`,
-    siteUrl: `https://allydigitalsolutions.com`,
+    url: `https://allydigital.netlify.app`,
+    siteUrl: `https://allydigital.netlify.app`,
   },
   plugins: [
     {
@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://allydigitalsolutions.com',
-        sitemap: 'https://allydigitalsolutions.com/sitemap.xml',
+        host: `https://allydigital.netlify.app`,
+        sitemap: `https://allydigital.netlify.app/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
