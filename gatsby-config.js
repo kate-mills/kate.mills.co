@@ -6,20 +6,20 @@ module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
     titleTemplate: `%s | Ally Digital Solutions`,
-    description: `We develop custom websites, blogs, e-commerce, and more. Elevate your online presence with specialized web design for the beauty industry.`,
+    description: `Web solutions for beauty specialists by industry experts. We develop custom websites, blogs, e-commerce, and more. Elevate your online presence with specialized web design for the beauty industry.`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
     image: `/About.jpeg`,
-    url: `https://allydigital.netlify.app`,
-    siteUrl: `https://allydigital.netlify.app`,
+    url: `https://allydigitalsolutions.com`,
+    siteUrl: `https://allydigitalsolutions.com`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Ally Digital Solutions`,
-        short_name: `Ally`,
-        description: `Elevate your online presence with specialized web design for the beauty industry.`,
+        short_name: `allydigital`,
+        description: `Web solutions for beauty specialists by industry experts. Elevate your online presence with specialized web design for the beauty industry.`,
         lang: `en`,
         start_url: `/`,
         background_color: `#ffff`,
@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: `https://allydigital.netlify.app`,
-        sitemap: `https://allydigital.netlify.app/sitemap.xml`,
+        host: 'https://allydigitalsolutions.com',
+        sitemap: 'https://allydigitalsolutions.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
@@ -86,5 +86,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
   ],
 }
