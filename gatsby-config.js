@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ally Digital Solutions`,
+        name: `%s | Ally Digital Solutions`,
         short_name: `allydigital`,
         description: `Web solutions for beauty specialists by industry experts. Elevate your online presence with specialized web design for the beauty industry.`,
         lang: `en`,
