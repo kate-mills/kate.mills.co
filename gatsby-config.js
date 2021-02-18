@@ -16,7 +16,7 @@ module.exports = {
     organization: {
       name: `Ally Digital Solutions`,
       url: `https://allydigitalsolutions.com`,
-      logo: `https://allydigitalsolutions.com/Ally-Logo.png`,
+      logo: `https://allydigitalsolutions.com/images/logo.jpg`,
     }
   },
   plugins: [
