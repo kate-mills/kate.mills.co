@@ -7,11 +7,17 @@ module.exports = {
     title: `Ally Digital Solutions`,
     titleTemplate: `%s | Ally Digital Solutions`,
     description: `Web solutions for beauty specialists by industry experts. We develop custom websites, blogs, e-commerce, and more. Elevate your online presence with specialized web design for the beauty industry.`,
+    dateModified: `${new Date().toISOString()}`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
-    image: `/About.jpeg`,
+    image: `/DefaultImg.jpg`,
     url: `https://allydigitalsolutions.com`,
     siteUrl: `https://allydigitalsolutions.com`,
+    organization: {
+      name: `Ally Digital Solutions`,
+      url: `https://allydigitalsolutions.com`,
+      logo: `https://allydigitalsolutions.com/Ally-Logo.png`,
+    }
   },
   plugins: [
     {

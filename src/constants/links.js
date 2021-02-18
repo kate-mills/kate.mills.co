@@ -1,27 +1,31 @@
 const sublinks = [
   {
-    page: 'home',
+    page: 'Home',
     path: '/',
+    id: 1,
     links: [],
   },
   {
-    page: 'about us',
+    page: 'About Us',
     path: '/about-us',
+    id: 2,
     links: [],
   },
   {
-    page: 'portfolio',
+    page: 'Portfolio',
     path: '/portfolio/',
+    id: 3,
     links: [
-      { label: 'blogs', url: '/blogs/' },
-      { label: 'websites', url: '/websites/' },
-      { label: 'e-commerce', url: '/e-commerce/' },
-      { label: 'all projects', url: '/portfolio/' },
+      { label: 'Blogs', url: '/blogs/' },
+      { label: 'Websites', url: '/websites/' },
+      { label: 'E-commerce', url: '/e-commerce/' },
+      { label: 'All Projects', url: '/portfolio/' },
     ],
   },
   {
-    page: 'contact us',
+    page: 'Contact Us',
     path: '/contact-us/',
+    id: 4,
     links: [],
   }
 ];
