@@ -26,7 +26,7 @@ export default styled(Title)`
   }
   .subtitle {
     font-family: var(--mainFF);;
-    color: ${props => props.subTitleColor || 'var(--primaryGrey)'};
+    color: ${props => props.subTitleColor || 'var(--primaryDark)'};
   }
   span {
     display: block;

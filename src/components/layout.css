@@ -1,25 +1,13 @@
 @import url("https://use.typekit.net/jrs5cnv.css");
 :root {
-  --color1: #919299;   /* silver grey */
-  --color2: #000000;   /* black */
-  --color3: #eeeae7;   /* cream */
-  --color4: #f5e7e9;   /* primary light Pink */
-  --color5: #f5e7e9;   /* primary light pink */
-  --btnColor: #fa8f83; /*  primary dark  pink */
-  --color6: rgba(34,34,34,.4); /* dark grey 2*/
-  --color7: #eeeae7;   /* cream */
-  --greenSilver: #9e9b88; /* greenish silver */
-  --color8: #ffffff; /* white */
-  --tealGreen: hsl(180deg 33% 72%);
-  --favoriteColor: rgb(255 161 177);
-  --safestColor: var(--primaryColor); /* gold */
-  --primaryLight: var(--color3); /* cream */
-  --primaryColor: var(--color5); /* maroon */
-  --primaryDark:  #333;
-  --primaryBlack: var(--color2); /* black */
-  --primaryWhite: var(--color8); /* white */
-  --primaryGrey: var(--color1);  /* silver grey */
-  --brightWhite: var(--primaryWhite);
+  --favoriteColor: #C7A0A1;
+  --primaryLight: #B99281;
+  --primaryDark: #9F776B;
+  --primaryColor: #F7F3F0;
+  --primaryBlack: #121212;
+  --primaryWhite: #ffffff;
+  --primaryGrey: #E4D9D5;
+
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
   --altSpacing: 0.0620rem;

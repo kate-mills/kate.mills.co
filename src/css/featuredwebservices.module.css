@@ -14,7 +14,7 @@
 .service {
   margin: 2rem 0;
   text-align: center;
-  background: var(--safestColor);
+  background: var(--primaryColor);
   border-radius: var(--radius);
 }
 .service span {

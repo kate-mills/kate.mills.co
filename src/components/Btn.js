@@ -28,7 +28,7 @@ export default styled(Btn)`
 
   &:hover{
     border-color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryBlack)`};
-    color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryDark)`} !important;
+    color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryBlack)`} !important;
     background-color: transparent;
     cursor: pointer;
   }

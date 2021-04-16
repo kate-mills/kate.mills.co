@@ -136,7 +136,7 @@ const Wrapper = styled.section`
         margin-bottom: 0;
       }
       p {
-        color: var(--favoriteColor);
+        color: var(--primaryLight);
       }
       h4 {
         font-size: 1.7rem;
@@ -149,7 +149,7 @@ const Wrapper = styled.section`
         border-color: transparent;
         font-size: 2rem;
         cursor: pointer;
-        color: var(--primaryBlack);
+        color: var(--primaryGrey);
       }
     }
   }
