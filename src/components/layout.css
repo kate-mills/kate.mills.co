@@ -1,5 +1,7 @@
 @import url("https://use.typekit.net/jrs5cnv.css");
 :root {
+  --digitalColor: #7e7b78;
+  --solutionsColor: #c8c6c3;
   --favoriteColor: #C7A0A1;
   --primaryLight: #B99281;
   --primaryDark:  #9F776B;

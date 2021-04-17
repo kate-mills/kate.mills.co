@@ -6,9 +6,9 @@
   position: absolute;
   top: 4rem;
   left: 60%;
-  transform: translateX(-38%) translateY(10%);
+  transform: translateX(-50%) translateY(0%);
   z-index: 3;
-  display: none;
+  display:none; 
   border-radius:0;
   padding: .5rem .5rem 1rem;
 }
@@ -33,14 +33,17 @@
 }
 .submenu-center {
   display: grid;
-  gap: 1.2rem;
+  gap: 1.9rem;
   background: var(--primaryGrey);
 }
 .colTwo {
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 123px);
 }
 .submenu h4 {
   margin-bottom: 1.5rem;
+}
+.submenu-center .subLink:first-child {
+  padding-top: 0.75rem;
 }
 .submenu-center .subLink {
   width: fit-content;
@@ -48,12 +51,12 @@
   color: var(--primaryBlack);
   text-decoration: none;
   text-transform: uppercase;
-  margin-left: .5rem;
+  margin-left: 1.7rem;
   letter-spacing: var(--altSpacing);
 }
 .submenu-center:hover .subLink:hover{
   cursor: pointer !important;
-  color: var(--primaryDark) !important;
+  color: var(--digitalColor) !important;
   text-decoration: none;
 }
 @media screen and (max-width: 991px){

@@ -42,7 +42,10 @@
 .nav-links a.current-page{
   opacity: 1;
   pointer-events: none;
+  background: var(--primaryColor);
+  color: var(--primaryColor) !important;
 }
+
 @media screen and (min-width: 576px) {
   .navbar {
     padding: 0 1rem;
@@ -51,12 +54,12 @@
     padding: .3rem 0;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .toggle-btn {
     display: none;
   }
   .nav-center {
-    align-items: center;
+    align-items: flex-end;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -65,6 +68,23 @@
   .nav-links {
     height: auto;
     display: flex;
+  }
+  .nav-links li{
+    min-width: 150px;
+    text-align: center;
+  }
+  .nav-links li.link{
+    background: unset;
+  }
+  .nav-links a:hover{
+    background: var(--primaryColor);
+    color: var(--primaryBlack) !important;
+  }
+  .nav-links li.active{
+    background: var(--primaryColor);
+  }
+  .nav-links li.active a {
+    color: var(--primaryBlack) !important;
   }
   .logo{
     padding: .3rem 0;

@@ -9,7 +9,7 @@ import {useGlobalContext} from '../../context/context'
 import NavSubmenu from './Submenu'
 
 const Navbar = (props) => {
-  const {  openSubmenu } = useGlobalContext()
+  const {page, isSubmenuOpen, openSubmenu } = useGlobalContext()
 
   const [isOpen, setIsOpen] = useState()
 
@@ -18,6 +18,7 @@ const Navbar = (props) => {
   }
 
   const displaySubmenu = (e)=>{
+    console.log('page', page)
     const page_name = e.target.textContent;           // I get this text
     const tempBtn = e.target.getBoundingClientRect(); // I get object with coordinates
     const center = (tempBtn.left + tempBtn.right)/2; // center of anilink
@@ -35,7 +36,6 @@ const Navbar = (props) => {
           </button>
         </div>
         <NavSubmenu/>
-
         <ul
           className={
             isOpen
@@ -45,7 +45,8 @@ const Navbar = (props) => {
         >
           {links.map((item, index) => {
             return (
-              <li key={index}>
+              <li key={index}
+                className={(isSubmenuOpen&& page.page===item.page)? `${styles.active}`: `${styles.link}`}>
                 <Link to={item.path}
                   onMouseOver={displaySubmenu}
                 >
