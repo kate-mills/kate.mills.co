@@ -115,7 +115,7 @@ const Wrapper = styled.section`
     li {
       background: var(--primaryWhite);
       border-radius: var(--radius);
-      font-family: var(--serifFF);
+      font-family: var(--pFF);
       padding: 0.75rem 1rem;
       display: grid;
       grid-template-columns: auto 1fr auto;
