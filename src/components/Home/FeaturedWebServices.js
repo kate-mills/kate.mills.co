@@ -16,8 +16,10 @@ const Services = () => {
         {features.map((item, index) => {
           return (
             <article key={index} className={styles.service}>
-              <span>{item.icon}</span>
-              <Link to={`/${item.path}/`}><div>{item.title}</div></Link>
+              <span>
+                <Link to={item.path}>{item.title}</Link>
+              </span>
+              <div className={styles.underline}/>
               <p className={styles.text}>{item.text}</p>
             </article>
           )

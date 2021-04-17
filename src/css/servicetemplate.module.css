@@ -28,9 +28,11 @@
 .project a {
   text-decoration: none;
 }
-a.url:hover{
-  color: var(--primaryColor) !important;
+a.url{
   text-decoration: underline;
+  background: var(--primaryColor);
+  white-space:normal;
+  /*padding: 0;*/
 }
 .hide-mobile {
   display: none;

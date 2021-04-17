@@ -1,30 +1,20 @@
-import React from "react"
-import { BiChart } from "react-icons/bi";
-import {
-  GiShoppingCart,
-} from "react-icons/gi"
-
-import { RiComputerLine } from "react-icons/ri";
 
 export default [
   {
-    icon: <BiChart className="icon" />,
-    title: "blogs",
-    path: "blogs",
+    path: "/blogs",
+    title: "Blogs",
     text:
       "Increase your online visibility with a blog.  More content means more opportunities to show up in search engines and drive new visitors to your website.",
   },
   {
-    icon: <GiShoppingCart className="icon" />,
-    path: "e-commerce",
+    path: "/e-commerce",
     title: "e-commerce",
     text:
       "Keep your retail business open 24 hours a day.  An online store makes shopping easier for existing clients and finds new ones that may never enter your physical location.",
   },
   {
-    icon: <RiComputerLine className="icon" />,
-    path: "websites",
-    title: "websites",
+    path: "/websites",
+    title: "Websites",
     text:
       "Grow your business, build credibility, save time, engage with clients, and the list goes on.",
   },

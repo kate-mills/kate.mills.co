@@ -2,7 +2,7 @@
 :root {
   --favoriteColor: #C7A0A1;
   --primaryLight: #B99281;
-  --primaryDark: #9F776B;
+  --primaryDark:  #9F776B;
   --primaryColor: #F7F3F0;
   --primaryBlack: #121212;
   --primaryWhite: #ffffff;
@@ -19,6 +19,7 @@
   /* START FONTS */
   --pFF:  bree, sans-serif;           /* 300 */
   --serifFF: baskerville-urw, serif;  /* 400 */
+  --serifFF: bree, sans-serif;
   --scriptFF:  shelby, sans-serif;    /* 400 */ 
   --mainFF: aileron, sans-serif;      /* 300,700 */
 }
@@ -77,7 +78,7 @@ a{
   transition: var(--mainTransition);
 }
 a:hover{
-  color: var(--primaryGrey) !important;
+  color: var(--primaryDark) !important;
 }
 .phone{
   color: var(--primaryBlack);

@@ -27,7 +27,7 @@ const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
         </CustomHero>
       <section className={styles.template}>
         <p className="centered">
-          <a href={url} className={styles.url}>Go to {name} </a>
+          <a href={url} className={styles.url} target="_blank" rel="noreferrer">Go to {name}</a>
         </p>
         <div className={styles.project}>
         <div className={styles.singleProjectImg}>

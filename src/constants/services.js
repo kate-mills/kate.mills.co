@@ -1,30 +1,28 @@
 import React from "react"
 
-import { GiBullseye, } from "react-icons/gi"
-import {HiOutlineSparkles} from "react-icons/hi"
-import { FaRegHandshake } from "react-icons/fa"
-import { GrGrow } from "react-icons/gr"
+import {GiDandelionFlower, GiSunflower } from "react-icons/gi"
 
 export default [
   {
-    icon: <HiOutlineSparkles className="icon" />,
+    icon: <GiDandelionFlower className="icon" />,
     title: "Highlight",
     text:
       "Highlight your business with a website, store, blog, & more.",
   },
   {
-    icon: <GrGrow className="icon" />,
+    icon: <GiSunflower className="icon" />,
     title: "Grow",
     text:
       "Solutions delivered to drive brand awareness and bring new clients to your door.",
   },
   {
-    icon:<FaRegHandshake className="icon" />,
+    icon: <GiDandelionFlower className="icon" />,
     title: "Bonds",
     text:
     "Build and enhance an everlasting bond between you and your customer via innovative web solutions.",
   },
-  { icon: <GiBullseye className="icon" />,
+  {
+    icon: <GiSunflower className="icon" />,
     title: "Success",
     text:
       "We value a true partnership with all of our clients and treat your success as necessary as our own.",

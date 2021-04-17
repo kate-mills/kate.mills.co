@@ -13,19 +13,18 @@
   text-align: center;
 }
 .service span {
-  background: var(--primaryColor);
   color: var(--primaryBlack);
-  padding: 0.5rem;
   display: inline-block;
   font-size: 3rem;
   margin-bottom: 1.5rem;
+  line-height:0;
 }
 .service div {
   font-family: var(--pFF);
   font-size: 1.1rem;
   letter-spacing: 0.01rem;
   margin-bottom: 1.25rem;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 .service  p{
   margin-left: 10%;
