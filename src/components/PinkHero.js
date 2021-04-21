@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
 import React from 'react'
 import styled from 'styled-components'
 import { useGlobalContext } from '../context/context';
@@ -6,6 +8,7 @@ const PinkHero = ({ img, className, children }) => {
   const { closeSubmenu } = useGlobalContext();
   return (
     <header
+
       onFocus={closeSubmenu}
       onMouseOver={closeSubmenu}
       className={className}
@@ -24,4 +27,3 @@ export default styled(PinkHero)`
   align-items: center;
   transition: var(--mainTranistion);
 `
-
