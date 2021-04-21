@@ -12,11 +12,10 @@ const Banner = ({ title, info, children, className}) => {
   )
 }
 
-
 const slideInLeft = keyframes`
   0%{
     opacity: 0;
-    transform: translateX(-800px);
+    transform: translateX(-400px);
   }
   80%{
     transform: translateX(20px);
@@ -29,7 +28,7 @@ const slideInLeft = keyframes`
 const slideInRight = keyframes`
   0%{
     opacity: 0;
-    transform: translateX(800px);
+    transform: translateX(400px);
   }
   70%{
     transform: translateX(-20px);
@@ -42,7 +41,7 @@ const slideInRight = keyframes`
 const slideInBtn = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(200px);
   }
   100%{
     opacity: 1;
