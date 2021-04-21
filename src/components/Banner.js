@@ -70,7 +70,7 @@ export default styled(Banner)`
     backface-visibility: hidden; /* shaky animation hack */
     font-size: 3.5rem;
     letter-spacing: var(--altSpacing);
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 0 1rem;
   }
   & .paragraph{
