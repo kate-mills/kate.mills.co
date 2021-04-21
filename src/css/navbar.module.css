@@ -51,6 +51,7 @@
     padding: 0 1rem;
   }
   .logo{
+    max-height: 50px;
     padding: .3rem 0;
   }
 }

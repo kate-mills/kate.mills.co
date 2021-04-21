@@ -18,7 +18,6 @@ const Navbar = (props) => {
   }
 
   const displaySubmenu = (e)=>{
-    console.log('page', page)
     const page_name = e.target.textContent;           // I get this text
     const tempBtn = e.target.getBoundingClientRect(); // I get object with coordinates
     const center = (tempBtn.left + tempBtn.right)/2; // center of anilink
