@@ -59,7 +59,7 @@
   color: var(--digitalColor) !important;
   text-decoration: none;
 }
-@media screen and (max-width: 991px){
+@media screen and (max-width: 1199px){
   .submenu{
     display: none !important;
   }
