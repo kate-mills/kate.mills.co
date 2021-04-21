@@ -5,8 +5,10 @@ import styled, {keyframes} from 'styled-components'
 const Banner = ({ title, info, children, className}) => {
   return (
     <div className={className}>
-      <h1 className="title">{title}</h1>
-      <p className="paragraph">{info}</p>
+      <h1>
+        <span className="title">{title}</span>
+        <span className="paragraph">{info}</span>
+      </h1>
       {children}
     </div>
   )
@@ -61,38 +63,43 @@ export default styled(Banner)`
   }
   & * {
     color: var(--primaryBlack);
+    font-family: var(--mainFF) !important;
+    font-weight: 400;
     white-space: pre-wrap !important;
+    margin: 0 auto;
     max-width: 90%;
+    text-align: center;
+  }
+  & h1{
+    margin-bottom: 1.5rem;
   }
   & .title{
-    animation: ${slideInLeft} 2s ease-out;
+    animation: ${slideInLeft} 1.5s ease-out;
     animation-fill-mode: backwards;
     backface-visibility: hidden; /* shaky animation hack */
-    font-size: 3.5rem;
+    display: block;
+    font-size: 2.3rem;
     letter-spacing: var(--altSpacing);
-    margin: 1rem auto;
     padding: 0 1rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
   }
   & .paragraph{
-    animation: ${slideInRight} 2s ease-out;
+    animation: ${slideInRight} 1.5s ease-out;
     animation-fill-mode: backwards;
     backface-visibility: hidden; /* shaky animation hack */
-    font-size: 1.3rem;
-    font-weight: 300;
-    margin: 0 auto 2rem;
+    display: block;
+    font-size: 1.5rem;
   }
   & a{
     backface-visibility: hidden; /* shaky animation hack */
-    animation: ${slideInBtn} .5s ease-out 1.5s;
+    animation: ${slideInBtn} .5s ease-out 1s;
     animation-fill-mode: backwards;
     background-color: var(--primaryBlack);
     border: 3px solid var(--primaryBlack);
     color: var(--primaryWhite);
     display: inline-block;
-    font-family: var(--mainFF);
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
+    font-size: 1.3rem;
     max-width: 75vw;
     padding: .4rem 3rem;
     text-align: center;
@@ -111,10 +118,11 @@ export default styled(Banner)`
       width: 60vw;
     }
     & .title{
-      font-size: 5rem;
+      font-size: 3rem;
       letter-spacing: var(--mainSpacing);
     }
     & .paragraph{
+      font-size: 2rem;
       max-width: 75%;
     }
   }

@@ -15,7 +15,7 @@ export default ({ data }) => (
     <PinkHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
         title="Web design for the beauty industry."
-        info="Websites, blogs, e-commerce, and more. Elevate your online presence with specialized digital solutions." >
+        info="Elevate your online presence with specialized digital solutions." >
         <Btn to="/contact-us/" text="Contact us" borderColor="var(--primaryBlack)"/>
       </Banner>
     </PinkHero>
@@ -31,7 +31,7 @@ export default ({ data }) => (
 )
 export const query = graphql`
   query {
-    defaultBg: file(relativePath: { eq: "primary-pink.png" }) {
+    defaultBg: file(relativePath: { eq: "candles.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

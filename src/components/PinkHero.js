@@ -2,31 +2,30 @@
 
 import React from 'react'
 import styled from 'styled-components'
+import BackgroundImage from 'gatsby-background-image'
 import { useGlobalContext } from '../context/context';
+
 
 
 const PinkHero = ({ img, className, children }) => {
   const { closeSubmenu } = useGlobalContext();
   return (
-    <header
-
+    <BackgroundImage
       onFocus={closeSubmenu}
       onMouseOver={closeSubmenu}
       className={className}
-      fluid={img}
-    >
-
+      fluid={img}>
       {children}
-    </header>
+    </BackgroundImage>
   )
 }
 export default styled(PinkHero)`
-  min-height: calc(100vh - 64px);
-  width: 100vw;
-  background-color: var(--primaryColor);
-  opacity: 1 !important;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(247 243 240 / 75%), rgb(247 243 240 / 72%)) 90% 0% / cover;
+  background-position: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: calc(100vh - 64px);
+  opacity: 1 !important;
   transition: var(--mainTranistion);
 `
