@@ -4,6 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useGlobalContext } from '../context/context';
 
+
 const PinkHero = ({ img, className, children }) => {
   const { closeSubmenu } = useGlobalContext();
   return (
@@ -13,7 +14,9 @@ const PinkHero = ({ img, className, children }) => {
       onMouseOver={closeSubmenu}
       className={className}
       fluid={img}
-    >{children}
+    >
+
+      {children}
     </header>
   )
 }
