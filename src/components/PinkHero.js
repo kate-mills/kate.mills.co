@@ -20,12 +20,16 @@ const PinkHero = ({ img, className, children }) => {
   )
 }
 export default styled(PinkHero)`
-  align-items: center;
+  align-items: baseline;
   background: linear-gradient(45deg, rgb(247 243 240 / 75%), rgb(247 243 240 / 72%)) 90% 0% / cover;
-  background-position: cover;
+  background-position: top;
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 76px);
   opacity: 1 !important;
   transition: var(--mainTranistion);
+
+  @media(min-width:500px){
+    align-items: center;
+  }
 `

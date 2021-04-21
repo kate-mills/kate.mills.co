@@ -56,7 +56,7 @@ export default styled(Banner)`
   &{
     border: 0;
     color: var(--primaryBlack);
-    margin: 0 auto 2.5rem;
+    margin: 1rem auto 2.5rem;
     padding: 0 1rem;
     text-align: center;
     width 94vw;
