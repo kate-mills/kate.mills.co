@@ -83,7 +83,7 @@ export const getProject = graphql`
         }
       }
     }
-    defaultBg: file(relativePath: { eq: "bgcandles.jpg" }) {
+    defaultBg: file(relativePath: { eq: "hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

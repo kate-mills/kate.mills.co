@@ -63,7 +63,7 @@ export default styled(Banner)`
   }
   & * {
     color: var(--primaryBlack);
-    font-family: var(--mainFF) !important;
+    font-family: var(--pFF) !important;
     font-weight: 400;
     white-space: pre-wrap !important;
     margin: 0 auto;
@@ -74,7 +74,7 @@ export default styled(Banner)`
     margin-bottom: 1.5rem;
   }
   & .title{
-    animation: ${slideInLeft} 1.5s ease-out;
+    animation: ${slideInLeft} 1.25s ease-out;
     animation-fill-mode: backwards;
     backface-visibility: hidden; /* shaky animation hack */
     display: block;
@@ -85,7 +85,7 @@ export default styled(Banner)`
     text-transform: uppercase;
   }
   & .paragraph{
-    animation: ${slideInRight} 1.5s ease-out;
+    animation: ${slideInRight} 1.25s ease-out;
     animation-fill-mode: backwards;
     backface-visibility: hidden; /* shaky animation hack */
     display: block;
@@ -93,7 +93,7 @@ export default styled(Banner)`
   }
   & a{
     backface-visibility: hidden; /* shaky animation hack */
-    animation: ${slideInBtn} .5s ease-out 1s;
+    animation: ${slideInBtn} .5s ease-out .5s;
     animation-fill-mode: backwards;
     background-color: var(--primaryBlack);
     border: 3px solid var(--primaryBlack);
