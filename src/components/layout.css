@@ -87,7 +87,7 @@ a:hover{
   white-space: pre-line;
 }
 .short-page{  /* 404-page, thankyou-page */
-  background: var(--primaryBlack);
+  background: var(--primaryColor);
   min-height: calc(100vh - 252px);
   display: flex;
   justify-content: center;
