@@ -28,6 +28,7 @@ export default styled(PinkHero)`
   min-height: calc(100vh - 76px);
   opacity: 1 !important;
   transition: var(--mainTranistion);
+  width: 100%;
 
   @media(min-width:500px){
     align-items: center;

@@ -28,4 +28,5 @@ export default styled(CustomHero)`
   min-height: 50vh;
   opacity: 1 !important;
   transition: var(--mainTransition);
+  width: 100%;
 `

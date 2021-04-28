@@ -10,7 +10,10 @@ const AboutUs = () => {
       <div className={styles.center}>
         {services.map((item, index) => {
           return (
-            <article key={index} className={styles.service}>
+            <article key={index} className={styles.service}
+              data-sal="zoom-in"
+              data-sal-easing="ease"
+              data-sal-duration="500">
               <span className={styles.icon}>{item.icon}</span>
               <div>{item.title}</div>
               <p>{item.text}</p>

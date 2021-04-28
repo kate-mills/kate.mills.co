@@ -19,11 +19,12 @@ export default ({ data }) => (
         <Btn to="/contact-us/" text="Contact us" borderColor="var(--primaryBlack)"/>
       </Banner>
     </PinkHero>
-    <AboutUs />
-    <div className="whiteBg">
-        <FeaturedWebServices />
-    </div>
-    <Survey/>
+    <AboutUs/> 
+    <FeaturedWebServices 
+      data-sal="zoom-out"
+      data-sal-easing="ease-out"
+      data-sal-duration="500"/>
+    <Survey />
     <section className="footer-btn">
       <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryColor)" colorful/>
     </section>

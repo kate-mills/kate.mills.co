@@ -1,80 +1,44 @@
 import React from 'react'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
 
 const Banner = ({ title, info, children, className}) => {
   return (
-    <div className={className}>
+    <div className={className}
+      data-sal="zoom-in"
+      data-sal-easing="ease"
+      data-sal-duration="500"
+    >
       <h1>
         <span className="title">{title}</span>
         <span className="paragraph">{info}</span>
       </h1>
-      {children}
+      <div>
+        {children}
+      </div>
     </div>
   )
 }
 
-const slideInLeft = keyframes`
-  0%{
-    opacity: 0;
-    transform: translateX(-400px);
-  }
-  80%{
-    transform: translateX(20px);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0);
-  }
-`
-const slideInRight = keyframes`
-  0%{
-    opacity: 0;
-    transform: translateX(400px);
-  }
-  70%{
-    transform: translateX(-20px);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0);
-  }
-`
-const slideInBtn = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0);
-  }
-`
-
-
 export default styled(Banner)`
   &{
+    color: var(--primaryBlack);
     border: 0;
     color: var(--primaryBlack);
-    margin: 1rem auto 2.5rem;
-    padding: 0 1rem;
-    text-align: center;
-    width 94vw;
+    width: 80%;
   }
   & * {
-    color: var(--primaryBlack);
-    font-family: var(--pFF) !important;
+    font-family: var(--pFF);
     font-weight: 400;
-    white-space: pre-wrap !important;
+  }
+  &  .title{
     margin: 0 auto;
-    max-width: 90%;
+    margin-bottom: 2rem;
+    display: block;
     text-align: center;
+    white-space: pre-wrap;
   }
-  & h1{
-    margin-bottom: 1.5rem;
-  }
-  & .title{
-    animation: ${slideInLeft} 1.25s ease-out;
+  &  .title{
     animation-fill-mode: backwards;
     backface-visibility: hidden; /* shaky animation hack */
     display: block;
@@ -83,39 +47,42 @@ export default styled(Banner)`
     padding: 0 1rem;
     margin: 1rem auto;
     text-transform: uppercase;
+    text-align: center;
   }
   & .paragraph{
-    animation: ${slideInRight} 1.25s ease-out;
     animation-fill-mode: backwards;
     backface-visibility: hidden; /* shaky animation hack */
     display: block;
     font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
   }
   & a{
-    backface-visibility: hidden; /* shaky animation hack */
-    animation: ${slideInBtn} .5s ease-out .5s;
+    align-items: center;
     animation-fill-mode: backwards;
+    backface-visibility: hidden; /* shaky animation hack */
     background-color: var(--primaryBlack);
     border: 3px solid var(--primaryBlack);
     color: var(--primaryWhite);
-    display: inline-block;
-    font-size: 1.3rem;
-    max-width: 75vw;
-    padding: .4rem 3rem;
-    text-align: center;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    margin: 5rem auto;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all var(--mainTransition);
+    width: fit-content;
+
     &:hover{
       background-color: transparent;
       color: var(--primaryBlack) !important;
     }
   }
-
   @media (min-width: 768px){
     &{
       padding: 2rem 0;
-      width: 60vw;
+    }
+    & a{
+      font-size: 1rem;
     }
     & .title{
       font-size: 3rem;
@@ -123,7 +90,6 @@ export default styled(Banner)`
     }
     & .paragraph{
       font-size: 2rem;
-      max-width: 75%;
     }
   }
 `

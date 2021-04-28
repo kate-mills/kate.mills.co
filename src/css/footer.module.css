@@ -5,6 +5,7 @@
   padding: 4rem;
   margin-top: auto;
   text-align: center;
+  width: 100%;
 }
 .footer > div{
   color: var(--primaryWhite);

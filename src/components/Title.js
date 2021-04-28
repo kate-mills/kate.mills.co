@@ -3,7 +3,10 @@ import styled from 'styled-components'
 
 const Title = ({ title, subtitle, className}) => {
   return (
-    <div className={className}>
+    <div className={className}
+      data-sal="zoom-in"
+      data-sal-easing="ease"
+      data-sal-duration="500">
       <p className="heading">
         <span className="title">{title}</span>
         <span className="subtitle">{subtitle}</span>

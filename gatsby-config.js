@@ -102,5 +102,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-scroll-reveal`,
   ],
 }

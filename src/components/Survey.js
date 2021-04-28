@@ -49,9 +49,12 @@ const Survey = ({ title }) => {
   }, [])
 
   return (
-    <Wrapper className="section">
+    <Wrapper className="section"
+      data-sal="zoom-in"
+      data-sal-easing="ease"
+      data-sal-duration="500">
       <div className="container">
-        <Title title="Your" subtitle="vote"></Title>
+        <Title title="Your" subtitle="vote" />
         <h3>Your favorite social media platform?</h3>
         {loading ? (
           <LoadingGif />
@@ -85,15 +88,19 @@ const Survey = ({ title }) => {
 }
 
 const Wrapper = styled.section`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
   .container {
-    width: 90vw;
-    max-width: var(--max-width);
     margin: .10rem auto;
     h3 {
       color: var(--primaryBlack);
       font-size: 2.3rem;
       font-weight: 400;
       margin-bottom: 4rem;
+      width: 100%;
       text-align: center;
     }
     ul {
