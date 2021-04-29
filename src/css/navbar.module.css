@@ -22,6 +22,7 @@
 }
 .nav-links {
   list-style-type: none;
+  margin: 0 auto;
   height: 0;
   overflow: hidden;
   transition: var(--mainTransition);
@@ -79,7 +80,7 @@
     background: unset;
   }
   .nav-links a:hover{
-    background: var(--primaryColor);
+    background: var(--solutionsColor);
     color: var(--primaryBlack) !important;
   }
   .nav-links li.active{
