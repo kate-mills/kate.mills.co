@@ -49,10 +49,7 @@ const Survey = ({ title }) => {
   }, [])
 
   return (
-    <Wrapper className="section"
-      data-sal="zoom-in"
-      data-sal-easing="ease"
-      data-sal-duration="300">
+    <Wrapper className="section">
       <div className="container">
         <Title title="Your" subtitle="vote"></Title>
         <h3>Your favorite social media platform?</h3>
@@ -88,7 +85,10 @@ const Survey = ({ title }) => {
 }
 
 const Wrapper = styled.section`
-  padding-top: 2rem;
+  &{
+    padding-top: 2rem;
+    margin-top: 0;
+  }
   .container {
     width: 90vw;
     max-width: var(--max-width);
