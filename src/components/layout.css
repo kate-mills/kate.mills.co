@@ -37,14 +37,6 @@ body {
   line-height: 1.4;
   opacity: 1;
 }
-#main{
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 p, div{
   font-family: var(--pFF);
   font-weight: 400;
