@@ -18,7 +18,7 @@ const sublinks = [
     links: [
       { label: 'Blogs', url: '/blogs/' },
       { label: 'Websites', url: '/websites/' },
-      { label: 'E-commerce', url: '/e-commerce/' },
+      { label: 'E-commerce', url: '/ecommerce/' },
       { label: 'All Projects', url: '/portfolio/' },
     ],
   },
