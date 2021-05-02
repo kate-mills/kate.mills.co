@@ -22,7 +22,7 @@ const snippet = `{
 const contact = props => {
   return (
     <Layout>
-      <SEO title="Contact" snippet={snippet}/>
+      <SEO title="Contact" snippet={snippet} description={'Contact a local Napa web designer specializing in websites, blogs, eCommerce, and social media for estheticians, beauticians, salons, spas & beauty companies.'}/>
       <CustomHero position={`center right`} img={props.data.contactBcg.childImageSharp.fluid}>
         <Banner title="Contact Us"/>
       </CustomHero>
