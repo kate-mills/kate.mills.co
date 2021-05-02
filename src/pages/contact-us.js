@@ -10,7 +10,7 @@ import SEO from '../components/SEO'
 const snippet = `{
     "@context": "https://schema.org",
     "@type": "Organization",
-    "url": "https://allydigital.netlify.app",
+    "url": "https://allydigitalsolutions.com",
     "name": "Ally Digital Solutions",
     "contactPoint": {
       "@type": "ContactPoint",
