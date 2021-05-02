@@ -21,7 +21,9 @@ const PinkHero = ({ img, className, children }) => {
 }
 export default styled(PinkHero)`
   align-items: baseline;
-  background: linear-gradient(45deg, rgb(247 243 240 / 75%), rgb(247 243 240 / 72%)) 90% 0% / cover;
+  background: linear-gradient(
+45deg
+, rgb(255 255 255 / 75%), rgb(229 228 227 / 95%)) 50% 0% / cover;
   background-position: top;
   display: flex;
   justify-content: center;
