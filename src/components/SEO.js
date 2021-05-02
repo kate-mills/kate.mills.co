@@ -80,7 +80,7 @@ const SEO = ({ title, description, image, article, snippet, keywords}) => {
       defaultTitle={'Ally Digital Solutions'}
       pageTitle={seo.title}
       description={seo.description}
-      url={seo.url}
+      url={siteUrl}
       image={seo.image}
       dateModified={dateModified}
       organization={organization}
