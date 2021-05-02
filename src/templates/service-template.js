@@ -14,14 +14,16 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   const {
     name,
     why,
+    meta_desc,
     img_position,
   } = service.nodes[0].data
   const why_list = why.split('.').filter((item)=>item.length > 0)
   const singularName = typeFormatter(name);
+  console.log('meta_desc', meta_desc)
 
   return (
     <Layout>
-      <SEO title={name}/>
+      <SEO title={name} description={meta_desc}/>
       <CustomHero position={`${img_position}`} img={defaultBg.childImageSharp.fluid}>
         <Banner title={name}>
           <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)"/>
@@ -61,6 +63,7 @@ export const getService = graphql`
           starting_price
           featured
           slug
+          meta_desc
         }
       }
     }

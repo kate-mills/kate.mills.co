@@ -105,3 +105,6 @@ module.exports = {
     `gatsby-plugin-scroll-reveal`,
   ],
 }
+
+
+// https://developers.google.com/search/docs/guides/search-gallery
