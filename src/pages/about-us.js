@@ -9,17 +9,16 @@ import SEO from '../components/SEO'
 
 export default ({ data }) => (
   <Layout>
-    <SEO title="About Us" description="Home Office in Napa Valley - Highlight your business with a website, web-store, blog, & more."/>
+    <SEO title="About Us" description="Set yourself apart with a custom website built by a local Napa Valley web designer specializing in beauty website design and social media for estheticians, beauticians, salons, spas & beauty companies."/>
     <CustomHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
-        title="Digital by industry experts"
-        info="Home office in Napa Valley" >
-        <Btn to="/contact-us/" borderColor="var(--primaryBlack)" text="contact us"/>
+        title="Meet Kate Mills"
+        info="Web developer in Napa Valley" >
       </Banner>
     </CustomHero>
       <AboutKate />
       <div className="footer-btn">
-        <Btn to="/portfolio/" color colorful text="our portfolio"/>
+        <Btn to="/portfolio/" color colorful text="latest websites"/>
      </div>
   </Layout>
 )

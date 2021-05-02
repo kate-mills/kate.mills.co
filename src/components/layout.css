@@ -21,7 +21,8 @@
   /* START FONTS */
   --pFF:  bree, sans-serif;           /* 300 */
   --scriptFF:  shelby, sans-serif;    /* 400 */ 
-  --mainFF: aileron, sans-serif;      /* 300,700 */
+  --mainFF:aileron, sans-serif;
+  /* 300,700 */
 }
 * {
   box-sizing: border-box;
@@ -45,15 +46,21 @@ nav a {
   font-family: var(--mainFF) !important;
   font-size: 0.8rem !important;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--scriptFF);
+h1, h2{
+  font-family: aileron, sans-serif;
   font-size: 3.2rem;
+  font-style: normal;
   font-weight: 400;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
 }
 h2, h3, h4, h5, h6{
+  font-family: var(--scriptFF);
+  font-size: 3.2rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing) !important;
+  white-space: pre-wrap;
 }
 section {
   background: var(--primaryWhite);

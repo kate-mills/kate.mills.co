@@ -50,6 +50,9 @@ a.url{
     display: inline-block;
   }
 }
+.meta-description{
+  padding-bottom: 2rem;
+}
 @media screen and (min-width: 1200px) {
   .center {
     width: 95vw;

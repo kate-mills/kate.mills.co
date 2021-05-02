@@ -25,7 +25,7 @@ export default styled(CustomHero)`
   background-size: cover;
   display: flex;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 40vh;
   opacity: 1 !important;
   transition: var(--mainTransition);
   width: 100%;
