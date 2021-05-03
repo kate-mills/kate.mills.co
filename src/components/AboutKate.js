@@ -9,7 +9,7 @@ const getKate = graphql`
   query AboutKate {
     aboutKate: file(relativePath: { eq: "katemills.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 1000, cropFocus: NORTH) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

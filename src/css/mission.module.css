@@ -20,6 +20,11 @@
   width: 100%;
   display: block;
   box-shadow: var(--lightShadow);
+  object-position: center 25% !important;
+  max-height: 450px;
+}
+.img-container {
+  max-height: 450px;
 }
 .about-info .heading {
   font-size: 3.5rem;
@@ -37,6 +42,7 @@
   top: -16px;
   left: -16px;
 }
+
 @media screen and (min-width: 768px) {
   .about-center {
     display: grid;
@@ -52,10 +58,10 @@
     margin-top: 3rem;
   }
   .about-img img {
-    max-height: 700px;
+    max-height: 600px;
   }
   .img-container {
-    max-height: 700px;
+    max-height: 600px;
   }
   .about-info p {
     width: 80%;
