@@ -43,10 +43,19 @@
   text-decoration: none;
 }
 a.url{
-  text-decoration: underline;
+  text-transform: capitalize;
   background: var(--primaryColor);
   white-space:normal;
-  /*padding: 0;*/
+  letter-spacing: var(--altSpacing);
+  font-size: 1.24rem;
+  padding: 0.5rem;
+  display: inline-block;
+}
+span.lower-url{
+  text-transform: lowercase;
+  margin-top: 1rem;
+  font-size: 1rem;
+  display: block;
 }
 .hide-mobile {
   display: none;
