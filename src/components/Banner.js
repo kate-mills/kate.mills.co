@@ -86,7 +86,7 @@ export default styled(Banner)`
     }
     & > h2,
     & > p{
-      margin: 0 auto;
+      margin: 1rem auto 0;
       max-width: 50%;
     }
   }

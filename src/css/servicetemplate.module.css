@@ -6,11 +6,25 @@
 
 /* Specific to a service type */
 .benefit-container{
-  width: fit-content !important;
+  width: fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
   padding: 1rem 1.5rem 0;
   white-space: pre-wrap;
 }
-.benefit-list{ margin: 0 auto;  margin-bottom: 6rem; width: fit-content;}
+.benefit-list{
+  margin: 0 auto 6rem;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meta-description{
+  max-width: 90%;
+  margin: 0 auto 1.5rem;
+}
 
 
 
@@ -64,7 +78,7 @@ a.url{
     width: 35%;
     height: 35%;
   }
-  .why-list{ width: 30%; }
+  .why-list{ width: 30%; margin: 0 auto; text-align: center;}
   .hide-mobile {
     display: inline-block;
   }

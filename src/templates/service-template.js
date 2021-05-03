@@ -26,7 +26,6 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       <CustomHero position={`${img_position}`} img={defaultBg.childImageSharp.fluid}>
         <Banner title={`Latest Beauty ${singularName}s`}>
           <h2 className={styles.bannerSubheading}>We build websites for spas, salons, estheticians & small businesses in the beauty industry.</h2>
-          <p className={styles.metaDescription}>{meta_desc}</p>
           <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)"/>
         </Banner>
       </CustomHero>
@@ -41,6 +40,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
               })
             }
           </ul>
+          <p className={styles.metaDescription}>{meta_desc}</p>
         </div>
         </div>
         <SearchProjects projects={projects.nodes}/>
