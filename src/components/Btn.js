@@ -35,7 +35,7 @@ export default styled(Btn)`
   @media(min-width: 768px){
     font-family: var(--pFF);
     font-style: normal;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1rem;
     padding: .8rem 6rem;
   }

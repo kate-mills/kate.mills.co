@@ -11,7 +11,7 @@ const Banner = ({ title, info, children, className}) => {
     >
       <h1>
         <span className="title">{title}</span>
-        <span className="paragraph">{info}</span>
+        <span className="subtitle">{info}</span>
       </h1>
       {children}
     </div>
@@ -26,51 +26,45 @@ export default styled(Banner)`
     padding: 0 1rem;
     text-align: center;
     width: 94vw;
-    max-width: 94vw;
-  }
-  & * {
-    color: var(--primaryBlack);
-    font-family: var(--pFF);
-    white-space: pre-wrap !important;
-    margin: 0 auto;
-    max-width: 90%;
-    text-align: center;
   }
   & h1{
     margin-bottom: 1.5rem;
   }
-  & h2{
-    color: var(--primaryDark);
-    font-size: 1.3rem;
-    padding-bottom: 2rem;
-    font-family: aileron, sans-serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  & .title{
+  & > h1 > span.title{
     animation-fill-mode: backwards;
     backface-visibility: hidden;
     display: block;
     font-family: aileron, sans-serif;
-    font-size: 2.3rem;
+    font-size: 3rem;
     letter-spacing: var(--altSpacing);
     padding: 0 1rem;
     margin: 1rem auto;
     text-transform: uppercase;
   }
-  & .paragraph{
+  & > h1 > span.subtitle{
     animation-fill-mode: backwards;
     backface-visibility: hidden;
     display: block;
     font-size: 1.5rem;
   }
-  & a{
+  & > h2{
+    color: var(--primaryDark);
+    font-family: var(--mainFF);
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+  }
+  & > p{
+    margin: 0 auto;
+    padding-bottom: 2rem;
+  }
+  & > a{
     animation-fill-mode: backwards;
     background-color: var(--primaryBlack);
     border: 3px solid var(--primaryBlack);
     color: var(--primaryWhite);
     display: inline-block;
-    font-size: 1.3rem;
     margin-top: 1.5rem;
     padding: .4rem 3rem;
     text-align: center;
@@ -82,17 +76,17 @@ export default styled(Banner)`
       color: var(--primaryBlack) !important;
     }
   }
-
   @media (min-width: 768px){
     &{
       padding: 2rem 0;
     }
-    & .title{
-      font-size: 3rem;
+    & > h1 > span.title{
       letter-spacing: var(--mainSpacing);
     }
-    & .paragraph{
-      font-size: 1.7rem;
+    & > h2,
+    & > p{
+      margin: 0 auto;
+      max-width: 50%;
     }
   }
 `
