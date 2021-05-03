@@ -14,7 +14,7 @@ export default ({ data }) => (
     <SEO/>
     <PinkHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
-        title="Web design for the beauty industry."
+        title="Websites for the beauty industry"
         info="Elevate your online presence with specialized digital solutions." >
         <Btn to="/contact-us/" text="Contact us" borderColor="var(--primaryBlack)"/>
       </Banner>

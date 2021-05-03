@@ -37,7 +37,7 @@ export default styled(Banner)`
     font-family: aileron, sans-serif;
     font-size: 3rem;
     letter-spacing: var(--altSpacing);
-    padding: 0 1rem;
+    padding: 1rem 1rem 0;
     margin: 1rem auto;
     text-transform: uppercase;
   }
@@ -46,6 +46,7 @@ export default styled(Banner)`
     backface-visibility: hidden;
     display: block;
     font-size: 1.5rem;
+    margin-top: 2rem;
   }
   & > h2{
     color: var(--primaryDark);

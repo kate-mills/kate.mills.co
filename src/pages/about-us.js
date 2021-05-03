@@ -12,8 +12,8 @@ export default ({ data }) => (
     <SEO title="About Us" description="Set yourself apart with a custom website built by a local Napa Valley web designer specializing in beauty website design and social media for estheticians, beauticians, salons, spas & beauty companies."/>
     <CustomHero img={data.defaultBg.childImageSharp.fluid}>
       <Banner
-        title="Meet Kate Mills"
-        info="Web developer in Napa Valley" >
+        title="Meet Kate"
+        info="Home office in Napa Valley" >
       </Banner>
     </CustomHero>
       <AboutKate />
