@@ -9,38 +9,38 @@
   position: relative;
   background: var(--primaryWhite);
   transition: var(--mainTransition);
+  opacity: 0.4;
 }
 .img-container:hover{
   height: 100%;
+  opacity: .9;
 }
 .img {
   transition: var(--mainTransition);
 }
 .img-container:hover .img {
-  opacity: 0.3;
+  opacity: 1; /*opacity: 0.3;*/
 }
 .link {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  background: var(--primaryWhite);
+  border: 2px solid var(--primaryBlack);
+  color: var(--primaryBlack);
+  opacity: 1;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
-  color: var(--primaryBlack);
-  border: 2px solid var(--primaryBlack);
   padding: 0.9rem 1.6rem;
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
 }
-.link:hover {
-  background: var(--primaryWhite);
-  color: var(--primaryBlack) !important;
-  border: 2px solid var(--primaryBlack);
-}
 .img-container:hover .link {
   opacity: 1;
+  background: var(--primaryBlack);
+  color: var(--primaryWhite);
 }
 
 .centerTitle{

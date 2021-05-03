@@ -75,12 +75,6 @@ const Wrapper = styled.section`
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);
-      &:hover .img {
-        opacity: 0.2;
-      }
-      &:hover {
-        opacity: 1;
-      }
     }
     @media (min-width: 768px) {
       .img {
