@@ -5,15 +5,23 @@ import styled from 'styled-components'
 const Banner = ({ title, info, children, className}) => {
   return (
     <div className={className}
-      data-sal="zoom-in"
-      data-sal-easing="ease"
-      data-sal-duration="500"
     >
       <h1>
-        <span className="title">{title}</span>
-        <span className="subtitle">{info}</span>
+        <span className="title"
+        >{title}</span>
+        <span className="subtitle"
+          data-sal="zoom-in"
+          data-sal-easing="ease"
+          data-sal-duration="500"
+        >{info}</span>
       </h1>
+      <div
+          data-sal="zoom-in"
+          data-sal-easing="ease"
+          data-sal-duration="500"
+      >
       {children}
+      </div>
     </div>
   )
 }
@@ -48,6 +56,7 @@ export default styled(Banner)`
     font-size: 1.5rem;
     margin-top: 2rem;
   }
+  & > div > h2,
   & > h2{
     color: var(--primaryDark);
     font-family: var(--mainFF);
@@ -84,6 +93,7 @@ export default styled(Banner)`
     & > h1 > span.title{
       letter-spacing: var(--mainSpacing);
     }
+    & > div > h2,
     & > h2,
     & > p{
       margin: 1rem auto 0;
