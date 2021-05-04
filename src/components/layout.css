@@ -83,7 +83,7 @@ a{
   transition: var(--mainTransition);
 }
 a:hover{
-  color: var(--primaryDark) !important;
+  color: var(--primaryDark);
 }
 .phone{
   color: var(--primaryBlack);

@@ -24,7 +24,7 @@ const contact = props => {
     <Layout>
       <SEO title="Contact" snippet={snippet} description={'Contact a local Napa web designer specializing in websites, blogs, eCommerce, and social media for estheticians, beauticians, salons, spas & beauty companies.'}/>
       <CustomHero position={`center right`} img={props.data.contactBcg.childImageSharp.fluid}>
-        <Banner title="Contact Us"/>
+        <Banner className="smallText" title="We make it easy" info="Are you drained from trying to make your website look professional?"/>
       </CustomHero>
       <Contact />
     </Layout>

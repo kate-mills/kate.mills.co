@@ -93,11 +93,15 @@ export default styled(Banner)`
     & > h1 > span.title{
       letter-spacing: var(--mainSpacing);
     }
+    & > h1 > span.subtitle,
     & > div > h2,
     & > h2,
     & > p{
       margin: 1rem auto 0;
       max-width: 50%;
+    }
+    & > h1 > span.subtitle{
+      margin-top: 1.5rem;
     }
   }
 `

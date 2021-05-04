@@ -43,13 +43,18 @@
   text-decoration: none;
 }
 a.url{
-  text-transform: capitalize;
-  background: var(--primaryColor);
-  white-space:normal;
-  letter-spacing: var(--altSpacing);
-  font-size: 1.24rem;
-  padding: 0.5rem;
+  background: var(--primaryBlack);
+  border-radius: 2px;
+  color: var(--primaryColor);
   display: inline-block;
+  font-size: 1.24rem;
+  letter-spacing: var(--altSpacing);
+  padding: 0.5rem 0.95rem;
+  text-transform: capitalize;
+  white-space:normal;
+}
+a.url:hover{
+  color: var(--solutionsColor);
 }
 span.lower-url{
   text-transform: lowercase;
