@@ -29,7 +29,7 @@ export default styled(Title)`
   }
   .subtitle {
     font-family: var(--mainFF);;
-    color: var(--primaryDark);
+    color: var(--digitalColor);
   }
   span {
     display: block;

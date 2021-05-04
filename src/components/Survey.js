@@ -127,7 +127,7 @@ const Wrapper = styled.section`
       grid-gap: 0 3rem;
       align-items: center;
       .key {
-        background: var(--primaryColor);
+        background: var(--solutionsColor);
         border-radius: var(--radius);
         color: var(--primaryBlack);
         cursor: pointer;
@@ -140,7 +140,7 @@ const Wrapper = styled.section`
         margin-bottom: 0;
       }
       p {
-        color: var(--primaryLight);
+        color: var(--digitalColor);
       }
       h4 {
         font-size: 1.7rem;
@@ -153,7 +153,7 @@ const Wrapper = styled.section`
         border-color: transparent;
         font-size: 2rem;
         cursor: pointer;
-        color: var(--primaryGrey);
+        color: var(--solutionsColor);
       }
     }
   }

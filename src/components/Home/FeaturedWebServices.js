@@ -6,7 +6,8 @@ import {Link} from 'gatsby'
 
 const Services = () => {
   return (
-    <section className={`${styles.services} section-center`}>
+    <section className={`${styles.services} background-pattern-rain-dark section-center`}
+    >
       <Title
         title="Web"
         subtitle="Design"

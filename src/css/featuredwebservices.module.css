@@ -1,7 +1,6 @@
 .services {
   color: var(--primaryBlack);
   padding: 4rem 0;
-  background: var(--primaryGrey);
   border-radius: var(--radius);
 }
 .center {
@@ -15,13 +14,13 @@
   margin: 2rem 0;
   padding: 1.5rem 0;
   text-align: center;
-  background: var(--primaryColor);
+  background: var(--primaryWhite);
   border-radius: var(--radius);
 }
 .service span {
   display: flex;
   justify-content: center; 
-  color: var(--primaryLight);
+  color: var(--solutionsColor);
   align-items: center;
   margin: 1rem auto;
   font-size: 3rem;
@@ -35,7 +34,7 @@
 }
 .underline{
   height: 3px;
-  background-color: var(--primaryGrey);
+  background-color: var(--solutionsColor);
   width: 50%;
   margin: 0 auto;
 }
