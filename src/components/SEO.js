@@ -53,6 +53,7 @@ const SEO = ({ title, description, image, article, snippet, keywords}) => {
     <React.Fragment>
     <Helmet title={seo.title} titleTemplate={titleTemplate} htmlAttributes={{ lang: 'en' }}>
       <meta name="google-site-verification" content="aS5BlTYYa6OIBC7WjfeTN_LQKKWvYXZWHvWGTyv6XAU" />
+      <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.keywords && (<meta name="keywords" content={seo.keywords} />)}
