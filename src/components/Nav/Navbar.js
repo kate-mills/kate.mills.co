@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 import styles from '../../css/navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../../constants/links'
-import logo from '../../images/nav-logo.png'
+import logo from '../../images/transparent.png'
 import PhoneNumber from '../PhoneNumber'
 import {useGlobalContext} from '../../context/context'
 import NavSubmenu from './Submenu'
@@ -26,7 +26,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar}`}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           <Link to={`/`} className={styles.logo}><img width="211" height="40" src={logo} alt="logo" /></Link>
@@ -54,7 +54,7 @@ const Navbar = (props) => {
               </li>
             )
           })}
-          <li><PhoneNumber/></li>
+          <li><PhoneNumber className={styles.phone}/></li>
         </ul>
       </div>
     </nav>
