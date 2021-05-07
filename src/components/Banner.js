@@ -4,8 +4,7 @@ import styled from 'styled-components'
 
 const Banner = ({ title, info, children, className}) => {
   return (
-    <div className={className}
-    >
+    <div className={className}>
       <h1>
         <span className="title"
         >{title}</span>
@@ -30,22 +29,23 @@ export default styled(Banner)`
   &{
     border: 0;
     color: var(--primaryBlack);
-    margin: 1rem auto 2.5rem;
+    margin: 1rem auto;
     padding: 0 1rem;
     text-align: center;
     width: 94vw;
   }
   & h1{
-    margin-bottom: 1.5rem;
+    margin: 2rem auto;
   }
   & > h1 > span.title{
     animation-fill-mode: backwards;
     backface-visibility: hidden;
     display: block;
     font-family: aileron, sans-serif;
-    font-size: 3rem;
+    font-size: 3.2rem;  /* looked good at 3rem */
     letter-spacing: var(--altSpacing);
-    padding: 1rem 1rem 0;
+    line-height: 4.6rem;
+    padding: 1rem auto 0;
     margin: 1rem auto;
     text-transform: uppercase;
   }
@@ -54,6 +54,7 @@ export default styled(Banner)`
     backface-visibility: hidden;
     display: block;
     font-size: 1.5rem;
+    line-height: 2rem;
     margin-top: 2rem;
   }
   & > div > h2,
@@ -88,10 +89,14 @@ export default styled(Banner)`
   }
   @media (min-width: 768px){
     &{
-      padding: 2rem 0;
+      padding: 0 1rem;
     }
     & > h1 > span.title{
+      font-size: 4.3rem;
       letter-spacing: var(--mainSpacing);
+      line-height: 6.3rem;
+      margin-bottom: 2rem;
+      max-width: 75%;
     }
     & > h1 > span.subtitle,
     & > div > h2,
