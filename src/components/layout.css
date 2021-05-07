@@ -30,7 +30,7 @@
   padding: 0;
 }
 body {
-  background-color: var(--primaryWhite);
+  /*background-color: var(--primaryWhite);*/
   color: var(--primaryBlack);
   font-family: var(--mainFF);
   font-size: 1rem;
@@ -43,8 +43,7 @@ p, div{
   font-weight: 400;
 }
 nav a {
-  font-family: var(--mainFF) !important;
-  font-size: 0.8rem !important;
+  font-family: var(--mainFF);
 }
 h1, h2{
   font-family: aileron, sans-serif;
@@ -63,7 +62,6 @@ h2, h3, h4, h5, h6{
   white-space: pre-wrap;
 }
 section {
-  background: var(--primaryWhite);
   transition: var(--mainTransition);
 }
 p {
@@ -87,7 +85,7 @@ a:hover{
 }
 .phone{
   color: var(--primaryBlack);
-  font-family: inherit;
+  font-family: var(--mainFF);
   letter-spacing: var(--altSpacing) !important;
   line-height: inherit !important;
   padding: 0 0.5rem;
