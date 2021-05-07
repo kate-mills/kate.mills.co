@@ -1,4 +1,4 @@
-.template{ padding: 4rem 0; }
+/*.template{ padding: 4rem 0; }*/
 
 .image {
   box-shadow: var(--lightShadow);
@@ -45,13 +45,13 @@
 a.url{
   background: var(--primaryBlack);
   border-radius: 2px;
-  color: var(--primaryColor);
+  color: var(--primaryWhite);
   display: inline-block;
-  font-size: 1.24rem;
   letter-spacing: var(--altSpacing);
-  padding: 0.5rem 0.95rem;
+  padding: 0.5rem 1.25rem;
   text-transform: capitalize;
   white-space:normal;
+  max-width: 300px;
 }
 a.url:hover{
   color: var(--solutionsColor);

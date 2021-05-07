@@ -25,10 +25,10 @@ const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
       <CustomHero img={defaultBg.childImageSharp.fluid}>
         <Banner title={name} info={desc || " "}> </Banner>
         </CustomHero>
-      <section className={styles.template}>
-        <p className="centered">
-          <a href={url} className={`${styles.url} ${styles.btnUrl}`} target="_blank" rel="noreferrer">
-            Checkout {name}
+      <section className={`${styles.template} background-pattern-rain-light`}>
+        <p className="centered background-pattern-rain-light" >
+          <a href={url} className={`${styles.url} ${styles.btnUrl}`}>
+            Go to<br/>{name}
           </a>
         </p>
         <div className={styles.project}>
