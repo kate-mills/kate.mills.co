@@ -13,18 +13,15 @@ const PinkHero = ({ img, className, children }) => {
     <div
       onFocus={closeSubmenu}
       onMouseOver={closeSubmenu}
-      className={className}
+      className={`${className} background-pattern-rain-dark`}
       fluid={img}>
       {children}
     </div>
   )
 }
 export default styled(PinkHero)`
+  background-color: #efebe8;
   align-items: baseline;
-  /*background: linear-gradient(
-45deg
-, rgb(255 255 255 / 75%), rgb(229 228 227 / 95%)) 50% 0% / cover;
-  background-position: top;*/
   display: flex;
   justify-content: center;
   min-height: calc(100vh - 76px);
