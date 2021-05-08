@@ -27,7 +27,7 @@ const Projects = ({
     </div>
   )
   return (
-    <Wrapper className={styles.center}>
+    <Wrapper className={`${styles.center} background-pattern-rain-light`}>
       {showSearchBtns && ( headerAndBtns) }
       <div className="section-center">
         {projects.map(item => {
@@ -50,7 +50,6 @@ const Projects = ({
 }
 
 const Wrapper = styled.section`
-  background: var(--primaryWhite);
   .section-center {
     display: grid;
     gap: 2rem;
