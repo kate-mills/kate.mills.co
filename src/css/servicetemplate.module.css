@@ -1,4 +1,8 @@
-/*.template{ padding: 4rem 0; }*/
+.template{
+  margin-top: 2rem;
+  background-image: inherit;
+  transition: var(--mainTransition);
+}
 
 .image {
   box-shadow: var(--lightShadow);
@@ -8,25 +12,27 @@
 .benefit-container{
   width: fit-content;
   max-width: fit-content;
-  margin: 0 auto;
+  margin: 0;
+  margin: 0 auto 3rem;
   padding: 1rem 1.5rem 0;
   white-space: pre-wrap;
+  background-image: inherit;
+  background-color: var(--primaryColor);
 }
 .benefit-list{
-  margin: 0 auto 6rem;
+  margin: 0 auto 3rem;
   max-width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: 10px;
 }
 
 .meta-description{
   max-width: 90%;
   margin: 0 auto 1.5rem;
 }
-
-
 
 /* Specific to each individual project */
 .single-project-img{
@@ -54,7 +60,7 @@ a.url{
   max-width: 300px;
 }
 a.url:hover{
-  color: var(--solutionsColor);
+  color: var(--primaryGrey);
 }
 span.lower-url{
   text-transform: lowercase;
@@ -95,5 +101,8 @@ span.lower-url{
   .why-list{ width: 30%; margin: 0 auto; text-align: center;}
   .hide-mobile {
     display: inline-block;
+  }
+  .benefit-list{
+    padding: 0 2rem;
   }
 }
