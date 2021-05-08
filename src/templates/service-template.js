@@ -24,8 +24,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
     <Layout>
       <SEO title={name} description={meta_desc}/>
       <CustomHero position={`${img_position}`} img={defaultBg.childImageSharp.fluid}>
-        <Banner title={`Latest Beauty ${singularName}s`}>
-          <h2 className={styles.bannerSubheading}>We build websites for spas, salons, estheticians & small businesses in the beauty industry.</h2>
+        <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
           <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)"/>
         </Banner>
       </CustomHero>
