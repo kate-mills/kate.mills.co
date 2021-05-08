@@ -44,13 +44,11 @@
 }
 
 .centerTitle{
-  background: var(--primaryWhite);
   padding-top: 1rem;
   margin-bottom: 0;
 }
 .centerInfo{
   text-align: center;
-  background: var(--primaryWhite);
   margin-bottom: 0;
   font-style: italic;
 }
