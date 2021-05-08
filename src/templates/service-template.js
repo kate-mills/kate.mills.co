@@ -28,10 +28,10 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
           <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)"/>
         </Banner>
       </CustomHero>
-      <section className={styles.template}>
-        <div className={`coloredBg section-center ${styles.benefitContainer}`}>
+      <section className={`${styles.template} section-center`}>
+        <div className={`background-pattern-rain-dark ${styles.benefitContainer}`}>
           <Title title={`${why_list.length} benifits of a`} subtitle={singularName} subTitleColor="var(--primaryLight)"/>
-        <div className={styles.benefitList}>
+        <div className={`${styles.benefitList}`}>
           <ul data-bullet-list>
             {
               why_list.map((s, index) =>{
@@ -39,7 +39,6 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
               })
             }
           </ul>
-          <p className={styles.metaDescription}>{meta_desc}</p>
         </div>
         </div>
         <SearchProjects projects={projects.nodes}/>
