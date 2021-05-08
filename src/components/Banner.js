@@ -29,8 +29,9 @@ export default styled(Banner)`
   &{
     border: 0;
     color: var(--primaryBlack);
+    font-weight: 300;
     margin: 1rem auto;
-    padding: 0 1rem;
+    padding: 0 1rem 1.25rem;
     text-align: center;
     width: 94vw;
   }
@@ -43,6 +44,7 @@ export default styled(Banner)`
     display: block;
     font-family: aileron, sans-serif;
     font-size: 3.2rem;  /* looked good at 3rem */
+    font-weight: 300;
     letter-spacing: var(--altSpacing);
     line-height: 4.6rem;
     padding: 1rem auto 0;
@@ -59,10 +61,8 @@ export default styled(Banner)`
   }
   & > div > h2,
   & > h2{
-    color: var(--primaryDark);
     font-family: var(--mainFF);
     font-size: 1.2rem;
-    font-weight: 300;
     margin: 0 auto;
     padding-bottom: 2rem;
   }
