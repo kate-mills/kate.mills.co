@@ -9,6 +9,7 @@
   --primaryBlack: #121212;
   --primaryWhite: #ffffff;
   --primaryGrey: #E4D9D5;
+  --grey0: #F5F5F5;
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
@@ -145,12 +146,7 @@ ul[data-bullet-list] li>*:first-child::before{
   padding: 0;
 }
 .whiteBg {
-  background: var(--primaryWhite) !important;
-}
-.coloredBg{
-  background: var(--primaryGrey) !important;
-  width: 70% !important;
-  border-radius: var(--radius);
+  background-color: var(--primaryWhite);
 }
 
 /* section */
