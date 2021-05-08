@@ -9,7 +9,7 @@
   position: relative;
   background: var(--primaryWhite);
   transition: var(--mainTransition);
-  opacity: 0.4;
+  opacity: 0.55;
 }
 .img-container:hover{
   height: 100%;
@@ -19,16 +19,16 @@
   transition: var(--mainTransition);
 }
 .img-container:hover .img {
-  opacity: 1; /*opacity: 0.3;*/
+  opacity: 1;
 }
 .link {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--primaryWhite);
+  background: var(--primaryBlack);
   border: 2px solid var(--primaryBlack);
-  color: var(--primaryBlack);
+  color: var(--primaryWhite);
   opacity: 1;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
@@ -39,8 +39,8 @@
 }
 .img-container:hover .link {
   opacity: 1;
-  background: var(--primaryBlack);
-  color: var(--primaryWhite);
+  background: var(--primaryWhite);
+  color: var(--primaryBlack);
 }
 
 .centerTitle{
