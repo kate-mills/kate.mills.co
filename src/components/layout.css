@@ -1,4 +1,5 @@
-@import url("https://use.typekit.net/jrs5cnv.css");
+@import url("https://use.typekit.net/igr8zjs.css"); /*NEW*/
+
 :root {
   --digitalColor: #7e7b78;
   --solutionsColor: #c8c6c3;
@@ -22,9 +23,10 @@
   /* START FONTS */
   --pFF:  bree, sans-serif;           /* 300 */
   --scriptFF:  shelby, sans-serif;    /* 400 */ 
-  --mainFF:aileron, sans-serif;
-  /* 300,700 */
+  --mainFF:aileron, sans-serif;      /* 300 normal & italic */
+  --testFF: 'neue-haas-grotesk-text', 'sans-serif'; /* 400 italic;*/
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,28 +36,33 @@ body {
   color: var(--primaryBlack);
   font-family: var(--mainFF);
   font-size: 1rem;
+  font-style: normal;
   font-weight: 300;
   line-height: 1.4;
   opacity: 1;
 }
 p, div{
-  font-family: var(--pFF);
-  font-weight: 400;
+  font-family: var(--mainFF);
+  font-style:normal;
+  font-weight: 300;
 }
 nav a {
   font-family: var(--mainFF);
+  font-style: normal;
+  font-weight: 300;
 }
 h1, h2{
-  font-family: aileron, sans-serif;
+  font-family: var(--mainFF);
   font-size: 3.2rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
 }
-h2, h3, h4, h5, h6{
+h3, h4, h5, h6{
   font-family: var(--scriptFF);
   font-size: 3.2rem;
+  font-style: normal;
   font-weight: 400;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing) !important;
@@ -86,6 +93,8 @@ a:hover{
 .phone{
   color: var(--primaryBlack);
   font-family: var(--mainFF);
+  font-style: normal;
+  font-weight: 300;
   letter-spacing: var(--altSpacing) !important;
   line-height: inherit !important;
   padding: 0 0.5rem;
@@ -121,7 +130,8 @@ ul[data-bullet-list] {
 }
 ul[data-bullet-list] > li p{
   margin: 7.5px auto;
-  font-family: var(--pFF);
+  font-family: var(--mainFF);
+  font-style: normal;
   font-weight: 300;
   padding: 0 0 .2rem;
   white-space: pre-line;
@@ -152,7 +162,8 @@ ul[data-bullet-list] li>*:first-child::before{
 /* section */
 .section {
   padding: 5rem 0;
-  font-family: var(--pFF);
+  font-family: var(--mainFF);
+  font-style: normal;
   font-weight: 300;
   position: relative;
 }
