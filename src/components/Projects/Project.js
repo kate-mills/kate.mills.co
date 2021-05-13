@@ -4,7 +4,7 @@ import styles from '../../css/project.module.css'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
 const getDefaultImg = graphql` {
-    file(relativePath: { eq: "background/Napa.jpeg" }) {
+    file(relativePath: { eq: "ally digital solutions website designers.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

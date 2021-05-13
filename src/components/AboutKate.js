@@ -7,7 +7,7 @@ import Btn from './Btn'
 
 const getKate = graphql`
   query AboutKate {
-    aboutKate: file(relativePath: { eq: "katemills.jpg" }) {
+    aboutKate: file(relativePath: { eq: "website-designer.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000, cropFocus: NORTH) {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -29,7 +29,7 @@ const AboutKate = () => {
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            <Img fluid={fluid} alt="Profile photo of website developer Kate Mills, owner of Ally Digital Solutions." />
+            <Img fluid={fluid} alt="Profile photo of website designer & developer Kate Mills, owner of Ally Digital Solutions." />
           </div>
         </article>
         <article className={styles.aboutInfo}>
