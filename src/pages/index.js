@@ -12,8 +12,8 @@ import Contact from '../components/Contact/Contact'
 
 export default ({ data }) => {
   const year = new Date().getFullYear()
-  const t1=`Boost your beauty business`
-  const t2=`in ${year} with a pro web designer`
+  const t1=`Boost your beauty business in ${year}`
+  const t2=`with a pro web designer`
   return (
     <Layout>
       <SEO title={`${t1} ${t2}`}/>
