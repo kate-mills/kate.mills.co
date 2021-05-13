@@ -3,7 +3,8 @@
 :root {
   --digitalColor: #7e7b78;
   --solutionsColor: #c8c6c3;
-  --favoriteColor: #C7A0A1;
+  --favoriteColor: #e12386;
+  --favoriteLight: #efc2e5;
   --primaryLight: #B99281;
   --primaryDark:  #9F776B;
   --primaryColor: #efebe8; /*#F7F3F0;*/
@@ -82,13 +83,11 @@ main{
 }
 a{
   color: var(--primaryBlack);
+  font-family: var(--mainFF);
   padding: 0;
   text-transform: uppercase;
   text-decoration: none;
   transition: var(--mainTransition);
-}
-a:hover{
-  color: var(--primaryDark);
 }
 .phone{
   color: var(--primaryBlack);
@@ -102,10 +101,12 @@ a:hover{
 }
 .short-page{  /* 404-page, thankyou-page */
   background: var(--primaryColor);
+  color: var(--digitalColor);
   min-height: calc(100vh - 252px);
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--primaryBlack);
 }
 .footer-btn{
   text-align: center;
