@@ -7,35 +7,36 @@ const Btn = ({to, text, color, className}) => {
 }
 
 export default styled(Btn)`
-  background-color: ${props =>  props.borderColor ? `var(--primaryBlack)`: `var(--primaryColor)`};
-  border-width: 3px;
-  border-color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryColor)`};
+  background-color: ${props =>  props.borderColor ? props.borderColor: `var(--favoriteColor)`};
+  border-radius: 10rem;
   border-style: solid;
-  color:var(--primaryBlack);
-  color: ${props =>  props.borderColor ? `var(--primaryWhite)`: `var(--primaryBlack)`};
+  border-width: 3px;
+  color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryBlack)`};
+  border-color: ${props =>  props.borderColor ? props.borderColor: `transparent`}; 
   cursor: pointer;
   display: ${props => props.display ?  props.display: `inline-block` };
+  letter-spacing: var(--altSpacing);
   font-family: var(--mainFF);
   font-weight: 300;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 1.2rem;
   max-width: 75vw;
   padding: .4rem 3rem;
   text-align: center;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
   transition: all var(--mainTransition);
 
   &:hover{
-    border-color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryBlack)`};
-    color: ${props =>  (!props.borderColor)? `var(--primaryBlack)`: `var(--primaryBlack)`} !important;
-    background-color: transparent;
+    background-color: var(--favoriteColor);
     cursor: pointer;
+    border-color: var(--favoriteColor);
+    color: var(--primaryBlack);
+  }
+  &:active{
+    border-color: var(--primaryBlack);
   }
   @media(min-width: 768px){
-    font-family: var(--pFF);
-    font-style: normal;
-    font-size: 1rem;
     margin: 1rem;
     padding: .8rem 6rem;
   }
