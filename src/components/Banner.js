@@ -6,13 +6,11 @@ const Banner = ({ title, info, children, className}) => {
   return (
     <div className={className}>
       <h1>
-        <span className="title"
-        >{title}</span>
-        <span className="subtitle"
+        <span className="title-l1">{title}</span>
+        <span className="title-l2"
           data-sal="zoom-in"
           data-sal-easing="ease"
-          data-sal-duration="500"
-        >{info}</span>
+          data-sal-duration="500">{info}</span>
       </h1>
       <div
           data-sal="zoom-in"
@@ -38,7 +36,7 @@ export default styled(Banner)`
   & h1{
     margin: 2rem auto;
   }
-  & > h1 > span.title{
+  & > h1 > span.title-l1{
     animation-fill-mode: backwards;
     backface-visibility: hidden;
     display: block;
@@ -51,31 +49,19 @@ export default styled(Banner)`
     margin: 1rem auto;
     text-transform: uppercase;
   }
-  & > h1 > span.subtitle{
+  & > h1 > span.title-l2{
     animation-fill-mode: backwards;
     backface-visibility: hidden;
     display: block;
     font-size: 1.5rem;
-    line-height: 2rem;
-    margin-top: 2rem;
-  }
-  & > div > h2,
-  & > h2{
-    font-family: var(--mainFF);
-    font-size: 1.2rem;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-  }
-  & > p{
-    margin: 0 auto;
-    padding-bottom: 2rem;
   }
   & > a{
     animation-fill-mode: backwards;
-    background-color: var(--primaryBlack);
-    border: 3px solid var(--primaryBlack);
-    color: var(--primaryWhite);
+    background: 3px solid var(--primaryColor);
+    border: 3px solid var(--primaryColor);
+    color: var(--favoriteLight);
     display: inline-block;
+    font-family: var(--mainFF);
     margin-top: 1.5rem;
     padding: .4rem 3rem;
     text-align: center;
@@ -84,29 +70,23 @@ export default styled(Banner)`
     transition: all var(--mainTransition);
     &:hover{
       background-color: transparent;
-      color: var(--primaryBlack) !important;
+      color: var(--favoriteLight);
     }
   }
   @media (min-width: 768px){
     &{
       padding: 0 1rem;
     }
-    & > h1 > span.title{
+    & > h1 > span.title-l1{
       font-size: 4.3rem;
       letter-spacing: var(--mainSpacing);
       line-height: 6.3rem;
       margin-bottom: 2rem;
-      max-width: 75%;
+      max-width: 95%;
     }
-    & > h1 > span.subtitle,
-    & > div > h2,
-    & > h2,
-    & > p{
+    & > h1 > span.title-l2 {
       margin: 1rem auto 0;
       max-width: 50%;
-    }
-    & > h1 > span.subtitle{
-      margin-top: 1.5rem;
     }
   }
 `
