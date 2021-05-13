@@ -38,7 +38,7 @@ export default styled(Banner)`
     text-align: center;
   }
   & h1{
-    color: var(--favoriteColor);
+    color: var(--digitalColor);
   }
   & > h1 > span.title-l1{
     animation-fill-mode: backwards;
@@ -55,7 +55,9 @@ export default styled(Banner)`
     animation-fill-mode: backwards;
     backface-visibility: hidden;
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: var(--altSpacing);
+    text-transform: capitalize;
   }
   & > a{
     animation-fill-mode: backwards;
@@ -83,6 +85,7 @@ export default styled(Banner)`
       margin-bottom: 2rem;
     }
     & > h1 > span.title-l2 {
+      font-size: 2.5rem;
       margin: 1rem auto 0;
     }
   }
