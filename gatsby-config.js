@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
     titleTemplate: `%s | Ally Digital Solutions`,
-    description: `Web solutions for beauty specialists by industry experts. We develop custom websites, blogs, e-commerce, and more. Elevate your online presence with specialized web design for the beauty industry.`,
+    description: `Learn more about boosting your beauty business in 2021 with a custom website designed by an aesthetic industry expert.`,
     dateModified: `${new Date().toISOString()}`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
