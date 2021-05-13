@@ -25,7 +25,7 @@ const query = graphql`
     }
   }
 `
-const SEO = ({ title, description, image, article, snippet, keywords}) => {
+const SEO = ({ title, description, image, article, snippet}) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -44,7 +44,6 @@ const SEO = ({ title, description, image, article, snippet, keywords}) => {
     title: title || defaultTitle,
     dateModified: dateModified,
     description: description || defaultDescription,
-    keywords: keywords.join(','),
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
@@ -56,7 +55,6 @@ const SEO = ({ title, description, image, article, snippet, keywords}) => {
       <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      {seo.keywords && (<meta name="keywords" content={seo.keywords} />)}
       {snippet && (<script type="application/ld+json">{snippet}</script>)}
 
       {/* facebook card */}
@@ -103,7 +101,6 @@ SEO.propTypes = {
 SEO.defaultProps = {
   title: null,
   description: null,
-  keywords: ['website', 'digital', 'solutions', 'beauty industry', 'blog', 'instagram'],
   image: null,
   article: false,
   snippet: null,
