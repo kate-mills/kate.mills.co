@@ -15,7 +15,6 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
     name,
     why,
     meta_desc,
-    img_position,
   } = service.nodes[0].data
   const why_list = why.split('.').filter((item)=>item.length > 0)
   const singularName = typeFormatter(name);
@@ -23,7 +22,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   return (
     <Layout>
       <SEO title={name} description={meta_desc}/>
-      <CustomHero position={`${img_position}`} img={defaultBg.childImageSharp.fluid}>
+      <CustomHero>
         <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
           <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)"/>
         </Banner>
@@ -85,12 +84,5 @@ export const getService = graphql`
        }
      }
    }
-    defaultBg: file(relativePath: { eq: "hero.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
   } 
 `

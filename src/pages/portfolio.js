@@ -14,9 +14,7 @@ const portfolio = ({ data }) => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <CustomHero 
-        position="99% top"
-        img={data.defaultBcg.childImageSharp.fluid}>
+      <CustomHero>
         <Banner title="Latest Web Designs" info="Browse through some of our favorites."/>
       </CustomHero>
     <section className="section">
@@ -30,13 +28,6 @@ export default portfolio
 
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: { eq: "hero.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
     allAirtable(
       filter: { table: { eq: "Projects" } }
       sort: { order: ASC, fields: data___number }

@@ -22,7 +22,7 @@ const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
   return (
     <Layout>
       <SEO title={name} />
-      <CustomHero img={defaultBg.childImageSharp.fluid}>
+      <CustomHero>
         <Banner title={name} info={desc || " "}> </Banner>
         </CustomHero>
       <section className={`${styles.template} background-pattern-rain-light`}>
