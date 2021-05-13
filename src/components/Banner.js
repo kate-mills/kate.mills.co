@@ -25,28 +25,30 @@ const Banner = ({ title, info, children, className}) => {
 
 export default styled(Banner)`
   &{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
     border: 0;
     color: var(--primaryBlack);
     font-weight: 300;
-    margin: 1rem auto;
+    margin: 0 auto;
     padding: 0 1rem 1.25rem;
     text-align: center;
-    width: 94vw;
   }
   & h1{
-    margin: 2rem auto;
+    color: var(--favoriteColor);
   }
   & > h1 > span.title-l1{
     animation-fill-mode: backwards;
     backface-visibility: hidden;
     display: block;
     font-family: aileron, sans-serif;
-    font-size: 3.2rem;  /* looked good at 3rem */
+    font-size: 3rem;
     font-weight: 300;
     letter-spacing: var(--altSpacing);
     line-height: 4.6rem;
-    padding: 1rem auto 0;
-    margin: 1rem auto;
     text-transform: uppercase;
   }
   & > h1 > span.title-l2{
@@ -74,19 +76,14 @@ export default styled(Banner)`
     }
   }
   @media (min-width: 768px){
-    &{
-      padding: 0 1rem;
-    }
     & > h1 > span.title-l1{
       font-size: 4.3rem;
       letter-spacing: var(--mainSpacing);
       line-height: 6.3rem;
       margin-bottom: 2rem;
-      max-width: 95%;
     }
     & > h1 > span.title-l2 {
       margin: 1rem auto 0;
-      max-width: 50%;
     }
   }
 `
