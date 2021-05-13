@@ -2,10 +2,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
-//import BackgroundImage from 'gatsby-background-image'
 import { useGlobalContext } from '../context/context';
-
-
 
 const PinkHero = ({ img, className, children }) => {
   const { closeSubmenu } = useGlobalContext();
@@ -13,14 +10,14 @@ const PinkHero = ({ img, className, children }) => {
     <div
       onFocus={closeSubmenu}
       onMouseOver={closeSubmenu}
-      className={`${className} background-pattern-rain-dark`}
+      className={`${className}`}
       fluid={img}>
       {children}
     </div>
   )
 }
 export default styled(PinkHero)`
-  background-color: #efebe8;
+  background: var(--primaryBlack);
   align-items: baseline;
   display: flex;
   justify-content: center;
