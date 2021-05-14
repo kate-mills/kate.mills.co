@@ -25,14 +25,14 @@ const IndexPage = ({ data, className }) => {
           <Btn to="/contact-us/" text="Let's Chat" borderColor="var(--solutionsColor)"txtColor="var(--primaryBlack)"/>
         </Banner>
       </PinkHero>
+        <AboutUs/>
       <div className="digital-marketing-services">
-        <h2 className="banner-h2">Find a Range of Website Design Solutions and Choose One That Fits Your Budget and Goals!</h2>
+        {/*<h2 className="banner-h2">Find a Range of Website Design Solutions and Choose One That Fits Your Budget and Goals!</h2>*/}
         <FeaturedWebServices
           data-sal="zoom-out"
           data-sal-easing="ease-out"
           data-sal-duration="500"/>
       </div>
-        <AboutUs/>
       <Contact/>
       <section className="footer-btn">
         <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryColor)" colorful/>
@@ -54,7 +54,6 @@ export const query = graphql`
 `
 export default styled(IndexPage)`
   div.digital-marketing-services{
-    background: var(--primaryBlack);
     h2.banner-h2{
       color: var(--digitalOnBlack);
       margin: 0 auto;
