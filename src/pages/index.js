@@ -22,7 +22,7 @@ const IndexPage = ({ data, className }) => {
         <Banner
           title={t1}
           info={t2}>
-          <Btn to="/contact-us/" text="Let's Chat" borderColor="var(--favoriteLight)"txtColor="var(--primaryBlack)"/>
+          <Btn to="/contact-us/" text="Let's Chat" borderColor="var(--solutionsColor)"txtColor="var(--primaryBlack)"/>
         </Banner>
       </PinkHero>
       <div className="digital-marketing-services">

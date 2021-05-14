@@ -12,7 +12,7 @@
   z-index: 3;
 }
 .submenu section{
-  background-color: var(--primaryColor);
+  background-color: var(--primaryDark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,7 @@
   display: block;
 }
 .submenu-center {
-  background-color: var(--primaryLight);
+  background-color: var(--solutionsColor);
 }
 .submenu-center .subLink {
   height: 60px;
