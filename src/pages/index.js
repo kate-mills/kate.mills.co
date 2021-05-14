@@ -5,6 +5,7 @@ import PinkHero from '../components/PinkHero'
 import Banner from '../components/Banner'
 import AboutUs from '../components/Home/AboutUs'
 import FeaturedWebServices from '../components/Home/FeaturedWebServices'
+import WebPackages from '../components/Home/WebPackages'
 import SEO from '../components/SEO'
 import Contact from '../components/Contact/Contact'
 import styled from 'styled-components'
@@ -31,6 +32,7 @@ const IndexPage = ({ data, className }) => {
           data-sal="zoom-out"
           data-sal-easing="ease-out"
           data-sal-duration="500"/>
+        <WebPackages/>
       </div>
       <Contact/>
       <section className="footer-btn">
