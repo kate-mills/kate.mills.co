@@ -63,8 +63,13 @@ export default styled(IndexPage)`
     }
     p.we-offer-p{
       letter-spacing: var(--altSpacing);
-      width: 50%;
+      width: 80%;
       margin: 1rem auto;
+    }
+    @media(min-width: 768px){
+      p.we-offer-p{
+        width: 50%;
+      }
     }
   }
 `
