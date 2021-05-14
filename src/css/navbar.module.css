@@ -25,6 +25,7 @@
 }
 .nav-links {
   list-style-type: none;
+  padding-left: 1.25rem;
   margin: 0 auto;
   height: 0;
   overflow: hidden;
@@ -32,7 +33,6 @@
 }
 .show-nav {
   height: 265px;
-  padding-left: 1.25rem;
 }
 .nav-links a,
 .nav-links span{
