@@ -95,7 +95,7 @@ a{
   transition: var(--mainTransition);
 }
 .phone{
-  color: var(--primaryBlack);
+  color: var(--solutionsColor);
   font-family: var(--mainFF);
   font-style: normal;
   font-weight: 300;

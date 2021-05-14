@@ -10,9 +10,10 @@
   padding: 1rem 1.25rem 0.5rem 1.02rem;
 }
 .logo{
-  padding: .3rem;
+  padding: .3rem 0;
 }
 .toggle-btn {
+  color: var(--solutionsColor);
   background: inherit !important;
   border: unset;
   margin-left: 10px;
@@ -31,6 +32,7 @@
 }
 .show-nav {
   height: 265px;
+  padding-left: 1.25rem;
 }
 .nav-links a,
 .nav-links span{
@@ -39,8 +41,15 @@
   letter-spacing: var(--altSpacing);
   padding: 1rem 1.25rem;
   text-decoration: none;
-  margin-left: 10px;   
 }
+.nav-links a:hover{
+  background: var(--primaryBlack2);
+  color: var(--primaryColor);
+}
+  .nav-links a.phone:hover{
+    background:transparent;
+  }
+
 .nav-links a.allow-pointer{
   opacity: 1;
 }
@@ -56,7 +65,7 @@
     padding: 0 1rem;
   }
   .logo{
-    max-height: 50px;
+    max-height: 53px;
     padding: .3rem 0;
   }
 }

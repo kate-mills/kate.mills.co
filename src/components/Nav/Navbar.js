@@ -29,7 +29,7 @@ const Navbar = (props) => {
     <nav className={`${styles.navbar}`}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <Link to={`/`} className={styles.logo}><img width="211" height="40" src={logo} alt="logo" /></Link>
+          <Link to={`/`} className={styles.logo}><img width="211" height="43" src={logo} alt="logo" /></Link>
           <button type="button" className={styles.toggleBtn} onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className={styles.toggleIcon} />
           </button>
