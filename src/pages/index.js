@@ -24,9 +24,9 @@ const IndexPage = ({ data, className }) => {
           <Link to="/contact-us/" className="btn btn--animated btn--white">Let's Chat</Link>
         </Banner>
       </PinkHero>
-        <AboutUs/>
       <div className="digital-marketing-services">
         {/*<h2 className="banner-h2">Find a Range of Website Design Solutions and Choose One That Fits Your Budget and Goals!</h2>*/}
+        <AboutUs/>
         <FeaturedWebServices
           data-sal="zoom-out"
           data-sal-easing="ease-out"
@@ -54,9 +54,15 @@ export const query = graphql`
 export default styled(IndexPage)`
   div.digital-marketing-services{
     h2.banner-h2{
-      color: var(--digitalOnBlack);
-      margin: 0 auto;
+      color: var(--primaryBlack);
+      margin: 2rem auto;
       text-align: center;
+      font-size: 2rem;
+    }
+    p.we-offer-p{
+      letter-spacing: var(--altSpacing);
+      width: 50%;
+      margin: 1rem auto;
     }
   }
 `
