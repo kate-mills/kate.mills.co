@@ -1,10 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import PinkHero from '../components/PinkHero'
 import Banner from '../components/Banner'
 import AboutUs from '../components/Home/AboutUs'
-import Btn from '../components/Btn'
 import FeaturedWebServices from '../components/Home/FeaturedWebServices'
 import SEO from '../components/SEO'
 import Contact from '../components/Contact/Contact'
@@ -22,7 +21,7 @@ const IndexPage = ({ data, className }) => {
         <Banner
           title={t1}
           info={t2}>
-          <Btn to="/contact-us/" text="Let's Chat" borderColor="var(--solutionsColor)"txtColor="var(--primaryBlack)"/>
+          <Link to="/contact-us/" className="btn btn--animated btn--white">Let's Chat</Link>
         </Banner>
       </PinkHero>
         <AboutUs/>
@@ -35,7 +34,7 @@ const IndexPage = ({ data, className }) => {
       </div>
       <Contact/>
       <section className="footer-btn">
-        <Btn to="/portfolio/" text="View Our Portfolio" color="var(--primaryColor)" colorful/>
+        <Link to="/portfolio" className="btn btn--animated btn--white" style={{backgroundColor: 'var(--primaryBlack)', color: 'var(--primaryColor)'}}>View Our Portfolio</Link>
       </section>
       </div>
     </Layout>
