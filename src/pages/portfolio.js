@@ -39,6 +39,7 @@ export const query = graphql`
           slug
           date
           type
+          mainImgAlt
           images {
             id
             localFiles {

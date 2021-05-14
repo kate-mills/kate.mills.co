@@ -7,7 +7,7 @@ import {navigate} from 'gatsby'
 import Title from '../Title'
 
 const Projects = ({
-  projects: data,
+  projects:data,mainImageAlt,
   slug,
   showSearchBtns,
 }) => {
@@ -31,12 +31,12 @@ const Projects = ({
       {showSearchBtns && ( headerAndBtns) }
       <div className="section-center">
         {projects.map(item => {
-          const { slug, type } = item.data
+          const { slug, type, mainImgAlt } = item.data
           const fluid = item.data.images.localFiles[0].childImageSharp.fluid
           return (
             <article className={styles.project} key={item.id} onClick={()=>navigate(`/${type}/${slug}`)} onKeyPress={()=>navigate(`/${type}/${slug}`)} aria-hidden="true">
               <div className={styles.imgContainer}>
-                <Image fluid={fluid} className={styles.img} alt="single project" />
+                <Image fluid={fluid} className={styles.img} alt={mainImgAlt} />
                 <span className={styles.link}>
                   details
                 </span>

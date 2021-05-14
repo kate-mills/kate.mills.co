@@ -9,11 +9,12 @@ import SEO from '../components/SEO'
 import Btn from '../components/Btn'
 //import Title from '../components/Title'
 
-const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
+const ProjectTemplate = ({ data:{projects} } ) => {
   const {
     name,
     desc,
     type,
+    mainImgAlt,
     url
   } = projects.nodes[0].data
 
@@ -39,7 +40,7 @@ const ProjectTemplate = ({ data:{projects, defaultBg} } ) => {
                 <Image
                   key={index}
                   fluid={img.childImageSharp.fluid}
-                  alt=""
+                  alt={mainImgAlt}
                   className={styles.image}
                 />
               )
@@ -78,17 +79,11 @@ export const getProject = graphql`
               }
             }
           }
+          mainImgAlt
           img_position
           starting_price
           featured
           slug
-        }
-      }
-    }
-    defaultBg: file(relativePath: { eq: "hero.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

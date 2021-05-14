@@ -72,6 +72,7 @@ export const getService = graphql`
           type
           slug
           name
+          mainImgAlt
           images {
             localFiles {
               childImageSharp {
