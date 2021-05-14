@@ -1,14 +1,16 @@
 @import url("https://use.typekit.net/igr8zjs.css"); /*NEW*/
 
 :root {
-  --digitalColor: #7e7b78;
-  --solutionsColor: #c8c6c3;
+  --digitalColor: #909197;  /*#7e7b78;*/
+  --digitalOnBlack:#909197; /*#a39f9b;*/
+  --solutionsColor:#D0D1D5; /*#c8c6c3;*/
   --favoriteColor: #e12386;
-  --favoriteLight: #efc2e5;
-  --primaryLight: #B99281;
-  --primaryDark:  #9F776B;
-  --primaryColor: #efebe8; /*#F7F3F0;*/
+  --favoriteLight:  #efc2e5;
+  --primaryLight:#f3f8fb; /* #B99281;*/
+  --primaryDark:#e0e0e0;/*#9F776B;*/
+  --primaryColor: #EDF0F2; /*#efebe8; /*#F7F3F0;*/
   --primaryBlack: #121212;
+  --primaryBlack2: #2d2e2f;/*hover black*/
   --primaryWhite: #ffffff;
   --primaryGrey: #E4D9D5;
   --grey0: #F5F5F5;
@@ -48,6 +50,7 @@ p, div{
   font-weight: 300;
 }
 nav a {
+  color: var(--solutionsColor);
   font-family: var(--mainFF);
   font-style: normal;
   font-weight: 300;

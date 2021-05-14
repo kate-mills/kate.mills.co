@@ -1,4 +1,5 @@
 .navbar{
+  background: var(--primaryBlack);
   font-weight: 300;
   width: 100%;
 }
@@ -82,17 +83,17 @@
     background: unset;
   }
   .nav-links a:hover{
-    background: var(--solutionsColor);
-    color: var(--primaryBlack) !important;
+    background: var(--primaryBlack2);
+    color: var(--primaryColor) !important;
   }
   .nav-links a.phone:hover{
     background:transparent;
   }
   .nav-links li.active{
-    background: var(--primaryColor);
-  }
-  .nav-links li.active a {
-    color: var(--primaryBlack) !important;
+    background: var(--primaryBlack2);/*styles while hovering over submenu*/
+    a {
+      color: var(--digitalColor);
+    }
   }
   .logo{
     padding: .3rem 0;

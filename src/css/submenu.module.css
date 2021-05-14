@@ -22,7 +22,7 @@
   display: block;
 }
 .submenu-center {
-  background-color: var(--primaryColor);
+  background-color: var(--primaryLight);
 }
 .submenu-center .subLink {
   height: 60px;
@@ -40,7 +40,7 @@
   cursor: pointer !important;
   color: var(--primaryBlack) !important;
   text-decoration: none;
-  background-color: var(--solutionsColor);
+  background-color: var(--primaryColor);
   width: 100%;
 }
 @media screen and (max-width: 1199px){
