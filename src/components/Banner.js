@@ -27,9 +27,11 @@ const Banner = ({ title, info, children, className}) => {
 
 export default styled(Banner)`
   &{
+    width: 100%;
     text-align: center;
     letter-spacing: var(--mainSpacing);
     color: var(--digitalColor);
+    position: relative;
     span.title-l1 {
       display: block;
       font-size: 3.3rem;
