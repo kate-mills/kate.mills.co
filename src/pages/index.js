@@ -57,7 +57,7 @@ export default styled(IndexPage)`
   div.digital-marketing-services{
     h2.banner-h2{
       color: var(--primaryBlack);
-      margin: 2rem auto;
+      margin: 2rem .5rem;
       text-align: center;
       font-size: 2rem;
     }
