@@ -38,7 +38,7 @@ export default styled(Banner)`
     text-align: center;
   }
   & h1{
-    color: var(--digitalColor2);
+    color: var(--digitalColor);
   }
   & > h1 > span.title-l1{
     animation-fill-mode: backwards;
