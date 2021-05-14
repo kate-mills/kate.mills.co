@@ -7,6 +7,8 @@ const AppProvider = ({ children }) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [page, setPage] = useState({ page: '', links: [] });
   const [location, setLocation] = useState({});
+
+
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
@@ -27,6 +29,18 @@ const AppProvider = ({ children }) => {
     setIsSubmenuOpen(false);
   };
 
+  const [height, setHeight] = React.useState(0);
+
+  React.useEffect(()=>{
+    window.addEventListener('scroll', ()=>{
+      setHeight(window.pageYOffset);
+    })
+    return ()=>{
+      return window.removeEventListener('scroll', ()=>{})
+    }
+  }, [])
+
+
   return (
     <AppContext.Provider
       value={{
@@ -38,6 +52,7 @@ const AppProvider = ({ children }) => {
         closeSubmenu,
         page,
         location,
+        height,
       }}
     >
       {children}
