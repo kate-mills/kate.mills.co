@@ -57,7 +57,6 @@ export default styled(IndexPage)`
   div.digital-marketing-services{
     h2.banner-h2{
       color: var(--primaryBlack);
-      margin: 2rem .5rem;
       text-align: center;
       font-size: 2rem;
     }
@@ -66,7 +65,9 @@ export default styled(IndexPage)`
       width: 80%;
       margin: 1rem auto;
     }
-    @media(min-width: 768px){
+  }
+  @media(min-width: 768px){
+    div.digital-marketing-services{
       p.we-offer-p{
         width: 50%;
       }
