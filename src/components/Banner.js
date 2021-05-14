@@ -38,7 +38,7 @@ export default styled(Banner)`
     text-align: center;
   }
   & h1{
-    color: var(--digitalColor);
+    color: var(--digitalColor2);
   }
   & > h1 > span.title-l1{
     animation-fill-mode: backwards;
@@ -67,7 +67,7 @@ export default styled(Banner)`
     display: inline-block;
     font-family: var(--mainFF);
     margin-top: 1.5rem;
-    padding: .4rem 3rem;
+    /*padding: .4rem 3rem;*/
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;

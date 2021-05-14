@@ -2,10 +2,12 @@
 
 :root {
   --digitalColor: #909197;  /*#7e7b78;*/
+  --digitalColor2: silver;
   --digitalOnBlack:#909197; /*#a39f9b;*/
   --solutionsColor:#D0D1D5; /*#c8c6c3;*/
   --favoriteColor: #e12386;
   --favoriteLight:  #efc2e5;
+  --primaryLightest: ghostwhite;
   --primaryLight:#f3f8fb; /* #B99281;*/
   --primaryDark:#e0e0e0;/*#9F776B;*/
   --primaryColor: #EDF0F2; /*#efebe8; /*#F7F3F0;*/
@@ -50,7 +52,7 @@ p, div{
   font-weight: 300;
 }
 nav a {
-  color: var(--solutionsColor);
+  color: var(--digitalColor2);
   font-family: var(--mainFF);
   font-style: normal;
   font-weight: 300;

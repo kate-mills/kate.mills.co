@@ -24,7 +24,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       <SEO title={name} description={meta_desc}/>
       <CustomHero>
         <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
-          <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)"/>
+          <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)" txtColor="var(--primaryWhite)"/>
         </Banner>
       </CustomHero>
       <section className={`${styles.template} section-center`}>
