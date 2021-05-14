@@ -17,16 +17,11 @@ const PinkHero = ({ img, className, children }) => {
   )
 }
 export default styled(PinkHero)`
-  background: var(--primaryBlack);
-  align-items: baseline;
-  display: flex;
-  justify-content: center;
   min-height: calc(100vh - 76px);
+  background: var(--primaryBlack);
   opacity: 1 !important;
   transition: var(--mainTranistion);
-  width: 100%;
-
-  @media(min-width:500px){
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
