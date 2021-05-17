@@ -1,12 +1,13 @@
 import React from 'react'
 import Title from '../Title'
-import styles from '../../css/featuredwebservices.module.css'
 import {packages} from '../../constants/featured-web-services'
 import {Link} from 'gatsby'
 
+import styled from 'styled-components'
+
 const Services = () => {
   return (
-    <section className={`${styles.services} background-pattern-rain-dark section-center`}
+    <WebPackagesWrapper className={`background-pattern-rain-dark section-center`}
     >
       <Title
         title="Baisic"
@@ -15,27 +16,100 @@ const Services = () => {
       />
           <p className="we-offer-p">We offer a range of website design solutions for you to choose including Websites and E-Commerce Stores for estheticians, spas, salons, and beauty professionals at a price that fits your budget and delivered promptly.  With our expertise & knowledge of the beauty industry, our design process is straightforward for you.</p>
 
-      <div className={styles.center}>
+      <div className="center">
         {packages.map((item, index) => {
           return (
-            <article key={index} className={styles.service}>
+            <article key={index} className="service">
               <span>
                 <Link to={item.path}>{item.title}</Link>
               </span>
-              <span className={styles.price}>{item.price}</span>
-              <div className={styles.underline}/>
-              <p className={styles.text}>{item.text}</p>
-              <p className={styles.text}>
+              <span className="price">{item.price}</span>
+              <div className="underline"/>
+                <ul data-bullet-list>
+                  {item.textList.map((item, idx)=>{
+                    return(
+                      <li key={idx}>{item}</li>
+                    )
+                  })}
+                </ul>
+              <p className="fine-print">
                 {item.finePrint}
-                {` `}
+              </p>
+              <p className="fine-print">
                 {item.finerPrint}
               </p>
             </article>
           )
         })}
       </div>
-    </section>
+    </WebPackagesWrapper>
   )
 }
+
+const WebPackagesWrapper = styled.section`
+  &{
+    color: var(--primaryBlack);
+    padding: 4rem 0;
+    border-radius: var(--radius);
+  }
+  & .center{
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 2rem;
+
+    .service {
+      margin: 2rem 0;
+      padding: 1.5rem 0;
+      text-align: center;
+      background: var(--primaryWhite);
+      border-radius: var(--radius);
+      span{
+        display: flex;
+        justify-content: center;
+        color: var(--solutionsColor);
+        align-items: center;
+        margin: 1rem auto;
+        border-radius: 10px;
+        a{
+          font-family: var(--scriptFF);
+          font-size: 2.5rem;
+          text-transform: capitalize;
+          letter-spacing: var(--mainSpacing);
+        }
+      }
+      .underline{
+        height: 3px;
+        background-color: var(--solutionsColor);
+        width: 50%;
+        margin: 0 auto;
+      }
+      div{
+        font-family: var(--pFF);
+        font-size: 1.1rem;
+        font-weight: 300;
+        letter-spacing: 0.01rem;
+        margin-bottom: 1.25rem;
+        text-transform: uppercase;
+      }
+      ul{
+        text-align: center;
+        margin: 1rem 3rem 1.5rem;
+        font-family: var(--mainFF);
+        letter-spacing: var(--altSpacing);
+      }
+      a:hover{
+        color: var(--favoriteColor);
+        text-decoration: none;
+      }
+    }
+    p.fine-print{
+      font-size: .8rem;
+      margin: .5rem auto;
+            width: 100%;
+    }
+  }
+`
 
 export default Services

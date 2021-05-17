@@ -25,19 +25,36 @@ export const packages =  [
     path: "/blogs",
     title: "Basic Website",
     price: "$1295",
-    text:
-      "Up to 5 pages of content\nRevisions\nHigh quality images\nCustom Forms\nMobile & desktop friendly\nFree SSL instalation\nFast, reliable, Google-friendly website",
-    finePrint: "**50% non-refundable deposit due at start of project.",
-    finerPrint: "50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
+    textList: [
+      "Up to 5 pages of content",
+      "Revisions",
+      "High quality images",
+      "Custom Forms",
+      "Mobile & desktop friendly",
+      "Free SSL instalation",
+      "Fast, reliable, Search Engine Optimized",
+      "Google-friendly"
+    ],
+    finePrint: "*50% non-refundable deposit due at start of project.",
+    finerPrint: "*50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
   },
   {
     path: "/ecommerce",
     title: "Basic e-commerce",
     price: "$1595",
-    text:
-    "Includes everything in Basic Website Package Plus:\nAdd a store and shopping cart to your optimized website.",
-    finePrint: "**50% non-refundable deposit due at start of project.",
-    finerPrint: "50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
+    textList:[
+      "Up to 5 pages of content",
+      "Revisions",
+      "High quality images",
+      "Custom Forms",
+      "Mobile & desktop friendly",
+      "Free SSL instalation",
+      "Fast, reliable, Search Engine Optimized",
+      "Google-friendly",
+      "Add a store and shopping cart to your optimized website. ",
+    ],
+    finePrint: "*50% non-refundable deposit due at start of project.",
+    finerPrint: "*50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
   },
 ]
 
