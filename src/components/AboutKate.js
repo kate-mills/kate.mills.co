@@ -1,9 +1,9 @@
 import React from 'react'
 import Title from './Title'
-import styles from '../css/mission.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Btn from './Btn'
+import styled from 'styled-components'
 
 const getKate = graphql`
   query AboutKate {
@@ -24,17 +24,16 @@ const AboutKate = () => {
   } = useStaticQuery(getKate)
 
   return (
-    <section className={styles.about}>
+    <AboutKateWrapper>
       <Title title="time to" subtitle="shine" />
-      <div className={styles.aboutCenter}>
-        <article className={styles.aboutImg}>
-          <div className={styles.imgContainer}>
+      <div className="about-center">
+        <article className="about-img">
+          <div className="img-container">
             <Img fluid={fluid} alt="Profile photo of website designer & developer Kate Mills, owner of Ally Digital Solutions." />
           </div>
         </article>
-        <article className={styles.aboutInfo}>
-          
-          <p className={styles.heading}>The Journey</p>
+        <article className="about-info">
+          <p className="heading">The Journey</p>
           <p>My philosophy is simple: develop beautifully responsive custom websites and social media for salons and spas with exemplary customer service.</p>
           <p>My journey in creating Ally Digital Solutions began in 2020 when I wanted to fulfill what I saw as a need in the beauty industry during the COVID pandemic, to develop websites with an e-commerce component allowing estheticians a safe way to generate income.
           </p>
@@ -49,8 +48,86 @@ const AboutKate = () => {
           <Btn to="/contact-us/" color colorful text="Get A Quote" />
         </article>
       </div>
-    </section>
+    </AboutKateWrapper>
   )
 }
 
+const AboutKateWrapper = styled.section`
+  &{
+    padding: 4rem 0;
+  }
+  .about-center {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .about-img {
+    margin: 3rem 0;
+    background: var(--primaryBlack);
+    box-shadow: var(--lightShadow);
+  }
+  .about-info {
+    margin-top: 3rem;
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img img {
+    width: 100%;
+    display: block;
+    box-shadow: var(--lightShadow);
+    object-position: center 25% !important;
+    max-height: 450px;
+  }
+  .img-container {
+    max-height: 450px;
+  }
+  .about-info .heading {
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    font-family: var(--scriptFF);
+    text-transform: capitalize;
+  }
+  .img-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--primaryBlack);
+    box-sizing: border-box;
+    top: -16px;
+    left: -16px;
+  }
+  
+  @media (min-width: 768px) {
+    .about-center {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 3rem;
+      align-items: flex-start;
+    }
+    .about-img,
+    .about-info {
+      margin: 0;
+    }
+    .about-img{
+      margin-top: 3rem;
+    }
+    .about-img img {
+      max-height: 600px;
+    }
+    .img-container {
+      max-height: 600px;
+    }
+    .about-info p {
+      width: 80%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .about-center {
+      width: 95vw;
+      max-width: 1170px;
+    }
+  }
+
+`
 export default AboutKate
