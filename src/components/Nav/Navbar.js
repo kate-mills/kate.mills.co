@@ -1,3 +1,5 @@
+/* eslint-disable  jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable  jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react'
 import {Link} from 'gatsby'
 import styles from '../../css/navbar.module.css'
@@ -25,6 +27,11 @@ const Navbar = (props) => {
     openSubmenu(page_name, {center, bottom});
   };
 
+  const alwaysCloseNavAfterClick = ()=>{
+    // close nav no mater what page user is on
+    setIsOpen(false)
+  }
+
   return (
     <nav className={`${styles.navbar}`}>
       <div className={styles.navCenter}>
@@ -35,7 +42,7 @@ const Navbar = (props) => {
           </button>
         </div>
         <NavSubmenu/>
-        <ul
+        <ul onClick={alwaysCloseNavAfterClick}
           className={
             isOpen
               ? `${styles.navLinks} ${styles.showNav}`
