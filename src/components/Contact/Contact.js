@@ -1,19 +1,21 @@
 import React from 'react'
 import Title from '../Title'
-import styles from '../../css/contact.module.css'
 import PhoneNumber from '../PhoneNumber'
+import styled from 'styled-components'
+
+
 const Contact = () => {
-  const asterisk = <span className={styles.required}>&lowast;</span>;
+  const asterisk = <span className="required">&lowast;</span>;
   return (
-    <section className={styles.contact}>
+    <ContactWrapper>
       <Title title="contact" subtitle="us" />
-      <div className={styles.center}>
-        <div className={styles.instructions}>
+      <div className="center">
+        <div className="instructions">
           <p>Call/text us at<PhoneNumber/>or contact us via the submission form and we'll get back to you as soon as we can.</p>
-          <p className={styles.thanks}> Thank you!</p>
+          <p> Thank you!</p>
         </div>
         <form
-          className={styles.form}
+          className="form"
           name="contact"
           method="post"
           netlify-honeypot="bot-field"
@@ -29,7 +31,7 @@ const Contact = () => {
               type="text"
               name="name"
               id="name"
-              className={styles.formControl}
+              className="form-control"
               required
             />
           </div>
@@ -40,7 +42,7 @@ const Contact = () => {
               type="email"
               name="email"
               id="email"
-              className={styles.formControl}
+              className="form-control"
               required
             />
           </div>
@@ -52,7 +54,7 @@ const Contact = () => {
                 type="tel"
                 name="phone"
                 id="phone"
-                className={styles.formControl}
+                className="form-control"
                 required
               />
             </label>
@@ -62,17 +64,90 @@ const Contact = () => {
               name="message"
               id="message"
               rows="10"
-              className={styles.formControl}
+              className="form-control"
               placeholder="Tell us about your project..."
             />
           </div>
           <div>
-            <input type="submit" value="send" className={styles.submit} />
+            <input type="submit" value="send" className="submit"/>
           </div>
         </form>
       </div>
-    </section>
+    </ContactWrapper>
   )
 }
 
+const ContactWrapper = styled.section`
+  &{
+    padding: 3rem 0;
+  }
+  & .center{
+    margin: 0 auto;
+    width: 80vw;
+    .instructions p:nth-child(2){
+      margin-bottom: 2.5rem;
+    }
+  }
+  label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  .required {
+    color: var(--favoriteColor);
+    font-size: 1.5rem;
+    padding-right: 2px;
+  }
+  .form-control,
+  .submit {
+    border: 1px solid var(--primaryBlack);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.375rem 0.75rem;
+    width: 100%;
+    transition: var(--mainTransition);
+  }
+  .submit {
+    background-color: var(--primaryBlack);
+    outline: none;
+    border-color: var(--primaryBlack);
+    text-transform: uppercase;
+    color: var(--primaryWhite);
+    transition: var(--mainTransition);
+    cursor: pointer;
+    padding: 0.65rem 0.75rem;
+    width: 100% !important;
+  }
+  input:focus,
+  textarea:focus{
+    outline-color: var(--primaryColor);
+  }
+  .submit:hover,
+  .submit:focus{
+    background: transparent;
+    color: var(--primaryBlack);
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--primaryBlack);
+    opacity: 0.8; /* Firefox */
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--primaryBlack);
+    opacity: 0.8;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--primaryBlack);
+    opacity: 0.8;
+  }
+
+
+  @media(min-width: 992px){
+    & .center{
+      margin: 0 auto;
+      width: 50vw;
+    }
+  }
+`
 export default Contact
