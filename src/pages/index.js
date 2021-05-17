@@ -26,7 +26,6 @@ const IndexPage = ({ data, className }) => {
         </Banner>
       </PinkHero>
       <div className="digital-marketing-services">
-        {/*<h2 className="banner-h2">Find a Range of Website Design Solutions and Choose One That Fits Your Budget and Goals!</h2>*/}
         <AboutUs/>
         <FeaturedWebServices
           data-sal="zoom-out"
