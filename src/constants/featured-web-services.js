@@ -22,7 +22,7 @@ export default [
 
 export const packages =  [
   {
-    path: "/blogs",
+    path: "/websites",
     title: "Basic Website",
     price: "$1295",
     textList: [

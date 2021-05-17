@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 import PinkHero from '../components/PinkHero'
 import Banner from '../components/Banner'
 import AboutUs from '../components/Home/AboutUs'
-import FeaturedWebServices from '../components/Home/FeaturedWebServices'
+//import FeaturedWebServices from '../components/Home/FeaturedWebServices'
 import WebPackages from '../components/Home/WebPackages'
 import Contact from '../components/Contact/Contact'
 
@@ -28,10 +28,7 @@ const IndexPage = ({ data, className }) => {
       </PinkHero>
       <div className="digital-marketing-services">
         <AboutUs/>
-        <FeaturedWebServices
-          data-sal="zoom-out"
-          data-sal-easing="ease-out"
-          data-sal-duration="500"/>
+        {/*<FeaturedWebServices data-sal="zoom-out" data-sal-easing="ease-out" data-sal-duration="500"/>*/}
         <WebPackages/>
       </div>
       <Contact/>

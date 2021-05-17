@@ -15,17 +15,24 @@ const Services = () => {
         subTitleColor="var(--primaryLight)"
       />
           <p className="we-offer-p">We offer a range of website design solutions for you to choose including Websites and E-Commerce Stores for estheticians, spas, salons, and beauty professionals at a price that fits your budget and delivered promptly.  With our expertise & knowledge of the beauty industry, our design process is straightforward for you.</p>
-
       <div className="center">
+
         {packages.map((item, index) => {
           return (
-            <article key={index} className="service">
-              <span>
+            <article key={index} className="service"
+            >
+              <span
+              data-sal="flip-down"
+              data-sal-duration="800"
+              >
                 <Link to={item.path}>{item.title}</Link>
               </span>
               <span className="price">{item.price}</span>
               <div className="underline"/>
-                <ul data-bullet-list>
+              <ul data-bullet-list
+              data-sal="flip-down"
+              data-sal-duration="800"
+              >
                   {item.textList.map((item, idx)=>{
                     return(
                       <li key={idx}>{item}</li>
