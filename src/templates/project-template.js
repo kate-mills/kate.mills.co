@@ -28,32 +28,31 @@ const ProjectTemplate = ({ data:{projects} } ) => {
         </CustomHero>
       <section className={`${styles.template} background-pattern-rain-light`}>
         <p className="centered background-pattern-rain-light" >
-          <a href={url} className={`${styles.url} ${styles.btnUrl}`}>
-            Go to<br/>{name}
-          </a>
+          <a href={url} className={`${styles.url}`}>Go to<br/>{name}</a>
         </p>
         <div className={styles.project}>
-        <div className={styles.singleProjectImg}>
-          {
-            projectImages.map((img, index)=>{
-              return(
-                <Image
-                  key={index}
-                  fluid={img.childImageSharp.fluid}
-                  alt={mainImgAlt}
-                  className={styles.image}
-                />
-              )
-            })
-          }
-        </div>
+          <div className={styles.singleProjectImg}>
+            {
+              projectImages.map((img, index)=>{
+                return(
+                  <Image
+                    key={index}
+                    fluid={img.childImageSharp.fluid}
+                    alt={mainImgAlt}
+                    className={styles.image}
+                  />
+                )
+              })
+            }
+          </div>
         </div>
         <div className="footer-btn">
-          <div  className={styles.hideMobile}>
-            <Btn to={`/${type}/`} text={`View all ${type}`} colorful  color/>
+          <div className={styles.hideMobile}>
+            <Btn to={`/${type}/`} text={`View all ${type}`}/>
           </div>
-        <Btn to={`/portfolio/`} text={`View all projects`} colorful color/> </div>
-        </section>
+          <Btn to={`/portfolio/`} text='View all projects'/>
+        </div>
+      </section>
     </Layout>
   )
 }

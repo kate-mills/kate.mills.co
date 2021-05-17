@@ -20,7 +20,9 @@ const portfolio = ({ data }) => {
     <section className="section">
       <SearchProjects projects = {projects} showSearchBtns />
     </section>
-      <div className="footer-btn"><Btn to="/contact-us/" text="contact us" colorful color/></div>
+      <div className="footer-btn">
+        <Btn to="/contact-us/" text="contact us" bgColor="dark"/>
+      </div>
     </Layout>
   )
 }

@@ -115,6 +115,7 @@ a{
 }
 .footer-btn{
   text-align: center;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   background: var(--primaryWhite);
 }
@@ -236,59 +237,4 @@ background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox=
     opacity: 1;
     transform: translateX(0);
   }
-}
-.btn:link,
-.btn:visited{
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .3s;
-  position: relative;
-}
-.btn:hover{
-  transform: translateY(-.3rem);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-}
-.btn:active {
-  transform: translateY(.1rem);
-  box-shadow: 0 .5rem .1rem rgba(0, 0, 0, .2);
-}
-.btn::after{
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s;
-}
-.btn:hover::after{
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-.btn--animated{
-  backface-visibility: hidden; /* shaky animation hack */
-  animation: moveInBtn .5s ease-out .5s;
-  animation-fill-mode: backwards;
-}
-.btn--white {
-  background-color: var(--primaryColor);
-  color: var(--primaryBlack);
-  font-size: 1rem;
-  font-weight: bold;
-}
-.btn--white::after{
-  background-color: silver;
-}
-
-
-
-/* utility classes */
-.u-center-txt{
-  text-align: center;
 }

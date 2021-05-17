@@ -17,7 +17,7 @@ export default () => (
     </CustomHero>
       <AboutKate />
       <div className="footer-btn">
-        <Btn to="/portfolio/" color colorful text="latest websites"/>
+        <Btn to="/portfolio/" bgColor="dark" text="latest websites"/>
      </div>
   </Layout>
 )

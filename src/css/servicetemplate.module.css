@@ -49,8 +49,8 @@
   text-decoration: none;
 }
 a.url{
-  background: var(--primaryBlack);
-  border-radius: 2px;
+  background: var(--digitalColor);
+  border-radius: 10rem;
   color: var(--primaryWhite);
   display: inline-block;
   letter-spacing: var(--altSpacing);
@@ -60,7 +60,7 @@ a.url{
   max-width: 300px;
 }
 a.url:hover{
-  color: var(--primaryGrey);
+  color: var(--primaryColor);
 }
 span.lower-url{
   text-transform: lowercase;
