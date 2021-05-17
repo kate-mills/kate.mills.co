@@ -8,7 +8,6 @@ import HeroTall from '../components/HeroTall'
 import Btn from '../components/Btn'
 import Banner from '../components/Banner'
 import AboutUs from '../components/Home/AboutUs'
-//import FeaturedWebServices from '../components/Home/FeaturedWebServices'
 import WebPackages from '../components/Home/WebPackages'
 import Contact from '../components/Contact/Contact'
 
