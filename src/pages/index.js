@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PinkHero from '../components/PinkHero'
+import HeroTall from '../components/HeroTall'
 import Btn from '../components/Btn'
 import Banner from '../components/Banner'
 import AboutUs from '../components/Home/AboutUs'
@@ -20,16 +20,15 @@ const IndexPage = ({ data, className }) => {
     <Layout>
       <SEO title={`${t1} ${t2}`} image={data.defaultBg.childImageSharp.fluid.src}/>
       <div className={className}>
-      <PinkHero>
+      <HeroTall>
         <Banner
           title={t1}
           info={t2}>
           <Btn to="/contact-us/" bgColor="light" text="Let's Chat"/>
         </Banner>
-      </PinkHero>
+      </HeroTall>
       <div className="digital-marketing-services">
         <AboutUs/>
-        {/*<FeaturedWebServices data-sal="zoom-out" data-sal-easing="ease-out" data-sal-duration="500"/>*/}
         <WebPackages/>
       </div>
       <Contact/>

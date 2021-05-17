@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import CustomHero from '../components/CustomHero'
+import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 import Btn from '../components/Btn'
 import styles from '../css/servicetemplate.module.css'
@@ -22,11 +22,11 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   return (
     <Layout>
       <SEO title={name} description={meta_desc}/>
-      <CustomHero>
+      <HeroShort>
         <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
           <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)" txtColor="var(--primaryWhite)"/>
         </Banner>
-      </CustomHero>
+      </HeroShort>
       <section className={`${styles.template} section-center`}>
         <div className={`background-pattern-rain-dark ${styles.benefitContainer}`}>
           <Title title={`${why_list.length} benifits of a`} subtitle={singularName} subTitleColor="var(--primaryLight)"/>

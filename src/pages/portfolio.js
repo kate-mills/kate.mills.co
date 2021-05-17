@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
-import CustomHero from '../components/CustomHero'
+import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 import SearchProjects from '../components/Projects/SearchProjects'
 import Btn from '../components/Btn'
@@ -14,9 +14,9 @@ const portfolio = ({ data }) => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <CustomHero>
+      <HeroShort>
         <Banner title="Latest Web Designs" info="Browse through some of our favorites."/>
-      </CustomHero>
+      </HeroShort>
     <section className="section">
       <SearchProjects projects = {projects} showSearchBtns />
     </section>

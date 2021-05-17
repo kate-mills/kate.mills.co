@@ -4,24 +4,27 @@ import React from 'react'
 import styled from 'styled-components'
 import { useGlobalContext } from '../context/context';
 
-const PinkHero = ({ img, className, children }) => {
+const ShortHero = ({ img, className, children }) => {
   const { closeSubmenu } = useGlobalContext();
+
   return (
     <div
+      className={`${className} background-pattern-rain-dark`}
+      fluid={img}
       onFocus={closeSubmenu}
       onMouseOver={closeSubmenu}
-      className={`${className}`}
-      fluid={img}>
+    >
       {children}
     </div>
   )
 }
-export default styled(PinkHero)`
-  min-height: calc(100vh - 76px);
-  background: var(--primaryBlack);
-  opacity: 1 !important;
-  transition: var(--mainTranistion);
-  display: flex;
+
+export default styled(ShortHero)`
   align-items: center;
+  display: flex;
   justify-content: center;
+  min-height: 55vh;
+  opacity: 1 !important;
+  transition: var(--mainTransition);
+  width: 100%;
 `

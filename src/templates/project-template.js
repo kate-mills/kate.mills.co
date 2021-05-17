@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Image from 'gatsby-image'
-import CustomHero from '../components/CustomHero'
+import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 import styles from '../css/servicetemplate.module.css'
 import SEO from '../components/SEO'
@@ -23,9 +23,9 @@ const ProjectTemplate = ({ data:{projects} } ) => {
   return (
     <Layout>
       <SEO title={name} />
-      <CustomHero>
+      <HeroShort>
         <Banner title={name} info={desc || " "}> </Banner>
-        </CustomHero>
+        </HeroShort>
       <section className={`${styles.template} background-pattern-rain-light`}>
         <p className="centered background-pattern-rain-light" >
           <a href={url} className={`${styles.url}`}>Go to<br/>{name}</a>
