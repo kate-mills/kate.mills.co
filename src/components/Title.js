@@ -25,10 +25,14 @@ export default styled(Title)`
 
   .title {
     font-family: var(--altFF);
+    font-weight: 400;
+    font-style: italic;
     color: ${props => props.titleColor || 'var(--primaryBlack)'};
   }
   .subtitle {
     font-family: var(--altFF);
+    font-weight: 400;
+    font-style: italic;
     color: var(--digitalColor);
   }
   span {

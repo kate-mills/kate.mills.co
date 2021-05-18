@@ -10,7 +10,7 @@ const Services = () => {
     <WebPackagesWrapper className={`background-pattern-rain-dark section-center`}
     >
       <Title
-        title="Baisic"
+        title="Basic"
         subtitle="Packages"
         subTitleColor="var(--primaryLight)"
       />
