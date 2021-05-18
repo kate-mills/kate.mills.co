@@ -99,7 +99,7 @@ a{
   transition: var(--mainTransition);
 }
 .phone{
-  color: var(--solutionsColor);
+  color: var(--digitalColor2);
   font-family: var(--altFF);
   font-style: normal;
   font-weight: 400;

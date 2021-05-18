@@ -112,7 +112,8 @@ const NavWrapper = styled.nav`
     color: var(--primaryColor);
   }
     .nav-links a.phone:hover{
-      background:transparent;
+      color: var(--digitalColor2) !important;
+      background:transparent !important;
     }
   
   .nav-links a.allow-pointer{
