@@ -43,7 +43,7 @@ body {
   font-size: 1rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
   opacity: 1;
 }
 p, div{
@@ -62,6 +62,7 @@ h1, h2{
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 300;
+  line-height: 1.25;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
 }
@@ -75,6 +76,7 @@ h3, h4, h5, h6{
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 300;
+  line-height: 1.25;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing) !important;
   white-space: pre-wrap;
