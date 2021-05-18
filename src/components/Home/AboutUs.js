@@ -47,11 +47,11 @@ const AboutUsWrapper = styled.section`
         line-height:0;
       }
       div {
-        font-family: var(--pFF);
+        font-family: var(--mainFF);
         font-size: 1.1rem;
         letter-spacing: 0.01rem;
         margin-bottom: 1.25rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
       }
       p{
         margin-left: 10%;

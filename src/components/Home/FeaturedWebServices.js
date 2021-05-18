@@ -71,7 +71,7 @@ const ServicesWrapper = styled.section`
         margin: 0 auto;
       }
       div{
-        font-family: var(--pFF);
+        font-family: var(--mainFF);
         font-size: 1.1rem;
         font-weight: 300;
         letter-spacing: 0.01rem;

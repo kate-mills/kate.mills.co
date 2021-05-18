@@ -10,8 +10,7 @@ const SlideBox = ({children}) => {
 }
 export default SlideBox
 
-
-const slideInRight = keyframes`
+const fadeIn = keyframes`
  0% {
    opacity: 0;
  }
@@ -21,7 +20,7 @@ const slideInRight = keyframes`
  }
 `
 const Container = styled.div`
- animation-name: ${slideInRight};
+ animation-name: ${fadeIn};
  animation-duration: 8s;
  animation-iteration-count:1;
 

@@ -8,16 +8,16 @@ const Banner = ({ title, info, children, className}) => {
         <span className="title-l1"
           data-sal="zoom-in"
           data-sal-easing="ease"
-          data-sal-duration="500">{title}</span>
+          data-sal-duration="100">{title}</span>
         <span className="title-l2"
           data-sal="zoom-in"
           data-sal-easing="ease"
-          data-sal-duration="500">{info}</span>
+          data-sal-duration="100">{info}</span>
       </h1>
       <div
           data-sal="zoom-in"
           data-sal-easing="ease"
-          data-sal-duration="500"
+          data-sal-duration="100"
       >
       {children}
       </div>
@@ -42,7 +42,7 @@ export default styled(Banner)`
     }
     span.title-l2 {
       display: block;
-      font-size: 1rem;
+      font-size: 1.5rem;
       width: 85%;
       margin: 0 auto;
       margin-bottom: 2rem;
