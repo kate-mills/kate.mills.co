@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Image from "gatsby-image"
-import styles from '../../css/project.module.css'
 import SearchButtons from "./SearchButtons"
-import {navigate} from 'gatsby'
+import SingleProject from './SingleProject'
 import Title from '../Title'
 
 const Projects = ({
@@ -16,8 +14,10 @@ const Projects = ({
 
   const setBackToAll = () => { setProjects(data) }
 
-  const headerAndBtns = (<div className={styles.centerTitle}><Title title={title} subtitle="Projects"/>
-    <p className={styles.centerInfo}>Click below to filter projects by category</p>
+  const headerAndBtns = (
+    <div>
+      <Title title={title} subtitle="Projects"/>
+      <p className="center-info">Click below to filter projects by category</p>
         <SearchButtons
           setTitle={setTitle}
           projects={data}
@@ -27,21 +27,12 @@ const Projects = ({
     </div>
   )
   return (
-    <Wrapper className={`${styles.center} background-pattern-rain-light`}>
+    <Wrapper className={`background-pattern-rain-light`}>
       {showSearchBtns && ( headerAndBtns) }
       <div className="section-center">
         {projects.map(item => {
-          const { slug, type, mainImgAlt } = item.data
-          const fluid = item.data.images.localFiles[0].childImageSharp.fluid
           return (
-            <article className={styles.project} key={item.id} onClick={()=>navigate(`/${type}/${slug}`)} onKeyPress={()=>navigate(`/${type}/${slug}`)} aria-hidden="true">
-              <div className={styles.imgContainer}>
-                <Image fluid={fluid} className={styles.img} alt={mainImgAlt} />
-                <span className={styles.link}>
-                  details
-                </span>
-              </div>
-            </article>
+            <SingleProject key={item.id} project={item.data} showDetailLink/>
           )
         })}
       </div>
@@ -50,27 +41,18 @@ const Projects = ({
 }
 
 const Wrapper = styled.section`
+  & .center-info{
+    text-align: center;
+    margin-bottom: 0;
+    font-style: italic;
+  }
   .section-center {
     display: grid;
     gap: 2rem;
     /* safari workaround */
     grid-gap: 2rem;
-    .img {
-      height: 20rem;
-      border-radius: var(--radius);
-      opacity: 0.7;
-      transition: all 0.3s linear;
-    }
-    article {
-      background: var(--primaryWhite);
-      border-radius: var(--radius);
-      box-shadow: var(--lightShadow);
-      transition: all 0.3s linear;
-    }
-    article:hover {
-      box-shadow: var(--darkShadow);
-    }
     .container {
+      background: var(--favoriteLight);
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);
@@ -78,30 +60,24 @@ const Wrapper = styled.section`
     @media (min-width: 768px) {
       .img {
         height: 15rem;
+        object-position: top center;
       }
       grid-template-columns: 1fr 1fr;
     }
     @media (min-width: 992px) {
       .img {
         height: 12.5rem;
+        object-position: top center;
       }
       grid-template-columns: 1fr 1fr 1fr;
     }
     @media (min-width: 1200px) {
       .img {
         height: 15rem;
+        object-position: top center;
+        
       }
     }
-  }
-  a {
-    display: block;
-    /*width: 9rem;*/
-    text-align: center;
-    background: var(--primaryBlack);
-    color: var(--primaryWhite);
-  }
-  a:hover{
-    border-color: var(--primaryWhite);
   }
 `
 export default Projects

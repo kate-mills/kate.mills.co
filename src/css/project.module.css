@@ -42,13 +42,3 @@
   background: var(--primaryWhite);
   color: var(--primaryBlack);
 }
-
-.centerTitle{
-  padding-top: 1rem;
-  margin-bottom: 0;
-}
-.centerInfo{
-  text-align: center;
-  margin-bottom: 0;
-  font-style: italic;
-}
