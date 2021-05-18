@@ -101,6 +101,7 @@ const NavWrapper = styled.nav`
   }
   .nav-links a,
   .nav-links span{
+    color: var(--digitalColor2);
     display: block;
     font-size: 0.95rem;
     letter-spacing: var(--altSpacing);

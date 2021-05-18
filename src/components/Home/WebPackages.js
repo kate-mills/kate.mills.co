@@ -108,7 +108,7 @@ const WebPackagesWrapper = styled.section`
         letter-spacing: var(--altSpacing);
       }
       a:hover{
-        color: var(--favoriteColor);
+        color: var(--digitalColor);
         text-decoration: none;
       }
     }
