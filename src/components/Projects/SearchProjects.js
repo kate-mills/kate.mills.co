@@ -44,7 +44,6 @@ const Wrapper = styled.section`
   & .center-info{
     text-align: center;
     margin-bottom: 0;
-    font-style: italic;
   }
   .section-center {
     display: grid;

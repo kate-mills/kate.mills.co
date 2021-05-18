@@ -17,18 +17,18 @@ const Title = ({ title, subtitle, className}) => {
 
 export default styled(Title)`
   font-size: 2.5rem;
-  letter-spacing: 7px;
+  letter-spacing: var(--midSpacing);
   margin-top: 0;
   margin-bottom: 1.25rem;
   text-align: center;
   text-transform: capitalize;
 
   .title {
-    font-family: var(--mainFF);;
+    font-family: var(--altFF);
     color: ${props => props.titleColor || 'var(--primaryBlack)'};
   }
   .subtitle {
-    font-family: var(--mainFF);;
+    font-family: var(--altFF);
     color: var(--digitalColor);
   }
   span {

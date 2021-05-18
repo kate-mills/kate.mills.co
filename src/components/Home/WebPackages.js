@@ -80,10 +80,12 @@ const WebPackagesWrapper = styled.section`
         margin: 1rem auto;
         border-radius: 10px;
         a{
-          font-family: var(--scriptFF);
-          font-size: 2.5rem;
+          font-family: var(--altFF);
+          font-weight: 400;
+          font-style: italic;
+          font-size: 1.5rem;
           text-transform: capitalize;
-          letter-spacing: var(--mainSpacing);
+          letter-spacing: var(--altSpacing);
         }
       }
       .underline{
@@ -93,9 +95,8 @@ const WebPackagesWrapper = styled.section`
         margin: 0 auto;
       }
       div{
-        font-family: var(--pFF);
+        font-family: var(--mainFF);
         font-size: 1.1rem;
-        font-weight: 300;
         letter-spacing: 0.01rem;
         margin-bottom: 1.25rem;
         text-transform: uppercase;

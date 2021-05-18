@@ -47,7 +47,6 @@ const SubmenuWrapper = styled.aside`
     border-radius:0;
     display: none; 
     font-size: 0.80rem;
-    font-weight: 300;
     height: fit-content;
     position: absolute;
     top: 4rem;

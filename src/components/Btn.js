@@ -15,7 +15,7 @@ const Btn = ({to, text, color, bgColor, className}) => {
 export default styled(Btn)`
   &:link,
   &:visited{
-    font-family: var(--mainFF);
+    font-size: 1rem;
     letter-spacing: var(--altSpacing);
     text-transform: uppercase;
     text-decoration: none;
@@ -57,17 +57,14 @@ export default styled(Btn)`
   &.btn--light {
     background-color: var(--primaryColor);
     color: var(--primaryBlack);
-    font-size: 1rem;
   }
   &.btn--dark {
     background-color: var(--digitalColor);
     color: var(--primaryWhite);
-    font-size: 1rem;
   }
   &.btn--favorite{
     background-color: var(--digitalColor2);
     color: var(--primaryLight);
-    font-size: 1rem;
   }
   &.btn--light::after,
   &.btn--dark::after{

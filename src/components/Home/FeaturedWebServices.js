@@ -58,8 +58,9 @@ const ServicesWrapper = styled.section`
         margin: 1rem auto;
         border-radius: 10px;
         a{
-          font-family: var(--scriptFF);
-          font-size: 2.5rem;
+          font-family: var(--altFF);
+          font-weight: 400;
+          font-style: italic;
           text-transform: capitalize;
           letter-spacing: var(--mainSpacing);
         }
@@ -73,7 +74,6 @@ const ServicesWrapper = styled.section`
       div{
         font-family: var(--mainFF);
         font-size: 1.1rem;
-        font-weight: 300;
         letter-spacing: 0.01rem;
         margin-bottom: 1.25rem;
         text-transform: uppercase;

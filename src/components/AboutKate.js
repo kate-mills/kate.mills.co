@@ -82,9 +82,11 @@ const AboutKateWrapper = styled.section`
     max-height: 450px;
   }
   .about-info .heading {
-    font-size: 3.5rem;
-    letter-spacing: 0.2rem;
-    font-family: var(--scriptFF);
+    font-size: 2rem;
+    letter-spacing: var(--midSpacing);
+    font-family: var(--altFF);
+    font-weight: 400;
+    font-style: italic;
     text-transform: capitalize;
   }
   .img-container::before {

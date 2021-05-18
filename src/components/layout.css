@@ -19,6 +19,7 @@
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
+  --midSpacing: 0.2rem;
   --altSpacing: 0.0620rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -26,10 +27,8 @@
   --maxWidth: 40rem;
 
   /* START FONTS */
-  --pFF:  bree, sans-serif;           /* 300 */
-  --scriptFF:  shelby, sans-serif;    /* 400 */ 
-  --mainFF:aileron, sans-serif;      /* 300 normal & italic */
-  --testFF: 'neue-haas-grotesk-text', 'sans-serif'; /* 400 italic;*/
+  --mainFF:aileron, sans-serif; /* 300 normal */
+  --altFF: 'neue-haas-grotesk-text', 'sans-serif'; /* 400 italic;*/
 }
 
 * {
@@ -65,11 +64,16 @@ h1, h2{
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
 }
+h2{
+  font-family: var(--altFF);
+  font-weight: 400;
+  font-style: italic;
+}
 h3, h4, h5, h6{
-  font-family: var(--scriptFF);
+  font-family: var(--mainFF);
   font-size: 3.2rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing) !important;
   white-space: pre-wrap;
@@ -96,9 +100,9 @@ a{
 }
 .phone{
   color: var(--solutionsColor);
-  font-family: var(--mainFF);
+  font-family: var(--altFF);
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: var(--altSpacing) !important;
   line-height: inherit !important;
   padding: 0 0.5rem;

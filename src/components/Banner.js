@@ -42,7 +42,11 @@ export default styled(Banner)`
     }
     span.title-l2 {
       display: block;
+      font-family: var(--altFF);
+      font-style: italic;
+      font-weight: 400;
       font-size: 1.5rem;
+      letter-spacing: var(--midSpacing);
       width: 85%;
       margin: 0 auto;
       margin-bottom: 2rem;

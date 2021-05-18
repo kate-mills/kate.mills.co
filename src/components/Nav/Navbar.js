@@ -66,7 +66,6 @@ const Navbar = (props) => {
 const NavWrapper = styled.nav`
   &{
     background: var(--primaryBlack);
-    font-weight: 300;
     width: 100%;
   }
   .nav-header {

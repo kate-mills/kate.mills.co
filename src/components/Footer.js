@@ -40,8 +40,7 @@ const Footer = () => {
 
 const FooterWrapper =styled.footer`
   &{
-    font-family: var(--pFF);
-    font-weight: 300;
+    font-family: var(--mainFF);
     background-color: var(--primaryBlack);
     padding: 4rem;
     margin-top: auto;
@@ -84,13 +83,13 @@ const FooterWrapper =styled.footer`
     cursor: pointer;
   }
   .small-font{
-    font-family: var(--pFF);
-    font-size: 0.75rem;
+    font-family: var(--mainFF);
+    letter-spacing: 1px;
+    font-size: 0.65rem;
     margin: 0 0;
     color: var(--primaryWhite);
     padding: .5rem .5rem 0;
     text-align: center;
   }
-
 `
 export default Footer
