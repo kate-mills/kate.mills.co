@@ -4,11 +4,12 @@ import Layout from '../components/Layout'
 import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 import Btn from '../components/Btn'
-import styles from '../css/servicetemplate.module.css'
 import SEO from '../components/SEO'
 import Title from '../components/Title'
 import SearchProjects from '../components/Projects/SearchProjects'
 import {typeFormatter} from '../utils/helpers'
+
+import styled from 'styled-components'
 
 const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   const {
@@ -24,13 +25,13 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       <SEO title={name} description={meta_desc}/>
       <HeroShort>
         <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
-          <Btn to="/portfolio/" text="View all projects" borderColor="var(--primaryBlack)" txtColor="var(--primaryWhite)"/>
+          <Btn to="/portfolio/" text="View all projects" />
         </Banner>
       </HeroShort>
-      <section className={`${styles.template} section-center`}>
-        <div className={`background-pattern-rain-dark ${styles.benefitContainer}`}>
+      <ServiceTemplateWrapper>
+        <div className='background-pattern-rain-dark benefit-container'>
           <Title title={`${why_list.length} benifits of a`} subtitle={singularName} subTitleColor="var(--primaryLight)"/>
-        <div className={`${styles.benefitList}`}>
+        <div className="benefit-list">
           <ul data-bullet-list>
             {
               why_list.map((s, index) =>{
@@ -41,12 +42,38 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
         </div>
         </div>
         <SearchProjects projects={projects.nodes}/>
-      </section>
+      </ServiceTemplateWrapper>
         <div className="footer-btn"><Btn to="/portfolio/" text="view all projects" colorful color/></div>
     </Layout>
   )
 }
 
+const ServiceTemplateWrapper = styled.section`
+  &{
+    margin-top: 2rem;
+    background-image: inherit;
+    transition: var(--mainTransition);
+  }
+  .benefit-container{
+    width: fit-content;
+    max-width: fit-content;
+    margin: 0;
+    margin: 0 auto 3rem;
+    padding: 1rem 1.5rem 0;
+    white-space: pre-wrap;
+    background-image: inherit;
+    background-color: var(--primaryColor);
+  }
+  .benefit-list{
+    margin: 0 auto 3rem;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+  }
+`
 export default ServiceTemplate
 
 export const getService = graphql`

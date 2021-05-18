@@ -6,7 +6,7 @@ const Btn = ({to, text, color, bgColor, className}) => {
   return (
     <Link to={to}
       className={`${className}
-      btn--animation btn--${bgColor || 'light'}
+      btn--animation btn--${bgColor || 'dark'}
       `}
     >{text}</Link>
   )
