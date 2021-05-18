@@ -72,7 +72,7 @@ const NavWrapper = styled.nav`
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.25rem 0.5rem 1.02rem;
+    padding: 1rem 1.25rem 0.5rem 0;
   }
   .logo{
     padding: .3rem 0;
