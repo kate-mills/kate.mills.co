@@ -1,6 +1,7 @@
 @import url("https://use.typekit.net/igr8zjs.css"); /*NEW*/
 
 :root {
+  --contrastOnWhite: #74757a;
   --digitalColor: #909197;  /*#7e7b78;*/
   --digitalColor2: silver;
   --digitalOnBlack:#909197; /*#a39f9b;*/
