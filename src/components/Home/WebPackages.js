@@ -73,12 +73,13 @@ const WebPackagesWrapper = styled.section`
       background: var(--primaryWhite);
       border-radius: var(--radius);
       span{
-        display: flex;
-        justify-content: center;
-        color: var(--solutionsColor);
         align-items: center;
-        margin: 1rem auto;
         border-radius: 10px;
+        color: var(--digitalColor);
+        display: flex;
+        font-size: 1.2rem;
+        justify-content: center;
+        margin: 1rem auto;
         a{
           font-family: var(--altFF);
           font-weight: 400;
