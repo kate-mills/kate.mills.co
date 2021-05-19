@@ -8,11 +8,12 @@ const DisplaySearch = ({loading, photos})=>{
     <DisplaySearchWrapper>
       <div className="photos-center">
         {
-          photos.map((photo)=>{
+          Array.isArray(photos) && (photos.map((photo)=>{
             return(
-              <Photo key={photo.id} photo={photo}/>
-            )
-          })
+                <Photo key={photo.id} photo={photo}/>
+              )
+            })
+          )
         }
       </div>
       {loading && <h2 className="loading">Loading...</h2>}
