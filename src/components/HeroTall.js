@@ -1,15 +1,9 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-
 import React from 'react'
 import styled from 'styled-components'
-import { useGlobalContext } from '../context/context';
 
 const TallHero = ({ img, className, children }) => {
-  const { closeSubmenu } = useGlobalContext();
   return (
     <div
-      onFocus={closeSubmenu}
-      onMouseOver={closeSubmenu}
       className={`${className}`}
       fluid={img}>
       {children}
