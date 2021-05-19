@@ -100,6 +100,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-scroll-reveal`,
