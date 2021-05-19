@@ -26,10 +26,12 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --radius: 0.25rem;
   --maxWidth: 40rem;
+  --max-width: 1170px;
+  --fixed-width: 620px;
 
   /* START FONTS */
-  --mainFF:aileron, sans-serif; /* 300 normal */
-  --altFF: 'neue-haas-grotesk-text', 'sans-serif'; /* 400 italic;*/
+  --mainFF:aileron, sans-serif;/*300 normal*/
+  --altFF: 'neue-haas-grotesk-text', 'sans-serif';/*400 italic*/
 }
 
 * {
