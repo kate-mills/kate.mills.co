@@ -19,6 +19,7 @@ const Navbar = (props) => {
     setIsOpen(isOpen => !isOpen)
   }
 
+
   const displaySubmenu = (e)=>{
     const page_name = e.target.textContent;           // I get this text
     const tempBtn = e.target.getBoundingClientRect(); // I get object with coordinates
@@ -46,15 +47,29 @@ const Navbar = (props) => {
               : `nav-links`
           }
         >
-          {links.map((item, index) => {
-            return (
-              <li key={index}
-                className={(isSubmenuOpen && page.page===item.page)? `active`:`link`}>
-                <Link to={item.path}
-                  onMouseOver={displaySubmenu}
-                >{item.page}</Link>
-              </li>
-            )
+          { links.map((item, index) => {
+            if((window.innerWidth <=1200) && (item.links.length > 0)){
+              return(
+                <div key={index} className="sublinks">
+                  {item.links.map((lnk, idx) =>{
+                    return(
+                      <li key={idx}>
+                        <Link to={lnk.url}>{lnk.label}</Link>
+                      </li>
+                    )
+                  })}
+                </div>
+              )
+            } else {
+              return (
+                <li key={index}
+                  className={(isSubmenuOpen && page.page===item.page)? `active`:`link`}>
+                  <Link to={item.path}
+                    onMouseOver={displaySubmenu}
+                  >{item.page}</Link>
+                </li>
+              )
+            }
           })}
           <li><PhoneNumber className="phone"/></li>
         </ul>
@@ -95,9 +110,13 @@ const NavWrapper = styled.nav`
     height: 0;
     overflow: hidden;
     transition: var(--mainTransition);
+
+    div.sublinks {
+      a{ margin-left: 2rem; }
+    }
   }
   .show-nav {
-    height: 265px;
+    height: 665px;
   }
   .nav-links a,
   .nav-links span{
@@ -112,11 +131,10 @@ const NavWrapper = styled.nav`
     background: var(--primaryBlack2);
     color: var(--primaryColor);
   }
-    .nav-links a.phone:hover{
-      color: var(--digitalColor2) !important;
-      background:transparent !important;
-    }
-  
+  .nav-links a.phone:hover{
+    color: var(--digitalColor2) !important;
+    background:transparent !important;
+  }
   .nav-links a.allow-pointer{
     opacity: 1;
   }
@@ -150,6 +168,9 @@ const NavWrapper = styled.nav`
     .nav-links {
       height: auto;
       display: flex;
+      div.sublinks{
+        display:none;
+      }
     }
     .nav-links li{
       min-width: 150px;
