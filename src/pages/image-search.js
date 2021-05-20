@@ -31,12 +31,14 @@ const ImageSearchPage = ()=>{
     try {
       const response = await fetch(url)
       const data = await response.json()
-
       setPhotos((oldPhotos)=>{
+        let tempPhotos
         if(page>1){
-          return [...oldPhotos, ...data.results]
+          tempPhotos = [...oldPhotos, ...data.results]
+          return tempPhotos
         } else{
-          return data.results
+          tempPhotos = data.results
+          return tempPhotos
         }
       })
       setLoading(false)
@@ -45,7 +47,6 @@ const ImageSearchPage = ()=>{
       setLoading(false)
     }
   }
-
   React.useEffect(()=>{
     fetchImages()
   // eslint-disable-next-line react-hooks/exhaustive-deps
