@@ -1,14 +1,17 @@
+/* eslint-disable react/jsx-no-target-blank */
 import * as React from 'react'
 
+import {HiDownload} from 'react-icons/hi'
 import styled from 'styled-components'
 
 const Photo = ({photo}) =>{
-  const {urls, likes, user:{
+  const {urls, likes,
+    links:{ download, },
+    user:{
     name,
-    portfolio_url,
-    profile_image:{medium},
   }} = photo
   const {regular} = urls
+
 
   return(
     <PhotoWrapper className="photo">
@@ -18,8 +21,9 @@ const Photo = ({photo}) =>{
         <h4>{name}</h4>
         <p>{likes} likes</p>
       </div>
-        <a href={portfolio_url}>
-          <img src={medium} alt={name} className="user-img"/>
+        <a rel="nofollow" download="" target="_blank" data-test="non-sponsored-photo-download-button" title="Download photo"
+          href={`${download}/?force=true`}>
+          <HiDownload className="user-img"/>
         </a>
       </div>
     </PhotoWrapper>
@@ -47,6 +51,7 @@ const PhotoWrapper = styled.article`
     margin-bottom: 0;
   }
   .user-img {
+    color: var(--primaryLight);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
