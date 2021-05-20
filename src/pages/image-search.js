@@ -1,52 +1,77 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-
 import DisplayImages from '../components/ImageSearch/DisplayImages'
-
 import styled from 'styled-components'
 import {FaSearch} from 'react-icons/fa'
 
+export const clientId = `?client_id=${process.env.GATSBY_UNSPLASH_ACCESS_KEY}`
 export const mainUrl = `https://api.unsplash.com/photos/`
 export const searchUrl = `https://api.unsplash.com/search/photos`
-export const clientId = `?client_id=${process.env.GATSBY_UNSPLASH_ACCESS_KEY}`
-export const urlPage = `&page=1`
 
 const ImageSearchPage = ()=>{
   const [loading, setLoading] = React.useState(false)
   const [photos, setPhotos] = React.useState([])
-  const [query, setQuery] = React.useState('spa')
+  const [page, setPage] = React.useState(1)
+  const [query, setQuery] = React.useState('')
 
   const fetchImages = async ()=>{
     setLoading(true)
-    let url;
+    let url
+    const urlPage = `&page=${page}`
     const urlQuery = `&query=${query}`
     if (query) {
-      url = `${searchUrl}${clientId}${urlQuery}`
+      url = `${searchUrl}${clientId}${urlQuery}${urlPage}`
     } else {
-      url = `${mainUrl}${clientId}`
+      url = `${mainUrl}${clientId}${urlPage}`
     }
     try {
       const response = await fetch(url)
       const data = await response.json()
-      if(data.results){
-        setPhotos(data.results)
+      let localList
+      if(query){
+        localList = data.results
       } else{
-        setPhotos(data)
+        localList = data
       }
+      setPhotos((oldPhotos)=>{
+        if(page>1){
+          return [...oldPhotos, ...localList]
+        } else{
+          return localList
+        }
+      })
       setLoading(false)
     } catch(err){
-      setLoading(false)
       console.log(err)
+      setLoading(false)
     }
   }
+
   React.useEffect(()=>{
     fetchImages()
   // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page])
+
+  React.useEffect(() => {
+    const event = window.addEventListener('scroll', () => {
+      if (
+        (!loading && window.innerHeight + window.scrollY) >=
+        document.body.scrollHeight - 302
+      ) {
+        setPage((oldPage) => {
+          return oldPage + 1
+        })
+      }
+    })
+    return () => window.removeEventListener('scroll', event)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
 
   const handleSubmit = (e)=>{
     e.preventDefault()
+    setPage((oldPage)=>1)
     fetchImages()
   }
   return(
