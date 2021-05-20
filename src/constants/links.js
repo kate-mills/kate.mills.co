@@ -16,6 +16,7 @@ const sublinks = [
     path: '/portfolio/',
     id: 3,
     links: [
+      { label: 'Image Search', url: '/image-search/', },
       { label: 'Blogs', url: '/blogs/' },
       { label: 'Websites', url: '/websites/' },
       { label: 'E-commerce', url: '/ecommerce/' },
