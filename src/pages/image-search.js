@@ -35,9 +35,11 @@ const ImageSearchPage = ()=>{
         let tempPhotos
         if(page>1){
           tempPhotos = [...oldPhotos, ...data.results]
+          console.log(tempPhotos.length)
           return tempPhotos
         } else{
           tempPhotos = data.results
+          console.log(tempPhotos.length)
           return tempPhotos
         }
       })
