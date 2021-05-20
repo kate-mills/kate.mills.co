@@ -6,6 +6,7 @@ import styled from 'styled-components'
 const DisplaySearch = ({loading, photos})=>{
   return(
     <DisplaySearchWrapper>
+        <h2>Download high quality images for your next website or social media post.</h2>
       <div className="photos-center">
         {
           Array.isArray(photos) && (photos.map((photo)=>{
@@ -25,6 +26,7 @@ const DisplaySearchWrapper = styled.section`
   &{
     padding 5rem 0;
   }
+  h2{ font-size: 2rem; text-align: center; margin-bottom: 5rem; }
   .photos-center {
     width: 90vw;
     max-width: var(--max-width);

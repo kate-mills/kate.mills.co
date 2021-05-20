@@ -22,7 +22,7 @@ const ImageSearchPage = ()=>{
     let url
     const urlPage = `&page=${page}`
     const urlQuery = `&query=${query}`
-    const initQuery = `&query=spa`
+    const initQuery = `&query=beauty`
     if (query) {
       url = `${searchUrl}${clientId}${urlQuery}${urlPage}`
     } else {
@@ -82,11 +82,9 @@ const ImageSearchPage = ()=>{
   }
   return(
     <Layout>
-    <SEO title="Search Free Spa Images" description="Set yourself apart with a custom website built by a local Napa Valley web designer specializing in beauty website design and social media for estheticians, beauticians, salons, spas & beauty companies."/>
-
+    <SEO title="Free Spa & Salon Images" description="Search and download unlimited Beauty Images for your website or social media post."/>
       <HeroShort>
-      <Banner title="Search for Free Beauty Images" info="for your website">
-
+      <Banner title="Unlimited Free Beauty Images" info="for your next digital project">
       </Banner>
       </HeroShort>
       <ImageSearchWrapper>
@@ -104,8 +102,7 @@ const ImageSearchPage = ()=>{
           ><FaSearch/></button>
         </form>
       </ImageSearchWrapper>
-
-        <DisplayImages loading={loading} photos={photos}/>
+        <DisplayImages loading={loading} photos={photos} query={query}/>
     </Layout>
   )
 }

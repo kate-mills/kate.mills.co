@@ -5,25 +5,28 @@ import {HiDownload} from 'react-icons/hi'
 import styled from 'styled-components'
 
 const Photo = ({photo}) =>{
-  const {urls, likes,
-    links:{ download, },
+  const {
+    urls,
+    links:{download},
     user:{
-    name,
-  }} = photo
+      name,
+      username,
+    }} = photo
   const {regular} = urls
 
+  let unsplashUrl = `https://unsplash.com/@${username}?utm_source=ally-digital-solutions&utm_medium=referral`
 
   return(
     <PhotoWrapper className="photo">
       <img alt={photo.alt_description} src={regular}/>
       <div className="photo-info">
       <div>
-        <h4>{name}</h4>
-        <p>{likes} likes</p>
+        <p>Photo on<a className="unsplash" href="https://unsplash.com" target="_blank">usplash.com</a>by</p>
+        <p><a href={unsplashUrl} target="_blank">{name}</a></p>
       </div>
         <a rel="nofollow" download="" target="_blank" data-test="non-sponsored-photo-download-button" title="Download photo"
           href={`${download}/?force=true`}>
-          <HiDownload className="user-img"/>
+          <HiDownload className="download-img"/>
         </a>
       </div>
     </PhotoWrapper>
@@ -43,14 +46,24 @@ const PhotoWrapper = styled.article`
     display: block;
     object-fit: cover;
   }
-  & h4 {
+  & p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    a{
+      color: var(--primaryWhite);
+    }
+    .unsplash{
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 0;
+      padding-right: 0;
+      text-transform: lowercase;
+    }
   }
   & p {
     margin-bottom: 0;
   }
-  .user-img {
+  .download-img {
     color: var(--primaryLight);
     width: 2.5rem;
     height: 2.5rem;
