@@ -6,7 +6,6 @@ import {navigate} from 'gatsby'
 
 
 const SingleProject = ({project, showDetailLink=false })=>{
-  console.log('project', project)
   return(
     <SingleProjectWrapper onClick={()=>navigate(`/${project.type}/${project.slug}`)} >
       <div className="img-container container">
