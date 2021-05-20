@@ -31,17 +31,12 @@ const ImageSearchPage = ()=>{
     try {
       const response = await fetch(url)
       const data = await response.json()
-      let localList
-      if(query){
-        localList = data.results
-      } else{
-        localList = data.results
-      }
+
       setPhotos((oldPhotos)=>{
         if(page>1){
-          return [...oldPhotos, ...localList]
+          return [...oldPhotos, ...data.results]
         } else{
-          return localList
+          return data.results
         }
       })
       setLoading(false)
@@ -55,10 +50,10 @@ const ImageSearchPage = ()=>{
     fetchImages()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page])
-  React.useEffect(()=>{
-    var el = document.getElementsByTagName('input')[0] // input[0] is search
-    el.focus()
 
+  React.useEffect(()=>{
+    const el = document.getElementsByTagName('input')[0] // input[0] is search
+    el.focus()
   }, [])
 
   React.useEffect(() => {
@@ -77,7 +72,6 @@ const ImageSearchPage = ()=>{
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-
   const handleSubmit = (e)=>{
     e.preventDefault()
     setPage((oldPage)=>1)
@@ -90,6 +84,8 @@ const ImageSearchPage = ()=>{
       <HeroShort>
       <Banner title="Search for Free Beauty Images" info="for your website">
 
+      </Banner>
+      </HeroShort>
       <ImageSearchWrapper>
         <form className="search-form">
           <input
@@ -105,8 +101,7 @@ const ImageSearchPage = ()=>{
           ><FaSearch/></button>
         </form>
       </ImageSearchWrapper>
-      </Banner>
-      </HeroShort>
+
         <DisplayImages loading={loading} photos={photos}/>
     </Layout>
   )
@@ -148,7 +143,5 @@ const ImageSearchWrapper = styled.section`
   .submit-btn:hover{
     cursor: pointer;
   }
-
 `
-
 export default ImageSearchPage
