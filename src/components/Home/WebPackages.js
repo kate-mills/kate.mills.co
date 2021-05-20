@@ -60,7 +60,7 @@ const WebPackagesWrapper = styled.section`
     border-radius: var(--radius);
   }
   & .center{
-    width: 80vw;
+    /*width: 80vw;*/
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
