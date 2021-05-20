@@ -10,6 +10,7 @@ import {useGlobalContext} from '../../context/context'
 import NavSubmenu from './Submenu'
 import styled from 'styled-components'
 
+
 const Navbar = (props) => {
   const {page, isSubmenuOpen, openSubmenu } = useGlobalContext()
 
@@ -48,28 +49,24 @@ const Navbar = (props) => {
           }
         >
           { links.map((item, index) => {
-            if((window.innerWidth <=1200) && (item.links.length > 0)){
-              return(
-                <div key={index} className="sublinks">
-                  {item.links.map((lnk, idx) =>{
-                    return(
-                      <li key={idx}>
-                        <Link to={lnk.url}>{lnk.label}</Link>
-                      </li>
-                    )
-                  })}
-                </div>
-              )
-            } else {
-              return (
+            return (
+              <>
                 <li key={index}
                   className={(isSubmenuOpen && page.page===item.page)? `active`:`link`}>
                   <Link to={item.path}
                     onMouseOver={displaySubmenu}
                   >{item.page}</Link>
                 </li>
-              )
-            }
+                { item.links.length &&(
+                  <div key={index} className="mobile-sublinks">
+                    { item.links.map((lnk, idx) =>{
+                        return(<li key={idx}><Link to={lnk.url}>{lnk.label}</Link></li>)
+                      })
+                    }
+                  </div>
+                )} 
+              </>
+            )
           })}
           <li><PhoneNumber className="phone"/></li>
         </ul>
@@ -111,7 +108,7 @@ const NavWrapper = styled.nav`
     overflow: hidden;
     transition: var(--mainTransition);
 
-    div.sublinks {
+    div.mobile-sublinks {
       a{ margin-left: 2rem; }
     }
   }
@@ -168,7 +165,7 @@ const NavWrapper = styled.nav`
     .nav-links {
       height: auto;
       display: flex;
-      div.sublinks{
+      div.mobile-sublinks{
         display:none;
       }
     }
