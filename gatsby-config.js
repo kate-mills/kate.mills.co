@@ -62,7 +62,7 @@ module.exports = {
       options: {
         host: 'https://allydigitalsolutions.com',
         sitemap: 'https://allydigitalsolutions.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        policy: [{ userAgent: '*', allow: '/' }],
       }
     },
     {
@@ -98,9 +98,23 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options:{
+        exclude: [
+          `/thankyou/`,
+          `/blogs/allyblog`,
+          `/websites/superskinshop`,
+          `/ecommerce/spashop`,
+          `/websites/michelecorleyclinicalskincare`,
+          `/websites/fabskinshop`,
+          `/ecommerce/hideandwild`,
+          `/websites/skincarebyhilary`,
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
