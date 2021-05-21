@@ -50,8 +50,8 @@ const Navbar = (props) => {
         >
           { links.map((item, index) => {
             return (
-              <>
-                <li key={index}
+              <React.Fragment key={index}>
+                <li
                   className={(isSubmenuOpen && page.page===item.page)? `active`:`link`}>
                   <Link to={item.path}
                     onMouseOver={displaySubmenu}
@@ -60,12 +60,12 @@ const Navbar = (props) => {
                 { item.links.length &&(
                   <div key={index} className="mobile-sublinks">
                     { item.links.map((lnk, idx) =>{
-                        return(<li key={idx}><Link to={lnk.url}>{lnk.label}</Link></li>)
+                        return(<Link key={idx} to={lnk.url}>{lnk.label}</Link>)
                       })
                     }
                   </div>
                 )} 
-              </>
+              </React.Fragment>
             )
           })}
           <li><PhoneNumber className="phone"/></li>
