@@ -10,7 +10,7 @@ export default React.memo(
     pageTitle,
     image,
     description,
-    siteUrl,
+    baseUrl,
     author,
     organization,
     dateModified,
@@ -20,33 +20,31 @@ export default React.memo(
         type: 'ListItem',
         name: link.page,
         position: link.id,
-        item: `${url}${link.path}`,
+        item: `${baseUrl}${link.path}`,
+        image,
+
       }
     })
     console.log('dateModified', dateModified);
     const baseSchema = [
       {
-        '@context': 'http://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'WebPage',
-            position: 1,
-            item: {
-              '@id': url,
-              alternateName: compoundTitle,
-              name: defaultTitle,
-              headline: pageTitle,
-              image,
-              logo: organization.logo,
-              lastReviewed: dateModified,
-            },
-          },
-        ],
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "@id": organization.url,
+        description: organization.description,
+        email: organization.email,
+        image: image,
+        logo: organization.logo,
+        name: organization.name,
+        priceRange: organization.priceRange,
+        sameAs: organization.otherUrls,
+        telephone: organization.telephone,
+        url: organization.url,
       },
       {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
+        name: 'navigation',
         itemListElement: linkCrumbs,
       },
     ]

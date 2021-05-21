@@ -12,7 +12,7 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
-        siteUrl
+        baseUrl
         defaultImage:image
         twitterUsername
         dateModified
@@ -20,20 +20,22 @@ const query = graphql`
           name
           url
           logo
+          priceRange
+          telephone
         }
       }
     }
   }
 `
 const SEO = ({ title, description, image, article, snippet}) => {
-  const {origin, pathname } = useLocation()
+  const {pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
   const {
     defaultTitle,
     titleTemplate,
     defaultDescription,
-    siteUrl,
+    baseUrl,
     defaultImage,
     twitterUsername,
     organization,
@@ -45,9 +47,11 @@ const SEO = ({ title, description, image, article, snippet}) => {
     title: title || defaultTitle,
     dateModified: dateModified,
     description: description || defaultDescription,
-    image: `${origin}/${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    image: `${baseUrl}/${image || defaultImage}`,
+    url: `${baseUrl}${pathname}`,
   }
+
+  console.log('seo',seo)
 
   return (
     <React.Fragment>
@@ -80,7 +84,7 @@ const SEO = ({ title, description, image, article, snippet}) => {
       defaultTitle={'Ally Digital Solutions'}
       pageTitle={seo.title}
       description={seo.description}
-      url={siteUrl}
+      baseUrl={baseUrl}
       image={seo.image}
       dateModified={dateModified}
       organization={organization}
