@@ -4,12 +4,25 @@ import React, { useState } from 'react'
 import {Link} from 'gatsby'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../../constants/links'
-import logo from '../../images/ally-digital-logo.png'
 import PhoneNumber from '../PhoneNumber'
 import {useGlobalContext} from '../../context/context'
 import NavSubmenu from './Submenu'
 import styled from 'styled-components'
 
+import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
+
+const query = graphql`
+  {
+    logo: file(relativePath: {eq: "ally-digital-logo.png"}) {
+      childImageSharp {
+        fixed(height: 43, quality: 10) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`
 
 const Navbar = (props) => {
   const {page, isSubmenuOpen, openSubmenu } = useGlobalContext()
@@ -19,6 +32,7 @@ const Navbar = (props) => {
   const toggleNav = () => {
     setIsOpen(isOpen => !isOpen)
   }
+  const data = useStaticQuery(query)
 
 
   const displaySubmenu = (e)=>{
@@ -35,7 +49,9 @@ const Navbar = (props) => {
     <NavWrapper>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to={`/`} className="logo"><img width="334" height="43" src={logo} alt="logo" /></Link>
+          <Link to={`/`} className="logo">
+            <Img fixed={data.logo.childImageSharp.fixed} alt="ally digital solutions text logo"/>
+          </Link>
           <button type="button" className="toggle-btn" onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className="toggle-icon"/>
           </button>

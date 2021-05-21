@@ -10,7 +10,7 @@ const getKate = graphql`
     aboutKate: file(relativePath: { eq: "website-designer.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
