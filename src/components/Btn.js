@@ -59,8 +59,8 @@ export default styled(Btn)`
     color: var(--primaryBlack);
   }
   &.btn--dark {
-    background-color: var(--digitalColor);
-    color: var(--primaryWhite);
+    background-color: var(--digitalColor2);
+    color: var(--primaryBlack);
   }
   &.btn--favorite{
     background-color: var(--digitalColor2);

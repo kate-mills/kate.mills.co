@@ -4,7 +4,7 @@
   --contrastOnWhite: #74757a;
   --digitalColor: #909197;  /*#7e7b78;*/
   --digitalColor2: silver;
-  --digitalOnBlack:#909197; /*#a39f9b;*/
+  --digitalOnBlack: #9e9fa6; /*#a39f9b;*/
   --solutionsColor:#D0D1D5; /*#c8c6c3;*/
   --favoriteColor: #e12386;
   --favoriteLight:  #efc2e5;
@@ -104,7 +104,7 @@ a{
   transition: var(--mainTransition);
 }
 .phone{
-  color: var(--digitalOnBlack);
+  color: var(--digitalColor2);
   font-family: var(--altFF);
   font-style: normal;
   font-weight: 400;
