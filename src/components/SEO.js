@@ -51,8 +51,6 @@ const SEO = ({ title, description, image, article, snippet}) => {
     url: `${baseUrl}${pathname}`,
   }
 
-  console.log('seo',seo)
-
   return (
     <React.Fragment>
     <Helmet title={seo.title} titleTemplate={titleTemplate} htmlAttributes={{ lang: 'en' }}>

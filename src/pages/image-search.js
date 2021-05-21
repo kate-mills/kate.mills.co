@@ -7,11 +7,13 @@ import {FaSearch} from 'react-icons/fa'
 import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 
+import {graphql} from 'gatsby'
+
 export const clientId = `?client_id=${process.env.GATSBY_UNSPLASH_ACCESS_KEY}`
 export const mainUrl = `https://api.unsplash.com/photos/`
 export const searchUrl = `https://api.unsplash.com/search/photos`
 
-const ImageSearchPage = ()=>{
+const ImageSearchPage = ({data:seoData})=>{
   const [loading, setLoading] = React.useState(false)
   const [photos, setPhotos] = React.useState([])
   const [page, setPage] = React.useState(1)
@@ -82,7 +84,8 @@ const ImageSearchPage = ()=>{
   }
   return(
     <Layout>
-    <SEO title="Free Spa & Salon Images" description="Search and download unlimited Beauty Images for your website or social media post."/>
+      <SEO title="Free Spa & Salon Images" description="Search and download unlimited Beauty Images for your website or social media post."
+     image={seoData.defaultBg.childImageSharp.fluid.src} />
       <HeroShort>
       <Banner title="Unlimited Free Beauty Images" info="for your next digital project">
       </Banner>
@@ -144,4 +147,17 @@ const ImageSearchWrapper = styled.section`
     cursor: pointer;
   }
 `
+
+export const query = graphql`
+  query{
+    defaultBg: file(relativePath: { eq: "image-search.png" }) {
+      childImageSharp {
+      fluid(quality: 100, maxWidth: 4160){
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+}
+`
 export default ImageSearchPage
+
