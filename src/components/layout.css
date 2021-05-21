@@ -96,7 +96,7 @@ main{
   min-height: 100vh;
 }
 a{
-  color: var(--primaryBlack);
+  color: inherit;
   font-family: var(--mainFF);
   padding: 0;
   text-transform: uppercase;
@@ -104,7 +104,6 @@ a{
   transition: var(--mainTransition);
 }
 .phone{
-  color: var(--digitalColor2);
   font-family: var(--altFF);
   font-style: normal;
   font-weight: 400;

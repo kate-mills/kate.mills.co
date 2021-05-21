@@ -74,12 +74,12 @@ const Navbar = (props) => {
                   >{item.page}</Link>
                 </li>
                 { item.links.length &&(
-                  <div key={index} className="mobile-sublinks">
+                  <React.Fragment key={index}>
                     { item.links.map((lnk, idx) =>{
-                        return(<Link key={idx} to={lnk.url}>{lnk.label}</Link>)
+                      return(<Link key={idx} to={lnk.url} className="mobile-sublinks">{lnk.label}</Link>)
                       })
                     }
-                  </div>
+                  </React.Fragment>
                 )} 
               </React.Fragment>
             )
@@ -124,8 +124,9 @@ const NavWrapper = styled.nav`
     overflow: hidden;
     transition: var(--mainTransition);
 
-    div.mobile-sublinks {
-      a{ margin-left: 2rem; }
+    .mobile-sublinks {
+      display: block;
+      margin-left: 2rem;
     }
   }
   .show-nav {
@@ -181,7 +182,7 @@ const NavWrapper = styled.nav`
     .nav-links {
       height: auto;
       display: flex;
-      div.mobile-sublinks{
+      .mobile-sublinks{
         display:none;
       }
     }
