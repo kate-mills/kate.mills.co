@@ -66,13 +66,11 @@ const Navbar = (props) => {
         >
           { links.map((item, index) => {
             return (
-              <React.Fragment key={index}>
-                <li
+                <li key={index}
                   className={(isSubmenuOpen && page.page===item.page)? `active`:`link`}>
                   <Link to={item.path}
                     onMouseOver={displaySubmenu}
                   >{item.page}</Link>
-                </li>
                 { item.links.length &&(
                   <React.Fragment key={index}>
                     { item.links.map((lnk, idx) =>{
@@ -81,7 +79,7 @@ const Navbar = (props) => {
                     }
                   </React.Fragment>
                 )} 
-              </React.Fragment>
+                </li>
             )
           })}
           <li><PhoneNumber className="phone"/></li>
@@ -94,7 +92,7 @@ const Navbar = (props) => {
 const NavWrapper = styled.nav`
   &{
     background: var(--primaryBlack);
-    width: 100%;
+    width: 100vw;
   }
   .nav-header {
     align-items: center;
@@ -126,7 +124,7 @@ const NavWrapper = styled.nav`
 
     .mobile-sublinks {
       display: block;
-      margin-left: 2rem;
+      padding-left: 3rem;
     }
   }
   .show-nav {
@@ -139,6 +137,7 @@ const NavWrapper = styled.nav`
     font-size: 0.95rem;
     letter-spacing: var(--altSpacing);
     padding: 1rem 1.25rem;
+    height: 100%;
     text-decoration: none;
   }
   .nav-links a:hover{
@@ -182,6 +181,8 @@ const NavWrapper = styled.nav`
     .nav-links {
       height: auto;
       display: flex;
+      padding-left: 1.25rem;
+
       .mobile-sublinks{
         display:none;
       }
@@ -212,8 +213,15 @@ const NavWrapper = styled.nav`
     .nav-links a,
     .nav-links span{
       margin-left: 0;   
+      padding: 0;
+      padding-top: 1.9rem;
     }
   }
+@media(max-width: 320px){
+  .nav-header{
+    flex-wrap: wrap;
+  }
+}
 
 `
 export default Navbar
