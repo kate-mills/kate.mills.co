@@ -10,7 +10,6 @@ const query = graphql`
     site {
       siteMetadata {
         defaultTitle: title
-        titleTemplate
         defaultDescription: description
         baseUrl
         defaultImage:image
@@ -33,7 +32,6 @@ const SEO = ({ title, description, image, article, snippet, noindex}) => {
 
   const {
     defaultTitle,
-    titleTemplate,
     defaultDescription,
     baseUrl,
     defaultImage,
@@ -42,26 +40,29 @@ const SEO = ({ title, description, image, article, snippet, noindex}) => {
     dateModified,
   } = site.siteMetadata
 
+  const formatTitle = ()=>{
+    let plain = `${title||defaultTitle}`; 
+    let fancy = `${title||defaultTitle} | Ally Digital Solutions`;
+    return (plain.length < 46)?fancy:plain;
+  }
 
   const seo = {
-    title: title || defaultTitle,
+    title: formatTitle(),
     dateModified: dateModified,
     description: description || defaultDescription,
     image: `${baseUrl}/${image || defaultImage}`,
     url: `${baseUrl}${pathname}`,
   }
-
   return (
     <React.Fragment>
       <Helmet title={seo.title}
-        titleTemplate={(seo.title.length < 46) && titleTemplate}
         htmlAttributes={{ lang: 'en' }}
       >
-        {noindex && (<meta name="robots" content="noindex" />)}
       <meta name="google-site-verification" content="aS5BlTYYa6OIBC7WjfeTN_LQKKWvYXZWHvWGTyv6XAU" />
       <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      {noindex && (<meta name="robots" content="noindex" />)}
       {snippet && (<script type="application/ld+json">{snippet}</script>)}
 
       {/* facebook card */}
