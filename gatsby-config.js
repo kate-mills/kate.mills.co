@@ -40,8 +40,8 @@ module.exports = {
         description: `Web solutions for beauty specialists by industry experts. Elevate your online presence with specialized web design for the beauty industry.`,
         lang: `en`,
         start_url: `/`,
-        background_color: `#ffff`,
-        theme_color: `#f5e7e9`,
+        background_color:`#dcdcdc`,
+        theme_color: `#dcdcdc`,
         display: `standalone`,
         icon: `src/images/icon.png`,
         icon_options: {
