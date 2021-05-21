@@ -5,10 +5,7 @@ const Banner = ({ title, info, children, className}) => {
   return (
     <div className={className}>
       <h1>
-        <span className="title-l1"
-          data-sal="zoom-in"
-          data-sal-easing="ease"
-          data-sal-duration="100">{title}</span>
+        <span className="title-l1">{title}</span>
         <span className="title-l2"
           data-sal="zoom-in"
           data-sal-easing="ease"
@@ -33,6 +30,7 @@ export default styled(Banner)`
     color: var(--digitalColor);
     position: relative;
     span.title-l1 {
+      position: relative;
       display: block;
       font-size: 3.3rem;
       text-transform: uppercase;
