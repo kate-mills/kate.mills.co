@@ -84,7 +84,7 @@ const ImageSearchPage = ({data:seoData})=>{
   }
   return(
     <Layout>
-      <SEO title="Free Spa & Salon Images" description="Search and download unlimited Beauty Images for your website or social media post."
+      <SEO title="Free Beauty Salon & Spa Images For Your Website" description="Search and download unlimited Beauty Images for your website or social media post."
      image={seoData.defaultBg.childImageSharp.fluid.src} />
       <HeroShort>
       <Banner title="Unlimited Free Beauty Images" info="for your next digital project">
