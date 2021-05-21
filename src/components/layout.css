@@ -1,4 +1,5 @@
-@import url("https://use.typekit.net/igr8zjs.css") rel="preload" as="font"; /*NEW*/
+@import url("https://use.typekit.net/igr8zjs.css" rel="preload" as="style");
+
 
 :root {
   --contrastOnWhite: #74757a;
