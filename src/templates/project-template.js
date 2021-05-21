@@ -22,7 +22,7 @@ const ProjectTemplate = ({ data:{projects} } ) => {
 
   return (
     <Layout>
-      <SEO title={name} />
+      <SEO title={name} noindex/>
       <HeroShort>
         <Banner title={name} info={desc || " "}> </Banner>
         </HeroShort>

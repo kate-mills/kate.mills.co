@@ -7,7 +7,8 @@ import SEO from '../components/SEO'
 const Thankyou = () => {
   return (
     <Layout>
-      <SEO title="Thank You"/>
+      <SEO title="Thank You"
+        noindex />
       <header className="short-page">
         <Banner title="Thank you!" info=" Your submission was received.  We'll be in contact shortly.">
           <Btn to="/" text="back to home page"/>

@@ -27,7 +27,7 @@ const query = graphql`
     }
   }
 `
-const SEO = ({ title, description, image, article, snippet}) => {
+const SEO = ({ title, description, image, article, snippet, noindex}) => {
   const {pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -57,6 +57,7 @@ const SEO = ({ title, description, image, article, snippet}) => {
         titleTemplate={(seo.title.length < 46) && titleTemplate}
         htmlAttributes={{ lang: 'en' }}
       >
+        {noindex && (<meta name="robots" content="noindex" />)}
       <meta name="google-site-verification" content="aS5BlTYYa6OIBC7WjfeTN_LQKKWvYXZWHvWGTyv6XAU" />
       <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>
       <meta name="description" content={seo.description} />
@@ -110,5 +111,6 @@ SEO.defaultProps = {
   image: null,
   article: false,
   snippet: null,
+  noindex: false,
 }
 
