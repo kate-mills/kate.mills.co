@@ -35,7 +35,7 @@ const Navbar = (props) => {
     <NavWrapper>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to={`/`} className="logo"><img width="211" height="43" src={logo} alt="logo" /></Link>
+          <Link to={`/`} className="logo"><img width="334" height="43" src={logo} alt="logo" /></Link>
           <button type="button" className="toggle-btn" onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className="toggle-icon"/>
           </button>
