@@ -112,6 +112,9 @@ a{
   padding: 0 0.5rem;
   white-space: pre-line;
 }
+nav .phone{
+  color: var(--primaryWhite) !important;
+}
 .short-page{  /* 404-page, thankyou-page */
   background: var(--primaryColor);
   color: var(--digitalColor);

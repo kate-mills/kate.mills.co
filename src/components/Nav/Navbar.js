@@ -144,10 +144,6 @@ const NavWrapper = styled.nav`
     background: var(--primaryBlack2);
     color: var(--primaryColor);
   }
-  .nav-links a.phone:hover{
-    color: var(--digitalColor2) !important;
-    background:transparent !important;
-  }
   .nav-links a.allow-pointer{
     opacity: 1;
   }
@@ -199,7 +195,8 @@ const NavWrapper = styled.nav`
       color: var(--primaryColor) !important;
     }
     .nav-links a.phone:hover{
-      background:transparent;
+      background:var(--primaryBlack);
+      color: var(--primaryColor);
     }
     .nav-links li.active{
       background: var(--primaryBlack2);/*styles while hovering over submenu*/
