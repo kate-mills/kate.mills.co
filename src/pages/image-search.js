@@ -34,7 +34,7 @@ const ImageSearchPage = ({data:seoData})=>{
       const response = await fetch(url)
       const data = await response.json()
       setPhotos((oldPhotos)=>{
-        let tempPhotos
+        let tempPhotos = []
         if(page>1){
           tempPhotos = [...oldPhotos, ...data.results]
           console.log(tempPhotos.length)
