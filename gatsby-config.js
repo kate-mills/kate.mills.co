@@ -13,6 +13,7 @@ module.exports = {
     image: `/DefaultImg.jpg`,
     url: `https://allydigitalsolutions.com`,
     baseUrl: `https://allydigitalsolutions.com`,
+    siteUrl: `https://allydigitalsolutions.com`,
     organization: {
       name: `Ally Digital Solutions`,
       url: `https://allydigitalsolutions.com`,
