@@ -5,7 +5,7 @@ import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 import SearchProjects from '../components/Projects/SearchProjects'
 import Btn from '../components/Btn'
-import SEO from '../components/SEO'
+import FullSeo from '../components/FullSeo'
 
 const portfolio = ({ data }) => {
   const {
@@ -13,7 +13,7 @@ const portfolio = ({ data }) => {
   } = data
   return (
     <Layout>
-      <SEO title="Portfolio" 
+      <FullSeo title="Portfolio" 
         description={` We specialize in websites & social media content for small beauty businesses.  Learn more about boosting your business in ${new Date().getFullYear()} now.`}
       />
       <HeroShort>

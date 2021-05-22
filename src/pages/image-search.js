@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import FullSeo from '../components/FullSeo'
 import DisplayImages from '../components/ImageSearch/DisplayImages'
 import styled from 'styled-components'
 import {FaSearch} from 'react-icons/fa'
@@ -84,7 +84,7 @@ const ImageSearchPage = ({data:seoData})=>{
   }
   return(
     <Layout>
-      <SEO title="Free Beauty Salon & Spa Images For Your Website" description="Search and download unlimited Beauty Images for your website or social media post."
+      <FullSeo title="Free Beauty Salon & Spa Images For Your Website" description="Search and download unlimited Beauty Images for your website or social media post."
      image={seoData.defaultBg.childImageSharp.fluid.src} />
       <HeroShort>
       <Banner title="Unlimited Free Beauty Images" info="for your next digital project">

@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 import Contact from '../components/Contact/Contact'
-import SEO from '../components/SEO'
+import FullSeo from '../components/FullSeo'
 
 
 const snippet = `{
@@ -21,7 +21,7 @@ const snippet = `{
 const contact = props => {
   return (
     <Layout>
-      <SEO title="Contact" snippet={snippet} description={'Contact a local Napa web designer specializing in websites, blogs, eCommerce, and social media for estheticians, beauticians, salons, spas & beauty companies.'}/>
+      <FullSeo title="Contact" snippet={snippet} description={'Contact a local Napa web designer specializing in websites, blogs, eCommerce, and social media for estheticians, beauticians, salons, spas & beauty companies.'}/>
       <HeroShort>
         <Banner className="smallText" title="We make it easy" info="Are you drained from trying to make your website look professional?"/>
       </HeroShort>

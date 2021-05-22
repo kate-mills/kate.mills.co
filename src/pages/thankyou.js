@@ -2,12 +2,12 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Banner from '../components/Banner'
 import Btn from '../components/Btn'
-import SEO from '../components/SEO'
+import FullSeo from '../components/FullSeo'
 
 const Thankyou = () => {
   return (
     <Layout>
-      <SEO title="Thank You"
+      <FullSeo title="Thank You"
         noindex />
       <header className="short-page">
         <Banner title="Thank you!" info=" Your submission was received.  We'll be in contact shortly.">

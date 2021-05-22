@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import FullSeo from '../components/FullSeo'
 import HeroTall from '../components/HeroTall'
 import Btn from '../components/Btn'
 import Banner from '../components/Banner'
@@ -17,7 +17,7 @@ const IndexPage = ({ data, className }) => {
   const t2=`with a pro website designer.`
   return (
     <Layout>
-      <SEO title={`${t1} ${t2}`} image={data.defaultBg.childImageSharp.fluid.src}/>
+      <FullSeo title={`${t1} ${t2}`} image={data.defaultBg.childImageSharp.fluid.src}/>
       <div className={className}>
       <HeroTall>
         <Banner

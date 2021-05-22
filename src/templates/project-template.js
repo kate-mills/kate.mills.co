@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import Image from 'gatsby-image'
 import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
-import SEO from '../components/SEO'
+import FullSeo from '../components/FullSeo'
 import Btn from '../components/Btn'
 
 import styled from 'styled-components'
@@ -22,7 +22,7 @@ const ProjectTemplate = ({ data:{projects} } ) => {
 
   return (
     <Layout>
-      <SEO title={name} noindex/>
+      <FullSeo title={name} noindex/>
       <HeroShort>
         <Banner title={name} info={desc || " "}> </Banner>
         </HeroShort>

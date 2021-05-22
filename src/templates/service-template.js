@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import HeroShort from '../components/HeroShort'
 import Banner from '../components/Banner'
 import Btn from '../components/Btn'
-import SEO from '../components/SEO'
+import FullSeo from '../components/FullSeo'
 import Title from '../components/Title'
 import SearchProjects from '../components/Projects/SearchProjects'
 import {typeFormatter} from '../utils/helpers'
@@ -22,7 +22,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
 
   return (
     <Layout>
-      <SEO title={name} description={meta_desc}/>
+      <FullSeo title={name} description={meta_desc}/>
       <HeroShort>
         <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
           <Btn to="/portfolio/" text="View all projects" />

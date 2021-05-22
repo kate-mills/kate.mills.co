@@ -1,5 +1,5 @@
 import React from 'react'
-import  navLinks from '../constants/links'
+import  navLinks from '../../constants/links'
 import { Helmet } from 'react-helmet'
 
 export default React.memo(
