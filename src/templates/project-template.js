@@ -103,11 +103,7 @@ const ProjectTemplateWrapper = styled.section`
 
 `
 
-
-export default ProjectTemplate
-
-
-export const getProject = graphql`
+export const query = graphql`
   query ($slug: String) {
     projects:allAirtable(filter: {data: {slug: {eq: $slug}}}) {
       nodes {
@@ -136,3 +132,5 @@ export const getProject = graphql`
     }
   } 
 `
+
+export default ProjectTemplate

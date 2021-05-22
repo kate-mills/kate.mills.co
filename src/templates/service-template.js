@@ -74,9 +74,7 @@ const ServiceTemplateWrapper = styled.section`
     padding-left: 10px;
   }
 `
-export default ServiceTemplate
-
-export const getService = graphql`
+export const query = graphql`
   query ($slug: String) {
     service:allAirtable(filter: {data: {slug: {eq: $slug}}}) {
       nodes {
@@ -114,3 +112,5 @@ export const getService = graphql`
    }
   } 
 `
+
+export default ServiceTemplate
