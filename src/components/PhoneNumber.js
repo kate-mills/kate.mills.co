@@ -1,9 +1,14 @@
 import React from 'react'
 
-import {Telephone} from '../constants/contact-info'
+const Phone = (props)=>{
+  const formatPh = (spacer) =>(`707${spacer}266${spacer}8106`)
 
-export default (props)=>{
-  return(
-    <a href="tel:707-226-8106" title="Call or Text" className={`${props.className ? props.className:''} phone`}>{Telephone}</a>
-  )
+  return <a
+      href={`tel:${formatPh('-')}`}
+      title="Call or Text"
+      className={`${props.className ? props.className:''} phone`}>
+      {`${formatPh('.')}`}
+    </a>
 }
+
+export default Phone
