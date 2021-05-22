@@ -4,8 +4,8 @@ import FullSeo from '../components/FullSeo'
 import DisplayImages from '../components/ImageSearch/DisplayImages'
 import styled from 'styled-components'
 import {FaSearch} from 'react-icons/fa'
-import HeroShort from '../components/HeroShort'
-import Banner from '../components/Banner'
+import HeroShort from '../components/Hero/Short'
+import Banner from '../components/Hero/Banner'
 
 import {graphql} from 'gatsby'
 

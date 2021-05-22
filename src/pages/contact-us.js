@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import HeroShort from '../components/HeroShort'
-import Banner from '../components/Banner'
+import HeroShort from '../components/Hero/Short'
+import Banner from '../components/Hero/Banner'
 import Contact from '../components/Contact/Contact'
 import FullSeo from '../components/FullSeo'
 

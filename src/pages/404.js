@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Banner from '../components/Banner'
+import Banner from '../components/Hero/Banner'
 import Btn from '../components/Btn'
 import FullSeo from '../components/FullSeo'
 

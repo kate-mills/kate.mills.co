@@ -2,9 +2,9 @@ import React from 'react'
 import services from '../../constants/services'
 import styled from 'styled-components'
 
-const AboutUs = () => {
+const ThreeIcons  = () => {
   return (
-    <AboutUsWrapper>
+    <ThreeIconsWrapper>
       <h2 className="banner-h2">Give Your Small Business a Competitive Advantage with a Professionally Done Website.</h2>
       <div className="center">
         {services.map((item, index) => {
@@ -20,12 +20,12 @@ const AboutUs = () => {
           )
         })}
       </div>
-    </AboutUsWrapper>
+    </ThreeIconsWrapper>
   )
 }
 
 
-const AboutUsWrapper = styled.section`
+const ThreeIconsWrapper = styled.section`
   &{
     padding: 4rem 1rem;
   }
@@ -61,4 +61,4 @@ const AboutUsWrapper = styled.section`
 
 
 `
-export default AboutUs
+export default ThreeIcons

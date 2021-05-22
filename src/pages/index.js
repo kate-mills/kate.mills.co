@@ -4,11 +4,11 @@ import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
-import HeroTall from '../components/HeroTall'
+import HeroTall from '../components/Hero/Tall'
 import Btn from '../components/Btn'
-import Banner from '../components/Banner'
-import AboutUs from '../components/Home/AboutUs'
-import WebPackages from '../components/Home/WebPackages'
+import Banner from '../components/Hero/Banner'
+import FourIcons from '../components/HomeAndAbout/FourIcons'
+import WebPackages from '../components/HomeAndAbout/WebPackages'
 import Contact from '../components/Contact/Contact'
 
 
@@ -27,7 +27,7 @@ const IndexPage = ({ data, className }) => {
         </Banner>
       </HeroTall>
       <div className="digital-marketing-services">
-        <AboutUs/>
+        <FourIcons/>
         <WebPackages/>
       </div>
       <Contact/>

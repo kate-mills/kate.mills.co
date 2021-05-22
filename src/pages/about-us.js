@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import HeroShort from '../components/HeroShort'
-import Banner from '../components/Banner'
-import AboutKate  from '../components/AboutKate'
+import HeroShort from '../components/Hero/Short'
+import Banner from '../components/Hero/Banner'
+import AboutKate  from '../components/HomeAndAbout/AboutKate'
 import Btn from '../components/Btn'
 import FullSeo from '../components/FullSeo'
 

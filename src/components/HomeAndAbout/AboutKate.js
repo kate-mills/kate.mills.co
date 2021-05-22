@@ -1,8 +1,8 @@
 import React from 'react'
-import Title from './Title'
+import Title from '../Title'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import Btn from './Btn'
+import Btn from '../Btn'
 import styled from 'styled-components'
 
 const getKate = graphql`
