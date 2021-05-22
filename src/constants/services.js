@@ -2,7 +2,7 @@ import React from "react"
 
 import {GiDandelionFlower, GiSunflower } from "react-icons/gi"
 
-export default [
+const services = [
   {
     icon: <GiDandelionFlower className="icon" />,
     title: "Blogs",
@@ -33,3 +33,4 @@ export default [
       "We value a true partnership with all of our clients and treat your success as necessary as our own.",
   },
 ]
+export default services

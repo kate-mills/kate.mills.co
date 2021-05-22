@@ -1,5 +1,5 @@
 
-export default [
+const featured = [
   {
     path: "/blogs",
     title: "Blogs",
@@ -58,4 +58,4 @@ export const packages =  [
   },
 ]
 
-
+export default featured
