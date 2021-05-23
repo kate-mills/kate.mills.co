@@ -18,14 +18,16 @@ export default SlideBox
 
 const fadeIn = keyframes`
  0% {
-   opacity: 0;
+  opacity: 1;
  }
- 80% {}
+  80% {
+    opacity: .90;
+  }
  100% {
    opacity: 1;
  }
 `
-const Container = styled.main`
+const Container = styled.div`
  animation-name: ${fadeIn};
  animation-duration: 1s;
  animation-iteration-count:1;
