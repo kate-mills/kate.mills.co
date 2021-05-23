@@ -33,7 +33,7 @@ const Services = () => {
               data-sal="flip-down"
               data-sal-duration="800"
               >
-                  {item.textList.map((item, idx)=>{
+                  {item.pkgDetails.map((item, idx)=>{
                     return(
                       <li key={idx}>{item}</li>
                     )

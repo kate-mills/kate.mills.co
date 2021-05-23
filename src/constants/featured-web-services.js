@@ -20,41 +20,35 @@ const featured = [
   },
 ]
 
+const pkgDetails = [
+  "Up to 5 pages of content",
+  "Basic Logo",
+  "Custom Fonts",
+  "High quality images",
+  "Custom Color Palette",
+  "Custom Contact Form",
+  "Mobile, tablet, and  desktop friendly",
+  "Free SSL instalation",
+  "Fast, reliable, Search Engine Optimized",
+]
+const finePrint = "*50% non-refundable deposit due at start of project.";
+const finerPrint = "*50% due 48 hours before \"go-live\" or 60 days (whichever comes first)";
 export const packages =  [
   {
-    path: "/websites",
     title: "Basic Website",
+    path: "/websites",
     price: "$1295",
-    textList: [
-      "Up to 5 pages of content",
-      "Revisions",
-      "High quality images",
-      "Custom Forms",
-      "Mobile & desktop friendly",
-      "Free SSL instalation",
-      "Fast, reliable, Search Engine Optimized",
-      "Google-friendly"
-    ],
-    finePrint: "*50% non-refundable deposit due at start of project.",
-    finerPrint: "*50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
+    pkgDetails,
+    finePrint,
+    finerPrint,
   },
   {
-    path: "/ecommerce",
     title: "Basic e-commerce",
+    path: "/ecommerce",
     price: "$1595",
-    textList:[
-      "Up to 5 pages of content",
-      "Revisions",
-      "High quality images",
-      "Custom Forms",
-      "Mobile & desktop friendly",
-      "Free SSL instalation",
-      "Fast, reliable, Search Engine Optimized",
-      "Google-friendly",
-      "Add a store and shopping cart to your optimized website. ",
-    ],
-    finePrint: "*50% non-refundable deposit due at start of project.",
-    finerPrint: "*50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
+    pkgDetails: pkgDetails.concat(["Add a store and shopping cart to your optimized website."]),
+    finePrint,
+    finerPrint,
   },
 ]
 
