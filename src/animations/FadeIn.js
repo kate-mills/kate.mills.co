@@ -1,9 +1,15 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
+import { useGlobalContext } from '../context/context';
+
 const SlideBox = ({children}) => {
+ const { closeSubmenu } = useGlobalContext();
  return (
-  <Container>
+   <Container 
+     onFocus={closeSubmenu}
+     onMouseOver={closeSubmenu}
+   >
      {children}
   </Container>
  )
