@@ -5,7 +5,7 @@ import Navbar from './Nav/Navbar'
 import Footer from './Footer'
 import ScrollButton from './ScrollButton'
 
-import  FadeIn from '../animations/FadeIn'
+import  FadeIn from './Animations/FadeIn'
 
 const Layout = ({children }) => {
 
@@ -14,9 +14,9 @@ const Layout = ({children }) => {
       <Navbar/>
       <FadeIn className="background-pattern-rain-light">
       {children}
+    </FadeIn>
       <ScrollButton/>
       <Footer />
-    </FadeIn>
     </>
   )
 }
