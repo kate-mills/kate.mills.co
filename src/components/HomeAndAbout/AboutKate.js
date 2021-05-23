@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 const getKate = graphql`
   query AboutKate {
-    aboutKate: file(relativePath: { eq: "website-designer.jpg" }) {
+    aboutKate: file(relativePath: { eq: "website-developer.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 561, maxHeight: 600, cropFocus: ATTENTION) {
           ...GatsbyImageSharpFluid_withWebp
