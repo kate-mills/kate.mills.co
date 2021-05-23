@@ -59,16 +59,12 @@ export default styled(Btn)`
     color: var(--primaryBlack);
   }
   &.btn--dark {
-    background-color: var(--digitalColor2);
+    background-color: var(--solutionsColor);
     color: var(--primaryBlack);
-  }
-  &.btn--favorite{
-    background-color: var(--digitalColor2);
-    color: var(--primaryLight);
   }
   &.btn--light::after,
   &.btn--dark::after{
-    background-color: var(--digitalColor2);
+    background-color: var(--solutionsColor);
   }
   @media(min-width: 768px){ margin: 1rem; }
 `

@@ -78,7 +78,7 @@ const PhotoWrapper = styled.article`
     background: rgba(0, 0, 0, 0.4);
     color: white;
     transform: translateY(100%);
-    transition: var(--transition);
+    transition: var(--mainTransition);
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -55,13 +55,13 @@ const Wrapper = styled.div`
     color: var(--primaryBlack);
     margin: 0.5rem;
     text-transform: capitalize;
-    letter-spacing: var(--spacing);
+    letter-spacing: var(--altSpacing);
     font-size: 1.3rem;
     padding: 0.25rem;
     cursor: pointer;
     border: none;
     outline: none;
-    transition: var(--transition);
+    transition: var(--mainTransition);
   }
   button:hover,
   button.active {

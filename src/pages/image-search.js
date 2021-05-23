@@ -132,13 +132,13 @@ const ImageSearchWrapper = styled.section`
     border-bottom: 3px solid var(--digitalColor);
     color: var(--digitalColor);
     font-size: 1.5rem;
-    letter-spacing: var(--spacing);
+    letter-spacing: var(--altSpacing);
     outline-color: var(--solutionsColor);
     padding: 0.75rem 1.25rem;
     text-transform: capitalize;
   }
   .form-input::placeholder {
-    color: var(--digitalColor2);
+    color: var(--solutionsColor);
   }
   .submit-btn {
     border-bottom: none;

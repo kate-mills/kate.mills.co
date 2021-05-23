@@ -1,22 +1,14 @@
 @import url("https://use.typekit.net/igr8zjs.css") rel="preload" as="styles";
 
 :root {
-  --contrastOnWhite: #74757a;
-  --digitalColor: #909197;  /*#7e7b78;*/
-  --digitalColor2: silver;
-  --digitalOnBlack: #9e9fa6; /*#a39f9b;*/
-  --solutionsColor:#D0D1D5; /*#c8c6c3;*/
+  --digitalColor: #909197;
+  --solutionsColor:#D0D1D5;
   --favoriteColor: #e12386;
-  --favoriteLight:  #efc2e5;
-  --primaryLightest: ghostwhite;
-  --primaryLight:#f3f8fb; /* #B99281;*/
-  --primaryDark:#e0e0e0;/*#9F776B;*/
-  --primaryColor: #EDF0F2; /*#efebe8; /*#F7F3F0;*/
+  --primaryLight:#f3f8fb;
+  --primaryColor: #EDF0F2;
   --primaryBlack: #121212;
   --primaryBlack2: #2d2e2f;/*hover black*/
   --primaryWhite: #ffffff;
-  --primaryGrey: #E4D9D5;
-  --grey0: #F5F5F5;
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
@@ -25,7 +17,6 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --radius: 0.25rem;
-  --maxWidth: 40rem;
   --max-width: 1170px;
   --fixed-width: 620px;
 
@@ -54,7 +45,7 @@ p, div{
   font-weight: 300;
 }
 nav a {
-  color: var(--digitalColor2);
+  color: var(--primaryWhite);
   font-family: var(--mainFF);
   font-style: normal;
   font-weight: 300;

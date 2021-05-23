@@ -14,7 +14,7 @@ export default styled(TallHero)`
   min-height: calc(100vh - 76px);
   background: var(--primaryBlack);
   opacity: 1 !important;
-  transition: var(--mainTranistion);
+  transition: var(--mainTransition);
   display: flex;
   align-items: center;
   justify-content: center;

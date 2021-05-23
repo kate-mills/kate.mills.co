@@ -75,7 +75,7 @@ const WebPackagesWrapper = styled.section`
       span{
         align-items: center;
         border-radius: 10px;
-        color: var(--contrastOnWhite);
+        color: var(--primaryBlack);
         display: flex;
         font-size: 1.2rem;
         justify-content: center;

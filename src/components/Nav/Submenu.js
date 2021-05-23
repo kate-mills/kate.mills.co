@@ -55,7 +55,6 @@ const SubmenuWrapper = styled.aside`
     z-index: 3;
   }
   & section{
-    background-color: var(--primaryDark);
     display: flex;
     flex-direction: column;
     align-items: center;
