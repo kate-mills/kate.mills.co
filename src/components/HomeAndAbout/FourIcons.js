@@ -1,13 +1,13 @@
 import React from 'react'
-import services from '../../constants/services'
+import FourIconList from '../../constants/four-icon-list'
 import styled from 'styled-components'
 
-const ThreeIcons  = () => {
+const FourIcons  = () => {
   return (
-    <ThreeIconsWrapper>
+    <FourIconsWrapper>
       <h2 className="banner-h2">Give Your Small Business a Competitive Advantage with a Professionally Done Website.</h2>
       <div className="center">
-        {services.map((item, index) => {
+        {FourIconList.map((item, index) => {
           return (
             <article key={index} className="service"
               data-sal="zoom-in"
@@ -20,12 +20,12 @@ const ThreeIcons  = () => {
           )
         })}
       </div>
-    </ThreeIconsWrapper>
+    </FourIconsWrapper>
   )
 }
 
 
-const ThreeIconsWrapper = styled.section`
+const FourIconsWrapper = styled.section`
   &{
     padding: 4rem 1rem;
   }
@@ -61,4 +61,4 @@ const ThreeIconsWrapper = styled.section`
 
 
 `
-export default ThreeIcons
+export default FourIcons

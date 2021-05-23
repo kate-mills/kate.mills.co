@@ -14,7 +14,7 @@ const details = {
   finerPrint:"*50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
 }
 
-const WebPackages =  [
+const WebPackageList =  [
   {
     title: "Basic Website",
     path: "/websites",
@@ -33,4 +33,4 @@ const WebPackages =  [
   },
 ]
 
-export default WebPackages
+export default WebPackageList

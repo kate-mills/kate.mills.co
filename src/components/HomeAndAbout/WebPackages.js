@@ -1,11 +1,11 @@
 import React from 'react'
 import Title from '../Title'
-import WebPackages from '../../constants/web-packages'
+import WebPackageList from '../../constants/web-package-list'
 import {Link} from 'gatsby'
 
 import styled from 'styled-components'
 
-const Services = () => {
+const WebPackages = () => {
   return (
     <WebPackagesWrapper className={`background-pattern-rain-dark section-center`}
     >
@@ -17,7 +17,7 @@ const Services = () => {
           <p className="we-offer-p">We offer a range of website design solutions for you to choose including Websites and E-Commerce Stores for estheticians, spas, salons, and beauty professionals at a price that fits your budget and delivered promptly.  With our expertise & knowledge of the beauty industry, our design process is straightforward for you.</p>
       <div className="center">
 
-        {WebPackages.map((item, index) => {
+        {WebPackageList.map((item, index) => {
           return (
             <article key={index} className="service"
             >
@@ -121,4 +121,4 @@ const WebPackagesWrapper = styled.section`
   }
 `
 
-export default Services
+export default WebPackages
