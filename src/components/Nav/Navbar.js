@@ -132,7 +132,7 @@ const NavWrapper = styled.nav`
   }
   .nav-links a,
   .nav-links span{
-    color: var(--digitalColor2);
+    color: var(--primaryWhite);
     display: block;
     font-size: 0.95rem;
     letter-spacing: var(--altSpacing);
@@ -151,7 +151,6 @@ const NavWrapper = styled.nav`
     opacity: 1;
     pointer-events: none;
     background: var(--primaryColor);
-    color: var(--primaryColor) !important;
   }
   
   @media screen and (min-width: 576px) {
@@ -201,7 +200,7 @@ const NavWrapper = styled.nav`
     .nav-links li.active{
       background: var(--primaryBlack2);/*styles while hovering over submenu*/
       a {
-        color: var(--digitalColor);
+        color: var(--primaryLight);
       }
     }
     .logo{
