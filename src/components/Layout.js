@@ -6,20 +6,22 @@ import Footer from './Footer'
 import ScrollButton from './ScrollButton'
 import { useGlobalContext } from '../context/context';
 
+import  FadeIn from '../animations/FadeIn'
+
 const Layout = ({children }) => {
   const { closeSubmenu } = useGlobalContext();
 
   return (
     <>
       <Navbar/>
-      <main className="background-pattern-rain-light"
+      <FadeIn className="background-pattern-rain-light"
       onFocus={closeSubmenu}
       onMouseOver={closeSubmenu}
       >
       {children}
       <ScrollButton/>
       <Footer />
-    </main>
+    </FadeIn>
     </>
   )
 }

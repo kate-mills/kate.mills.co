@@ -19,9 +19,9 @@ const fadeIn = keyframes`
    opacity: 1;
  }
 `
-const Container = styled.div`
+const Container = styled.main`
  animation-name: ${fadeIn};
- animation-duration: 8s;
+ animation-duration: 1.5s;
  animation-iteration-count:1;
 
 `
