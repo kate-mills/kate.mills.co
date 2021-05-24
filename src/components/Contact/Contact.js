@@ -95,7 +95,7 @@ const ContactWrapper = styled.section`
     text-transform: capitalize;
   }
   .required {
-    color: var(--favoriteColor);
+    color: var(--digitalColor);
     font-size: 1.5rem;
     padding-right: 2px;
   }

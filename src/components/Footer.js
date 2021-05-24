@@ -60,7 +60,7 @@ const FooterWrapper =styled.footer`
     transition: var(--mainTransition);
   }
   .links a:hover{
-    color: var(--favoriteColor) !important;
+    color: var(--digitalColor) !important;
   }
   .icons{
     padding: 1.5rem;
@@ -74,7 +74,7 @@ const FooterWrapper =styled.footer`
   }
   .icons a:hover {
     transform: translateY(-1px);
-    color: var(--favoriteColor) !important
+    color: var(--digitalColor) !important;
   }
   .phone{
     color: var(--primaryWhite);
