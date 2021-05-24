@@ -51,7 +51,7 @@ const Wrapper = styled.section`
     /* safari workaround */
     grid-gap: 2rem;
     .container {
-      background: var(--primaryLight);
+      background: var(--primaryWhite);
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);

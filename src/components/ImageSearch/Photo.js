@@ -64,7 +64,7 @@ const PhotoWrapper = styled.article`
     margin-bottom: 0;
   }
   .download-img {
-    color: var(--primaryLight);
+    color: var(--primaryWhite);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;

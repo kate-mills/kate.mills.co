@@ -200,7 +200,7 @@ const NavWrapper = styled.nav`
     .nav-links li.active{
       background: var(--primaryBlack2);/*styles while hovering over submenu*/
       a {
-        color: var(--primaryLight);
+        color: var(--primaryWhite);
       }
     }
     .logo{

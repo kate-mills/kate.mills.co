@@ -1,12 +1,11 @@
 @import url("https://use.typekit.net/igr8zjs.css") rel="preload" as="styles";
 
 :root {
-  --digitalColor: #909197;
-  --solutionsColor:#D0D1D5;
-  --primaryLight:#f3f8fb;
-  --primaryColor: #EDF0F2;
   --primaryBlack: #121212;
   --primaryBlack2: #2d2e2f;/*hover black*/
+  --digitalColor: #909197;
+  --solutionsColor:#D0D1D5;
+  --primaryColor: #EDF0F2;
   --primaryWhite: #ffffff;
 
   --mainTransition: all 0.2s linear;
