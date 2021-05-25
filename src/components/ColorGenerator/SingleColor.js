@@ -5,6 +5,14 @@ const SingleColor = ({ rgb, weight, index, hex }) => {
   const [alert,setAlert] = React.useState(false)
   const bcg = rgb.join(', ')
   const hexValue = `#${hex}`
+
+  React.useEffect(()=>{
+    const timeout = setTimeout(()=>{
+      setAlert(false)
+    }, 2000)
+
+    return () => clearTimeout(timeout)
+  }, [alert])
   
 
   return (
