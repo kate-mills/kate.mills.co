@@ -35,12 +35,9 @@ const WebPackages = () => {
                     )
                   })}
                 </ul>
-              <p className="fine-print">
-                {item.finePrint}
-              </p>
-              <p className="fine-print">
-                {item.finerPrint}
-              </p>
+              {item.finePrint.map((txt, index)=>{
+                return<p className="fine-print" key={index}>{txt}</p>
+              })}
             </article>
           )
         })}

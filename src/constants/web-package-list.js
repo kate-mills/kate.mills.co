@@ -1,17 +1,23 @@
 const details = {
   basicPackage: [
-    "Up to 5 pages of content",
-    "Basic Logo",
-    "Custom Fonts",
-    "High quality images",
-    "Custom Color Palette",
-    "Custom Contact Form",
-    "Mobile, tablet, and  desktop friendly",
-    "Free SSL instalation",
+    "Fully customized design (1 - 4 pages)*",
+    "Basic logo design",
+    "Your choice of font",
+    "High quality, responsive images",
+    "Custom color palette",
+    "Custom contact form",
+    "Responsive - always mobile, tablet, and desktop friendly",
+    "Free SSL installation",
     "Fast, reliable, Search Engine Optimized",
   ],
-  finePrint: "*50% non-refundable deposit due at start of project.",
-  finerPrint:"*50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
+  ecommercePackage: [
+    "Add a store and shopping cart to your optimized website."
+  ],
+  finePrint: [
+    "* Extra page designs and coding available at additional cost.",
+    "** 50% non-refundable deposit due at start of project.",
+    "** 50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
+  ]
 }
 
 const WebPackageList =  [
@@ -21,15 +27,15 @@ const WebPackageList =  [
     price: "$1295",
     pkgDetails: details.basicPackage,
     finePrint: details.finePrint,
-    finerPrint: details.finerPrint,
   },
   {
     title: "Basic e-commerce",
     path: "/ecommerce",
     price: "$1595",
-    pkgDetails: details.basicPackage.concat(["Add a store and shopping cart to your optimized website."]),
+    pkgDetails: details.basicPackage.concat(
+      details.ecommercePackage
+    ),
     finePrint: details.finePrint,
-    finerPrint: details.finerPrint,
   },
 ]
 
