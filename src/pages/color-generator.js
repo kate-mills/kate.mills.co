@@ -12,7 +12,7 @@ const ColorGeneratorPage = ()=> {
   const [error,setError] = React.useState(false);
   const [bgClr,setBgClr] = React.useState('#40e0d0')
   const [list, setList ] = React.useState([]);
-  const [emsg, setEmsg ] = React.useState('Test Msg')
+  const [emsg, setEmsg ] = React.useState('')
 
   React.useEffect(()=>{
     let colors = new Values('#40e0d0').all(10)
@@ -34,10 +34,10 @@ const ColorGeneratorPage = ()=> {
       return 'Input must start with #'
     }
     else if (len < 4){ //'#fff'
-      return 'Input is too short'
+      return ((len === 1) ? `${clr}___`:(len===2) ? `${clr}__`:`${clr}_`)
     }
     else if(len === 6){ //'#fffff'
-      return 'Input needs 1 more letter or number'
+      return `${clr}_`
     }
     else if (len > 7){
       return 'Input is too long'
@@ -45,11 +45,11 @@ const ColorGeneratorPage = ()=> {
     else if((len === 4)||
       (len === 5)||
       (len === 7)){
-      return ''
+      return `${clr}`
     }
   }
   const errMsg = {
-    color: '#ff0000',
+    color: 'transparent',
     len: (num) => (num <= 3 || (num > 7) || (num === 6)),
     hash: (str) => (str !== '#'),
   }
@@ -74,7 +74,7 @@ const ColorGeneratorPage = ()=> {
             <input
               type="text"
               value={color}
-              placeholder={color || bgClr}
+              placeholder={`#f01011`}
               onChange={handleInputChange}
               className={`${error ? 'error' : null}`}
             />
