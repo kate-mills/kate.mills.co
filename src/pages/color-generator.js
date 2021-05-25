@@ -10,19 +10,19 @@ import Values from 'values.js'
 const ColorGeneratorPage = ()=> {
   const [color,setColor] = React.useState('');
   const [error,setError] = React.useState(false);
-  const [bgClr,setBgClr] = React.useState('#40e0d0')
+  const [bgClr,setBgClr] = React.useState('')
   const [list, setList ] = React.useState([]);
   const [emsg, setEmsg ] = React.useState('')
 
   React.useEffect(()=>{
-    let colors = new Values('#40e0d0').all(10)
+    let colors = new Values('#ffe9dd').all(5)
     setList(colors)
   }, [])
 
   const handleSubmit = (e) =>{
     e.preventDefault();
     try {
-      let colors = new Values(color).all(10)
+      let colors = new Values(color).all(5)
       setError(false)
       setList(colors)
     }catch(error){
@@ -66,7 +66,7 @@ const ColorGeneratorPage = ()=> {
   return(
     <Layout>
       <FullSeo title="Color Generator"/>
-      <div style={{marginTop: '2rem'}}/>
+      <div style={{marginTop: '4rem'}}/>
       <Banner title="Color Generator" info=""/>
       <ColoredGeneratorWrapper>
         <section className="container">
@@ -74,7 +74,7 @@ const ColorGeneratorPage = ()=> {
             <input
               type="text"
               value={color}
-              placeholder={`#f01011`}
+              placeholder={`#ffe9dd`}
               onChange={handleInputChange}
               className={`${error ? 'error' : null}`}
             />
@@ -123,10 +123,15 @@ const ColoredGeneratorWrapper = styled.div`
       width: 100vw;
       input {
         border: 2px solid var(--digitalColor);
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
         border-top-left-radius: var(--radius);
         border-bottom-left-radius: var(--radius);
+        letter-spacing: var(--midSpacing);
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        ::placeholder{
+          color: var(--solutionsColor);
+          letter-spacing: var(--midSpacing);
+        }
       }
       .btn {
         background: var(--digitalColor);
@@ -162,6 +167,7 @@ const ColoredGeneratorWrapper = styled.div`
     margin: 0 auto;
     text-align: center;
     height: 5rem;
+    letter-spacing: var(--midSpacing);
     min-height: 5rem;
     max-height: 5rem;
   }

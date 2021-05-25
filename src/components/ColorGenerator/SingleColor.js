@@ -21,10 +21,12 @@ const SingleColor = ({ rgb, weight, index, hex }) => {
         setAlert(true)
         navigator.clipboard.writeText(hexValue)
       }}
-      className={`${(index>11)?'light-txt':''}`}
+      className={`${(index<14)?'darkest-txt':(
+        (index>27)?'lightest-txt':
+        (index<26)?'dark-txt':'light-txt')}`}
       style={{backgroundColor: `rgb(${bcg})`}}
     >
-      <p className="percent-value">rgba({bcg}, {weight})</p>
+      <p className="percent-value">{weight}%</p>
       <p className="color-value">{hexValue}</p>
       {alert && <p className="alert">Copied to clipboard</p>}
     </SingleColorWrapper>
@@ -49,10 +51,21 @@ const SingleColorWrapper = styled.article`
     margin-bottom: 0;
   }
   .color-value {
+    letter-spacing: var(--midSpacing);
     margin-bottom: 0;
   }
-  &.light-txt p{
+
+  &.dark-txt p{
+    color: var(--digitalColor) !important;
+  }
+  &.darkest-txt p{
+    color: var(--primaryBlack) !important;
+  }
+  &.lightest-txt p{
     color: var(--primaryWhite) !important;
+  }
+  &.light-txt p{
+    color: var(--solutionsColor) !important;
   }
   .alert {
     position: absolute;

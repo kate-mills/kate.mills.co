@@ -17,6 +17,7 @@ const sublinks = [
     id: 3,
     links: [
       { label: 'Image Search', url: '/image-search/', },
+      { label: 'Color Generator', url: '/color-generator/', },
       { label: 'Blogs', url: '/blogs/' },
       { label: 'Websites', url: '/websites/' },
       { label: 'E-commerce', url: '/ecommerce/' },
