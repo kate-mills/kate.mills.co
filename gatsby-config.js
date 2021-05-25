@@ -63,7 +63,11 @@ module.exports = {
       options: {
         host: 'https://allydigitalsolutions.com',
         sitemap: 'https://allydigitalsolutions.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [
+          { userAgent: '*', allow: '/' },
+          {userAgent: '*', disallow: '/thankyou'},
+          {userAgent: '*', disallow: '/image-search'},
+        ],
       }
     },
     {
