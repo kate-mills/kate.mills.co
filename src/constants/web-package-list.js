@@ -1,7 +1,7 @@
 // start growing the beauty business of your dreams.
 const details = {
   basicPackage: [
-    "Fully customized design (1 - 4 pages)*",
+    "Fully customized design (*1-4 pages)",
     "Basic logo design",
     "High quality, responsive images",
     "Custom color palette",
@@ -18,8 +18,8 @@ const details = {
   ],
   finePrint: [
     "* Extra page designs and coding available at additional cost.",
-    "** 50% non-refundable deposit due at start of project.",
-    "** 50% due 48 hours before \"go-live\" or 60 days (whichever comes first)",
+    "** 50% non-refundable deposit due at the start of the project.",
+    "** 50% due 48 hours before \"go-live\" or 60 days (whichever comes first).",
   ]
 }
 
