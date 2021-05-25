@@ -1,3 +1,4 @@
+// start growing the beauty business of your dreams.
 const details = {
   basicPackage: [
     "Fully customized design (1 - 4 pages)*",
@@ -8,7 +9,8 @@ const details = {
     "Custom contact form",
     "Responsive - always mobile, tablet, and desktop friendly",
     "Free SSL installation",
-    "Fast, reliable, Search Engine Optimized",
+    "Fast and reliable",
+    "Search engine optimization",
   ],
   ecommercePackage: [
     "Add a store and shopping cart to your optimized website."
