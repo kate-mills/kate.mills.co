@@ -7,46 +7,25 @@ import styled from 'styled-components'
 const Photo = ({photo}) =>{
   const {
     urls,
-    links,
+    links:{download},
     user:{
       name,
       username,
     }} = photo
   const {regular} = urls
 
-  let downloadLocation = links.download_location.slice(12)
   let unsplashUrl = `https://unsplash.com/@${username}?utm_source=ally-digital-solutions&utm_medium=referral`
 
   return(
     <PhotoWrapper className="photo">
       <img alt={photo.alt_description} src={regular}/>
-      <div className="download-info">
-        <a
-          rel="nofollow"
-          download=""
-          target="_blank"
-          data-test="non-sponsored-photo-download-button"
-          title="Download photo"
-          download_location={links.download_location}
-          href={`${downloadLocation}/?force=true`}
-        >
-        <HiDownload className="download-img-arrow"/>
-        </a>
-      </div>
       <div className="photo-info">
       <div>
         <p>Photo on<a className="unsplash" href="https://unsplash.com" target="_blank">usplash.com</a>by</p>
         <p><a href={unsplashUrl} target="_blank">{name}</a></p>
       </div>
-        <a
-          rel="nofollow"
-          download=""
-          target="_blank"
-          data-test="non-sponsored-photo-download-button"
-          title="Download photo"
-          download_location={links.download_location}
-          href={`${downloadLocation}/?force=true`}
-        >
+        <a rel="nofollow" download="" target="_blank" data-test="non-sponsored-photo-download-button" title="Download photo"
+          href={`${download}/?force=true`}>
           <HiDownload className="download-img"/>
         </a>
       </div>
@@ -89,22 +68,6 @@ const PhotoWrapper = styled.article`
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-  }
-  .download-info{
-    position: absolute;
-    width: 100%;
-    padding: 1rem;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0);
-    .download-img-arrow{
-      position: relative;
-      left: 90%;
-      color: var(--primaryWhite);
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-    }
   }
   .photo-info {
     position: absolute;
