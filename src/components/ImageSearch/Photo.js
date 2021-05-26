@@ -104,6 +104,12 @@ const PhotoWrapper = styled.article`
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
+      transition: color ease 1s; 
+    }
+  }
+  &:hover .download-info{
+    .download-img-arrow{
+      color: transparent;
     }
   }
   .photo-info {
