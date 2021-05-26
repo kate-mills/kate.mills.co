@@ -18,10 +18,16 @@ const ColorGeneratorPage = ()=> {
   const [list, setList ] = React.useState([]);
   const [alertMsg, setAlertMsg ] = React.useState('')
 
+  const focusMethod = () =>{
+    document.getElementById('hex-input').focus()
+  }
+
   React.useEffect(()=>{
     let colors = new Values('#ffe9dd').all(5)
     setList(colors)
+    focusMethod()
   }, [])
+
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -32,6 +38,7 @@ const ColorGeneratorPage = ()=> {
     }catch(error){
       setError(true)
     }
+    focusMethod()
   }
   const handleInputChange = (e) =>{
     let clr  = idxZeroCheckBeforeFormat(e.target.value)
@@ -60,6 +67,7 @@ const ColorGeneratorPage = ()=> {
         <section className="container">
           <form onSubmit={handleSubmit} className="form">
             <input
+              id="hex-input"
               type="text"
               value={color}
               placeholder={`#ffe9dd`}
