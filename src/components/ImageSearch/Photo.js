@@ -14,7 +14,7 @@ const Photo = ({photo}) =>{
     }} = photo
   const {regular} = urls
 
-  let downloadLocation = links.download_location.slice(12)
+  //let downloadLocation = links.download_location.slice(12)
   let unsplashUrl = `https://unsplash.com/@${username}?utm_source=ally-digital-solutions&utm_medium=referral`
 
   return(
@@ -23,12 +23,11 @@ const Photo = ({photo}) =>{
       <div className="download-info">
         <a
           rel="nofollow"
-          download=""
+          data-download="non-sponsored-photo-download-button"
+          download={links.download_location}
           target="_blank"
-          data-test="non-sponsored-photo-download-button"
           title="Download photo"
-          download_location={links.download_location}
-          href={`${downloadLocation}/?force=true`}
+          href={`${links.download}/?force=true`}
         >
         <HiDownload className="download-img-arrow"/>
         </a>
@@ -40,12 +39,11 @@ const Photo = ({photo}) =>{
       </div>
         <a
           rel="nofollow"
-          download=""
+          data-download="non-sponsored-photo-download-button"
+          download={links.download_location}
           target="_blank"
-          data-test="non-sponsored-photo-download-button"
           title="Download photo"
-          download_location={links.download_location}
-          href={`${downloadLocation}/?force=true`}
+          href={`${links.download}/?force=true`}
         >
           <HiDownload className="download-img"/>
         </a>
@@ -95,7 +93,6 @@ const PhotoWrapper = styled.article`
     width: 100%;
     padding: 1rem;
     bottom: 0;
-    left: 0;
     background: rgba(0, 0, 0, 0);
     .download-img-arrow{
       position: relative;
@@ -104,7 +101,7 @@ const PhotoWrapper = styled.article`
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-      transition: color ease 1s; 
+      transition: color ease .5s; 
     }
   }
   &:hover .download-info{
@@ -128,6 +125,13 @@ const PhotoWrapper = styled.article`
   }
   &:hover .photo-info {
     transform: translateY(0);
+  }
+  @media(max-width: 853px){
+    .download-info{
+      .download-img-arrow{
+        left: 91%;
+      }
+    }
   }
 
 `
