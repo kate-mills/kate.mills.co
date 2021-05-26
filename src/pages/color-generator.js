@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
+import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
 
@@ -66,8 +67,19 @@ const ColorGeneratorPage = ()=> {
   return(
     <Layout>
       <FullSeo title="Color Generator"/>
-      <div style={{marginTop: '4rem'}}/>
-      <Banner title="Color Generator" info=""/>
+      <HeroShort>
+        <Banner
+          title="Gorgeous Colors"
+          info="Get tints & shades of any color & build a gorgeous coloscheme."
+        />
+      </HeroShort>
+        <SectionWrapper className="section">
+            <h2>Enter a hexadecimal value or a basic color like<br/>green, blue, yellow, red, turquoise.</h2>
+            <p>A hexadecimal color is specified with: #RRGGBB.</p>
+            <p>RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and FF specifying the intensity of the color.</p>
+            <p>For example, #FF0000 is displayed as red, because the red component is set to its highest value (FF) and the others are set to 00.</p>
+            <p>A hexadecimal color value always starts with: #</p>
+        </SectionWrapper>
       <ColoredGeneratorWrapper>
         <section className="container">
           <form onSubmit={handleSubmit} className="form">
@@ -107,6 +119,29 @@ const ColorGeneratorPage = ()=> {
 }
 
 
+const SectionWrapper = styled.div`
+  &{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: .4rem;
+    margin: auto;
+    text-align: center;
+    h2{
+      font-size: 2rem;
+      max-width: 80vw;
+      width: 100%;
+    }
+    p{
+      color: var(--primaryBlack);
+      letter-spacing:var(--altSpacing);
+      max-width: 80vw;
+      width: 100%;
+    }
+  }
+
+`
 const ColoredGeneratorWrapper = styled.div`
   & .container {
     margin: 0 auto;
@@ -130,6 +165,8 @@ const ColoredGeneratorWrapper = styled.div`
         font-size: 1rem;
         ::placeholder{
           color: var(--solutionsColor);
+
+  }
           letter-spacing: var(--midSpacing);
         }
       }
