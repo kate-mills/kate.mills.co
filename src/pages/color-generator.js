@@ -5,15 +5,18 @@ import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
 
+import {idxZeroCheckBeforeFormat, getAlertMsg} from '../utils/hex-helpers'
+
 import SingleColor from '../components/ColorGenerator/SingleColor'
 import Values from 'values.js'
+
 
 const ColorGeneratorPage = ()=> {
   const [color,setColor] = React.useState('');
   const [error,setError] = React.useState(false);
   const [bgClr,setBgClr] = React.useState('')
   const [list, setList ] = React.useState([]);
-  const [emsg, setEmsg ] = React.useState('')
+  const [alertMsg, setAlertMsg ] = React.useState('')
 
   React.useEffect(()=>{
     let colors = new Values('#ffe9dd').all(5)
@@ -30,39 +33,12 @@ const ColorGeneratorPage = ()=> {
       setError(true)
     }
   }
-  const getErrMsg = (len, clr) =>{
-    if(clr[0] !== '#'){
-      return 'Input must start with #'
-    }
-    else if (len < 4){ //'#fff'
-      return ((len === 1) ? `${clr}___`:(len===2) ? `${clr}__`:`${clr}_`)
-    }
-    else if(len === 6){ //'#fffff'
-      return `${clr}_`
-    }
-    else if (len > 7){
-      return 'Input is too long'
-    }
-    else if((len === 4)||
-      (len === 5)||
-      (len === 7)){
-      return `${clr}`
-    }
-  }
-  const errMsg = {
-    color: 'transparent',
-    len: (num) => (num <= 3 || (num > 7) || (num === 6)),
-    hash: (str) => (str !== '#'),
-  }
   const handleInputChange = (e) =>{
-    let clr = e.target.value
-    let len = e.target.value.length
+    let clr  = idxZeroCheckBeforeFormat(e.target.value)
+    let msg = getAlertMsg(clr)
     setColor(clr)
-    setEmsg(getErrMsg(len, clr))
-    if(!errMsg.len(len)) {
-      setBgClr(e.target.value)
-    }
-    else{ setBgClr(errMsg.color) }
+    setBgClr(clr)
+    setAlertMsg(msg)
   }
   return(
     <Layout>
@@ -74,7 +50,7 @@ const ColorGeneratorPage = ()=> {
         />
       </HeroShort>
         <SectionWrapper className="section">
-            <h2>Enter a hexadecimal value or a basic color like<br/>green, blue, yellow, red, turquoise.</h2>
+            <h2>Enter a hexadecimal value</h2>
             <p>A hexadecimal color is specified with: #RRGGBB.</p>
             <p>RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and FF specifying the intensity of the color.</p>
             <p>For example, #FF0000 is displayed as red, because the red component is set to its highest value (FF) and the others are set to 00.</p>
@@ -97,7 +73,7 @@ const ColorGeneratorPage = ()=> {
           </div>
         </section>
         <div className="display-err-container">
-          {emsg}
+          {alertMsg}
         </div>
         <section className="colors">
           {

@@ -34,7 +34,7 @@ export default styled(Banner)`
       display: block;
       font-size: 3.3rem;
       text-transform: uppercase;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       padding: 0 1rem;
       letter-spacing: var(--altSpacing);
     }
