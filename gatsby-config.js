@@ -23,7 +23,6 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
