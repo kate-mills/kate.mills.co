@@ -59,11 +59,10 @@ const ColorGeneratorPage = ()=> {
         />
       </HeroShort>
         <SectionWrapper className="section">
-            <h2>Enter a hexadecimal value</h2>
+            <h2>Enter a color or hexadecimal value</h2>
             <p>A hexadecimal color is specified with: #RRGGBB.</p>
             <p>RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and FF specifying the intensity of the color.</p>
             <p>For example, #FF0000 is displayed as red, because the red component is set to its highest value (FF) and the others are set to 00.</p>
-            <p>A hexadecimal color value always starts with: #</p>
         </SectionWrapper>
       <ColoredGeneratorWrapper>
         <section className="container">
