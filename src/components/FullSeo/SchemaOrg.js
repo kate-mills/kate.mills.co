@@ -25,7 +25,6 @@ export default React.memo(
 
       }
     })
-    console.log('dateModified', dateModified);
     const baseSchema = [
       {
         "@context": "http://schema.org",
