@@ -9,46 +9,43 @@ import Banner from '../components/Hero/Banner'
 
 import {graphql} from 'gatsby'
 
-export const clientId = `?client_id=${process.env.GATSBY_UNSPLASH_ACCESS_KEY}`
-export const mainUrl = `https://api.unsplash.com/photos/`
-export const searchUrl = `https://api.unsplash.com/search/photos`
+import {UseUnsplashContext} from '../context/unsplash'
 
 const ImageSearchPage = ({data:seoData})=>{
+  const {unsplash} = UseUnsplashContext()
   const [loading, setLoading] = React.useState(false)
-  const [photos, setPhotos] = React.useState([])
   const [page, setPage] = React.useState(1)
   const [query, setQuery] = React.useState('')
+  const [photos, setPhotos] = React.useState([])
 
   const fetchImages = async ()=>{
-    setLoading(true)
-    let url
-    const urlPage = `&page=${page}`
-    const urlQuery = `&query=${query}`
-    const initQuery = `&query=beauty`
-    if (query) {
-      url = `${searchUrl}${clientId}${urlQuery}${urlPage}`
-    } else {
-      url = `${searchUrl}${clientId}${initQuery}${urlPage}`
-    }
-    try {
-      const response = await fetch(url)
-      const data = await response.json()
-      setPhotos((oldPhotos)=>{
-        let tempPhotos = []
-        if(page>1){
-          tempPhotos = [...oldPhotos, ...data.results]
-          console.log(tempPhotos.length)
-          return tempPhotos
-        } else{
-          tempPhotos = data.results
-          console.log(tempPhotos.length)
-          return tempPhotos
-        }
-      })
-      setLoading(false)
-    } catch(err){
-      console.log(err)
-      setLoading(false)
+    let searchQ = query || 'beauty'
+    if(searchQ){
+      setLoading(true)
+      unsplash.search
+        .getPhotos({
+          page,
+          query:searchQ,
+        })
+        .then(result =>{
+          setPhotos((oldPhotos)=>{
+            let tempPhotos = []
+            if(page>1){
+              tempPhotos = [...oldPhotos, ...result.response.results]
+              console.log(tempPhotos.length)
+              return tempPhotos
+            } else{
+              tempPhotos = result.response.results
+              console.log(tempPhotos.length)
+              return tempPhotos
+            }
+          })
+          setLoading(false)
+        })
+        .catch((err)=>{
+          console.log('something went wrong', err)
+          setLoading(false)
+        })
     }
   }
   React.useEffect(()=>{
@@ -160,4 +157,3 @@ export const query = graphql`
 }
 `
 export default ImageSearchPage
-
