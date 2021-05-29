@@ -32,18 +32,18 @@ const ImageSearchPage = ({data:seoData})=>{
             let tempPhotos = []
             if(page>1){
               tempPhotos = [...oldPhotos, ...result.response.results]
-              console.log(tempPhotos.length)
+              console.log(`Displaying ${tempPhotos.length} images`)
               return tempPhotos
             } else{
               tempPhotos = result.response.results
-              console.log(tempPhotos.length)
+              console.log(`Displaying ${tempPhotos.length} images`)
               return tempPhotos
             }
           })
           setLoading(false)
         })
         .catch((err)=>{
-          console.log('something went wrong', err)
+          console.log(err)
           setLoading(false)
         })
     }
@@ -94,7 +94,7 @@ const ImageSearchPage = ({data:seoData})=>{
             type='text'
             placeholder='search images'
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e)=>setQuery(e.target.value)}
             className='form-input'
           />
           <button className="submit-btn" type="submit" aria-label="search"
@@ -144,7 +144,6 @@ const ImageSearchWrapper = styled.section`
     cursor: pointer;
   }
 `
-
 export const query = graphql`
   query{
     defaultBg: file(relativePath: { eq: "image-search.png" }) {

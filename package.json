@@ -43,6 +43,7 @@
     "values.js": "^2.0.0"
   },
   "devDependencies": {
+    "netlify-plugin-inline-critical-css": "^1.2.0",
     "prettier": "2.2.1"
   },
   "repository": {
