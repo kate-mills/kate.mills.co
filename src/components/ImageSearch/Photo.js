@@ -1,35 +1,34 @@
 /* eslint-disable react/jsx-no-target-blank */
 import * as React from 'react'
-
-import {HiDownload} from 'react-icons/hi'
 import styled from 'styled-components'
+import {UseUnsplashContext} from '../../context/unsplash'
 
 const Photo = ({photo}) =>{
+  const {trackDownload} = UseUnsplashContext()
   const {
-    urls,
+    urls:{regular},
     links,
     user:{
       name,
       username,
     }} = photo
-  const {regular} = urls
 
-  //let downloadLocation = links.download_location.slice(12)
   let unsplashUrl = `https://unsplash.com/@${username}?utm_source=ally-digital-solutions&utm_medium=referral`
 
   return(
     <PhotoWrapper className="photo">
       <img alt={photo.alt_description} src={regular}/>
-      <div className="download-info">
+      <div className="mobile-download-info">
         <a
+          onClick={()=>trackDownload(photo)}
           rel="nofollow"
-          data-download="non-sponsored-photo-download-button"
-          download={links.download_location}
-          target="_blank"
+          download=""
+          target=""
+          data-test="non-sponsored-photo-download-button"
           title="Download photo"
-          href={`${links.download}/?force=true`}
+          href={`${links.download}?force=true`}
         >
-        <HiDownload className="download-img-arrow"/>
+          <Arrow cls="download-img-arrow"/>
         </a>
       </div>
       <div className="photo-info">
@@ -38,20 +37,20 @@ const Photo = ({photo}) =>{
         <p><a href={unsplashUrl} target="_blank">{name}</a></p>
       </div>
         <a
+          onClick={()=>trackDownload(photo)}
           rel="nofollow"
           data-download="non-sponsored-photo-download-button"
-          download={links.download_location}
-          target="_blank"
+          download=""
+          target=""
           title="Download photo"
-          href={`${links.download}/?force=true`}
+          href={`${links.download}?force=true`}
         >
-          <HiDownload className="download-img"/>
+          <Arrow cls="download-img"/>
         </a>
       </div>
     </PhotoWrapper>
   )
 }
-
 
 const PhotoWrapper = styled.article`
   &{
@@ -83,12 +82,12 @@ const PhotoWrapper = styled.article`
     margin-bottom: 0;
   }
   .download-img {
-    color: var(--primaryWhite);
-    width: 2.5rem;
-    height: 2.5rem;
+    fill: var(--primaryWhite);
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
   }
-  .download-info{
+  .mobile-download-info{
     position: absolute;
     width: 100%;
     padding: 1rem;
@@ -97,16 +96,16 @@ const PhotoWrapper = styled.article`
     .download-img-arrow{
       position: relative;
       left: 90%;
-      color: var(--primaryWhite);
-      width: 2.5rem;
-      height: 2.5rem;
+      fill: var(--primaryWhite);
+      width: 2rem;
+      height: 2rem;
       border-radius: 50%;
       transition: color ease .5s; 
     }
   }
-  &:hover .download-info{
+  &:hover .mobile-download-info{
     .download-img-arrow{
-      color: transparent;
+      fill: transparent;
     }
   }
   .photo-info {
@@ -126,13 +125,15 @@ const PhotoWrapper = styled.article`
   &:hover .photo-info {
     transform: translateY(0);
   }
-  @media(max-width: 853px){
-    .download-info{
+  @media(min-width: 1025px){
+    .mobile-download-info{
       .download-img-arrow{
-        left: 91%;
+        display:none;
       }
     }
   }
 
 `
 export default Photo
+
+export const Arrow = ({cls}) => (<svg width="32" height="32" className={cls} version="1.1" viewBox="0 0 32 32" aria-hidden="false"><path d="M25.8 15.5l-7.8 7.2v-20.7h-4v20.7l-7.8-7.2-2.7 3 12.5 11.4 12.5-11.4z"></path></svg>)
