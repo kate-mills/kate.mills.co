@@ -31,7 +31,6 @@ const SingleColor = ({ rgb, weight, index, hex }) => {
     </SingleColorWrapper>
   )
 }
-
 const SingleColorWrapper = styled.article`
   & {
     display: flex;
@@ -53,7 +52,6 @@ const SingleColorWrapper = styled.article`
     letter-spacing: var(--midSpacing);
     margin-bottom: 0;
   }
-
   &.dark-txt p{
     color: var(--digitalColor) !important;
   }
