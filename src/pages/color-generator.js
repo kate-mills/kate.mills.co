@@ -74,12 +74,15 @@ const ColorGeneratorPage = ()=> {
               placeholder={`#ffe9dd`}
               onChange={handleHexInputChange}
               className={`${error ? 'error' : null}`}
+              tabindex="0"
+              style={{
+                outlineColor: `${bgClr}`,
+              }}
             />
-            <button className="btn" type="submit">submit</button>
+            <button tabindex="0" className="btn" type="submit"
+              style={{ outlineColor: `${bgClr}`, }}
+            >submit</button>
           </form>
-          <div className="display-color-container">
-            <div style={{backgroundColor: `${bgClr}`}} className="display-color"/>
-          </div>
         </section>
         <section className="colors">
           {
@@ -139,6 +142,7 @@ const ColoredGeneratorWrapper = styled.div`
       display: block;
       width: 100vw;
       input {
+        outline-color: var(--primaryColor);
         border: 2px solid var(--digitalColor);
         border-top-left-radius: var(--radius);
         border-bottom-left-radius: var(--radius);
@@ -153,6 +157,7 @@ const ColoredGeneratorWrapper = styled.div`
         }
       }
       .btn {
+        outline-color: var(--primaryColor);
         background: var(--digitalColor);
         padding: 0.5rem 1rem;
         font-size: 1rem;
