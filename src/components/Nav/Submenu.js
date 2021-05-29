@@ -14,76 +14,69 @@ const Submenu = () => {
 
   useEffect(() => {
     const submenu = container.current
-    const { center, bottom } = location
+    const { center } = location
     submenu.style.left = `${center}px`
-    submenu.style.top = `${bottom}px`
   }, [page, location, links])
 
   return (
-   <SubmenuWrapper
+    <SubmenuWrapper
       className={`${isSubmenuOpen ? `submenu show`:`submenu`}`}
-      ref={container}>
-     <div/>{/* this extra empty div keeps alignment looking good.*/}
-      <section>
-        <div className='submenu-center'>
-          {links.map((link, index) => {
-            const { url, label } = link
-            return(
-              <Link
-                key={index}
-                to={url}
-                className="sub-link"
-                onClick={closeSubmenu}>{label}
-              </Link>
-            )
-          })}
-        </div>
-      </section>
+      ref={container}
+    >
+      <div className='submenu-center'>
+        {links.map((link, index) => {
+          const { url, label } = link
+          return(
+            <Link
+              key={index}
+              to={url}
+              className="sub-link"
+              onClick={closeSubmenu}>{label}
+            </Link>
+          )
+        })}
+      </div>
     </SubmenuWrapper>
   )
 }
 const SubmenuWrapper = styled.aside`
   &{
     border-radius:0;
-    display: none; 
     font-size: 0.80rem;
-    height: fit-content;
     position: absolute;
-    top: 4rem;
-    transform: translateX(-50%) translateY(3px);
+    top: 75px;
+    transform: translateX(-50%) translateY(0);
     width: 150px;
-    z-index: 3;
-  }
-  & section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    z-index: -1;
   }
   &.show {
     display: block;
-  }
-  .submenu-center {
-    background-color: var(--solutionsColor);
-  }
-  .submenu-center .sub-link {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    color: var(--primaryBlack);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: var(--altSpacing);
-    width: 150px;
-  }
-  .submenu-center:hover .sub-link:hover{
-    cursor: pointer !important;
-    color: var(--primaryBlack) !important;
-    text-decoration: none;
-    background-color: var(--primaryColor);
-    width: 100%;
+    transform: translateX(-50%) translateY(3px);
+    z-index: 3;
+    .submenu-center {
+      background-color: var(--solutionsColor);
+      :hover{
+        .sub-link:hover{
+          cursor: pointer !important;
+          color: var(--primaryBlack) !important;
+          text-decoration: none;
+          background-color: var(--primaryColor);
+          width: 100%;
+        }
+      }
+      .sub-link {
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        color: var(--primaryBlack);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: var(--altSpacing);
+        width: 150px;
+      }
+    }
   }
   @media screen and (max-width: 1199px){
     &{
