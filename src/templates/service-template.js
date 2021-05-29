@@ -30,7 +30,7 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       </HeroShort>
       <ServiceTemplateWrapper>
         <div className='background-pattern-rain-dark benefit-container'>
-          <Title title={`${why_list.length} benifits of a`} subtitle={singularName}/>
+          <Title title={`${why_list.length} benefits of a`} subtitle={singularName}/>
         <div className="benefit-list">
           <ul data-bullet-list>
             {
