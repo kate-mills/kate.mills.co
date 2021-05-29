@@ -68,8 +68,8 @@ const ProjectTemplateWrapper = styled.section`
   }
   .single-project-img{
     margin: 0 auto;
-    width: 55%;
-    height: 55%;
+    width: 85%;
+    height: 85%;
     transition: var(--mainTransition);
   }
   a.url{
@@ -86,7 +86,6 @@ const ProjectTemplateWrapper = styled.section`
   a.url:hover{
     color: var(--primaryColor);
   }
-
   .hide-mobile {
     display: none;
   }
@@ -95,12 +94,11 @@ const ProjectTemplateWrapper = styled.section`
     .hide-mobile {
       display: inline-block;
     }
+    .single-project-img{
+      width: 55%;
+      height: 55%;
+    }
   }
-
-
-  @media (min-width: 1200px) {
-  }
-
 `
 
 export const query = graphql`

@@ -72,6 +72,9 @@ const ServiceTemplateWrapper = styled.section`
     align-items: center;
     justify-content: center;
     padding-left: 10px;
+    li{
+      letter-spacing: .1rem;
+    }
   }
 `
 export const query = graphql`
