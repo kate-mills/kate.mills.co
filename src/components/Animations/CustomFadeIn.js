@@ -1,22 +1,16 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { useGlobalContext } from '../../context/context';
-
-const SlideBox = ({children}) => {
- const { closeSubmenu } = useGlobalContext();
+const CustomBox= (props) => {
  return (
-   <Container 
-     onFocus={closeSubmenu}
-     onMouseOver={closeSubmenu}
-   >
-     {children}
+   <Container>
+     {props.children}
   </Container>
  )
 }
-export default SlideBox
+export default CustomBox
 
-const fadeIn = keyframes`
+const customFadeIn = keyframes`
  0% {
   opacity: 0;
  }
@@ -34,7 +28,7 @@ const fadeIn = keyframes`
  }
 `
 const Container = styled.div`
-  animation-name: ${fadeIn};
-  animation-duration: ${props => props.time || '1s'};
+  animation-name: ${customFadeIn};
+  animation-duration: ${props => props.time ? props.time:'3s'};
   animation-iteration-count:1;
 `
