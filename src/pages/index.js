@@ -35,7 +35,7 @@ const IndexPage = ({ data, className }) => {
       <div className="footer-btn">
         <Btn to="/portfolio/" bgColor="dark" text="View Our Portfolio"/>
         <div style={{height:'2rem'}}/>
-        <Btn to="/image-search/" bgColor="dark" text="search Images for your website" className="btn2"/>
+        <Btn to="/free-website-images/" bgColor="dark" text="Free Website Images" className="btn2"/>
       </div>
     </Layout>
   )
