@@ -1,7 +1,7 @@
 const path = require('path')
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const { data } = await graphql(`
     query {
@@ -22,7 +22,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
   data.services.nodes.forEach(({ data }) => {
     createPage({
       path: `/${data.slug}`,
@@ -41,4 +40,29 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const redirectList = [
+    {from: '/ecommerce',   to: '/e-commerce'},
+    {from: '/image-search',to: '/free-website-images'},
+  ];
+
+  redirectList.forEach(({from, to}) =>{
+    createRedirect({
+      fromPath: `${from}/`,
+      toPath: `${to}`,
+      redirectInBrowser: true,
+      force: true,
+      statusCode: 200,
+      isPermanent: true
+    });
+    createRedirect({
+      fromPath: `${from}`,
+      toPath: `${to}`,
+      redirectInBrowser: true,
+      force: true,
+      statusCode: 200,
+      isPermanent: true
+    });
+  })
+
 }

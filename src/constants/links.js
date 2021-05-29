@@ -13,20 +13,20 @@ const sublinks = [
   },
   {
     page: 'Portfolio',
-    path: '/portfolio/',
+    path: '/portfolio',
     id: 3,
     links: [
-      { label: 'Color Generator', url: '/color-generator/', },
-      { label: 'Website Images', url: '/free-website-images/', },
-      { label: 'Blogs', url: '/blogs/' },
-      { label: 'Websites', url: '/websites/' },
-      { label: 'E-commerce', url: '/ecommerce/' },
-      { label: 'All Projects', url: '/portfolio/' },
+      { label: 'Color Generator', url: '/color-generator', },
+      { label: 'Website Images', url: '/free-website-images', },
+      { label: 'Blogs', url: '/blogs' },
+      { label: 'Websites', url: '/websites' },
+      { label: 'E-commerce', url: '/e-commerce' },
+      { label: 'All Projects', url: '/portfolio' },
     ],
   },
   {
     page: 'Contact Us',
-    path: '/contact-us/',
+    path: '/contact-us',
     id: 4,
     links: [],
   }

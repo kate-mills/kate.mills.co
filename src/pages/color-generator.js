@@ -103,7 +103,6 @@ const ColorGeneratorPage = ()=> {
   )
 }
 
-
 const SectionWrapper = styled.div`
   &{
     display: flex;
@@ -151,8 +150,7 @@ const ColoredGeneratorWrapper = styled.div`
         font-size: 1rem;
         ::placeholder{
           color: var(--solutionsColor);
-
-  }
+          }
           letter-spacing: var(--midSpacing);
         }
       }

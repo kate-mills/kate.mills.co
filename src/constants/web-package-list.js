@@ -33,7 +33,7 @@ const WebPackageList =  [
   },
   {
     title: "Basic e-commerce",
-    path: "/ecommerce",
+    path: "/e-commerce",
     price: "$1595",
     pkgDetails: details.basicPackage.concat(
       details.ecommercePackage

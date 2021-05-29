@@ -18,7 +18,7 @@ const AboutPage = () => {
       </HeroShort>
         <AboutKate />
         <div className="footer-btn">
-          <Btn to="/portfolio/" bgColor="dark" text="latest websites"/>
+          <Btn to="/portfolio" bgColor="dark" text="latest websites"/>
        </div>
     </Layout>
   )

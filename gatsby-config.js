@@ -65,7 +65,6 @@ module.exports = {
         policy: [
           { userAgent: '*', allow: '/' },
           {userAgent: '*', disallow: '/thankyou'},
-          {userAgent: '*', disallow: '/image-search'},
           {userAgent: '*', disallow: '/404'},
         ],
       }
