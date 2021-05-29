@@ -40,7 +40,7 @@ const ColorGeneratorPage = ()=> {
     }
     focusMethod()
   }
-  const handleInputChange = (e) =>{
+  const handleHexInputChange = (e) =>{
     let clr  = idxZeroCheckBeforeFormat(e.target.value)
     let msg = getAlertMsg(clr)
     setColor(clr)
@@ -71,7 +71,7 @@ const ColorGeneratorPage = ()=> {
               type="text"
               value={color}
               placeholder={`#ffe9dd`}
-              onChange={handleInputChange}
+              onChange={handleHexInputChange}
               className={`${error ? 'error' : null}`}
             />
             <button className="btn" type="submit">submit</button>
