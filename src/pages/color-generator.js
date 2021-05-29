@@ -5,8 +5,6 @@ import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
 
-import {idxZeroCheckBeforeFormat, getAlertMsg} from '../utils/hex-helpers'
-
 import SingleColor from '../components/ColorGenerator/SingleColor'
 import Values from 'values.js'
 
@@ -16,7 +14,6 @@ const ColorGeneratorPage = ()=> {
   const [error,setError] = React.useState(false);
   const [bgClr,setBgClr] = React.useState('')
   const [list, setList ] = React.useState([]);
-  const [alertMsg, setAlertMsg ] = React.useState('')
 
   const focusMethod = () =>{
     document.getElementById('hex-input').focus()
@@ -36,16 +33,21 @@ const ColorGeneratorPage = ()=> {
       setError(false)
       setList(colors)
     }catch(error){
-      setError(true)
+      try{
+        let colors = new Values('#'.concat(color)).all(5)
+        setError(false)
+        setList(colors)
+      }catch(err){
+        setError(true)
+      }
     }
     focusMethod()
   }
+
   const handleHexInputChange = (e) =>{
-    let clr  = idxZeroCheckBeforeFormat(e.target.value)
-    let msg = getAlertMsg(clr)
+    let clr = e.target.value.toLowerCase()
     setColor(clr)
     setBgClr(clr)
-    setAlertMsg(msg)
   }
   return(
     <Layout>
@@ -80,9 +82,6 @@ const ColorGeneratorPage = ()=> {
             <div style={{backgroundColor: `${bgClr}`}} className="display-color"/>
           </div>
         </section>
-        <div className="display-err-container">
-          {alertMsg}
-        </div>
         <section className="colors">
           {
             list.map((color, index)=>{
