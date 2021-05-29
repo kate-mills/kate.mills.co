@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../Title'
 import WebPackageList from '../../constants/web-package-list'
 import {Link} from 'gatsby'
+import FadeIn from '../Animations/CustomFadeIn'
 
 import styled from 'styled-components'
 
@@ -11,14 +12,14 @@ const WebPackages = () => {
     >
       <Title title="Basic" subtitle="Packages" />
           <p className="we-offer-p">We offer a range of website design solutions for you to choose including Websites and E-Commerce Stores for estheticians, spas, salons, and beauty professionals at a price that fits your budget and delivered promptly.  With our expertise & knowledge of the beauty industry, our design process is straightforward for you.</p>
-      <div className="center">
+      <FadeIn time="3" className="center">
 
         {WebPackageList.map((item, index) => {
           return (
             <article key={index} className="service"
             >
               <span
-              data-sal="flip-down"
+              data-sal="fade-in"
               data-sal-duration="800"
               >
                 <Link to={item.path}>{item.title}</Link>
@@ -26,7 +27,7 @@ const WebPackages = () => {
               <span className="price">{item.price}</span>
               <div className="underline"/>
               <ul data-bullet-list
-              data-sal="flip-down"
+              data-sal="fade-in"
               data-sal-duration="800"
               >
                   {item.pkgDetails.map((item, idx)=>{
@@ -41,7 +42,7 @@ const WebPackages = () => {
             </article>
           )
         })}
-      </div>
+      </FadeIn>
     </WebPackagesWrapper>
   )
 }
@@ -52,7 +53,7 @@ const WebPackagesWrapper = styled.section`
     padding: 4rem 0;
     border-radius: var(--radius);
   }
-  & .center{
+  & div{
     /*width: 80vw;*/
     margin: 0 auto;
     display: grid;
