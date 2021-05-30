@@ -18,10 +18,14 @@ const ColorGeneratorPage = ()=> {
     document.getElementById('hex-input').focus()
   }
 
+  const setSlicedColors = (clrs) =>{
+    setList(clrs.slice(1))
+  }
+
   React.useEffect(()=>{
     let colors = new Values('#C7A0A1').all(8)
     let uniqueColors = getUniqueColors(colors)
-    setList(uniqueColors)
+    setSlicedColors(uniqueColors)
     focusMethod()
   }, [])
 
@@ -32,13 +36,13 @@ const ColorGeneratorPage = ()=> {
       let colors = new Values(color).all(5)
       let uniqueColors = getUniqueColors(colors)
       setError(false)
-      setList(uniqueColors)
+      setSlicedColors(uniqueColors)
     }catch(error){
       try{
         let colors = new Values('#'.concat(color)).all(5)
         let uniqueColors = getUniqueColors(colors)
         setError(false)
-        setList(uniqueColors)
+        setSlicedColors(uniqueColors)
       }catch(err){
         setError(true)
       }
