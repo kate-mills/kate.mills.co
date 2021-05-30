@@ -1,18 +1,17 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
-import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
 
 import SingleColor from '../components/ColorGenerator/SingleColor'
 import Values from 'values.js'
+import {getUniqueColors} from '../utils/helpers'
 
 
 const ColorGeneratorPage = ()=> {
   const [color,setColor] = React.useState('');
   const [error,setError] = React.useState(false);
-  const [bgClr,setBgClr] = React.useState('')
   const [list, setList ] = React.useState([]);
 
   const focusMethod = () =>{
@@ -20,8 +19,9 @@ const ColorGeneratorPage = ()=> {
   }
 
   React.useEffect(()=>{
-    let colors = new Values('#ffe9dd').all(5)
-    setList(colors)
+    let colors = new Values('#C7A0A1').all(8)
+    let uniqueColors = getUniqueColors(colors)
+    setList(uniqueColors)
     focusMethod()
   }, [])
 
@@ -30,13 +30,15 @@ const ColorGeneratorPage = ()=> {
     e.preventDefault();
     try {
       let colors = new Values(color).all(5)
+      let uniqueColors = getUniqueColors(colors)
       setError(false)
-      setList(colors)
+      setList(uniqueColors)
     }catch(error){
       try{
         let colors = new Values('#'.concat(color)).all(5)
+        let uniqueColors = getUniqueColors(colors)
         setError(false)
-        setList(colors)
+        setList(uniqueColors)
       }catch(err){
         setError(true)
       }
@@ -45,42 +47,33 @@ const ColorGeneratorPage = ()=> {
   }
 
   const handleHexInputChange = (e) =>{
-    let clr = e.target.value.toLowerCase()
+    let clr = e.target.value.trim().toLowerCase()
     setColor(clr)
-    setBgClr(clr)
   }
   return(
     <Layout>
       <FullSeo title="Color Generator"/>
-      <HeroShort>
+      <ColoredGeneratorWrapper>
         <Banner
+          className="background-pattern-rain-dark"
           title="Gorgeous Colors"
           info="Get tints & shades of any color & build a gorgeous coloscheme."
-        />
-      </HeroShort>
-        <SectionWrapper className="section">
-            <h2>Enter a color or hexadecimal value</h2>
-            <p>A hexadecimal color is specified with: #RRGGBB.</p>
-            <p>RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and FF specifying the intensity of the color.</p>
-            <p>For example, #FF0000 is displayed as red, because the red component is set to its highest value (FF) and the others are set to 00.</p>
-        </SectionWrapper>
-      <ColoredGeneratorWrapper>
-        <section className="container">
-          <form onSubmit={handleSubmit} className="form">
+        >
+        </Banner>
+        <section className="container background-pattern-rain-dark">
+          <h2>Enter a hexadecimal or basic color value</h2>
+          <form onSubmit={handleSubmit} className="form background-pattern-rain-dark">
             <input
               id="hex-input"
               type="text"
               value={color}
-              placeholder={`#ffe9dd`}
+              placeholder={`Try pink or #ff0000`}
               onChange={handleHexInputChange}
               className={`${error ? 'error' : null}`}
-              tabindex="0"
-              style={{
-                outlineColor: `${bgClr}`,
-              }}
+              tabIndex="0"
+              autoComplete="off"
             />
-            <button tabindex="0" className="btn" type="submit"
-              style={{ outlineColor: `${bgClr}`, }}
+            <button tabIndex="0" className="btn" type="submit"
             >submit</button>
           </form>
         </section>
@@ -103,44 +96,23 @@ const ColorGeneratorPage = ()=> {
   )
 }
 
-const SectionWrapper = styled.div`
-  &{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: .4rem;
-    margin: auto;
-    text-align: center;
-    h2{
-      font-size: 2rem;
-      max-width: 80vw;
-      width: 100%;
-    }
-    p{
-      color: var(--primaryBlack);
-      letter-spacing:var(--altSpacing);
-      max-width: 80vw;
-      width: 100%;
-    }
-  }
-
-`
 const ColoredGeneratorWrapper = styled.div`
   & .container {
     margin: 0 auto;
     text-align: center;
-    display: flex;
-    align-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+    padding: 0 0 2rem;
+    h2{
+      font-size: 2rem;
+      max-width: 90%;
+      margin: auto;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
     form{
       display: block;
       width: 100vw;
       input {
+        min-width: 15%;
         outline-color: var(--primaryColor);
         border: 2px solid var(--digitalColor);
         border-top-left-radius: var(--radius);
@@ -167,43 +139,32 @@ const ColoredGeneratorWrapper = styled.div`
         cursor: pointer;
       }
       input.error {
+        outline-color: red;
         border-color: red;
       }
     }
-    .display-color-container{
-      min-height: 2rem;
-      width: 100%;
-      margin: 1rem auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .display-color{
-        border: 1px solid silver;
-        border-radius: 50rem;
-        height: 2rem;
-        width: 2rem;
-      }
-    }
-  }
-  .display-err-container{
-    margin: 0 auto;
-    text-align: center;
-    height: 5rem;
-    letter-spacing: var(--midSpacing);
-    min-height: 5rem;
-    max-height: 5rem;
   }
   & .colors {
-    min-height: 55vh;
     text-align: center;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+  }
+  & > div h1,
+  & > div h1 span.title-l2 {
+    margin-bottom: 0;
   }
   @media (max-width: 576px) {
     & .container{
       justify-content: flex-start;
+
+      form{
+        input{
+          min-width: 60%;
+        }
+      }
     }
   }
 `
