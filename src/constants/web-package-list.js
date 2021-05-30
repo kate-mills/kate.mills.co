@@ -22,6 +22,19 @@ const details = {
     "** 50% due 48 hours before \"go-live\" or 60 days (whichever comes first).",
   ]
 }
+/*const infoGraphics = {
+  basicPackage: [
+    "Same day response",
+    "Photoshop an image",
+    "Email design",
+    "Instagram ad or post design",
+    "Infographic design",
+    "Premium Stock Photos",
+    "Logo Design",
+  ]
+}*/
+
+
 
 const WebPackageList =  [
   {
