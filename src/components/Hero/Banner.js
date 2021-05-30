@@ -12,6 +12,7 @@ const Banner = ({ title, info, children, className}) => {
           data-sal-duration="100">{info}</span>
       </h1>
       <div
+          className="child-div"
           data-sal="zoom-in"
           data-sal-easing="ease"
           data-sal-duration="100"
@@ -29,6 +30,8 @@ export default styled(Banner)`
     letter-spacing: var(--mainSpacing);
     color: var(--digitalColor);
     position: relative;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
     span.title-l1 {
       position: relative;
       display: block;
@@ -49,13 +52,16 @@ export default styled(Banner)`
       margin: 0 auto;
       margin-bottom: 2rem;
     }
+    .child-div{ padding: 1rem; }
   }
   @media screen and (min-width: 768px) {
-    span.title-l1 {
-      font-size: 4.5rem;
-    }
-    span.title-l2 {
-      width: 70%;
+    &{
+      span.title-l1 {
+        font-size: 4.5rem;
+      }
+      span.title-l2 {
+        width: 70%;
+      }
     }
   }
 `
