@@ -17,6 +17,7 @@
   --radius: 0.25rem;
   --max-width: 1170px;
   --fixed-width: 620px;
+  --wordSpacing: 1.5px;
 
   /* START FONTS */
   --mainFF:aileron, sans-serif;/*300 normal*/
@@ -53,9 +54,11 @@ h1, h2{
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 300;
+  overflow-wrap: break-word;
   line-height: 1.25;
   margin-bottom: 1.25rem;
   white-space: pre-wrap;
+  word-spacing: var(--wordSpacing);
 }
 h2{
   font-family: var(--altFF);
@@ -68,9 +71,11 @@ h3, h4, h5, h6{
   font-style: normal;
   font-weight: 300;
   line-height: 1.25;
-  margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing) !important;
+  margin-bottom: 1.25rem;
+  overflow-wrap: break-word;
   white-space: pre-wrap;
+  word-spacing: var(--wordSpacing);
 }
 section {
   transition: var(--mainTransition);

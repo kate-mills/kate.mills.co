@@ -3,10 +3,10 @@ import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
 import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
-
 import SingleColor from '../components/ColorGenerator/SingleColor'
 import Values from 'values.js'
 import {getUniqueColors} from '../utils/helpers'
+
 
 
 const ColorGeneratorPage = ()=> {
@@ -14,41 +14,43 @@ const ColorGeneratorPage = ()=> {
   const [error,setError] = React.useState(false);
   const [list, setList ] = React.useState([]);
 
-  const focusMethod = () =>{
-    document.getElementById('hex-input').focus()
-  }
+  const focusMethod = () =>{document.getElementById('hex-input').focus()};
+  const getValues = (clr) => {return new Values(clr).all(5)};
+  const setSlicedColors = (clrs) =>{setList(clrs.slice(1))};
 
-  const setSlicedColors = (clrs) =>{
-    setList(clrs.slice(1))
-  }
+  const clearForm = () => {
+    setError(false)
+    setColor('')
+  };
 
   React.useEffect(()=>{
-    let colors = new Values('#C7A0A1').all(8)
+    let colors = getValues('#C7A0A1')
     let uniqueColors = getUniqueColors(colors)
     setSlicedColors(uniqueColors)
     focusMethod()
   }, [])
 
-
   const handleSubmit = (e) =>{
     e.preventDefault();
-    try {
-      let colors = new Values(color).all(5)
-      let uniqueColors = getUniqueColors(colors)
-      setError(false)
-      setSlicedColors(uniqueColors)
-    }catch(error){
-      try{
-        let colors = new Values('#'.concat(color)).all(5)
+    if(color){
+      try {
+        let colors = getValues(color)
         let uniqueColors = getUniqueColors(colors)
         setError(false)
         setSlicedColors(uniqueColors)
-      }catch(err){
-        setError(true)
+      }catch(error){
+        try{
+          let colors = getValues(color)
+          let uniqueColors = getUniqueColors(colors)
+          setError(false)
+          setSlicedColors(uniqueColors)
+        }catch(err){
+          setError(true)
+        }
       }
     }
     focusMethod()
-  }
+  };
 
   const handleHexInputChange = (e) =>{
     let clr = e.target.value.trim().toLowerCase()
@@ -71,7 +73,7 @@ const ColorGeneratorPage = ()=> {
               id="hex-input"
               type="text"
               value={color}
-              placeholder={`Try pink or #ff0000`}
+              placeholder={`Try pink or #ffff00`}
               onChange={handleHexInputChange}
               className={`${error ? 'error' : null}`}
               tabIndex="0"
@@ -79,6 +81,7 @@ const ColorGeneratorPage = ()=> {
             />
             <button tabIndex="0" className="btn" type="submit"
             >submit</button>
+          <button tabIndex="0" className="btn clear-btn" id="clear" onClick={clearForm}>clear</button>
           </form>
         </section>
         <section className="colors">
@@ -104,30 +107,34 @@ const ColoredGeneratorWrapper = styled.div`
   & .container {
     margin: 0 auto;
     text-align: center;
-    padding: 0 0 2rem;
+    padding: 0 0 1rem;
     h2{
+      color: var(--primaryBlack2);
       font-size: 2rem;
       max-width: 90%;
       margin: auto;
       margin-bottom: 2rem;
       text-align: center;
+      white-space: pre-line;
+      overflow-wrap: break-word;
+      word-spacing: var(--wordSpacing);
+      transform: translateY(-30px);
     }
     form{
-      display: block;
       width: 100vw;
+      margin: 0 auto;
+      transform: translateX(-1rem) translateY(-35px);
       input {
-        min-width: 15%;
         outline-color: var(--primaryColor);
         border: 2px solid var(--digitalColor);
         border-top-left-radius: var(--radius);
         border-bottom-left-radius: var(--radius);
         letter-spacing: var(--midSpacing);
-        padding: 0.5rem 1rem;
+        letter-spacing: var(--midSpacing);
+        padding: 0.5rem 2rem 0.5rem 1rem;
         font-size: 1rem;
         ::placeholder{
-          color: var(--solutionsColor);
-          }
-          letter-spacing: var(--midSpacing);
+          width: fit-content; color: var(--solutionsColor);
         }
       }
       .btn {
@@ -135,16 +142,22 @@ const ColoredGeneratorWrapper = styled.div`
         background: var(--digitalColor);
         padding: 0.5rem 1rem;
         font-size: 1rem;
-        border-color: transparent;
+        border: 1px solid var(--digitalColor);
         border-top-right-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
         text-transform: capitalize;
         color: var(--primaryWhite);
         cursor: pointer;
+        transform: translateX(1px) translateY(0);
       }
       input.error {
         outline-color: red;
         border-color: red;
+      }
+      .clear-btn{
+        background: var(--solutionsColor);
+        color: var(--primaryBlack2);
+        transform: translateX(3px) translateY(0);
       }
     }
   }
@@ -163,10 +176,14 @@ const ColoredGeneratorWrapper = styled.div`
   @media (max-width: 576px) {
     & .container{
       justify-content: flex-start;
-
       form{
+        transform: translateX(0) translateY(-35px);
         input{
-          min-width: 60%;
+          min-width: 75%;
+        }
+        .btn{
+          min-width: 37.5%;
+          transform: translateX(0) translateY(10px);
         }
       }
     }
