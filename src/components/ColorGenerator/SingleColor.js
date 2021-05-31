@@ -75,6 +75,9 @@ const SingleColorWrapper = styled.article`
     &.darkest-txt:nth-of-type(1){
       display: none;
     }
+    .alert{
+      font-size: 0.64rem;
+    }
   }
 `
 export default SingleColor
