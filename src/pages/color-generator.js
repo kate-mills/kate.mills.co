@@ -14,7 +14,7 @@ const ColorGeneratorPage = ()=> {
   const [placeValue, setPlaceValue] = React.useState('yellow')
   const focusMethod = () =>{document.getElementById('hex-input').focus()};
   const getValues = (clr) => {return new Values(clr).all(5)};
-  const setSlicedColors = (clrs) =>{setList(clrs.slice(1))};
+  const setSlicedColors = (clrs) =>{setList(clrs.slice(0))};
 
   const iterPlaceVal = () => {
     let cIdx = listOfColors.indexOf(placeValue)
@@ -91,8 +91,9 @@ const ColorGeneratorPage = ()=> {
               tabIndex="0"
               autoComplete="off"
             />
-            <button tabIndex="0" className="btn" type="submit">submit</button>
+            <button tabIndex="0" className="btn btn-dt" type="submit">submit</button>
             <button tabIndex="0" className="btn clear-btn" id="clear" onClick={clearForm}>clear</button>
+            <button tabIndex="0" className="btn btn-mb" type="submit">submit</button>
           </form>
         </section>
         <section className="colors">
@@ -157,17 +158,19 @@ const ColoredGeneratorWrapper = styled.div`
           color:#b1b2b6;
         }
       }
+      .btn-dt{display:block;}
+      .btn-mb{display:none;}
       .btn {
-        outline-color: var(--primaryColor); 
-        background: var(--digitalColor);
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
+        background: var(--solutionsColor);
         border: 1px solid var(--digitalColor);
         border-top-right-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
-        text-transform: capitalize;
-        color: var(--primaryWhite);
+        font-size: 1rem;
+        color: var(--primaryBlack2);
         cursor: pointer;
+        outline-color: var(--primaryColor); 
+        padding: 0.5rem 1rem;
+        text-transform: capitalize;
         transform: translateX(10px) translateY(0);
       }
       input.error {
@@ -175,8 +178,8 @@ const ColoredGeneratorWrapper = styled.div`
         border-color: red;
       }
       .clear-btn{
-        background: var(--solutionsColor);
-        color: var(--primaryBlack2);
+        background: var(--digitalColor);
+        color: var(--primaryWhite);
         transform: translateX(12px) translateY(0);
       }
     }
@@ -194,15 +197,23 @@ const ColoredGeneratorWrapper = styled.div`
     margin-bottom: 0;
   }
   @media (max-width: 576px) {
+    & .colors {
+      grid-template-columns: repeat(auto-fit, minmax(123.33px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(123.33px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(41px, 1fr));
+    }
     & .container{
       justify-content: flex-start;
       form{
-        justify-content: flex-start;
-        flex-direction: column;
+        /*justify-content: flex-start;
+        flex-direction: column;*/
+        flex-wrap: wrap;
         transform: translateX(0) translateY(-35px);
         input{
           min-width: 75%;
         }
+        .btn-dt{display:none;}
+        .btn-mb{display:block;}
         .btn{
           min-width: 37.5%;
           transform: translateX(0) translateY(10px);

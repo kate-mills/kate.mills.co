@@ -71,5 +71,10 @@ const SingleColorWrapper = styled.article`
     margin-top: 0.5rem;
     bottom: 0;
   }
+  @media(max-width:576px){
+    &.darkest-txt:nth-of-type(1){
+      display: none;
+    }
+  }
 `
 export default SingleColor
