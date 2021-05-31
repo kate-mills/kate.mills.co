@@ -20,7 +20,7 @@ const ImageSearchPage = ({data:seoData})=>{
 
   const fetchImages = async ()=>{
     let searchQ = query || 'beauty'
-    if(searchQ){
+    if(searchQ && page<10){
       setLoading(true)
       unsplash.search
         .getPhotos({
