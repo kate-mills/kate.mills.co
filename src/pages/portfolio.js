@@ -14,7 +14,7 @@ const portfolio = ({ data }) => {
   return (
     <Layout>
       <FullSeo title="Portfolio" 
-        description={` We specialize in websites & social media content for small beauty businesses.  Learn more about boosting your business in ${new Date().getFullYear()} now.`}
+        description={`We specialize in websites & social media content for small beauty businesses. Learn more about boosting your business in ${new Date().getFullYear()} now.`}
       />
       <HeroShort>
         <Banner title="Latest Web Designs" info="Browse through some of our favorites."/>
