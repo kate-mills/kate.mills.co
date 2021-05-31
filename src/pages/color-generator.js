@@ -67,7 +67,10 @@ const ColorGeneratorPage = ()=> {
 
   return(
     <Layout>
-      <FullSeo title="Color Generator"/>
+      <FullSeo
+        title="Build A Gorgeous Colorscheme"
+        description="Get tints & shades of any color & build a gorgeous coloscheme for your next digital project."
+      />
       <ColoredGeneratorWrapper>
         <Banner
           className="background-pattern-rain-dark"
