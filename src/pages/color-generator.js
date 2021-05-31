@@ -80,7 +80,6 @@ const ColorGeneratorPage = ()=> {
         >
         </Banner>
         <section className="container background-pattern-rain-dark">
-          <h2>Enter a hexadecimal or basic color value</h2>
           <form onSubmit={handleSubmit} className="form background-pattern-rain-dark">
             <input
               id="hex-input"
