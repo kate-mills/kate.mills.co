@@ -76,7 +76,7 @@ const ColorGeneratorPage = ()=> {
         <Banner
           className="background-pattern-rain-dark"
           title="Gorgeous Colors"
-          info="Get tints & shades of any color & build a gorgeous coloscheme."
+          info="Get tints & shades of any color to build a gorgeous coloscheme."
         >
         </Banner>
         <section className="container background-pattern-rain-dark">
@@ -192,34 +192,34 @@ const ColoredGeneratorWrapper = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
   }
-  & > div h1,
-  & > div h1 span.title-l2 {
-    margin-bottom: 0;
+  & > div h1,& > div h1 span.title-l2 {
+    margin-bottom: 3rem;
   }
   @media (max-width: 576px) {
-    & .colors {
-      grid-template-columns: repeat(auto-fit, minmax(123.33px, 1fr));
-      grid-template-columns: repeat(auto-fit, minmax(123.33px, 1fr));
-      grid-template-rows: repeat(auto-fit, minmax(41px, 1fr));
+    & > div h1, & > div h1 span.title-l2 {
+      margin-bottom: 0;
+      font-size: 1rem;
     }
     & .container{
-      justify-content: flex-start;
       form{
-        /*justify-content: flex-start;
-        flex-direction: column;*/
         flex-wrap: wrap;
         transform: translateX(0) translateY(-35px);
         input{
           min-width: 75%;
         }
-        .btn-dt{display:none;}
-        .btn-mb{display:block;}
         .btn{
           min-width: 37.5%;
           transform: translateX(0) translateY(10px);
           margin: 2px auto;
         }
+        .btn-dt{display:none;}
+        .btn-mb{display:block;}
       }
+    }
+    & .colors {
+      grid-template-columns: repeat(auto-fit, minmax(123.33px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(123.33px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(41px, 1fr));
     }
   }
 `
