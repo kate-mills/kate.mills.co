@@ -39,18 +39,19 @@ const SEO = ({ title, description, image, article, snippet, noindex}) => {
     organization,
     dateModified,
   } = site.siteMetadata
-
   const formatTitle = ()=>{
     let plain = `${title||defaultTitle}`; 
     let fancy = `${title||defaultTitle} | Ally Digital Solutions`;
     return (plain.length < 46)?fancy:plain;
   }
 
+  let defaultSeoImage = `${baseUrl}${defaultImage}`
+
   const seo = {
     title: formatTitle(),
     dateModified: dateModified,
     description: description || defaultDescription,
-    image: `${baseUrl}/${image || defaultImage}`,
+    image: `${image || defaultSeoImage}`,
     url: `${baseUrl}${pathname}`,
   }
   return (

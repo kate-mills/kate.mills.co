@@ -68,6 +68,7 @@ const ColorGeneratorPage = ()=> {
   return(
     <Layout>
       <FullSeo
+        image="/images/color-generator.jpg"
         title="Build A Gorgeous Colorscheme"
         description="Get tints & shades of any color & build a gorgeous coloscheme for your next digital project."
       />
