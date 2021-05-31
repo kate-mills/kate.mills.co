@@ -82,7 +82,7 @@ const ColorGeneratorPage = ()=> {
               id="hex-input"
               type="text"
               value={color}
-              placeholder={`Try ${placeValue}`}
+              placeholder={`Eg: ${placeValue}`}
               onChange={handleHexInputChange}
               className={`${error ? 'error' : null}`}
               tabIndex="0"
@@ -135,7 +135,7 @@ const ColoredGeneratorWrapper = styled.div`
       height: fit-content;
       width: 100vw;
       margin: 0 auto;
-      transform: translateX(-1rem) translateY(-35px);
+      transform: translateX(-1rem) translateY(-30px);
       input {
         background: transparent;
         min-width: 300px;
@@ -150,9 +150,8 @@ const ColoredGeneratorWrapper = styled.div`
         font-size: 1rem;
         ::placeholder{
           width: fit-content;
-          font-family: var(--mainFF);
-          font-size: 1.4rem;
-          color: var(--digitalColor);
+          font-size: 1.5rem;
+          color:#b1b2b6;
         }
       }
       .btn {
