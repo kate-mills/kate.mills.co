@@ -41,8 +41,10 @@ const ColorGeneratorPage = ()=> {
   const handleSubmit = (e) =>{
     e.preventDefault();
     if(color){
+      let isHex = color[0]==="#"
+      let clr = isHex ? color:color.toLowerCase()
       try {
-        let colors = getValues(color)
+        let colors = getValues(clr) 
         let uniqueColors = getUniqueColors(colors)
         setError(false)
         setSlicedColors(uniqueColors)
@@ -61,8 +63,7 @@ const ColorGeneratorPage = ()=> {
   };
 
   const handleHexInputChange = (e) =>{
-    let clr = e.target.value.trim().toLowerCase()
-    setColor(clr)
+    setColor(e.target.value.trim())
   }
 
   return(
