@@ -5,22 +5,30 @@ import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
 import SingleColor from '../components/ColorGenerator/SingleColor'
 import Values from 'values.js'
-import {getUniqueColors} from '../utils/helpers'
-
-
+import {getUniqueColors, listOfColors} from '../utils/helpers'
 
 const ColorGeneratorPage = ()=> {
   const [color,setColor] = React.useState('');
   const [error,setError] = React.useState(false);
   const [list, setList ] = React.useState([]);
-
+  const [placeValue, setPlaceValue] = React.useState('yellow')
   const focusMethod = () =>{document.getElementById('hex-input').focus()};
   const getValues = (clr) => {return new Values(clr).all(5)};
   const setSlicedColors = (clrs) =>{setList(clrs.slice(1))};
 
+  const iterPlaceVal = () => {
+    let cIdx = listOfColors.indexOf(placeValue)
+    setPlaceValue(
+      (cIdx <= listOfColors.length-2)
+      ?listOfColors[cIdx + 1]
+      :listOfColors[0]
+    )
+  }
+
   const clearForm = () => {
     setError(false)
     setColor('')
+    iterPlaceVal()
   };
 
   React.useEffect(()=>{
@@ -40,7 +48,7 @@ const ColorGeneratorPage = ()=> {
         setSlicedColors(uniqueColors)
       }catch(error){
         try{
-          let colors = getValues(color)
+          let colors = getValues('#'.concat(color))
           let uniqueColors = getUniqueColors(colors)
           setError(false)
           setSlicedColors(uniqueColors)
@@ -56,6 +64,7 @@ const ColorGeneratorPage = ()=> {
     let clr = e.target.value.trim().toLowerCase()
     setColor(clr)
   }
+
   return(
     <Layout>
       <FullSeo title="Color Generator"/>
@@ -73,15 +82,14 @@ const ColorGeneratorPage = ()=> {
               id="hex-input"
               type="text"
               value={color}
-              placeholder={`Try pink or #ffff00`}
+              placeholder={`Try ${placeValue}`}
               onChange={handleHexInputChange}
               className={`${error ? 'error' : null}`}
               tabIndex="0"
               autoComplete="off"
             />
-            <button tabIndex="0" className="btn" type="submit"
-            >submit</button>
-          <button tabIndex="0" className="btn clear-btn" id="clear" onClick={clearForm}>clear</button>
+            <button tabIndex="0" className="btn" type="submit">submit</button>
+            <button tabIndex="0" className="btn clear-btn" id="clear" onClick={clearForm}>clear</button>
           </form>
         </section>
         <section className="colors">
@@ -121,24 +129,34 @@ const ColoredGeneratorWrapper = styled.div`
       transform: translateY(-30px);
     }
     form{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
       width: 100vw;
       margin: 0 auto;
       transform: translateX(-1rem) translateY(-35px);
       input {
-        outline-color: var(--primaryColor);
-        border: 2px solid var(--digitalColor);
-        border-top-left-radius: var(--radius);
-        border-bottom-left-radius: var(--radius);
+        background: transparent;
+        min-width: 300px;
+        outline: none;
+        outline-bottom: 2px solid var(--primaryColor);
+        outline-color: transparent; 
+        border: none;
+        border-bottom: 4px solid var(--digitalColor);
         letter-spacing: var(--midSpacing);
         letter-spacing: var(--midSpacing);
         padding: 0.5rem 2rem 0.5rem 1rem;
         font-size: 1rem;
         ::placeholder{
-          width: fit-content; color: var(--solutionsColor);
+          width: fit-content;
+          font-family: var(--mainFF);
+          font-size: 1.4rem;
+          color: var(--digitalColor);
         }
       }
       .btn {
-        outline-color: var(--primaryColor);
+        outline-color: var(--primaryColor); 
         background: var(--digitalColor);
         padding: 0.5rem 1rem;
         font-size: 1rem;
@@ -148,7 +166,7 @@ const ColoredGeneratorWrapper = styled.div`
         text-transform: capitalize;
         color: var(--primaryWhite);
         cursor: pointer;
-        transform: translateX(1px) translateY(0);
+        transform: translateX(10px) translateY(0);
       }
       input.error {
         outline-color: red;
@@ -157,7 +175,7 @@ const ColoredGeneratorWrapper = styled.div`
       .clear-btn{
         background: var(--solutionsColor);
         color: var(--primaryBlack2);
-        transform: translateX(3px) translateY(0);
+        transform: translateX(12px) translateY(0);
       }
     }
   }
@@ -177,6 +195,8 @@ const ColoredGeneratorWrapper = styled.div`
     & .container{
       justify-content: flex-start;
       form{
+        justify-content: flex-start;
+        flex-direction: column;
         transform: translateX(0) translateY(-35px);
         input{
           min-width: 75%;
@@ -184,6 +204,7 @@ const ColoredGeneratorWrapper = styled.div`
         .btn{
           min-width: 37.5%;
           transform: translateX(0) translateY(10px);
+          margin: 2px auto;
         }
       }
     }
