@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-const SingleColor = ({ rgb, weight, index, hex }) => {
+const SingleColor = ({colorGroup,rgb, weight, index, hex }) => {
   const [alert,setAlert] = React.useState(false)
   const bcg = rgb.join(', ')
   const hexValue = `#${hex}`
@@ -20,9 +20,7 @@ const SingleColor = ({ rgb, weight, index, hex }) => {
         setAlert(true)
         navigator.clipboard.writeText(hexValue)
       }}
-      className={`${(index<14)?'darkest-txt':(
-        (index>27)?'lightest-txt':
-        (index<26)?'dark-txt':'light-txt')}`}
+      className={colorGroup}
       style={{backgroundColor: `rgb(${bcg})`}}
     >
       <p className="percent-value">{weight}%</p>
@@ -52,17 +50,14 @@ const SingleColorWrapper = styled.article`
     letter-spacing: var(--midSpacing);
     margin-bottom: 0;
   }
-  &.dark-txt p{
-    color: var(--digitalColor) !important;
-  }
-  &.darkest-txt p{
+  &.group-1-lightest-txt p{
     color: var(--primaryBlack) !important;
   }
-  &.lightest-txt p{
-    color: var(--primaryWhite) !important;
+  &.group-2-md-txt p{
+    color: var(--primaryBlack2) !important;
   }
-  &.light-txt p{
-    color: var(--solutionsColor) !important;
+  &.group-3-darkest-txt p{
+    color: var(--primaryWhite) !important;
   }
   .alert {
     position: absolute;

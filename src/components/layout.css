@@ -7,7 +7,9 @@
   --solutionsColor:#D0D1D5;
   --primaryColor: #EDF0F2;
   --primaryWhite: #ffffff;
-  --themeColor: #e9d9d9;
+  --themeLt: #fcfafa;
+  --themeMd: #e9d9d9;
+  --themeDk: #C7A0A1;
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;

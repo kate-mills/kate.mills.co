@@ -43,6 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const redirectList = [
     {from: '/ecommerce',   to: '/e-commerce'},
+    {from: '/color-generator',   to: '/build-color-schemes'},
     {from: '/image-search',to: '/free-website-images'},
   ];
 

@@ -16,12 +16,11 @@ const sublinks = [
     path: '/portfolio',
     id: 3,
     links: [
-      { label: 'Color Generator', url: '/color-generator', },
-      { label: 'Website Images', url: '/free-website-images', },
+      { label: 'Color Schemes', url: '/build-color-schemes', },
+      { label: 'Search Images', url: '/free-website-images', },
       { label: 'Blogs', url: '/blogs' },
       { label: 'Websites', url: '/websites' },
       { label: 'E-commerce', url: '/e-commerce' },
-      { label: 'All Projects', url: '/portfolio' },
     ],
   },
   {
