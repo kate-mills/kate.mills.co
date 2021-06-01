@@ -83,7 +83,7 @@ const ImageSearchPage = ({data:seoData})=>{
     <Layout>
       <FullSeo
         image="/images/free-website-images.jpg"
-        title="Free Beauty Salon & Spa Images For Your Website"
+        title="Search Unlimited Beauty Images For Your Website"
         description="Search and download unlimited Beauty Images for your website or social media post."
       />
       <HeroShort>
