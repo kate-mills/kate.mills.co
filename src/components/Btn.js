@@ -55,11 +55,11 @@ export default styled(Btn)`
     animation-fill-mode: backwards;
   }
   &.btn--light {
-    background-color: var(--themeColor);
+    background-color: var(--themeMd);
     color: var(--primaryBlack);
   }
   &.btn--dark {
-    background-color: var(--themeColor);
+    background-color: var(--themeMd);
     color: var(--primaryBlack);
   }
   &.btn--light::after,
