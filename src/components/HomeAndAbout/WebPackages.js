@@ -59,7 +59,6 @@ const WebPackagesWrapper = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column-gap: 2rem;
-
     .service {
       margin: 2rem 0;
       padding: 1.5rem 0;
