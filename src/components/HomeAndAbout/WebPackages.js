@@ -8,7 +8,7 @@ import styled from 'styled-components'
 
 const WebPackages = () => {
   return (
-    <WebPackagesWrapper className={`bg-circles section-center`}
+    <WebPackagesWrapper className={`circles-squares section-center`}
     >
       <Title title="Basic" subtitle="Packages" />
           <p className="we-offer-p">We offer a range of website design solutions for you to choose including Websites and E-Commerce Stores for estheticians, spas, salons, and beauty professionals at a price that fits your budget and delivered promptly.  With our expertise & knowledge of the beauty industry, our design process is straightforward for you.</p>
