@@ -44,14 +44,13 @@ const SubmenuWrapper = styled.aside`
     border-radius:0;
     font-size: 0.80rem;
     position: absolute;
-    top: 75px;
-    transform: translateX(-50%) translateY(0);
-    width: 150px;
-    z-index: -1;
+    top: 77px;
+    display: none;
   }
   &.show {
     display: block;
     transform: translateX(-50%) translateY(0);
+    width: 150px;
     z-index: 3;
     .submenu-center {
       background-color: var(--solutionsColor);
@@ -61,7 +60,6 @@ const SubmenuWrapper = styled.aside`
           color: var(--primaryBlack) !important;
           text-decoration: none;
           background-color: var(--primaryColor);
-          width: 100%;
         }
       }
       .sub-link {
@@ -74,7 +72,6 @@ const SubmenuWrapper = styled.aside`
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: var(--altSpacing);
-        width: 150px;
       }
     }
   }

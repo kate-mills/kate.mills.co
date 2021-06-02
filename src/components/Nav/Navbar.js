@@ -123,8 +123,7 @@ const NavWrapper = styled.nav`
     transition: var(--mainTransition);
 
     .mobile-sublinks {
-      display: block;
-      padding-left: 3rem;
+      padding-left: 4rem;
     }
   }
   .show-nav {
@@ -191,7 +190,7 @@ const NavWrapper = styled.nav`
     }
     .nav-links a:hover{
       background: var(--primaryBlack2);
-      color: var(--primaryColor) !important;
+      color: var(--primaryColor);
     }
     .nav-links a.phone:hover{
       background:var(--primaryBlack);
