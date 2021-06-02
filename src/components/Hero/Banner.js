@@ -30,8 +30,8 @@ export default styled(Banner)`
     letter-spacing: var(--mainSpacing);
     color: var(--digitalColor);
     position: relative;
-    padding-top: 5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    /*padding-bottom: 1.5rem;*/
     span.title-l1 {
       position: relative;
       display: block;
@@ -56,6 +56,7 @@ export default styled(Banner)`
   }
   @media screen and (min-width: 768px) {
     &{
+      padding-top: 5rem;
       span.title-l1 {
         font-size: 4.5rem;
       }
