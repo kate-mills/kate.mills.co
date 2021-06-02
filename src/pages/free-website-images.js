@@ -66,7 +66,7 @@ const ImageSearchPage = ({data:seoData})=>{
 
   React.useEffect(() => {
     const event = window.addEventListener('scroll', () => {
-      const footerHeight = 135
+      const footerHeight =291
       if (
         (!loading && window.innerHeight + window.scrollY) >=
         document.body.scrollHeight - footerHeight
