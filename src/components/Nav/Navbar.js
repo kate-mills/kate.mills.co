@@ -16,7 +16,7 @@ const query = graphql`
   {
     logo: file(relativePath: {eq: "ally-digital-logo.png"}) {
       childImageSharp {
-        fixed(height: 43, quality: 10) {
+        fixed(height: 37, quality: 10) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }
@@ -212,11 +212,5 @@ const NavWrapper = styled.nav`
       padding-top: 1.9rem;
     }
   }
-@media(max-width: 320px){
-  .nav-header{
-    flex-wrap: wrap;
-  }
-}
-
 `
 export default Navbar
