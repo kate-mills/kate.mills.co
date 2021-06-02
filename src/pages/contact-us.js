@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 import Contact from '../components/Contact/Contact'
 import FullSeo from '../components/FullSeo'
@@ -22,9 +21,7 @@ const contact = props => {
   return (
     <Layout>
       <FullSeo title="Contact" snippet={snippet} description={'Contact a local Napa web designer specializing in websites, blogs, eCommerce, and social media for estheticians, beauticians, salons, spas & beauty companies.'}/>
-      <HeroShort className="heavy-rain">
-        <Banner className="smallText" title="We make it easy" info="Are you drained from trying to make your website look professional?"/>
-      </HeroShort>
+        <Banner className="smallText heavy-rain" title="We make it easy" info="Are you drained from trying to make your website look professional?"/>
       <Contact />
     </Layout>
   )
