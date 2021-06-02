@@ -30,7 +30,7 @@ export default styled(Banner)`
     letter-spacing: var(--mainSpacing);
     color: var(--digitalColor);
     position: relative;
-    padding-top: 3rem;
+    padding-top: 5rem;
     padding-bottom: 1.5rem;
     span.title-l1 {
       position: relative;
