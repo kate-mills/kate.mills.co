@@ -17,9 +17,14 @@ const ImageSearchPage = ({data:seoData})=>{
   const [query, setQuery] = React.useState('')
   const [photos, setPhotos] = React.useState([])
 
+  const focusInput = ()=>{
+    const el = document.getElementsByTagName('input')[0] // input[0] is search
+    el.focus()
+    return
+  }
   const fetchImages = async ()=>{
     let searchQ = query || 'spa'
-    if(searchQ && page<=10){
+    if(searchQ && page<=50){
       setLoading(true)
       unsplash.search
         .getPhotos({
@@ -33,31 +38,31 @@ const ImageSearchPage = ({data:seoData})=>{
               let newPhotos = result.response.results.reverse()
 
               tempPhotos = [...oldPhotos, ...newPhotos]
-              console.log(`Displaying ${tempPhotos.length} images`)
+              console.log(`fetch-${tempPhotos.length}`)
               return tempPhotos
             } else{
               tempPhotos = result.response.results.reverse()
-              console.log(`Displaying ${tempPhotos.length} images`)
+              console.log(`fetch-${tempPhotos.length}`)
               return tempPhotos
             }
           })
+          focusInput()
           setLoading(false)
         })
         .catch((err)=>{
           console.log(err)
+          focusInput()
           setLoading(false)
         })
     }
   }
+  
   React.useEffect(()=>{
     fetchImages()
+    focusInput()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page])
 
-  React.useEffect(()=>{
-    const el = document.getElementsByTagName('input')[0] // input[0] is search
-    el.focus()
-  }, [])
 
   React.useEffect(() => {
     const event = window.addEventListener('scroll', () => {

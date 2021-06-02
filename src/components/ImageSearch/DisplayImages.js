@@ -8,9 +8,9 @@ const DisplaySearch = ({loading, photos})=>{
     <DisplaySearchWrapper>
       <div className="photos-center">
         {
-          Array.isArray(photos) && (photos.map((photo)=>{
+          Array.isArray(photos) && (photos.map((photo, idx)=>{
             return(
-                <Photo key={photo.id} photo={photo}/>
+                <Photo key={`${photo.id}-${idx}`} photo={photo}/>
               )
             })
           )
