@@ -12,7 +12,7 @@ const Layout = ({children }) => {
   return (
     <>
       <Navbar/>
-      <FadeIn className="background-pattern-rain-light">
+      <FadeIn>
       {children}
     </FadeIn>
       <ScrollButton/>

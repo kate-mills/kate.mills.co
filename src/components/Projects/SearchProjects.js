@@ -27,7 +27,7 @@ const Projects = ({
     </div>
   )
   return (
-    <Wrapper className={`background-pattern-rain-light`}>
+    <Wrapper>
       {showSearchBtns && ( headerAndBtns) }
       <div className="section-center">
         {projects.map(item => {

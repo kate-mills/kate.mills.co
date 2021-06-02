@@ -5,7 +5,7 @@ const HeroShort = ({ img, className, children }) => {
 
   return (
     <div
-      className={`${className} background-pattern-rain-dark`}
+      className={`${className}`}
       fluid={img}>
       {children}
     </div>

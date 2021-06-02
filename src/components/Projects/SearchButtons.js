@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   button {
-    background: var(--primaryWhite);
+    background: transparent;
     color: var(--primaryBlack);
     margin: 0.5rem;
     text-transform: capitalize;

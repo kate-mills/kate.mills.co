@@ -23,15 +23,15 @@ const ProjectTemplate = ({ data:{projects} } ) => {
   return (
     <Layout>
       <FullSeo title={name} noindex/>
-      <HeroShort>
+      <HeroShort className="bg-circles">
         <Banner title={name} info={desc || " "}> </Banner>
         </HeroShort>
-      <ProjectTemplateWrapper className={`background-pattern-rain-light`}>
-        <p className="centered background-pattern-rain-light" >
+      <ProjectTemplateWrapper className={``}>
+        <p className="centered" >
           <a href={url} className="url">Go to<br/>{name}</a>
         </p>
         <div className="project">
-          <div className="single-project-img">
+          <div className="single-project-img bg-circles">
             {
               projectImages.map((img, index)=>{
                 return(
@@ -60,15 +60,16 @@ const ProjectTemplate = ({ data:{projects} } ) => {
 const ProjectTemplateWrapper = styled.section`
   &{
     margin-top: 2rem;
-    background-image: inherit;
     transition: var(--mainTransition);
   }
   .project{
     padding: 4rem 0;
   }
   .single-project-img{
+    padding: 2rem;
+    border-radius: var(--radius);
     margin: 0 auto;
-    width: 85%;
+    width: 95%;
     height: 85%;
     transition: var(--mainTransition);
   }

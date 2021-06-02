@@ -23,13 +23,13 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   return (
     <Layout>
       <FullSeo title={name} description={meta_desc}/>
-      <HeroShort>
+      <HeroShort className="circles-squares">
         <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
           <Btn to="/portfolio/" text="View all projects" />
         </Banner>
       </HeroShort>
       <ServiceTemplateWrapper>
-        <div className='background-pattern-rain-dark benefit-container'>
+        <div className='benefit-container'>
           <Title title={`${why_list.length} benefits of a`} subtitle={singularName}/>
         <div className="benefit-list">
           <ul data-bullet-list>

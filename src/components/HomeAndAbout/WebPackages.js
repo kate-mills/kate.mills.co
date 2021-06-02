@@ -8,7 +8,7 @@ import styled from 'styled-components'
 
 const WebPackages = () => {
   return (
-    <WebPackagesWrapper className={`background-pattern-rain-dark section-center`}
+    <WebPackagesWrapper className={`bg-squares section-center`}
     >
       <Title title="Basic" subtitle="Packages" />
           <p className="we-offer-p">We offer a range of website design solutions for you to choose including Websites and E-Commerce Stores for estheticians, spas, salons, and beauty professionals at a price that fits your budget and delivered promptly.  With our expertise & knowledge of the beauty industry, our design process is straightforward for you.</p>
@@ -32,7 +32,7 @@ const WebPackages = () => {
               >
                   {item.pkgDetails.map((item, idx)=>{
                     return(
-                      <li key={idx}>{item}</li>
+                      <li key={idx}><p>{item}</p></li>
                     )
                   })}
                 </ul>
@@ -52,9 +52,13 @@ const WebPackagesWrapper = styled.section`
     color: var(--primaryBlack);
     padding: 4rem 0;
     border-radius: var(--radius);
+    .heading,
+    .we-offer-p{
+      margin: 0 auto;
+      background-color: var(--primaryWhite);
+    }
   }
   & div{
-    /*width: 80vw;*/
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -110,6 +114,11 @@ const WebPackagesWrapper = styled.section`
       font-size: .8rem;
       margin: .5rem auto;
             width: 100%;
+    }
+  }
+  @media(min-width: 768px){
+    & div{
+      width: 80%;
     }
   }
 `
