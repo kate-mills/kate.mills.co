@@ -22,7 +22,7 @@ const contact = props => {
   return (
     <Layout>
       <FullSeo title="Contact" snippet={snippet} description={'Contact a local Napa web designer specializing in websites, blogs, eCommerce, and social media for estheticians, beauticians, salons, spas & beauty companies.'}/>
-      <HeroShort>
+      <HeroShort className="heavy-rain">
         <Banner className="smallText" title="We make it easy" info="Are you drained from trying to make your website look professional?"/>
       </HeroShort>
       <Contact />

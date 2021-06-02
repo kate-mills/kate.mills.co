@@ -10,7 +10,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <FullSeo title="About Us" description="Set yourself apart with a custom website built by a local Napa Valley web designer specializing in beauty website design and social media for estheticians, beauticians, salons, spas & beauty companies."/>
-      <HeroShort>
+      <HeroShort className="polka-dots">
         <Banner
           title="Meet Kate"
           info="Home office in Napa Valley" >
