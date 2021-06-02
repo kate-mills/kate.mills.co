@@ -34,7 +34,7 @@ const Photo = ({photo}) =>{
       </div>
       <div className="photo-info">
       <div>
-        <p>Photo on<a className="unsplash" href="https://unsplash.com" target="_blank">usplash.com</a>by</p>
+        <p>Photo on<a className="unsplash" href="https://unsplash.com" target="_blank">unsplash.com</a>by</p>
         <p><a href={unsplashUrl} target="_blank">{name}</a></p>
       </div>
         <a
