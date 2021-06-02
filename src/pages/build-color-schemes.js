@@ -88,7 +88,7 @@ const ColorGeneratorPage = ()=> {
       />
       <ColoredGeneratorWrapper>
         <Banner
-          className=""
+          className="polka-dots"
           title="Build Color Schemes"
           info="Get tints & shades of any color to build a gorgeous color scheme."
         >
@@ -173,7 +173,7 @@ const ColoredGeneratorWrapper = styled.div`
         font-size: 1rem;
         ::placeholder{
           width: fit-content;
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           color:#b1b2b6;
         }
       }
@@ -216,7 +216,6 @@ const ColoredGeneratorWrapper = styled.div`
     margin-bottom: 3rem;
   }
   & > div h1{
-    margin-top: 3rem;
   }
   @media (max-width: 576px) {
     & > div h1, & > div h1 span.title-l2 {
