@@ -51,7 +51,7 @@ const SubmenuWrapper = styled.aside`
   }
   &.show {
     display: block;
-    transform: translateX(-50%) translateY(3px);
+    transform: translateX(-50%) translateY(0);
     z-index: 3;
     .submenu-center {
       background-color: var(--solutionsColor);
