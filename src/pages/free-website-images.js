@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import * as React from 'react'
 import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
@@ -56,13 +57,9 @@ const ImageSearchPage = ({data:seoData})=>{
         })
     }
   }
-  
   React.useEffect(()=>{
     fetchImages()
-    focusInput()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page])
-
 
   React.useEffect(() => {
     const event = window.addEventListener('scroll', () => {
@@ -76,8 +73,7 @@ const ImageSearchPage = ({data:seoData})=>{
         })
       }
     })
-    return () => window.removeEventListener('scroll', event)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    return()=>window.removeEventListener('scroll', event)
   }, [])
 
   const handleSubmit = (e)=>{
