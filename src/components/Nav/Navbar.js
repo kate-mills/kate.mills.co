@@ -67,7 +67,7 @@ const Navbar = (props) => {
           { links.map((item, index) => {
             return (
                 <li key={index}
-                  className={(isSubmenuOpen && page.page===item.page)? `active`:`link`}>
+                  className={(isSubmenuOpen && page.page===item.page)? `${item.isHomeLnk} active`:`${item.isHomeLnk} link`}>
                   <Link to={item.path}
                     onMouseOver={displaySubmenu}
                   >{item.page}</Link>
@@ -151,7 +151,12 @@ const NavWrapper = styled.nav`
     pointer-events: none;
     background: var(--primaryColor);
   }
-  
+  .nav-links .hide-mobile{
+    display:none;
+  }
+  .nav-links .home-link{
+    display:none;
+  }
   @media screen and (min-width: 576px) {
     .navbar {
       padding: 0 1rem;
@@ -159,6 +164,9 @@ const NavWrapper = styled.nav`
     .logo{
       max-height: 53px;
       padding: .3rem 0;
+    }
+    .nav-links .home-link{
+      display: block;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -201,6 +209,9 @@ const NavWrapper = styled.nav`
       a {
         color: var(--primaryWhite);
       }
+    }
+    .nav-links li.hide-mobile{
+      display:none;
     }
     .logo{
       padding: .3rem 0;

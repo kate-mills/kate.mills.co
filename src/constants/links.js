@@ -3,31 +3,39 @@ const sublinks = [
     page: 'Home',
     path: '/',
     id: 1,
+    isHomeLnk:'home-link',
     links: [],
   },
   {
     page: 'About Us',
     path: '/about-us',
     id: 2,
-    links: [],
+    isHomeLnk:'',
+    links: [
+      { label: 'Contact Us', url: '/contact-us', },
+    ],
   },
   {
     page: 'Portfolio',
     path: '/portfolio',
     id: 3,
+    isHomeLnk:'',
     links: [
-      { label: 'Color Schemes', url: '/build-color-schemes', },
-      { label: 'Search Images', url: '/free-website-images', },
+      { label: 'Latest', url: '/portfolio' },
       { label: 'Blogs', url: '/blogs' },
-      { label: 'Websites', url: '/websites' },
       { label: 'E-commerce', url: '/e-commerce' },
+      { label: 'Websites', url: '/websites' },
     ],
   },
   {
-    page: 'Contact Us',
-    path: '/contact-us',
+    page: 'Apps',
+    path: '/free-website-images',
     id: 4,
-    links: [],
+    isHomeLnk:'',
+    links: [
+      { label: 'Search Images', url: '/free-website-images', },
+      { label: 'Color Schemes', url: '/build-color-schemes', },
+    ],
   }
 ];
 
