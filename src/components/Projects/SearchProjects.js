@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import SearchButtons from "./SearchButtons"
 import SingleProject from './SingleProject'
-import Title from '../Title'
 
 const Projects = ({
   projects:data,mainImageAlt,
@@ -10,16 +9,13 @@ const Projects = ({
   showSearchBtns,
 }) => {
   const [projects, setProjects] = React.useState(data)
-  const [title, setTitle] = React.useState('Filter')
 
   const setBackToAll = () => { setProjects(data) }
 
   const headerAndBtns = (
     <div>
-      <Title title={title} subtitle="Projects"/>
       <p className="center-info">Click below to filter projects by category</p>
         <SearchButtons
-          setTitle={setTitle}
           projects={data}
           setProjects={setProjects}
           setBackToAll={setBackToAll}

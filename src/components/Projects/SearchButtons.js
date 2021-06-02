@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import {typeFormatter} from '../../utils/helpers'
 
 const SearchButtons = ({ projects, setProjects, setBackToAll, setTitle }) => {
   const [index, setIndex] = React.useState(0)
@@ -15,7 +14,6 @@ const SearchButtons = ({ projects, setProjects, setBackToAll, setTitle }) => {
 
   const showProjects = (type, typeIndex) => {
     setIndex(typeIndex)
-    setTitle(typeFormatter(type))
     if (type === "all") {
       setBackToAll()
     } else {

@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
-import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 import SearchProjects from '../components/Projects/SearchProjects'
 import Btn from '../components/Btn'
@@ -16,10 +15,8 @@ const portfolio = ({ data }) => {
       <FullSeo title="Portfolio" 
         description={`We specialize in websites & social media content for small beauty businesses. Learn more about boosting your business in ${new Date().getFullYear()} now.`}
       />
-      <HeroShort className="circles-squares">
-        <Banner title="Latest Web Designs" info="Browse through some of our favorites."/>
-      </HeroShort>
-    <section className="section">
+      <Banner title="Web Designs" info="Browse through some of our latest websites." className="circles-squares"/>
+      <section className="section section-center" style={{marginTop: 0, paddingTop: '1rem'}}>
       <SearchProjects projects = {projects} showSearchBtns />
     </section>
       <div className="footer-btn">
