@@ -2,6 +2,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import {UseUnsplashContext} from '../../context/unsplash'
+import {HiDownload} from 'react-icons/hi'
 
 const Photo = ({photo}) =>{
   const {trackDownload} = UseUnsplashContext()
@@ -28,7 +29,7 @@ const Photo = ({photo}) =>{
           title="Download photo"
           href={`${links.download}?force=true`}
         >
-          <Arrow cls="download-img-arrow"/>
+          <HiDownload className="download-img-arrow"/>
         </a>
       </div>
       <div className="photo-info">
@@ -45,7 +46,7 @@ const Photo = ({photo}) =>{
           title="Download photo"
           href={`${links.download}?force=true`}
         >
-          <Arrow cls="download-img"/>
+          <HiDownload className="download-img"/>
         </a>
       </div>
     </PhotoWrapper>
@@ -105,7 +106,6 @@ const PhotoWrapper = styled.article`
   }
   &:hover .mobile-download-info{
     .download-img-arrow{
-      fill: transparent;
     }
   }
   .photo-info {
@@ -135,5 +135,3 @@ const PhotoWrapper = styled.article`
 
 `
 export default Photo
-
-export const Arrow = ({cls}) => (<svg width="32" height="32" className={cls} version="1.1" viewBox="0 0 32 32" aria-hidden="false"><path d="M25.8 15.5l-7.8 7.2v-20.7h-4v20.7l-7.8-7.2-2.7 3 12.5 11.4 12.5-11.4z"></path></svg>)

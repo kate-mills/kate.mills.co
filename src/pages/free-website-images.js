@@ -4,7 +4,6 @@ import FullSeo from '../components/FullSeo'
 import DisplayImages from '../components/ImageSearch/DisplayImages'
 import styled from 'styled-components'
 import {FaSearch} from 'react-icons/fa'
-import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 
 import {graphql} from 'gatsby'
@@ -19,8 +18,8 @@ const ImageSearchPage = ({data:seoData})=>{
   const [photos, setPhotos] = React.useState([])
 
   const fetchImages = async ()=>{
-    let searchQ = query || 'beauty'
-    if(searchQ && page<10){
+    let searchQ = query || 'spa'
+    if(searchQ && page<=10){
       setLoading(true)
       unsplash.search
         .getPhotos({
@@ -31,11 +30,13 @@ const ImageSearchPage = ({data:seoData})=>{
           setPhotos((oldPhotos)=>{
             let tempPhotos = []
             if(page>1){
-              tempPhotos = [...oldPhotos, ...result.response.results]
+              let newPhotos = result.response.results.reverse()
+
+              tempPhotos = [...oldPhotos, ...newPhotos]
               console.log(`Displaying ${tempPhotos.length} images`)
               return tempPhotos
             } else{
-              tempPhotos = result.response.results
+              tempPhotos = result.response.results.reverse()
               console.log(`Displaying ${tempPhotos.length} images`)
               return tempPhotos
             }
@@ -60,7 +61,7 @@ const ImageSearchPage = ({data:seoData})=>{
 
   React.useEffect(() => {
     const event = window.addEventListener('scroll', () => {
-      const footerHeight = 115
+      const footerHeight = 135
       if (
         (!loading && window.innerHeight + window.scrollY) >=
         document.body.scrollHeight - footerHeight
@@ -86,11 +87,9 @@ const ImageSearchPage = ({data:seoData})=>{
         title="Search Unlimited Beauty Images For Your Website"
         description="Search and download unlimited Beauty Images for your website or social media post."
       />
-      <HeroShort>
-      <Banner title="Unlimited Free Beauty Images" info="for your next digital project">
-      </Banner>
-      </HeroShort>
+      <Banner title="Get Images" className="polka-dots">
       <ImageSearchWrapper>
+        <h2 className="h2-sm">Download high quality images for your next website or social media post.</h2>
         <form className="search-form">
           <input
             tabIndex={0}
@@ -105,6 +104,7 @@ const ImageSearchPage = ({data:seoData})=>{
           ><FaSearch/></button>
         </form>
       </ImageSearchWrapper>
+      </Banner>
         <DisplayImages loading={loading} photos={photos} query={query}/>
     </Layout>
   )
@@ -114,8 +114,13 @@ const ImageSearchWrapper = styled.section`
   &{
     margin: 0 auto;
     max-width: var(--max-width);
-    padding: 5rem 0 0 0;
+    padding: 0 0 0;
     width: 90vw;
+    h2{
+      font-size: 1.5rem;
+      letter-spacing: var(--altSpacing);
+      padding: 0 0 0;
+    }
   }
   .search-form {
     display: flex;

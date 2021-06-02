@@ -6,7 +6,6 @@ import styled from 'styled-components'
 const DisplaySearch = ({loading, photos})=>{
   return(
     <DisplaySearchWrapper>
-        <h2>Download high quality images for your next website or social media post.</h2>
       <div className="photos-center">
         {
           Array.isArray(photos) && (photos.map((photo)=>{
