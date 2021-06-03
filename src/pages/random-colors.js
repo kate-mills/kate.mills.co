@@ -12,12 +12,13 @@ const ColorGeneratorPage = ()=> {
 
   const VAR_LIST = ['soft', 'pastel', 'hard', 'light','pale', 'default']
   const NM_LIST = ['triade', 'analogic', 'contrast', 'tetrade', 'mono']
-  const scheme = new ColorScheme()
   const [hueNum, setHueNum] = React.useState(21)
   const [varIdx,setVarIdx] = React.useState(0);
   const [nmIdx,setNmIdx] = React.useState(0);
   const [error,setError] = React.useState(false);
   const [list, setList ] = React.useState([]);
+
+  const scheme = new ColorScheme()
   const focusMethod = () =>{document.getElementById('hex-input').focus()};
 
   const isVarIdxSetToLastIdx = (varIdx >= (VAR_LIST.length - 1))
@@ -25,8 +26,7 @@ const ColorGeneratorPage = ()=> {
 
   const increaseVarIdx = () => {
     let newIndex = (isVarIdxSetToLastIdx ? 0:(varIdx+1))
-    setVarIdx((prev)=>newIndex)
-    return
+    return setVarIdx((prev)=>newIndex)
   }
   const increaseNmIdx = () => {
     // only increase NM_LIST index if at last VAR_LIST index
@@ -36,13 +36,10 @@ const ColorGeneratorPage = ()=> {
     }
     return
   }
-
   const increaseIndices = ()=>{
     increaseNmIdx()
-    increaseVarIdx()
-    return
+    return increaseVarIdx()
   }
-
 
   const clearForm = () => {
     setNmIdx(0)
@@ -50,11 +47,24 @@ const ColorGeneratorPage = ()=> {
     setError(false)
   };
 
+  const updateDistance = ()=>{
+    try{
+      scheme.distance(0.75)
+      setList(scheme.colors())
+    }catch(err){
+      console.log('EEEERRRR in updateDistance', err)
+    }
+  }
   const updateScheme = () => {
     increaseIndices()
-    return scheme.from_hue(hueNum)
-      .scheme(NM_LIST[nmIdx])
-      .variation(VAR_LIST[varIdx])
+    try{
+      scheme.from_hue(hueNum)
+        .scheme(NM_LIST[nmIdx])
+        .variation(VAR_LIST[varIdx])
+    } catch(err){
+      console.log('ERRERR -> updateScheme err ', err)
+      updateDistance()
+    }
   };
 
   React.useEffect(()=>{
@@ -63,21 +73,10 @@ const ColorGeneratorPage = ()=> {
     focusMethod()
   }, [])
 
-  const updateDistance = ()=>{
-    try{
-      scheme.distance(0.75)
-      setList(scheme.colors())
-      console.log('try', list)
-    }catch(err){
-      console.log('EEEERRRR', err)
-    }
-  }
-
   const handleSubmit = (e) =>{
     e.preventDefault();
     let huePassedTest = Number.isSafeInteger(hueNum)
     if(huePassedTest){
-      alert(huePassedTest)
       try {
         updateScheme()
         setList(scheme.colors())
@@ -91,8 +90,9 @@ const ColorGeneratorPage = ()=> {
           setError(true)
         }
       }
+    } else{
+      updateDistance()
     }
-    updateDistance()
     focusMethod()
   };
 
