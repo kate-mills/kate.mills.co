@@ -1,84 +1,111 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import * as React from 'react'
 import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
 import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
-import SingleColor from '../components/ColorGenerator/SingleColor'
-import Values from 'values.js'
-import {getUniqueColors, listOfColors} from '../utils/helpers'
+import RandomColor from '../components/ColorGenerator/RandomColor'
+import ColorScheme from 'color-scheme'
+
 
 const ColorGeneratorPage = ()=> {
-  const [color,setColor] = React.useState('');
+
+  const VAR_LIST = ['soft', 'pastel', 'hard', 'light','pale', 'default']
+  const NM_LIST = ['triade', 'analogic', 'contrast', 'tetrade', 'mono']
+  const scheme = new ColorScheme()
+  const [hueNum, setHueNum] = React.useState(21)
+  const [varIdx,setVarIdx] = React.useState(0);
+  const [nmIdx,setNmIdx] = React.useState(0);
   const [error,setError] = React.useState(false);
   const [list, setList ] = React.useState([]);
-  const [placeValue, setPlaceValue] = React.useState('yellow')
   const focusMethod = () =>{document.getElementById('hex-input').focus()};
-  const getValues = (clr) => {return new Values(clr).all(5)};
-  const setSlicedColors = (clrs) =>{setList(clrs.slice(0))};
 
-  const iterPlaceVal = () => {
-    let cIdx = listOfColors.indexOf(placeValue)
-    setPlaceValue(
-      (cIdx <= listOfColors.length-2)
-      ?listOfColors[cIdx + 1]
-      :listOfColors[0]
-    )
+  const isVarIdxSetToLastIdx = (varIdx >= (VAR_LIST.length - 1))
+  const isNmeIdxSetToLastIdx = (nmIdx >= (NM_LIST.length - 1))
+
+  const increaseVarIdx = () => {
+    let newIndex = (isVarIdxSetToLastIdx ? 0:(varIdx+1))
+    setVarIdx((prev)=>newIndex)
+    return
+  }
+  const increaseNmIdx = () => {
+    // only increase NM_LIST index if at last VAR_LIST index
+    if(isVarIdxSetToLastIdx) {
+      let newIndex = (isNmeIdxSetToLastIdx ? 0:(nmIdx+1))
+      setNmIdx((prev)=>newIndex, console.log(NM_LIST[nmIdx]))
+    }
+    return
+  }
+
+  const increaseIndices = ()=>{
+    increaseNmIdx()
+    increaseVarIdx()
+    return
   }
 
 
   const clearForm = () => {
+    setNmIdx(0)
+    setVarIdx(0)
     setError(false)
-    setColor('')
-    iterPlaceVal()
+  };
+
+  const updateScheme = () => {
+    increaseIndices()
+    return scheme.from_hue(hueNum)
+      .scheme(NM_LIST[nmIdx])
+      .variation(VAR_LIST[varIdx])
   };
 
   React.useEffect(()=>{
-    let colors = getValues('#C7A0A1')
-    let uniqueColors = getUniqueColors(colors)
-    setSlicedColors(uniqueColors)
+    updateScheme()
+    setList(scheme.colors())
     focusMethod()
   }, [])
 
+  const updateDistance = ()=>{
+    try{
+      scheme.distance(0.75)
+      setList(scheme.colors())
+      console.log('try', list)
+    }catch(err){
+      console.log('EEEERRRR', err)
+    }
+  }
+
   const handleSubmit = (e) =>{
     e.preventDefault();
-    if(color){
-      let isHex = color[0]==="#"
-      let clr = isHex ? color:color.toLowerCase()
+    let huePassedTest = Number.isSafeInteger(hueNum)
+    if(huePassedTest){
+      alert(huePassedTest)
       try {
-        let colors = getValues(clr) 
-        let uniqueColors = getUniqueColors(colors)
+        updateScheme()
+        setList(scheme.colors())
         setError(false)
-        setSlicedColors(uniqueColors)
       }catch(error){
         try{
-          let colors = getValues('#'.concat(color))
-          let uniqueColors = getUniqueColors(colors)
+          scheme.variation('pastel')
+          setList(scheme.color())
           setError(false)
-          setSlicedColors(uniqueColors)
         }catch(err){
           setError(true)
         }
       }
     }
+    updateDistance()
     focusMethod()
   };
 
-  const handleHexInputChange = (e) =>{
-    setColor(e.target.value.trim())
+  const handleHueNumChange = (e) =>{
+    let temp = Number(e.target.value)
+    setHueNum((prev)=> {
+      if(Number.isSafeInteger(temp)){
+        return temp
+      }else{
+        return prev
+      }
+    })
   }
-
-  const getColorGroup = (idx)=>{
-    let GROUP_1 = 'group-1-lightest-txt'
-    let GROUP_2 = 'group-2-md-txt'
-    let GROUP_3 = 'group-3-darkest-txt'
-    let oneThird = Number.parseInt(list.length/3)
-    return (
-      (idx <= oneThird)?GROUP_1:(
-       idx <= oneThird*2)?GROUP_2 : GROUP_3
-    )
-  }
-
-
   return(
     <Layout>
       <FullSeo
@@ -89,8 +116,8 @@ const ColorGeneratorPage = ()=> {
       <ColoredGeneratorWrapper>
         <Banner
           className="polka-dots"
-          title="Build Color Schemes"
-          info="Get tints & shades of any color to build a gorgeous color scheme."
+          title="Spa Color Schemes"
+          info="Build A Gorgeous Color Scheme For Beauty Business"
         >
         </Banner>
         <section className="container">
@@ -98,32 +125,23 @@ const ColorGeneratorPage = ()=> {
             <input
               id="hex-input"
               type="text"
-              value={color}
-              placeholder={`Eg: ${placeValue}`}
-              onChange={handleHexInputChange}
+              value={hueNum}
+              placeholder={`Key words`}
+              onChange={handleHueNumChange}
               className={`${error ? 'error' : null}`}
               tabIndex="0"
               autoComplete="off"
             />
-            <button tabIndex="0" className="btn btn-dt" type="submit">submit</button>
+            <button tabIndex="0" className="btn btn-dt" type="submit">generate</button>
             <button tabIndex="0" className="btn clear-btn" id="clear" onClick={clearForm}>clear</button>
-            <button tabIndex="0" className="btn btn-mb" type="submit">submit</button>
+            <button tabIndex="0" className="btn btn-mb" type="submit">generate</button>
           </form>
         </section>
         <section className="colors">
           {
-            list.map((color, index)=>{
-              const {hex} = color
-              const colorGroup = getColorGroup(index)
-              console.log('colorGroup', colorGroup)
-              
+            list.map((hex, index)=>{
               return(
-                <SingleColor
-                  colorGroup={colorGroup}
-                  key={index}
-                  index={index}
-                  hex={hex}
-                  {...color}/>
+                <RandomColor key={index} index={index} hex={hex}/>
               )
             })
           }
