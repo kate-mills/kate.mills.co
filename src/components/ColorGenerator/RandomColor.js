@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 const SingleColor = ({index, hex}) => {
+  const [active, setActive] = React.useState(false)
   const [alert,setAlert] = React.useState(false)
   const hexValue = `#${hex}`
 
@@ -15,7 +16,9 @@ const SingleColor = ({index, hex}) => {
 
   return (
     <SingleColorWrapper
+      className={`${active ? 'active':'inactive'}`}
       onClick={()=>{
+        setActive(prev => !prev)
         setAlert(true)
         navigator.clipboard.writeText(hexValue)
       }}
@@ -41,6 +44,8 @@ const SingleColorWrapper = styled.article`
     min-height: 150px;
     align-content: space-between;
   }
+  &.active{ background-color: yellow; border: 5px solid yellow; }
+  &.inactive{ border: 5px solid transparent; }
   .percent-value {
     margin-bottom: 0;
   }

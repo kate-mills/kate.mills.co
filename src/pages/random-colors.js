@@ -10,7 +10,7 @@ import ColorScheme from 'color-scheme'
 
 const ColorGeneratorPage = ()=> {
 
-  const VAR_LIST = ['soft', 'pastel', 'hard', 'light','pale', 'default']
+  const VAR_LIST = ['soft', 'default', 'hard', 'light','pale', 'pastel']
   const NM_LIST = ['triade', 'analogic', 'contrast', 'tetrade', 'mono']
   const [hueNum, setHueNum] = React.useState(21)
   const [varIdx,setVarIdx] = React.useState(0);
@@ -125,8 +125,8 @@ const ColorGeneratorPage = ()=> {
             <input
               id="hex-input"
               type="text"
-              value={hueNum}
-              placeholder={`Key words`}
+              value={``}
+              placeholder={`${NM_LIST[nmIdx]} ${VAR_LIST[varIdx]}`}
               onChange={handleHueNumChange}
               className={`${error ? 'error' : null}`}
               tabIndex="0"
