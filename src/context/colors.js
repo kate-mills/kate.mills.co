@@ -39,13 +39,15 @@ const ColorProvider = ({children}) => {
 
   const updateColorList = async (hue=224, schName='triade', variation='soft'
   )=>{
-    scheme.from_hue(hue)
-      .scheme(schName).variation(variation)
-    let colors = scheme.colors()
-    let mpClr = await mapThroughColors(colors)
-    setColorList((prev)=>{
-      return mpClr
-    }, console.log('new colors', colorList))
+    try{
+      scheme.from_hue(hue)
+        .scheme(schName).variation(variation)
+      let colors = scheme.colors()
+      let mpClr = mapThroughColors(colors)
+      setColorList((prev)=>{ return mpClr }, console.log('new colors', colorList))
+    }catch(err){
+      console.log('err updating ColorList', err)
+    }
   }
 
   return (
