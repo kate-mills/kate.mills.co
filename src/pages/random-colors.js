@@ -5,10 +5,11 @@ import FullSeo from '../components/FullSeo'
 import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
 import RandomColor from '../components/ColorGenerator/RandomColor'
-import ColorScheme from 'color-scheme'
+import {useColorContext} from '../context/colors'
 
 
 const ColorGeneratorPage = ()=> {
+  const {updateColorList, colorList, scheme} = useColorContext()
 
   const VAR_LIST = ['soft', 'default', 'hard', 'light','pale', 'pastel']
   const NM_LIST = ['triade', 'analogic', 'contrast', 'tetrade', 'mono']
@@ -16,9 +17,7 @@ const ColorGeneratorPage = ()=> {
   const [varIdx,setVarIdx] = React.useState(0);
   const [nmIdx,setNmIdx] = React.useState(0);
   const [error,setError] = React.useState(false);
-  const [list, setList ] = React.useState([]);
 
-  const scheme = new ColorScheme()
   const focusMethod = () =>{document.getElementById('hex-input').focus()};
 
   const isVarIdxSetToLastIdx = (varIdx >= (VAR_LIST.length - 1))
@@ -46,45 +45,28 @@ const ColorGeneratorPage = ()=> {
     setVarIdx(0)
     setError(false)
   };
-
   const updateDistance = ()=>{
     try{
       scheme.distance(0.75)
-      setList(scheme.colors())
     }catch(err){
       console.log('EEEERRRR in updateDistance', err)
     }
   }
-  const updateScheme = () => {
-    increaseIndices()
-    try{
-      scheme.from_hue(hueNum)
-        .scheme(NM_LIST[nmIdx])
-        .variation(VAR_LIST[varIdx])
-    } catch(err){
-      console.log('ERRERR -> updateScheme err ', err)
-      updateDistance()
-    }
-  };
-
   React.useEffect(()=>{
-    updateScheme()
-    setList(scheme.colors())
     focusMethod()
-  }, [])
+  }, [colorList])
 
   const handleSubmit = (e) =>{
     e.preventDefault();
     let huePassedTest = Number.isSafeInteger(hueNum)
     if(huePassedTest){
+      increaseIndices()
       try {
-        updateScheme()
-        setList(scheme.colors())
+        updateColorList(224, NM_LIST[nmIdx], VAR_LIST[varIdx]) 
         setError(false)
       }catch(error){
         try{
           scheme.variation('pastel')
-          setList(scheme.color())
           setError(false)
         }catch(err){
           setError(true)
@@ -139,9 +121,13 @@ const ColorGeneratorPage = ()=> {
         </section>
         <section className="colors">
           {
-            list.map((hex, index)=>{
+            colorList.map((clr, index)=>{
               return(
-                <RandomColor key={index} index={index} hex={hex}/>
+                <RandomColor
+                  key={index}
+                  index={index}
+                  {...clr}
+                />
               )
             })
           }
