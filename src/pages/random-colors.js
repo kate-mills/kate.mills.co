@@ -6,63 +6,56 @@ import Banner from '../components/Hero/Banner'
 import styled from 'styled-components'
 import RandomColor from '../components/ColorGenerator/RandomColor'
 import {useColorContext} from '../context/colors'
+import {VAR_LIST, NM_LIST} from '../constants/colors'
 
 
 const ColorGeneratorPage = ()=> {
   const {updateColorList, colorList, scheme} = useColorContext()
 
-  const VAR_LIST = ['soft', 'default', 'hard', 'light','pale', 'pastel']
-  const NM_LIST = ['triade', 'analogic', 'contrast', 'tetrade', 'mono']
-  const [hueNum, setHueNum] = React.useState(21)
-  const [varIdx,setVarIdx] = React.useState(0);
-  const [nmIdx,setNmIdx] = React.useState(0);
+  const [schemaHue, setSchemaHue] = React.useState(21) // start the scheme
+  const [schemaVariation,setSchemaVariation] = React.useState(0);
+  const [schemaName,setSchemaName] = React.useState(0);
   const [error,setError] = React.useState(false);
 
   const focusMethod = () =>{document.getElementById('hex-input').focus()};
 
-  const isVarIdxSetToLastIdx = (varIdx >= (VAR_LIST.length - 1))
-  const isNmeIdxSetToLastIdx = (nmIdx >= (NM_LIST.length - 1))
+  const atLastVariationSchema = (schemaVariation >= (VAR_LIST.length - 1))
+  const atLastNameSchema = (schemaName >= (NM_LIST.length - 1))
 
-  const increaseVarIdx = () => {
-    let newIndex = (isVarIdxSetToLastIdx ? 0:(varIdx+1))
-    return setVarIdx((prev)=>newIndex)
-  }
-  const increaseNmIdx = () => {
-    // only increase NM_LIST index if at last VAR_LIST index
-    if(isVarIdxSetToLastIdx) {
-      let newIndex = (isNmeIdxSetToLastIdx ? 0:(nmIdx+1))
-      setNmIdx((prev)=>newIndex, console.log(NM_LIST[nmIdx]))
-    }
-    return
-  }
-  const increaseIndices = ()=>{
-    increaseNmIdx()
-    return increaseVarIdx()
-  }
-
-  const clearForm = () => {
-    setNmIdx(0)
-    setVarIdx(0)
-    setError(false)
-  };
   const updateDistance = ()=>{
+    alert('update distance')
     try{
       scheme.distance(0.75)
     }catch(err){
-      console.log('EEEERRRR in updateDistance', err)
+      console.log('error updating distance', err)
     }
   }
+  const increaseIndices = ()=>{
+    if(atLastVariationSchema){
+      let i = (atLastNameSchema ? 0:(schemaName+1))
+      setSchemaName((prev)=>i, console.log(NM_LIST[schemaName]))
+    }
+    let ii = (atLastVariationSchema ? 0:(schemaVariation+1))
+    setSchemaVariation((prev)=>ii)
+  }
+  const clearForm = () => {
+    setSchemaName(0)
+    setSchemaVariation(0)
+    updateDistance()
+    setError(false)
+  };
+
   React.useEffect(()=>{
     focusMethod()
   }, [colorList])
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    let huePassedTest = Number.isSafeInteger(hueNum)
+    let huePassedTest = Number.isSafeInteger(schemaHue)
     if(huePassedTest){
       increaseIndices()
       try {
-        updateColorList(224, NM_LIST[nmIdx], VAR_LIST[varIdx]) 
+        updateColorList(224, NM_LIST[schemaName], VAR_LIST[schemaVariation]) 
         setError(false)
       }catch(error){
         try{
@@ -80,7 +73,7 @@ const ColorGeneratorPage = ()=> {
 
   const handleHueNumChange = (e) =>{
     let temp = Number(e.target.value)
-    setHueNum((prev)=> {
+    setSchemaHue((prev)=> {
       if(Number.isSafeInteger(temp)){
         return temp
       }else{
@@ -108,7 +101,7 @@ const ColorGeneratorPage = ()=> {
               id="hex-input"
               type="text"
               value={``}
-              placeholder={`${NM_LIST[nmIdx]} ${VAR_LIST[varIdx]}`}
+              placeholder={`${NM_LIST[schemaName]} ${VAR_LIST[schemaVariation]}`}
               onChange={handleHueNumChange}
               className={`${error ? 'error' : null}`}
               tabIndex="0"
