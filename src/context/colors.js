@@ -6,12 +6,26 @@ const ColorContext = React.createContext()
 
 const ColorProvider = ({children}) => {
   const scheme = new ColorScheme()
-  
   const [colorList, setColorList] = useState((startingColors))
 
+  const updateSingleColor = (id) => {
+    let tmpColors = [...colorList].map((item)=>{
+      if(item.id === id){
+        return {...item, active:!item.active}
+      }else{
+        return item
+      }
+    })
+    setColorList((prev)=>{
+      return tmpColors
+    },
+      console.log(colorList)
+    )
+  }
 
 
   const mapThroughColors = (clrs) =>{
+    window.clrs = clrs
     return clrs.map((clr, idx)=>{
       const oldColor = colorList.find(item => item.id === idx)
       if(oldColor && oldColor.active){
@@ -37,6 +51,7 @@ const ColorProvider = ({children}) => {
   return (
     <ColorContext.Provider
       value={{
+        updateSingleColor,
         scheme,
         colorList,
         updateColorList,

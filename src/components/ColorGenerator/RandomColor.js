@@ -1,7 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import {useColorContext} from '../../context/colors'
 
-const SingleColor = ({index, hex}) => {
+const SingleColor = ({id, index, hex}) => {
+  const {updateSingleColor} = useColorContext()
+
   const [active, setActive] = React.useState(false)
   const [alert,setAlert] = React.useState(false)
   const hexValue = `#${hex}`
@@ -21,6 +24,7 @@ const SingleColor = ({index, hex}) => {
         setActive(prev => !prev)
         setAlert(true)
         navigator.clipboard.writeText(hexValue)
+        updateSingleColor(id)
       }}
       style={{backgroundColor: `#${hex}`}}
     >
