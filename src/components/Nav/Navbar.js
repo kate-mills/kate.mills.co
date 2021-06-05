@@ -96,7 +96,7 @@ const NavWrapper = styled.nav`
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.25rem 0.5rem 0;
+    padding: 1rem 1.25rem 0.5rem 1rem;
   }
   .logo{
     padding: .3rem 0;
@@ -168,6 +168,9 @@ const NavWrapper = styled.nav`
       max-height: 53px;
       padding: .3rem 0;
     }
+    .nav-header{
+      padding: 1rem 1.25rem 0.5rem;
+    }
   }
   @media screen and (min-width: 1200px) {
     .toggle-btn {
@@ -228,6 +231,11 @@ const NavWrapper = styled.nav`
     .nav-links li.no-mobile.show-dt a:first-child{
       pointer-events: unset;
       cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .nav-header{
+      padding: 1rem 1.5rem .5rem .35rem;
     }
   }
 `
