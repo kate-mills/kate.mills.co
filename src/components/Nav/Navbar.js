@@ -71,7 +71,7 @@ const Navbar = (props) => {
                 <li key={index}
                   className={(isSubmenuOpen && page.page===item.page)
                       ?`${item.cls} active`:`${item.cls}`}>
-                  <NavHeadLink lnk={item} hoverFn={displaySubmenu}/>
+                  <NavHeadLink lnk={item} className={item.cls} hoverFn={displaySubmenu}/>
                 { item.links.length &&(
                   <React.Fragment key={index}>
                     {item.links.map((lnk,idx)=><NavSubLink key={idx} lnk={lnk} />)}
@@ -113,19 +113,23 @@ const NavWrapper = styled.nav`
     cursor: pointer;
   }
   .nav-links {
+    border: 1px solid transparent;
     list-style-type: none;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     margin: 0 auto;
     height: 0;
     overflow: hidden;
-    transition: var(--mainTransition);
+    transition: height .29s linear, border 1s linear;
 
     .show-mobile{
       display:block;
     }
   }
   .show-nav {
+    border-color: transparent;
+    border-top: 1px solid var(--primaryBlack0);
+    border-bottom: 1px solid var(--primaryBlack0);
     height: 375px;
   }
   .nav-links a,
@@ -152,13 +156,6 @@ const NavWrapper = styled.nav`
   }
   .nav-links .show-mobile{
     display: block;
-  }
-  .nav-links .hide-mobile{
-    display:none;
-  }
-  .nav-links li.no-mobile a:first-child,
-  .nav-links .home-link{
-    display:none;
   }
   @media screen and (min-width: 576px) {
     .navbar {
@@ -194,19 +191,12 @@ const NavWrapper = styled.nav`
       min-width: 150px;
       text-align: center;
     }
-    .nav-links li.link{
-      background: unset;
-    }
-    .nav-links a:hover{
-      background: var(--primaryBlack2);
-      color: var(--primaryColor);
-    }
     .nav-links a.phone:hover{
       background:var(--primaryBlack);
       color: var(--primaryColor);
     }
     .nav-links li.active{
-      background: var(--primaryBlack2);/*styles while hovering over submenu*/
+      background: var(--primaryBlack0);/*styles while hovering over submenu*/
       a {
         color: var(--primaryWhite);
       }
@@ -222,15 +212,6 @@ const NavWrapper = styled.nav`
       margin-left: 0;   
       padding: 0;
       padding-top: 1.9rem;
-    }
-    .nav-links li.no-mobile a:first-child{
-      display:block;
-      background:unset;
-      cursor: default;
-    }
-    .nav-links li.no-mobile.show-dt a:first-child{
-      pointer-events: unset;
-      cursor: pointer;
     }
   }
   @media screen and (max-width: 320px){

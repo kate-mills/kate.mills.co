@@ -10,30 +10,54 @@ const noClk=(e)=>{e.preventDefault()}
 const NavDesktopHeadLink = ({className, lnk, hoverFn}) =>{
   return (
     ((lnk.links.length > 0)?
-      <HeadLinkWithChildren className={className} lnk={lnk} hoverFn={hoverFn}/>
-      :<SimpleLink className={className} lnk={lnk}/>
+      <HeadLinkPlus className={className} lnk={lnk} hoverFn={hoverFn}/>
+      :<HeadLinkSimple className={className} lnk={lnk}/>
     )
   )
 }
-
-export default styled(NavDesktopHeadLink)`
-  pointer-events: unset;
-`
-
-const SimpleLink = ({className, lnk}) => {
+const HeadLinkSimple = ({className, lnk}) => {
   const {closeSubmenu } = useGlobalContext()
-  return (<Link to={lnk.path} className={className} onMouseOver={closeSubmenu}>{lnk.page}</Link>
+  return (
+    <SimpleWrapper
+      to={lnk.path}
+      className={`${className} head-link-simple`}
+      onMouseOver={closeSubmenu}>{lnk.page}
+    </SimpleWrapper>
   )
 }
-
-const HeadLinkWithChildren = ({className, lnk, hoverFn}) => {
+const HeadLinkPlus = ({className, lnk, hoverFn}) => {
   return (
-    <Link
+    <PlusWrapper
       to={lnk.path}
       onMouseOver={hoverFn}
       onClick={noClk}
-      className={className}>
+      className={`${className} head-link-plus`}>
       {lnk.page}
-    </Link>
+    </PlusWrapper>
   )
 }
+const SimpleWrapper = styled(Link)`
+  &{
+    display:none !important;
+    transition: none !important;
+  }
+  @media screen and (min-width:1200px){
+    &{
+      cursor: pointer;
+      display:block !important;
+    }
+  }
+`
+const PlusWrapper = styled(Link)`
+  &{
+    display:none !important;
+    transition: none !important;
+  }
+  @media screen and (min-width:1200px){
+    &{
+      cursor: default;
+      display:block !important;
+    }
+  }
+`
+export default NavDesktopHeadLink;

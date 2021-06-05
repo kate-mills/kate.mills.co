@@ -2,7 +2,8 @@
 
 :root {
   --primaryBlack: #121212;
-  --primaryBlack2: #2d2e2f;/*hover black*/
+  --primaryBlack0: #1e1e1e;
+  --primaryBlack2:#2a2a2a; /*#2d2e2f hover black*/
   --digitalColor: #909197;
   --solutionsColor:#D0D1D5;
   --primaryColor: #EDF0F2; /* #E4D9D5 */
