@@ -36,12 +36,7 @@ export default styled(Title)`
     color: var(--digitalColor);
   }
   span {
-    display: block;
-  }
-  @media (min-width: 576px) {
-    span {
-      display: inline-block;
-      margin: 0 0.35rem;
-    }
+    display: inline-block;
+    margin: 0 0.35rem;
   }
 `
