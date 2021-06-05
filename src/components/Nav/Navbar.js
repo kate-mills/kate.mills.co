@@ -126,7 +126,7 @@ const NavWrapper = styled.nav`
     }
   }
   .show-nav {
-    height: 665px;
+    height: 375px;
   }
   .nav-links a,
   .nav-links span{
