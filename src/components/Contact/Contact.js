@@ -79,7 +79,7 @@ const Contact = () => {
 
 const ContactWrapper = styled.section`
   &{
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
   & .center{
     margin: 0 auto;

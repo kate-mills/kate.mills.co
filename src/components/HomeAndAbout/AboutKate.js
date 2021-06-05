@@ -54,7 +54,7 @@ const AboutKate = () => {
 
 const AboutKateWrapper = styled.section`
   &{
-    padding: 4rem 0;
+    padding: 1rem 0;
   }
   .about-center {
     width: 80vw;

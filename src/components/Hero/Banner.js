@@ -48,7 +48,7 @@ export default styled(Banner)`
       font-weight: 400;
       font-size: 1.5rem;
       letter-spacing: var(--midSpacing);
-      width: 85%;
+      width: 95%;
       margin: 0 auto;
       margin-bottom: 2rem;
     }
@@ -61,7 +61,7 @@ export default styled(Banner)`
         font-size: 4.5rem;
       }
       span.title-l2 {
-        width: 70%;
+        width: 80%;
       }
     }
   }
