@@ -7,6 +7,8 @@ import links from '../../constants/links'
 import PhoneNumber from '../PhoneNumber'
 import {useGlobalContext} from '../../context/context'
 import NavSubmenu from './Submenu'
+import NavSubLink from './NavSubLink'
+import NavHeadLink from './NavHeadLink'
 import styled from 'styled-components'
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -67,16 +69,12 @@ const Navbar = (props) => {
           { links.map((item, index) => {
             return (
                 <li key={index}
-                  className={(isSubmenuOpen && page.page===item.page)? `${item.isHomeLnk} active`:`${item.isHomeLnk} link`}>
-                  <Link to={item.path}
-                    onMouseOver={displaySubmenu}
-                  >{item.page}</Link>
+                  className={(isSubmenuOpen && page.page===item.page)
+                      ?`${item.cls} active`:`${item.cls}`}>
+                  <NavHeadLink lnk={item} hoverFn={displaySubmenu}/>
                 { item.links.length &&(
                   <React.Fragment key={index}>
-                    { item.links.map((lnk, idx) =>{
-                      return(<Link key={idx} to={lnk.url} className="mobile-sublinks">{lnk.label}</Link>)
-                      })
-                    }
+                    {item.links.map((lnk,idx)=><NavSubLink key={idx} lnk={lnk} />)}
                   </React.Fragment>
                 )} 
                 </li>
@@ -117,13 +115,14 @@ const NavWrapper = styled.nav`
   .nav-links {
     list-style-type: none;
     padding-left: 1.25rem;
+    padding-right: 1.25rem;
     margin: 0 auto;
     height: 0;
     overflow: hidden;
     transition: var(--mainTransition);
 
-    .mobile-sublinks {
-      padding-left: 4rem;
+    .show-mobile{
+      display:block;
     }
   }
   .show-nav {
@@ -151,9 +150,13 @@ const NavWrapper = styled.nav`
     pointer-events: none;
     background: var(--primaryColor);
   }
+  .nav-links .show-mobile{
+    display: block;
+  }
   .nav-links .hide-mobile{
     display:none;
   }
+  .nav-links li.no-mobile a:first-child,
   .nav-links .home-link{
     display:none;
   }
@@ -164,9 +167,6 @@ const NavWrapper = styled.nav`
     .logo{
       max-height: 53px;
       padding: .3rem 0;
-    }
-    .nav-links .home-link{
-      display: block;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -185,9 +185,7 @@ const NavWrapper = styled.nav`
       display: flex;
       padding-left: 1.25rem;
 
-      .mobile-sublinks{
-        display:none;
-      }
+      .mobile-link{display:none;}/* KEEP HERE */
     }
     .nav-links li{
       min-width: 150px;
@@ -221,6 +219,15 @@ const NavWrapper = styled.nav`
       margin-left: 0;   
       padding: 0;
       padding-top: 1.9rem;
+    }
+    .nav-links li.no-mobile a:first-child{
+      display:block;
+      background:unset;
+      cursor: default;
+    }
+    .nav-links li.no-mobile.show-dt a:first-child{
+      pointer-events: unset;
+      cursor: pointer;
     }
   }
 `
