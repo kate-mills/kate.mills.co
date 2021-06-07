@@ -130,7 +130,7 @@ const NavWrapper = styled.nav`
     border-color: transparent;
     border-top: 1px solid var(--primaryBlack0);
     border-bottom: 1px solid var(--primaryBlack0);
-    height: 375px;
+    height: 420px;
   }
   .nav-links a,
   .nav-links span{
