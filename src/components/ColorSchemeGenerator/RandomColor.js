@@ -51,9 +51,11 @@ const RandomColorWrapper = styled.article`
     min-height: 500px;
     align-content: space-between;
     transition: var(--mainTransition);
+    outline-color:transparent;
   }
   .copy-hex,
   .lock-container{
+    outline-color:transparent;
     align-items: center;
     cursor:pointer;
     display: flex;
