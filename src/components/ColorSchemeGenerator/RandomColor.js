@@ -23,7 +23,7 @@ const RandomColor = ({id, index, hex, onHold}) => {
   }
   return (
     <RandomColorWrapper
-      className={`${onHold ? 'locked':'unlocked'}`}
+      className={`${onHold ? 'locked random-color':'unlocked random-color'}`}
       style={{backgroundColor: `${hex}`, opacity: 1}}
     >
       <p className="copy-hex" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}>{hex}</p>
@@ -48,7 +48,7 @@ const RandomColorWrapper = styled.article`
     font-size: 1.1rem;
     text-transform: none;
     position: relative;
-    min-height: 175px;
+    min-height: 500px;
     align-content: space-between;
     transition: var(--mainTransition);
   }
@@ -73,21 +73,19 @@ const RandomColorWrapper = styled.article`
       svg.unlock-icon{opacity:1;}
     }
   }
-  &.locked{.lock-container{svg.lock-icon{height:1.5rem;width:1.3rem;}}*/
+  &.locked{
+    .lock-container{svg.lock-icon{height:1.5rem;width:1.3rem;}}
   }
   .alert {
+    font-size: 0.85rem;
     position: absolute;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    top: 10%;
+    top: 15%;
   }
   @media(max-width:576px){
-    &.darkest-txt:nth-of-type(1){
-      display: none;
-    }
-    .alert{
-      font-size: 0.64rem;
+    &{
+      letter-spacing: var(--altSpacing);
+      min-height: 200px;
     }
   }
 `
