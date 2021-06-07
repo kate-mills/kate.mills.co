@@ -89,7 +89,7 @@ const ColorGeneratorPage = ()=> {
       <ColoredGeneratorWrapper>
         <Banner
           className="polka-dots"
-          title="Build Color Schemes"
+          title="Find the perfect Color"
           info="Get tints & shades of any color to build a gorgeous color scheme."
         >
         </Banner>
