@@ -5,12 +5,15 @@ import randomColor from 'randomcolor'
 
 import {
   INIT_RANDOM_COLORS,
+  INIT_RANDOM_COLORS_ERROR,
   UPDATE_PENDING_COLORS,
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
 
 const initialState = {
   all_colors: default_colors,
+  default_colors,
+  theme_color: 'green',
 }
 
 const ColorsContext = React.createContext()
@@ -18,12 +21,12 @@ const ColorsContext = React.createContext()
 export const ColorsProvider = ({ children }) => {
   const [state,dispatch] = useReducer(reducer, initialState)
 
-  const resetAllColors = () => {
-    var color = randomColor()
+  const resetAllColors = (clr) => {
+    var color = clr || randomColor()
     try{
       dispatch({type: INIT_RANDOM_COLORS, payload: {hue: color}})
     }catch(err){
-      console.log(err)
+      dispatch({type: INIT_RANDOM_COLORS_ERROR, payload: err})
     }
   }
   const updatePendingColors = (colors) => {

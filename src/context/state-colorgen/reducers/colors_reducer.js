@@ -1,5 +1,6 @@
 import {
   INIT_RANDOM_COLORS,
+  INIT_RANDOM_COLORS_ERROR,
   UPDATE_PENDING_COLORS,
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
@@ -25,13 +26,15 @@ const colors_reducer = (state, action) => {
   }
   if(action.type === INIT_RANDOM_COLORS){
     const {hue} = action.payload
-    let clrs = randomColor({hue, count: 18})
+    let clrs = randomColor({hue, count: 6})
     const all_colors = clrs.map((hex, id) => {
       return {hex, id, onHold:false}
     })
     return {...state,all_colors}
   }
-
+  if(action.type === INIT_RANDOM_COLORS_ERROR){
+    return {...state, all_colors:state.default_colors}
+  }
   throw new Error(`No Matching "${action.type}" - action type`)
 }
 
