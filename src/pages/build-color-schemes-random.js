@@ -22,8 +22,12 @@ const ColorSchemes = () => {
   return (
     <Layout>
       <FullSeo title="Color Schemes" noindex />
-        <Banner title="Color Scheme Generator" info=""/>
-        <ColorSchemeWrapper>
+      <ColorSchemeWrapper>
+        <Banner
+          className="polka-dots"
+          title="Build Color Schemes"
+          info="Lock, unlock & generate colors untill you have a perfect color scheme."
+        />
           <div className="btn-div">
             <button tabIndex="0" className="btn btn" onClick={()=>updatePendingColors([...all_colors])}>refresh unlocked colors</button>
             <button tabIndex="0" className="btn btn" onClick={handleClickCopyColors}>copy locked color scheme</button>
