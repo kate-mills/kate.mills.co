@@ -4,6 +4,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { useColorsContext } from '../../context/state-colorgen/context/colors_context'
 import {FaLock, FaLockOpen} from 'react-icons/fa'
+import {FiCopy} from 'react-icons/fi'
 
 const RandomColor = ({id, index, hex, onHold}) => {
 
@@ -27,6 +28,7 @@ const RandomColor = ({id, index, hex, onHold}) => {
       style={{backgroundColor: `${hex}`, opacity: 1}}
     >
       <p className="hex-value" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}>{hex}</p>
+      <p className="copy-container" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}><FiCopy/></p>
       <p className="lock-container" title="toggle lock" onClick={()=>toggleSingleColor(id)} role="button" tabIndex="0" onKeyPress={()=>toggleSingleColor(id)}>
         {onHold
           ?<FaLock className="lock-icon"/>
@@ -53,6 +55,7 @@ const RandomColorWrapper = styled.article`
     outline-color:transparent;
   }
   .hex-value,
+  .copy-container,
   .lock-container{
     outline:none;
     align-items: center;
@@ -64,8 +67,17 @@ const RandomColorWrapper = styled.article`
     width: 100%;
     position: absolute;
   }
+  .copy-container{
+    top: 20%;
+    svg{font-size:1.5rem; }
+  }
   .hex-value{
     bottom:0;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: var(--midSpacing);
   }
   &.pending-color{
     .lock-container{
@@ -96,6 +108,9 @@ const RandomColorWrapper = styled.article`
     text-transform: uppercase;
     letter-spacing: var(--midSpacing);
     bottom: 25%;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
   @media(max-width:576px){
     &{
