@@ -6,4 +6,6 @@ const default_colors = [
   { id: 4, hex: "#094d9b", onHold: false },
   { id: 5, hex: "#017720", onHold: false },
 ]
-export {default_colors}
+
+const top_half_of_app_height = 142;
+export {default_colors, top_half_of_app_height}

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { useColorsContext } from '../../context/state-colorgen/context/colors_context'
 import {FaLock, FaLockOpen} from 'react-icons/fa'
 import {FiCopy} from 'react-icons/fi'
+import {top_half_of_app_height as xx} from '../../context/state-colorgen/helpers'
 
 const RandomColor = ({id, index, hex, onHold}) => {
 
@@ -36,18 +37,18 @@ const RandomColor = ({id, index, hex, onHold}) => {
 }
 const RandomColorWrapper = styled.article`
   & {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    padding: .8rem 2rem;
-    font-size: 1.1rem;
-    text-transform: none;
-    position: relative;
-    min-height: 65vh;
     align-content: space-between;
-    transition: var(--mainTransition);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    justify-content:center;
+    min-height: calc(100vh - ${xx}px);
     outline-color:transparent;
+    padding: .8rem 2rem;
+    position: relative;
+    text-transform: none;
+    transition: var(--mainTransition);
   }
   .alert,
   .lock-container,
@@ -104,9 +105,9 @@ const RandomColorWrapper = styled.article`
       }
     }
   }
-  @media(max-width:576px){
+  @media(max-width:750px){
     &{
-      min-height: 40vh;
+      min-height: calc(50vh - ${xx/2}px);
     }
   }
 `
