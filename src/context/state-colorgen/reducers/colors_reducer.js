@@ -12,7 +12,7 @@ const colors_reducer = (state, action) => {
   if(action.type === UPDATE_PENDING_COLORS){
     const {colors} = action.payload
     const  all_colors = colors.map((clr, id)=>{ 
-      return (clr.onHold?{...clr}:{...clr,hex:randomColor({count: 1})})
+      return (clr.onHold?{...clr}:{...clr,hex:randomColor({hue: 'random'})})
     })
     return { ...state, all_colors}
   }
@@ -26,7 +26,7 @@ const colors_reducer = (state, action) => {
   }
   if(action.type === INIT_RANDOM_COLORS){
     const {hue} = action.payload
-    let clrs = randomColor({hue, count: 6})
+    let clrs = randomColor({hue: 'random', count: 6})
     const all_colors = clrs.map((hex, id) => {
       return {hex, id, onHold:false}
     })

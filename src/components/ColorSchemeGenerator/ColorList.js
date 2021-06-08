@@ -29,7 +29,7 @@ const ColorListWrapper = styled.section`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
   }
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 750px){
     &{
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(auto-fit, minmax(41px, 1fr));
