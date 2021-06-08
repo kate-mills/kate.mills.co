@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
 import { useColorsContext } from '../context/state-colorgen/context/colors_context'
+import {copyColorScheme} from '../context/state-colorgen/helpers'
 import ColorList from '../components/ColorSchemeGenerator/ColorList'
 import styled from 'styled-components'
 
@@ -18,14 +19,8 @@ const ColorSchemes = () => {
 
 
   const handleClickCopyColors = ()=>{
-    let hexes = [`Your Next Color Scheme`]
-    let tempColors = [...all_colors]
-    tempColors.forEach(clr=>{
-      if(clr.onHold) hexes.push(clr.hex)
-    })
-    hexes = hexes.join('\n')
+    copyColorScheme(all_colors)
     setAlert(true)
-    navigator.clipboard.writeText(hexes)
   }
   
   return (

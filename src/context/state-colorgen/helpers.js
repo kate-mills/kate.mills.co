@@ -8,4 +8,21 @@ const default_colors = [
 ]
 
 const top_half_of_app_height = 114;
-export {default_colors, top_half_of_app_height}
+
+
+const copyColorScheme = (lst)=>{
+  let hexes = [`Your Next Color Scheme`]
+  let tempColors = [...lst]
+  tempColors.forEach(clr=>{
+    if(clr.onHold){
+      hexes.push(`${clr.hex}  🔒`)
+    }else{
+      hexes.push(clr.hex)
+    }
+  })
+  hexes = hexes.join('\n')
+  navigator.clipboard.writeText(hexes)
+  return
+}
+
+export {default_colors, top_half_of_app_height, copyColorScheme}
