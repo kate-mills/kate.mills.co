@@ -7,5 +7,5 @@ const default_colors = [
   { id: 5, hex: "#017720", onHold: false },
 ]
 
-const top_half_of_app_height = 142;
+const top_half_of_app_height = 128;
 export {default_colors, top_half_of_app_height}

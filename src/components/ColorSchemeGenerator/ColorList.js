@@ -27,7 +27,7 @@ const ColorListWrapper = styled.section`
     text-align: center;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   @media screen and (max-width: 750px){
     &{

@@ -26,7 +26,7 @@ const colors_reducer = (state, action) => {
   }
   if(action.type === INIT_RANDOM_COLORS){
     const {hue} = action.payload
-    let clrs = randomColor({hue, count: 6})
+    let clrs = randomColor({hue, count: 5})
     const all_colors = clrs.map((hex, id) => {
       return {hex, id, onHold:false}
     })

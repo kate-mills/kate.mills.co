@@ -25,13 +25,13 @@ const RandomColor = ({id, index, hex, onHold}) => {
   }
   return (
     <RandomColorWrapper className={`${onHold ? 'on-hold':'pending-color'}`}style={{backgroundColor: `${hex}`, opacity: 1}}>
+      {alert && <p className="alert">Copied</p>}
       <p className="lock-container" title="toggle lock" onClick={()=>toggleSingleColor(id)} role="button" aria-label="toggle lock" tabIndex="0" onKeyPress={()=>toggleSingleColor(id)}>
         {onHold?<FaLock className="lock-icon"/>:<FaLockOpen className="unlock-icon"/>}</p>
 
       <p className="copy-container" title="copy hex" onClick={handleHexClick} role="button" aria-label="Copy hex" tabIndex="0" onKeyPress={handleHexClick}><FiCopy/></p>
 
-      <p className="hex-value" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}>{hex}</p>
-      {alert && <p className="alert">Copied</p>}
+      <p className="hex-value" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}>{hex.slice(1)}</p>
     </RandomColorWrapper>
   )
 }
@@ -71,9 +71,6 @@ const RandomColorWrapper = styled.article`
     text-transform: uppercase;
     letter-spacing: var(--midSpacing);
     bottom: 25%;
-    font-family: neue-haas-grotesk-display, sans-serif;
-    font-weight: 600;
-    font-style: normal;
   }
   .copy-container{
     top: 20%;
@@ -81,11 +78,13 @@ const RandomColorWrapper = styled.article`
   }
   .hex-value{
     bottom:0;
-    font-family: neue-haas-grotesk-display, sans-serif;
-    font-weight: 600;
-    font-style: normal;
     font-size: 1.3rem;
-    letter-spacing: var(--midSpacing);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--altSpacing);
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
   }
   &.pending-color{
     .lock-container{
