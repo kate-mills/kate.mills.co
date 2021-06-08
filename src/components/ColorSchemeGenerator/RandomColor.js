@@ -59,7 +59,7 @@ const RandomColorWrapper = styled.article`
     align-items: center;
     cursor:pointer;
     display: flex;
-    height: 20%;
+    height: 10%;
     justify-content: center;
     margin-bottom: 0;
     width: 100%;
@@ -77,14 +77,13 @@ const RandomColorWrapper = styled.article`
     svg{font-size:1.5rem; }
   }
   .hex-value{
-    bottom:0;
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: var(--altSpacing);
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 700;
+    bottom:2%;
+    font-size: 1.6rem;
+    font-family: var(--altFF);
     font-style: normal;
+    font-weight: 700;
+    letter-spacing: var(--altSpacing);
+    text-transform: uppercase;
   }
   &.pending-color{
     .lock-container{

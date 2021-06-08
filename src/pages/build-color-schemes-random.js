@@ -23,8 +23,8 @@ const ColorSchemes = () => {
       <FullSeo title="Color Schemes" noindex />
       <ColorSchemeWrapper>
           <div className="app-nav">
-            <button tabIndex="0" className="btn btn" onClick={()=>updatePendingColors([...all_colors])}>generate</button>
-            <button tabIndex="0" className="btn btn" onClick={handleClickCopyColors}>copy locked colors</button>
+            <button tabIndex="0" className="btn" onClick={handleClickCopyColors}>copy colors</button>
+            <button tabIndex="0" className="btn" onClick={()=>updatePendingColors([...all_colors])}>generate</button>
           </div>
             <ColorList colors={all_colors}/>
         </ColorSchemeWrapper>
@@ -38,22 +38,25 @@ const ColorSchemeWrapper = styled.div`
   & div.app-nav{
     align-items: center;
     display: flex;
-    height: 3rem;
+    height: 2.1rem;
     justify-content: space-evenly;
     margin: 0 auto;
     width: 100%;
-    .btn {
-      background: var(--solutionsColor);
-      border: 1px solid var(--solutionsColor);
-      border-top-right-radius: var(--radius);
-      border-bottom-right-radius: var(--radius);
-      font-size: 1rem;
-      color: var(--primaryBlack2);
+    button.btn {
+      border: none;
+      background: var(--primaryWhite);
+      color: var(--primaryBlack);
       cursor: pointer;
-      outline-color: var(--primaryColor); 
-      padding: 0.5rem 1rem;
-      text-transform: capitalize;
+      font-family: var(--mainFF);
+      font-weight: 900;
+      font-size: 1.1rem;
+      letter-spacing: var(--altSpacing);
+      outline-color: transparent; 
+      padding: 0.15rem .15rem;
+      text-transform: uppercase;
       transform: translateX(10px) translateY(0);
+    }
+    button.btn:hover{
     }
   }
 
