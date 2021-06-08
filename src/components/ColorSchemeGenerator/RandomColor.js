@@ -23,10 +23,10 @@ const RandomColor = ({id, index, hex, onHold}) => {
   }
   return (
     <RandomColorWrapper
-      className={`${onHold ? 'locked random-color':'unlocked random-color'}`}
+      className={`${onHold ? 'on-hold':'pending-color'}`}
       style={{backgroundColor: `${hex}`, opacity: 1}}
     >
-      <p className="copy-hex" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}>{hex}</p>
+      <p className="hex-value" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}>{hex}</p>
       <p className="lock-container" title="toggle lock" onClick={()=>toggleSingleColor(id)} role="button" tabIndex="0" onKeyPress={()=>toggleSingleColor(id)}>
         {onHold
           ?<FaLock className="lock-icon"/>
@@ -43,51 +43,62 @@ const RandomColorWrapper = styled.article`
     align-items: center;
     justify-content:center;
     flex-direction: column;
-    letter-spacing: var(--midSpacing);
     padding: .8rem 2rem;
     font-size: 1.1rem;
     text-transform: none;
     position: relative;
-    min-height: 500px;
+    min-height: 65vh;
     align-content: space-between;
     transition: var(--mainTransition);
     outline-color:transparent;
   }
-  .copy-hex,
+  .hex-value,
   .lock-container{
-    outline-color:transparent;
+    outline:none;
     align-items: center;
     cursor:pointer;
     display: flex;
-    height: 35%;
+    height: 20%;
     justify-content: center;
     margin-bottom: 0;
     width: 100%;
     position: absolute;
   }
-  .copy-hex{top:18%;}
-  .lock-container{bottom:10%;}
-  &.unlocked{
+  .hex-value{
+    bottom:0;
+  }
+  &.pending-color{
     .lock-container{
-      svg.unlock-icon{height:1.2rem;opacity:.3;}
+      svg.unlock-icon{
+        height:1.3rem;
+        width: 1.3rem;
+        opacity:.3;
+      }
     }
     .lock-container:hover{
-      svg.unlock-icon{opacity:1;}
+      svg.unlock-icon{
+        opacity:1;
+      }
     }
   }
-  &.locked{
-    .lock-container{svg.lock-icon{height:1.5rem;width:1.3rem;}}
+  &.on-hold{
+    .lock-container{
+      .lock-icon{
+        opacity: 1;
+        height:1.7rem;
+        width: 1.7rem;
+      }
+    }
   }
   .alert {
-    font-size: 0.85rem;
+    font-size: 1rem;
     position: absolute;
     text-transform: uppercase;
-    top: 15%;
+    letter-spacing: var(--midSpacing);
+    bottom: 25%;
   }
   @media(max-width:576px){
     &{
-      letter-spacing: var(--altSpacing);
-      min-height: 200px;
     }
   }
 `

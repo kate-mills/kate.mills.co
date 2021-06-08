@@ -23,13 +23,9 @@ const ColorSchemes = () => {
     <Layout>
       <FullSeo title="Color Schemes" noindex />
       <ColorSchemeWrapper>
-        <Banner
-          className="polka-dots"
-          title="Build Color Schemes"
-          info="Lock, unlock & generate colors untill you have a perfect color scheme."
-        />
+        <Banner className="polka-dots" />
           <div className="btn-div">
-            <button tabIndex="0" className="btn btn" onClick={()=>updatePendingColors([...all_colors])}>refresh unlocked colors</button>
+            <button tabIndex="0" className="btn btn" onClick={()=>updatePendingColors([...all_colors])}>generate</button>
             <button tabIndex="0" className="btn btn" onClick={handleClickCopyColors}>copy locked color scheme</button>
           </div>
             <ColorList colors={all_colors}/>
@@ -41,13 +37,18 @@ const ColorSchemes = () => {
 export default ColorSchemes
 
 const ColorSchemeWrapper = styled.div`
+  &{
+    position: relative;
+  }
   div.btn-div{
+    position: absolute;
+    top: 1rem;
     align-items: center;
     display: flex;
-    flex-direction: column;
-    height: 100px;
+    height: 30px;
     justify-content: space-evenly;
     margin: 0 auto;
+    width: 100%;
     .btn {
       background: var(--solutionsColor);
       border: 1px solid var(--digitalColor);
