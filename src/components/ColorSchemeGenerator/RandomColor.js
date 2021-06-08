@@ -99,6 +99,7 @@ const RandomColorWrapper = styled.article`
   }
   @media(max-width:576px){
     &{
+      min-height: 40vh;
     }
   }
 `
