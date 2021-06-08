@@ -29,7 +29,7 @@ const ColorSchemes = () => {
       <ColorSchemeWrapper>
           <div className="app-nav">
             <button tabIndex="0" className="btn generate" onClick={()=>updatePendingColors([...all_colors])} aria-label="generate color scheme"></button>
-            {alert ? <span className="alert">COPIED</span>:<span className="alert"></span>}
+            {alert ? <span className="alert">COPIED</span>:<span className="alert general">Lock to save a color.</span>}
             <button tabIndex="0" className="btn copy" onClick={handleClickCopyColors} aria-label="copy color scheme"></button>
           </div>
             <ColorList colors={all_colors}/>
@@ -92,6 +92,7 @@ const ColorSchemeWrapper = styled.div`
       > span,> button{font-size:.8rem;}
       button.btn.generate{transform:translateX(-10px);}
       button.btn.copy{transform:translateX(10px);}
+      span.alert.general{color: transparent;}
     }
   }
 
