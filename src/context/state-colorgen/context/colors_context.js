@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useReducer } from 'react'
 import reducer from '../reducers/colors_reducer'
 import {default_colors} from '../helpers'
-import randomColor from 'randomcolor'
 
 import {
   INIT_RANDOM_COLORS,
@@ -21,10 +20,9 @@ const ColorsContext = React.createContext()
 export const ColorsProvider = ({ children }) => {
   const [state,dispatch] = useReducer(reducer, initialState)
 
-  const resetAllColors = (clr) => {
-    var color = clr || randomColor()
+  const resetAllColors = (clr='random') => {
     try{
-      dispatch({type: INIT_RANDOM_COLORS, payload: {hue: color}})
+      dispatch({type: INIT_RANDOM_COLORS, payload: {hue:clr}})
     }catch(err){
       dispatch({type: INIT_RANDOM_COLORS_ERROR, payload: err})
     }
