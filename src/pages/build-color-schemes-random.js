@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import Banner from '../components/Hero/Banner'
 import FullSeo from '../components/FullSeo'
 import { useColorsContext } from '../context/state-colorgen/context/colors_context'
 import ColorList from '../components/ColorSchemeGenerator/ColorList'
