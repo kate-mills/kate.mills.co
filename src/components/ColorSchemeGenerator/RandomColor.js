@@ -6,13 +6,13 @@ import {FaLock, FaLockOpen} from 'react-icons/fa'
 import {FiCopy} from 'react-icons/fi'
 import {top_half_of_app_height as xx} from '../../context/state-colorgen/helpers'
 import styled, {keyframes} from 'styled-components'
-import {tada, pulse} from 'react-animations'
+import {tada} from 'react-animations'
 const tdA = keyframes`${tada}`
 
 const TadaOpenLock = styled(FaLockOpen)`
   animation: 1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},
   1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA};
-  animation-delay:2s,5s,10s,15s,20s,25s,30s,35s,40s,45s;
+  animation-delay:2s,10s,20s,30s,40s,50s, 60s, 70s, 80s, 90s;
 `
 const RandomColor = ({id, index, hex, onHold, textColor}) => {
 
