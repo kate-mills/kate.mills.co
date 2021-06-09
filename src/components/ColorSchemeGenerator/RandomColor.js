@@ -176,7 +176,7 @@ const RandomColorWrapper = styled.article`
   @media(max-width:750px){
     &{
       display:grid;
-      min-height: 16vh;
+      min-height: 10vh;
       grid-template-columns: repeat(4, 1fr);
       align-items: baseline;
     }
