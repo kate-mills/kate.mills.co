@@ -10,8 +10,16 @@ const default_colors = [
 const top_half_of_app_height = 114;
 
 
+const getFmtDate = ()=>{
+  const d = new Date()
+  let mo = d.getMonth()+1
+  let dy = d.getDate() 
+  let yr = String(d.getFullYear()).slice(2)
+  return `${mo}-${dy}-${yr}`
+}
 const copyColorScheme = (lst)=>{
-  let hexes = [`Your Next Color Scheme`]
+  let dt = getFmtDate()
+  let hexes = [`Your Next Color Scheme RGB hex values - ${dt}`]
   let tempColors = [...lst]
   tempColors.forEach(clr=>{
     if(clr.onHold){
@@ -20,6 +28,7 @@ const copyColorScheme = (lst)=>{
       hexes.push(clr.hex)
     }
   })
+  hexes.push('\n')
   hexes = hexes.join('\n')
   navigator.clipboard.writeText(hexes)
   return
