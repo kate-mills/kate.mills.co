@@ -6,7 +6,7 @@ import {FaLock, FaLockOpen} from 'react-icons/fa'
 import {FiCopy} from 'react-icons/fi'
 import {top_half_of_app_height as xx} from '../../context/state-colorgen/helpers'
 import styled, {keyframes} from 'styled-components'
-import {tada} from 'react-animations'
+import {tada, pulse} from 'react-animations'
 const tdA = keyframes`${tada}`
 
 const TadaOpenLock = styled(FaLockOpen)`
@@ -31,21 +31,57 @@ const RandomColor = ({id, index, hex, onHold}) => {
     navigator.clipboard.writeText(hex)
   }
   return (
-    <RandomColorWrapper className={`${onHold ? 'on-hold':'pending-color'}`}style={{backgroundColor: `${hex}`, opacity: 1}}>
-      {alert && <p className="alert">Copied</p>}
+    <RandomColorWrapper className={`${onHold ? 'holding-color':'pending-color'}`}style={{backgroundColor: `${hex}`, opacity: 1}}>
 
-      <p className="lock-container" title="toggle lock" onClick={()=>toggleSingleColor(id)} role="button" aria-label="toggle lock" tabIndex="0" onKeyPress={()=>toggleSingleColor(id)}>
-        {onHold?<FaLock className="lock-icon"/>:<TadaOpenLock className="unlock-icon"/>}
+      {/* HEX VALUE */}
+      <p
+        className="hex-value"
+        onClick={handleHexClick}
+        onKeyPress={handleHexClick}
+        role="button"
+        tabIndex="0"
+        title="copy hex">
+        {hex.slice(1)}
       </p>
 
-      <p className="copy-container" title="copy hex" onClick={handleHexClick} role="button" aria-label="Copy hex" tabIndex="0" onKeyPress={handleHexClick}><FiCopy/></p>
+      {/* ALERT Copied */}
+      {
+        (!!alert)
+          ?<p className="alert"><span>Copied</span></p>
+          :<p className="alert"><span></span></p>
+       }
+      {/* Lock ICON */}
+      <p
+        aria-label="toggle lock"
+        className="lock-container"
+        onClick={()=>toggleSingleColor(id)}
+        onKeyPress={()=>toggleSingleColor(id)}
+        role="button"
+        tabIndex="0"
+        title="toggle lock">
+        {onHold
+          ?<FaLock className="lock-icon"/>
+          :<TadaOpenLock className="unlock-icon"/>
+        }
+      </p>
 
-      <p className="hex-value" title="copy hex" onClick={handleHexClick} role="button" tabIndex="0" onKeyPress={handleHexClick}>{hex.slice(1)}</p>
+      {/* Copy ICON */}
+      <p
+        aria-label="Copy hex"
+        className="copy-container"
+        onClick={handleHexClick}
+        onKeyPress={handleHexClick}
+        role="button"
+        tabIndex="0"
+        title="copy hex">
+        <FiCopy/>
+      </p>
     </RandomColorWrapper>
   )
 }
 const RandomColorWrapper = styled.article`
   & {
+    position: relative;
     align-content: space-between;
     align-items: center;
     display: flex;
@@ -55,34 +91,49 @@ const RandomColorWrapper = styled.article`
     min-height: calc(100vh - ${xx}px);
     outline-color:transparent;
     padding: .8rem 2rem;
-    position: relative;
     text-transform: none;
     transition: var(--mainTransition);
   }
-  .alert,
+  &.pending-color{
+    :hover{
+      .lock-container:before{}
+    }
+  }
+  &.holding-color{
+    :hover{
+      .copy-container:before{}
+    }
+  }
   .lock-container,
+  .alert,
   .copy-container,
   .hex-value{
+    position: absolute;
     font-size: 1rem;
     outline:none;
-    align-items: center;
     cursor:pointer;
-    display: flex;
-    height: 10%;
-    justify-content: center;
     margin-bottom: 0;
     width: 100%;
     opacity: 1;
     :hover{opacity:1;}
-    position: absolute;
+  }
+  .lock-container{
+    bottom: 70%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    svg{
+      height:1.9rem;
+      width:1.5rem;
+      :hover{opacity:1;}
+    }
   }
   .alert {
-    text-transform: uppercase;
-    letter-spacing: var(--midSpacing);
     bottom: 25%;
+    letter-spacing: var(--midSpacing);
+    text-transform: uppercase;
   }
   .copy-container{
-    top: 20%;
+    bottom: 15%;
     svg{font-size:1.5rem; }
   }
   .hex-value{
@@ -96,25 +147,52 @@ const RandomColorWrapper = styled.article`
   }
   &.pending-color{
     .lock-container{
-      :hover{opacity:1;}
-      opacity: .3;
-      svg.unlock-icon{
-        height:1.3rem;
-        width: 1.3rem;
+      svg{opacity:.3;}
+    }
+    :hover{
+      .lock-container{
+        animation:1s ${tdA};
+        svg{opacity:1;}
       }
     }
   }
-  &.on-hold{
+  &.holding-color{
     .lock-container{
       .lock-icon{
-        height:1.7rem;
-        width: 1.7rem;
+        height:1.9rem;
+        width: 1.5rem;
+      }
+    }
+    :hover{
+      .copy-container{
+        svg{
+          opacity:1;
+          animation:1s ${tdA};
+        }
       }
     }
   }
+
   @media(max-width:750px){
     &{
-      min-height: calc(50vh - ${xx/2}px);
+      display:grid;
+      min-height: 16vh;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: baseline;
+    }
+    .hex-value,
+    .alert,
+    .copy-container,
+    .lock-container{
+      position:unset;
+      height: 100%;
+    }
+    .alert{
+      display:relative;
+      span{
+        position:absolute;
+        left: 10%; /* displays over hex value */
+      }
     }
   }
 `

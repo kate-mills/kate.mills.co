@@ -31,8 +31,8 @@ const ColorListWrapper = styled.section`
   }
   @media screen and (max-width: 750px){
     &{
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(auto-fit, minmax(41px, 1fr));
+      grid-template-columns: repeat(1, 100vw);
+      grid-template-rows: repeat(5, 1fr);
     }
   }
 
