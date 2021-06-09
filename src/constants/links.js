@@ -35,8 +35,8 @@ const sublinks = [
     cls:'no-mobile',
     links: [
       { label: 'Search Images', url: '/free-website-images', cls: 'no-dt' },
-      { label: 'Color Shades', url: '/build-color-schemes', cls: '' },
-      { label: 'Color Schemes', url: '/build-color-schemes-random', cls: '' },
+      { label: 'Find Colors', url: '/discover-new-colors', cls: '' },
+      { label: 'Color Schemes', url: '/build-color-schemes', cls: '' },
     ],
   }
 ];
