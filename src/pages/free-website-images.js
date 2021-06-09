@@ -24,7 +24,7 @@ const ImageSearchPage = ({data:seoData})=>{
     return
   }
   const fetchImages = async ()=>{
-    let searchQ = query || 'spa'
+    let searchQ = query || 'beauty'
     if(searchQ && page<=50){
       setLoading(true)
       unsplash.search
