@@ -1,6 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components';
 import {Link} from 'gatsby'
+import { zoomIn } from 'react-animations';
+const zoomInAnimation = keyframes`${zoomIn}`;
+
 
 const Btn = ({to, text, color, bgColor, className}) => {
   return (
@@ -8,6 +11,8 @@ const Btn = ({to, text, color, bgColor, className}) => {
       className={`${className}
       btn--animation btn--${bgColor || 'dark'}
       `}
+      data-sal="zoom-in"
+      data-sal-delay="2000"
     >{text}</Link>
   )
 }
@@ -50,9 +55,8 @@ export default styled(Btn)`
     opacity: 0;
   }
   &.btn--animation{
-    backface-visibility: hidden;
-    animation: moveInBtn .5s ease-out .5s;
-    animation-fill-mode: backwards;
+    animation: ${zoomInAnimation};
+    animation-duration: 800ms;
   }
   &.btn--light {
     background-color: var(--themeMd);
