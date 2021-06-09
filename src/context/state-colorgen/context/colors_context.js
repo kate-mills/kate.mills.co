@@ -12,7 +12,11 @@ import {
 const initialState = {
   all_colors: default_colors,
   default_colors,
-  theme_color: 'green',
+  theme:{
+    cidx:2,
+    lastIdx:2,
+    colors: ['purple', 'blue', 'green']
+  }
 }
 
 const ColorsContext = React.createContext()
@@ -20,9 +24,10 @@ const ColorsContext = React.createContext()
 export const ColorsProvider = ({ children }) => {
   const [state,dispatch] = useReducer(reducer, initialState)
 
-  const resetAllColors = (clr='random') => {
+  const resetAllColors = (clr) => {
+    let hue = clr || 'random'
     try{
-      dispatch({type: INIT_RANDOM_COLORS, payload: {hue:clr}})
+      dispatch({type: INIT_RANDOM_COLORS, payload: {hue}})
     }catch(err){
       dispatch({type: INIT_RANDOM_COLORS_ERROR, payload: err})
     }

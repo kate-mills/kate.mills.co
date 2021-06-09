@@ -4,7 +4,9 @@ import {
   UPDATE_PENDING_COLORS,
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
+import {getBestTextColor} from '../helpers'
 import  randomColor from 'randomcolor'
+import tinycolor from 'tinycolor2'
 
 
 const colors_reducer = (state, action) => {
@@ -12,7 +14,12 @@ const colors_reducer = (state, action) => {
   if(action.type === UPDATE_PENDING_COLORS){
     const {colors} = action.payload
     const  all_colors = colors.map((clr, id)=>{ 
-      return (clr.onHold?{...clr}:{...clr,hex:randomColor({hue: 'random'})})
+      if (clr.onHold){
+        return {...clr}
+      } else{
+        let hex = randomColor({hue:'random'}) 
+        return{...clr, hex, textColor: getBestTextColor(hex)}
+      }
     })
     return { ...state, all_colors}
   }
@@ -28,7 +35,9 @@ const colors_reducer = (state, action) => {
     const {hue} = action.payload
     let clrs = randomColor({hue, count: 5})
     const all_colors = clrs.map((hex, id) => {
-      return {hex, id, onHold:false}
+      const tiny = tinycolor(hex)
+      const textColor = tiny.isLight()?'black':'white'
+      return {hex, id, onHold:false, textColor}
     })
     return {...state,all_colors}
   }

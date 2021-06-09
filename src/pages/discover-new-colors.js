@@ -115,8 +115,6 @@ const ColorGeneratorPage = ()=> {
             list.map((color, index)=>{
               const {hex} = color
               const colorGroup = getColorGroup(index)
-              console.log('colorGroup', colorGroup)
-              
               return(
                 <SingleColor
                   colorGroup={colorGroup}

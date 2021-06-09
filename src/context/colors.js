@@ -19,7 +19,7 @@ const ColorProvider = ({children}) => {
     setColorList((prev)=>{
       return tmpColors
     },
-      console.log(colorList)
+      console.log()
     )
   }
 
@@ -29,7 +29,6 @@ const ColorProvider = ({children}) => {
     return clrs.map((clr, idx)=>{
       const oldColor = colorList.find(item => item.id === idx)
       if(oldColor && oldColor.active){
-        console.log('active', oldColor.active)
         return oldColor
       }else{
         return {hex:clr, id: idx, active: false}
@@ -44,9 +43,9 @@ const ColorProvider = ({children}) => {
         .scheme(schName).variation(variation)
       let colors = scheme.colors()
       let mpClr = mapThroughColors(colors)
-      setColorList((prev)=>{ return mpClr }, console.log('new colors', colorList))
+      setColorList((prev)=>{ return mpClr })
     }catch(err){
-      console.log('err updating ColorList', err)
+      console.log(err)
     }
   }
 

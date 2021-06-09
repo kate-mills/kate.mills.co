@@ -14,7 +14,7 @@ const TadaOpenLock = styled(FaLockOpen)`
   1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA};
   animation-delay:2s,5s,10s,15s,20s,25s,30s,35s,40s,45s;
 `
-const RandomColor = ({id, index, hex, onHold}) => {
+const RandomColor = ({id, index, hex, onHold, textColor}) => {
 
   const {toggleSingleColor} = useColorsContext()
 
@@ -31,7 +31,7 @@ const RandomColor = ({id, index, hex, onHold}) => {
     navigator.clipboard.writeText(hex)
   }
   return (
-    <RandomColorWrapper className={`${onHold ? 'holding-color':'pending-color'}`}style={{backgroundColor: `${hex}`, opacity: 1}}>
+    <RandomColorWrapper className={`${onHold ? 'holding-color':'pending-color'}`}style={{backgroundColor: `${hex}`, opacity: 1, color: textColor}}>
 
       {/* HEX VALUE */}
       <p
