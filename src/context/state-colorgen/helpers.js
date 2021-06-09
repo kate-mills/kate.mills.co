@@ -19,7 +19,7 @@ const getFmtDate = ()=>{
 }
 const copyColorScheme = (lst)=>{
   let dt = getFmtDate()
-  let hexes = [`Your Next Color Scheme RGB hex values - ${dt}`]
+  let hexes = [`RGB hex codes. Color scheme created ${dt}.\n`]
   let tempColors = [...lst]
   tempColors.forEach(clr=>{
     if(clr.onHold){
@@ -28,7 +28,7 @@ const copyColorScheme = (lst)=>{
       hexes.push(clr.hex)
     }
   })
-  hexes.push('\n')
+  hexes.push('\nCome back!\nallydigitalsolutions.com/build-color-schemes\n')
   hexes = hexes.join('\n')
   navigator.clipboard.writeText(hexes)
   return

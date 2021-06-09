@@ -13,6 +13,7 @@ const pulseAnimation = keyframes`${pulse}`;
 const ColorSchemes = () => {
   const {all_colors, updatePendingColors} = useColorsContext()
   const [alert,setAlert] = React.useState(false)
+  // Move to Context
   const [clickCount, setClickCount] = React.useState(0)
 
   React.useEffect(()=>{
@@ -26,11 +27,11 @@ const ColorSchemes = () => {
   const handleClickCopyColors = ()=>{
     copyColorScheme(all_colors)
     setAlert(true)
-    setClickCount(prevCount => prevCount+=1, console.log(clickCount))
+    setClickCount(prevCount => prevCount+=1)
   }
   const handleGenerate = ()=>{
     updatePendingColors([...all_colors])
-    setClickCount(prevCount => prevCount+=1, console.log(clickCount))
+    setClickCount(prevCount => prevCount+=1)
   }
   
   return (
@@ -38,9 +39,9 @@ const ColorSchemes = () => {
       <FullSeo title="Color Schemes" noindex />
       <ColorSchemeWrapper>
           <div className="app-nav">
-            <button tabIndex="0" className={`btn generate ${(clickCount <= 4)?'pulse':''}`} onClick={handleGenerate} aria-label="generate color scheme"></button>
+            <button tabIndex="0" className={`btn generate ${(clickCount <2)?'pulse':''}`} onClick={handleGenerate} aria-label="generate color scheme"></button>
             {alert ? <span className="alert">COPIED</span>:<span className="alert general"></span>}
-            <button tabIndex="0" className={`btn copy ${(clickCount > 4)?'pulse':''}`} onClick={handleClickCopyColors} aria-label="copy color scheme"></button>
+            <button tabIndex="0" className={`btn copy ${(clickCount > 3)?'pulse':''}`} onClick={handleClickCopyColors} aria-label="copy color scheme"></button>
           </div>
             <ColorList colors={all_colors}/>
         </ColorSchemeWrapper>

@@ -1,12 +1,19 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 
 import * as React from 'react'
-import styled from 'styled-components'
 import { useColorsContext } from '../../context/state-colorgen/context/colors_context'
 import {FaLock, FaLockOpen} from 'react-icons/fa'
 import {FiCopy} from 'react-icons/fi'
 import {top_half_of_app_height as xx} from '../../context/state-colorgen/helpers'
+import styled, {keyframes} from 'styled-components'
+import {tada} from 'react-animations'
+const tdA = keyframes`${tada}`
 
+const TadaOpenLock = styled(FaLockOpen)`
+  animation: 1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},
+  1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA},1s ${tdA};
+  animation-delay:2s,5s,10s,15s,20s,25s,30s,35s,40s,45s;
+`
 const RandomColor = ({id, index, hex, onHold}) => {
 
   const {toggleSingleColor} = useColorsContext()
@@ -26,8 +33,10 @@ const RandomColor = ({id, index, hex, onHold}) => {
   return (
     <RandomColorWrapper className={`${onHold ? 'on-hold':'pending-color'}`}style={{backgroundColor: `${hex}`, opacity: 1}}>
       {alert && <p className="alert">Copied</p>}
+
       <p className="lock-container" title="toggle lock" onClick={()=>toggleSingleColor(id)} role="button" aria-label="toggle lock" tabIndex="0" onKeyPress={()=>toggleSingleColor(id)}>
-        {onHold?<FaLock className="lock-icon"/>:<FaLockOpen className="unlock-icon"/>}</p>
+        {onHold?<FaLock className="lock-icon"/>:<TadaOpenLock className="unlock-icon"/>}
+      </p>
 
       <p className="copy-container" title="copy hex" onClick={handleHexClick} role="button" aria-label="Copy hex" tabIndex="0" onKeyPress={handleHexClick}><FiCopy/></p>
 
