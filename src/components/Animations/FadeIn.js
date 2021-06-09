@@ -1,35 +1,26 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations'
 
 import { useGlobalContext } from '../../context/context';
 
-const SlideBox = ({children}) => {
+
+const FadeInDiv = ({children}) => {
  const { closeSubmenu } = useGlobalContext();
  return (
-   <Container 
+   <FadeInDivContainer
      onFocus={closeSubmenu}
      onMouseOver={closeSubmenu}
    >
      {children}
-  </Container>
+  </FadeInDivContainer>
  )
 }
-export default SlideBox
+export default FadeInDiv
 
-const fadeIn = keyframes`
- 0% {
-  opacity: 1;
- }
-  80% {
-    opacity: .90;
-  }
- 100% {
-   opacity: 1;
- }
-`
-const Container = styled.div`
- animation-name: ${fadeIn};
- animation-duration: 1s;
- animation-iteration-count:1;
+const fadeInAnimation = keyframes`${fadeIn}`;
 
-`
+const FadeInDivContainer = styled.div`
+  animation: 1s ${fadeInAnimation};
+  animation-duration: 2s;
+`;
