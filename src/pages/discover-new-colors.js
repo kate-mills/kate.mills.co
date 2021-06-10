@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import SingleColor from '../components/ColorGenerator/SingleColor'
 import Values from 'values.js'
 import {getUniqueColors, listOfColors} from '../utils/helpers'
-import {getBestTextColor} from '../context/state-colorgen/helpers'
+import {getReadableColorFromHex} from '../context/state-colorgen/helpers'
 
 const ColorGeneratorPage = ()=> {
   const [color,setColor] = React.useState('');
@@ -110,7 +110,7 @@ const ColorGeneratorPage = ()=> {
                   key={index}
                   index={index}
                   hex={hex}
-                  textColor={getBestTextColor(hex)}
+                  textColor={getReadableColorFromHex(hex)}
                   {...color}/>
               )
             })

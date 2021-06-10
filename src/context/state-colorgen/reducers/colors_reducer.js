@@ -4,8 +4,7 @@ import {
   UPDATE_PENDING_COLORS,
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
-import {getBestTextColor, getRandomInt} from '../helpers'
-import  randomColor from 'randomcolor'
+import {getReadableColorFromHex, getRandomInt, getRandomHex} from '../helpers'
 
 const colors_reducer = (state, action) => {
 
@@ -15,8 +14,8 @@ const colors_reducer = (state, action) => {
       if (clr.onHold){
         return {...clr}
       } else{
-        let hex = randomColor({hue:'random'}) 
-        return{...clr, hex, textColor: getBestTextColor(hex)}
+        let hex = getRandomHex()
+        return{...clr, hex, textColor: getReadableColorFromHex(hex)}
       }
     })
     return { ...state, all_colors}
