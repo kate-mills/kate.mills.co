@@ -195,5 +195,10 @@ const RandomColorWrapper = styled.article`
       }
     }
   }
+  @media(max-width: 500px){
+    &{
+      min-height:8vh;
+    }    
+  }
 `
 export default RandomColor
