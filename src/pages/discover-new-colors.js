@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import SingleColor from '../components/ColorGenerator/SingleColor'
 import Values from 'values.js'
 import {getUniqueColors, listOfColors} from '../utils/helpers'
+import {getBestTextColor} from '../context/state-colorgen/helpers'
 
 const ColorGeneratorPage = ()=> {
   const [color,setColor] = React.useState('');
@@ -67,16 +68,6 @@ const ColorGeneratorPage = ()=> {
     setColor(e.target.value.trim())
   }
 
-  const getColorGroup = (idx)=>{
-    let GROUP_1 = 'group-1-lightest-txt'
-    let GROUP_2 = 'group-2-md-txt'
-    let GROUP_3 = 'group-3-darkest-txt'
-    let oneThird = Number.parseInt(list.length/3)
-    return (
-      (idx <= oneThird)?GROUP_1:(
-       idx <= oneThird*2)?GROUP_2 : GROUP_3
-    )
-  }
 
 
   return(
@@ -114,13 +105,12 @@ const ColorGeneratorPage = ()=> {
           {
             list.map((color, index)=>{
               const {hex} = color
-              const colorGroup = getColorGroup(index)
               return(
                 <SingleColor
-                  colorGroup={colorGroup}
                   key={index}
                   index={index}
                   hex={hex}
+                  textColor={getBestTextColor(hex)}
                   {...color}/>
               )
             })
