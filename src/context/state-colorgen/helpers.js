@@ -41,9 +41,15 @@ const getBestTextColor = (hex) => {
   return tiny.isLight()?'black':'white'
 }
 
+const getRandomInt = (max) => {
+// will never return max
+  return Math.floor(Math.random() * max) 
+}
+
 export {
   default_colors,
   top_half_of_app_height,
   copyColorScheme,
   getBestTextColor,
+  getRandomInt,
 }

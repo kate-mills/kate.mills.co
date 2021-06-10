@@ -4,10 +4,8 @@ import {
   UPDATE_PENDING_COLORS,
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
-import {getBestTextColor} from '../helpers'
+import {getBestTextColor, getRandomInt} from '../helpers'
 import  randomColor from 'randomcolor'
-import tinycolor from 'tinycolor2'
-
 
 const colors_reducer = (state, action) => {
 
@@ -32,14 +30,14 @@ const colors_reducer = (state, action) => {
     return {...state, all_colors:tempColors}
   }
   if(action.type === INIT_RANDOM_COLORS){
-    const {hue} = action.payload
-    let clrs = randomColor({hue, count: 5})
-    const all_colors = clrs.map((hex, id) => {
-      const tiny = tinycolor(hex)
-      const textColor = tiny.isLight()?'black':'white'
-      return {hex, id, onHold:false, textColor}
+    const {theme:{spaColors}} = state
+    let i = getRandomInt(spaColors.length)
+    let clrs = spaColors[i].tiny.monochromatic().slice(0, 5)
+    const all_colors = clrs.map((clr, id) => {
+      const textColor = clr.isLight()?'black':'white'
+      return {hex:`#${clr.toHex()}`, id, onHold:false, textColor}
     })
-    return {...state,all_colors}
+    return {...state,all_colors, theme:{...state.theme}}
   }
   if(action.type === INIT_RANDOM_COLORS_ERROR){
     return {...state, all_colors:state.default_colors}
