@@ -16,6 +16,9 @@ const ColorSchemes = () => {
   // Move to Context
   const [clickCount, setClickCount] = React.useState(0)
 
+  const refContainer = React.useRef(null);
+  const focusMethod = () =>{document.getElementById('generator').focus()};
+
   React.useEffect(()=>{
     const timeout = setTimeout(()=>{
       setAlert(false)
@@ -23,8 +26,18 @@ const ColorSchemes = () => {
     return () => clearTimeout(timeout)
   }, [alert])
 
+  React.useEffect(()=>{
+    // only listen to for click inside refContainer not entire page
+    const event = refContainer.current.addEventListener('click',(e)=>{focusMethod()})
+    return refContainer.current.removeEventListener('click', event)
+  },[])
+
+  React.useEffect(()=>{
+    focusMethod()
+  },[])
 
   const handleClickCopyColors = ()=>{
+    focusMethod()
     copyColorScheme(all_colors)
     setAlert(true)
     setClickCount(prevCount => prevCount+=1)
@@ -37,9 +50,14 @@ const ColorSchemes = () => {
   return (
     <Layout>
       <FullSeo title="Color Schemes" noindex />
-      <ColorSchemeWrapper>
+      <ColorSchemeWrapper ref={refContainer}>
           <div className="app-nav">
-            <button tabIndex="0" className={`btn generate ${(clickCount <2)?'pulse':''}`} onClick={handleGenerate} aria-label="generate color scheme"></button>
+            <button
+              tabIndex="0"
+              className={`btn generate`}
+              onClick={handleGenerate}
+              aria-label="generate color scheme"
+              id="generator"/>
             {alert ? <span className="alert">COPIED</span>:<span className="alert general"></span>}
             <button tabIndex="0" className={`btn copy ${(clickCount > 3)?'pulse':''}`} onClick={handleClickCopyColors} aria-label="copy color scheme"></button>
           </div>
@@ -57,7 +75,7 @@ const ColorSchemeWrapper = styled.div`
     align-items: center;
     justify-content: center;
     display: flex;
-    height: 2.2rem;
+    height: 2.6rem;
     margin: 0;
     padding: 0 2rem;
     width: 100%;
@@ -66,8 +84,9 @@ const ColorSchemeWrapper = styled.div`
       animation-iteration-count: infinite;
     }
     > span,> button{
+      border: none;
       font-family: var(--altFF);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 700;
       line-height: normal;
       margin: 0;
@@ -86,7 +105,7 @@ const ColorSchemeWrapper = styled.div`
     }
     button.btn.generate{ transform: translateX(0);min-width:40%;}
     button.btn.copy{ transform: translateX(0); min-width:40%;}
-    button.btn.generate:before{content:'Generate color palette!';}
+    button.btn.generate:before{content:'Press the spacebar to generate color palettes!';}
     button.btn.copy:before{ content:'Copy color palette!';}
     span.alert{font-weight:400;min-width:20%;}
   }
@@ -98,7 +117,7 @@ const ColorSchemeWrapper = styled.div`
 
   @media screen and (max-width: 646px){
     & div.app-nav{
-      button.btn.generate:before{content:'generate colors!';}
+      button.btn.generate:before{content:'Generate';}
       button.btn.copy:before{content:'copy colors!';}
     }
   }

@@ -76,7 +76,7 @@ const spaColors = [
   {theme: 'spa', tiny: tinycolor('#e0dcd0')}, // taupish
 ]
 
-const top_half_of_app_height = 114;
+const top_half_of_app_height = 119;
 
 export {
   copyColorScheme,

@@ -37,7 +37,7 @@ const RandomColor = ({id, index, hex, onHold, textColor}) => {
       <p
         className="hex-value"
         onClick={handleHexClick}
-        onKeyPress={handleHexClick}
+        onKeyPress={(e)=>e.preventDefault()}
         role="button"
         tabIndex="0"
         title="copy hex">
@@ -54,8 +54,8 @@ const RandomColor = ({id, index, hex, onHold, textColor}) => {
       <p
         aria-label="toggle lock"
         className="lock-container"
-        onClick={()=>toggleSingleColor(id)}
-        onKeyPress={()=>toggleSingleColor(id)}
+        onClick={(e)=>toggleSingleColor(id)}
+        onKeyPress={(e)=>e.preventDefault()}
         role="button"
         tabIndex="0"
         title="toggle lock">
@@ -72,7 +72,6 @@ const RandomColor = ({id, index, hex, onHold, textColor}) => {
         onClick={handleHexClick}
         onKeyPress={handleHexClick}
         role="button"
-        tabIndex="0"
         title="copy hex">
         <FiCopy/>
       </p>
@@ -177,6 +176,7 @@ const RandomColorWrapper = styled.article`
     &{
       display:grid;
       min-height: 10vh;
+      height: 15vh;
       grid-template-columns: repeat(4, 1fr);
       align-items: baseline;
     }
@@ -197,7 +197,8 @@ const RandomColorWrapper = styled.article`
   }
   @media(max-width: 500px){
     &{
-      min-height:8vh;
+      min-height: 10vh;
+      height: 15vh;
     }    
   }
 `
