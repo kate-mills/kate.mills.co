@@ -5,6 +5,7 @@ import {
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
 import {getReadableColorFromHex, getRandomInt, getRandomHex} from '../helpers'
+import randomColor from 'randomcolor'
 
 const colors_reducer = (state, action) => {
 
@@ -14,7 +15,7 @@ const colors_reducer = (state, action) => {
       if (clr.onHold){
         return {...clr}
       } else{
-        let hex = getRandomHex()
+        let hex = randomColor({luminosity:clr.luminosity})
         return{...clr, hex, textColor: getReadableColorFromHex(hex)}
       }
     })
@@ -29,14 +30,8 @@ const colors_reducer = (state, action) => {
     return {...state, all_colors:tempColors}
   }
   if(action.type === INIT_RANDOM_COLORS){
-    const {theme:{spaColors}} = state
-    let i = getRandomInt(spaColors.length)
-    let clrs = spaColors[i].tiny.monochromatic().slice(0, 5)
-    const all_colors = clrs.map((clr, id) => {
-      const textColor = clr.isLight()?'black':'white'
-      return {hex:`#${clr.toHex()}`, id, onHold:false, textColor}
-    })
-    return {...state,all_colors, theme:{...state.theme}}
+    const {theme:{palette}} = state
+    return {...state,all_colors:palette, theme:{...state.theme}}
   }
   if(action.type === INIT_RANDOM_COLORS_ERROR){
     return {...state, all_colors:state.default_colors}
