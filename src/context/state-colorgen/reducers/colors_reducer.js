@@ -4,8 +4,10 @@ import {
   UPDATE_PENDING_COLORS,
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
-import {getReadableColorFromHex, getRandomInt, getRandomHex} from '../helpers'
+//import {getReadableColorFromHex, getRandomInt, getRandomHex} from '../helpers'
+import {getReadableColorFromHex} from '../helpers'
 import randomColor from 'randomcolor'
+
 
 const colors_reducer = (state, action) => {
 
@@ -15,7 +17,7 @@ const colors_reducer = (state, action) => {
       if (clr.onHold){
         return {...clr}
       } else{
-        let hex = randomColor({luminosity:clr.luminosity})
+        let hex = randomColor({luminosity:clr.luminosity}) // bright, light, dark
         return{...clr, hex, textColor: getReadableColorFromHex(hex)}
       }
     })

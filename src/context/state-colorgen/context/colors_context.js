@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useReducer } from 'react'
 import reducer from '../reducers/colors_reducer'
-import {default_colors, spaColors, getCoolPalette, getInitialPalette} from '../helpers'
+import {default_colors, spaColors, getInitialPalette} from '../helpers'
 //import iwanthue from 'iwanthue';
 
 import {

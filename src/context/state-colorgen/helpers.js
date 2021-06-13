@@ -2,12 +2,12 @@ import tinycolor from 'tinycolor2'
 import randomColor from 'randomcolor'
 
 
-var reds=randomColor({count:100,hue:'red',luminosity:'random'});
-var oranges=randomColor({count:100,hue:'orange',luminosity:'random'});
-var yellows=randomColor({count:100,hue:'yellow',luminosity:'random'});
-var greens=randomColor({count:100,hue:'green',luminosity:'random'});
-var blues=randomColor({count:100,hue:'blue',luminosity:'random'});
-var purples=randomColor({count:100,hue:'purple',luminosity:'random'});
+//var reds=randomColor({count:100,hue:'red',luminosity:'random'});
+//var oranges=randomColor({count:100,hue:'orange',luminosity:'random'});
+//var yellows=randomColor({count:100,hue:'yellow',luminosity:'random'});
+//var greens=randomColor({count:100,hue:'green',luminosity:'random'});
+//var blues=randomColor({count:100,hue:'blue',luminosity:'random'});
+//var purples=randomColor({count:100,hue:'purple',luminosity:'random'});
 
 const copyColorScheme = (lst)=>{
   let dt = getFmtDate()
@@ -81,8 +81,8 @@ const spaColors = [
 const top_half_of_app_height = 119;
 
 const getInitialPalette = (hue='blue') => {
-  var rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
-  var i = getRandomInt(5)
+  var rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
+  var i = getRandomInt(6)
   var light=randomColor({count:2,hue:rainbow[i],luminosity:'light'});
   var bright = randomColor({count:1, hue: rainbow[i], luminosity:'bright'})
   var dark = randomColor({count:2, hue:rainbow[i], luminosity:'dark'})
