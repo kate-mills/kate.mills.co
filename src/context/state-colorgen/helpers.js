@@ -1,5 +1,9 @@
 import tinycolor from 'tinycolor2'
 import randomColor from 'randomcolor'
+import colorScheme from 'color-scheme'
+window.colorScheme = colorScheme
+window.tinycolor = tinycolor
+window.randomColor=randomColor
 
 
 //var reds=randomColor({count:100,hue:'red',luminosity:'random'});
@@ -44,13 +48,12 @@ const getFmtDate = ()=>{
 }
 
 const getRandomHex=()=> {
-  console.log('#'+(~~(Math.random()*(1<<24))).toString(16))
   return '#'+('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6);
 }
 
 const getRandomInt = (max) => {
   // will never return max
-  return Math.floor(Math.random() * max) 
+  return Math.floor(Math.random() * max)
 }
 
 const getReadableColorFromHex = (hex) => {
@@ -82,7 +85,7 @@ const top_half_of_app_height = 119;
 
 const getInitialPalette = (hue='blue') => {
   var rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
-  var i = getRandomInt(6)
+  var i = Math.floor(Math.random() * 6)
   var light=randomColor({count:2,hue:rainbow[i],luminosity:'light'});
   var bright = randomColor({count:1, hue: rainbow[i], luminosity:'bright'})
   var dark = randomColor({count:2, hue:rainbow[i], luminosity:'dark'})

@@ -7,18 +7,20 @@ import {
 //import {getReadableColorFromHex, getRandomInt, getRandomHex} from '../helpers'
 import {getReadableColorFromHex} from '../helpers'
 import randomColor from 'randomcolor'
+import tinycolor from 'tinycolor2'
 
 
 const colors_reducer = (state, action) => {
 
   if(action.type === UPDATE_PENDING_COLORS){
     const {colors} = action.payload
-    const  all_colors = colors.map((clr, id)=>{ 
-      if (clr.onHold){
-        return {...clr}
+    const  all_colors = colors.map((color, id)=>{
+      if (color.onHold){
+        return {...color}
       } else{
-        let hex = randomColor({luminosity:clr.luminosity}) // bright, light, dark
-        return{...clr, hex, textColor: getReadableColorFromHex(hex)}
+        let hex = randomColor({luminosity:color.luminosity}) // bright, light, dark
+        let clr = tinycolor(hex)
+        return{...color, clr, hex, textColor: getReadableColorFromHex(hex)}
       }
     })
     return { ...state, all_colors}
