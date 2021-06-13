@@ -1,13 +1,6 @@
 import tinycolor from 'tinycolor2'
 import randomColor from 'randomcolor'
 
-//var reds=randomColor({count:100,hue:'red',luminosity:'random'});
-//var oranges=randomColor({count:100,hue:'orange',luminosity:'random'});
-//var yellows=randomColor({count:100,hue:'yellow',luminosity:'random'});
-//var greens=randomColor({count:100,hue:'green',luminosity:'random'});
-//var blues=randomColor({count:100,hue:'blue',luminosity:'random'});
-//var purples=randomColor({count:100,hue:'purple',luminosity:'random'});
-
 const copyColorScheme = (lst)=>{
   let dt = getFmtDate()
   let hexes = [`RGB hex codes. Color scheme created ${dt}.\n`]
@@ -42,14 +35,6 @@ const getFmtDate = ()=>{
   return `${mo}-${dy}-${yr}`
 }
 
-const getRandomHex=()=> {
-  return '#'+('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6);
-}
-
-const getRandomInt = (max) => {
-  // will never return max
-  return Math.floor(Math.random() * max)
-}
 
 const getReadableColorFromHex = (hex) => {
   let tiny = tinycolor(hex)
@@ -107,8 +92,6 @@ export {
   getInitialPalette,
   copyColorScheme,
   default_colors,
-  getRandomHex,
-  getRandomInt,
   getReadableColorFromHex,
   spaColors,
   top_half_of_app_height,

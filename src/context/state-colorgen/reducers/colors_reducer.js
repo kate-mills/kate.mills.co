@@ -4,7 +4,7 @@ import {
   UPDATE_PENDING_COLORS,
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
-//import {getReadableColorFromHex, getRandomInt, getRandomHex} from '../helpers'
+
 import {getReadableColorFromHex} from '../helpers'
 import randomColor from 'randomcolor'
 import tinycolor from 'tinycolor2'
