@@ -1,10 +1,5 @@
 import tinycolor from 'tinycolor2'
 import randomColor from 'randomcolor'
-import colorScheme from 'color-scheme'
-window.colorScheme = colorScheme
-window.tinycolor = tinycolor
-window.randomColor=randomColor
-
 
 //var reds=randomColor({count:100,hue:'red',luminosity:'random'});
 //var oranges=randomColor({count:100,hue:'orange',luminosity:'random'});

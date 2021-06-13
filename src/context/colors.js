@@ -25,7 +25,6 @@ const ColorProvider = ({children}) => {
 
 
   const mapThroughColors = (clrs) =>{
-    window.clrs = clrs
     return clrs.map((clr, idx)=>{
       const oldColor = colorList.find(item => item.id === idx)
       if(oldColor && oldColor.active){
