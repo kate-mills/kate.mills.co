@@ -5,7 +5,6 @@ import {
   TOGGLE_SINGLE_COLOR,
 } from '../actions'
 
-import {getReadableColorFromHex} from '../helpers'
 import randomColor from 'randomcolor'
 import tinycolor from 'tinycolor2'
 
@@ -18,9 +17,10 @@ const colors_reducer = (state, action) => {
       if (color.onHold){
         return {...color}
       } else{
-        let hex = randomColor({luminosity:color.luminosity}) // bright, light, dark
+        let hex = randomColor({luminosity:color.luminosity})
         let clr = tinycolor(hex)
-        return{...color, clr, hex, textColor: getReadableColorFromHex(hex)}
+        let textColor = clr.isLight()?'black':'white'
+        return{...color, clr, hex, textColor}
       }
     })
     return { ...state, all_colors}
