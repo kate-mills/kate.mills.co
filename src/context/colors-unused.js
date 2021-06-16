@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+/*import React, { useState, useContext } from 'react';
 import ColorScheme from 'color-scheme'
 import {startingColors} from '../constants/colors'
 
@@ -68,4 +68,4 @@ export { ColorContext, ColorProvider };
 
 
 
-//var xyz=colors.map((clr, idx) =>{return {hex: clr,id: idx}})
+//var xyz=colors.map((clr, idx) =>{return {hex: clr,id: idx}})*/
