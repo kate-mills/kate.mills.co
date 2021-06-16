@@ -3,7 +3,7 @@ import randomColor from 'randomcolor'
 
 const copyColorScheme = (lst)=>{
   let dt = getFmtDate()
-  let hexes = [`RGB hex codes. Color scheme created ${dt}.\n`]
+  let hexes = [`Color scheme created ${dt}.\n`]
   let tempColors = [...lst]
   tempColors.forEach(clr=>{
     if(clr.onHold){
