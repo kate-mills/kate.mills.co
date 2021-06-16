@@ -138,7 +138,7 @@ const RandomColorWrapper = styled.article`
   .hex-value{
     bottom:2%;
     font-size: 1.6rem;
-    font-family: var(--altFF);
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 700;
     letter-spacing: var(--altSpacing);

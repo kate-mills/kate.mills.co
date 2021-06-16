@@ -75,7 +75,7 @@ const ColorSchemeWrapper = styled.div`
     align-items: center;
     justify-content: center;
     display: flex;
-    height: 2.6rem;
+    height: 3rem;
     margin: 0;
     padding: 0 2rem;
     width: 100%;
@@ -85,12 +85,13 @@ const ColorSchemeWrapper = styled.div`
     }
     > span,> button{
       border: none;
-      font-family: var(--altFF);
+      font-family: var(--mainFF);
       font-size: 1.1rem;
-      font-weight: 700;
+      font-weight: 600;
       line-height: normal;
       margin: 0;
       min-width:33.3333%; 
+      outline-color: var(--themeMd);
       overflow-wrap: break-word;
       text-align: center;
       white-space: pre-line;
@@ -101,13 +102,13 @@ const ColorSchemeWrapper = styled.div`
       color: var(--primaryBlack);
       cursor: pointer;
       letter-spacing: var(--altSpacing);
-      outline-color: transparent; 
+      outline-color:var(--themeLt);
     }
     button.btn.generate{ transform: translateX(0);min-width:40%;}
     button.btn.copy{ transform: translateX(0); min-width:40%;}
     button.btn.generate:before{content:'Press the spacebar to generate color palettes!';}
     button.btn.copy:before{ content:'Copy color palette!';}
-    span.alert{font-weight:400;min-width:20%;}
+    span.alert{font-weight:600;min-width:20%;}
   }
   @media screen and (max-width:1200px){
     & div.app-nav{
@@ -117,13 +118,13 @@ const ColorSchemeWrapper = styled.div`
 
   @media screen and (max-width: 646px){
     & div.app-nav{
-      button.btn.generate:before{content:'Generate';}
-      button.btn.copy:before{content:'copy colors!';}
+      button.btn.generate:before{content:'Generate\ncolors!';}
+      button.btn.copy:before{content:'Copy colors!';}
     }
   }
   @media screen and (max-width: 500px){
     & div.app-nav{
-      > span,> button{font-size:.8rem;}
+      > span,> button{font-size:1rem;}
       button.btn.generate{transform:translateX(-10px);}
       button.btn.copy{transform:translateX(10px);}
       span.alert.general{color: transparent;}

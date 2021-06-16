@@ -42,7 +42,7 @@ const getReadableColorFromHex = (hex) => {
   return tiny.isLight()?'black':'white'
 }
 
-const top_half_of_app_height = 119;
+const top_half_of_app_height = 125;
 
 const getInitialPalette = (hue='blue') => {
   var rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
