@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useReducer } from 'react'
 import reducer from '../reducers/colors_reducer'
-import {default_colors, spaColors, getInitialPalette} from '../helpers'
+import {default_colors, getInitialPalette} from '../helpers'
 
 import {
   INIT_RANDOM_COLORS,
@@ -14,7 +14,6 @@ const initialState = {
   default_colors,
   theme: {
     palette: getInitialPalette(),
-    spaColors,
   }
 }
 
