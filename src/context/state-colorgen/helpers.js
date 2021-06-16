@@ -7,7 +7,7 @@ const copyColorScheme = (lst)=>{
   let tempColors = [...lst]
   tempColors.forEach(clr=>{
     if(clr.onHold){
-      hexes.push(`${clr.hex}  🔒`)
+      hexes.push(`${clr.hex}\t🔒`)
     }else{
       hexes.push(clr.hex)
     }
