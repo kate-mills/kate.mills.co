@@ -7,30 +7,31 @@ import Btn from '../components/Btn'
 import FullSeo from '../components/FullSeo'
 import Title from '../components/Title'
 import SearchProjects from '../components/Projects/SearchProjects'
-import {typeFormatter} from '../utils/helpers'
 
 import styled from 'styled-components'
 
 const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
   const {
     name,
-    why,
-    meta_desc,
+    bannerTitle,
+    bannerInfo,
+    whyTitle,
+    whyList,
+    metaDesc,
   } = service.nodes[0].data
-  const why_list = why.split('.').filter((item)=>item.length > 0)
-  const singularName = typeFormatter(name);
+  const why_list = whyList.split('. ').filter((item)=>item.length !== 0)
 
   return (
     <Layout>
-      <FullSeo title={name} description={meta_desc}/>
+      <FullSeo title={name} description={metaDesc}/>
       <HeroShort className="circles-squares">
-        <Banner title={`Latest Beauty ${singularName}s`} info={`We build websites for spas, salons, estheticians & small businesses in the beauty industry.`}>
+        <Banner title={`Latest Beauty ${bannerTitle}`} info={bannerInfo}>
           <Btn to="/portfolio/" text="View all projects" />
         </Banner>
       </HeroShort>
       <ServiceTemplateWrapper>
         <div className='benefit-container'>
-          <Title title={`${why_list.length} benefits of a`} subtitle={singularName}/>
+          <Title title={`${why_list.length} benefits of `} subtitle={whyTitle}/>
         <div className="benefit-list">
           <ul data-bullet-list>
             {
@@ -83,13 +84,14 @@ export const query = graphql`
       nodes {
         data {
           name
-          why
+          bannerTitle
+          bannerInfo
+          whyTitle
+          whyList
           description
-          category
-          starting_price
           featured
           slug
-          meta_desc
+          metaDesc
         }
       }
     }
