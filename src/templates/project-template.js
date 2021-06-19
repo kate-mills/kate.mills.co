@@ -111,6 +111,7 @@ export const query = graphql`
           desc
           type
           url
+          mainImgAlt
           images {
             localFiles {
               childImageSharp {
@@ -121,11 +122,6 @@ export const query = graphql`
               }
             }
           }
-          mainImgAlt
-          img_position
-          starting_price
-          featured
-          slug
         }
       }
     }

@@ -82,7 +82,6 @@ module.exports = {
           {
             baseId: process.env.GATSBY_AIRTABLE_ALLY_BASE_ID,
             tableName: `Services`,
-            mapping: {images: `fileNode`}
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_ALLY_BASE_ID,
@@ -97,6 +96,10 @@ module.exports = {
           {
             baseId: process.env.GATSBY_AIRTABLE_ALLY_BASE_ID,
             tableName: `Survey`,
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_ALLY_BASE_ID,
+            tableName: `WebSolutions`,
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_ALLY_BASE_ID,
