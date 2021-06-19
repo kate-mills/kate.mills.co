@@ -23,9 +23,10 @@ const sublinks = [
     cls:'no-mobile',
     links: [
       { label: 'Portfolio', url: '/portfolio', cls:'no-dt'},
-      { label: 'Blogs', url: '/blogs', cls: 'no-mobile' },
-      { label: 'E-commerce', url: '/e-commerce', cls:'no-mobile' },
       { label: 'Websites', url: '/websites', cls: 'no-mobile' },
+      { label: 'Social', url: '/social-media', cls: 'no-mobile' },
+      { label: 'E-commerce', url: '/e-commerce', cls:'no-mobile' },
+      { label: 'Blogs', url: '/blogs', cls: 'no-mobile' },
     ],
   },
   {
