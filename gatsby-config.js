@@ -66,10 +66,6 @@ module.exports = {
           { userAgent: '*', allow: '/' },
           {userAgent: '*', disallow: '/thankyou'},
           {userAgent: '*', disallow: '/404'},
-          {userAgent: '*', disallow: '/blogs'},
-          {userAgent: '*', disallow: '/websites'},
-          {userAgent: '*', disallow: '/e-commerce'},
-          {userAgent: '*', disallow: '/portfolio'},
         ],
       }
     },
