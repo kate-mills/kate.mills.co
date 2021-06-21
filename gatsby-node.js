@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      projects:allAirtable(filter: {table: {eq: "Projects"}}){
+      projects:allAirtable(filter: {table: {eq: "Projects"}}, sort: {order: ASC, fields: data___number}){
         nodes {
           data {
             slug

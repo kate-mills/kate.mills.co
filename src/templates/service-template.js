@@ -30,7 +30,8 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
         </Banner>
       </HeroShort>
       <ServiceTemplateWrapper>
-        <div className='benefit-container'>
+        <SearchProjects projects={projects.nodes}/>
+        <div className='benefit-container polka-dots'>
           <Title title={`${why_list.length} benefits of `} subtitle={whyTitle}/>
         <div className="benefit-list">
           <ul data-bullet-list>
@@ -42,7 +43,6 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
           </ul>
         </div>
         </div>
-        <SearchProjects projects={projects.nodes}/>
       </ServiceTemplateWrapper>
         <div className="footer-btn"><Btn to="/portfolio/" text="view all projects" colorful color/></div>
     </Layout>
@@ -59,20 +59,21 @@ const ServiceTemplateWrapper = styled.section`
     width: fit-content;
     max-width: fit-content;
     margin: 0;
-    margin: 0 auto 3rem;
+    margin: 4rem auto 0;
     padding: 1rem 1.5rem 0;
     white-space: pre-wrap;
-    background-image: inherit;
-    background-color: var(--primaryColor);
   }
   .benefit-list{
-    margin: 0 auto 3rem;
+    margin: 0 auto;
     max-width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0;
     padding-left: 10px;
+    background-color: var(--primaryWhite);
+    transform: translateY(-10px);
     li{
       letter-spacing: .1rem;
     }
@@ -95,7 +96,7 @@ export const query = graphql`
         }
       }
     }
-    projects: allAirtable(filter: {table: {eq: "Projects"}, data: {type: {eq: $slug}}}) {
+    projects: allAirtable(filter: {table: {eq: "Projects"}, data: {type: {eq: $slug}}}, sort: {order: ASC, fields: data___number}) {
       nodes {
         id
         data {
