@@ -33,7 +33,7 @@ export default styled(Title)`
     font-family: var(--altFF);
     font-weight: 400;
     font-style: italic;
-    color: var(--digitalColor);
+    color: var(--themeMd);
   }
   span {
     display: inline-block;
