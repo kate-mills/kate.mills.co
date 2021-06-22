@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const FourIcons  = () => {
   return (
     <FourIconsWrapper>
-      <h2 className="banner-h2">Give Your Small Business a Competitive Advantage with a Professionally Done Website.</h2>
       <div className="center">
         {FourIconList.map((item, index) => {
           return (
