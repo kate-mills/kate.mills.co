@@ -127,18 +127,6 @@ const ColoredGeneratorWrapper = styled.div`
     margin: 0 auto;
     text-align: center;
     padding: 0 0 1rem;
-    h2{
-      color: var(--primaryBlack2);
-      font-size: 2rem;
-      max-width: 90%;
-      margin: auto;
-      margin-bottom: 2rem;
-      text-align: center;
-      white-space: pre-line;
-      overflow-wrap: break-word;
-      word-spacing: var(--wordSpacing);
-      transform: translateY(-30px);
-    }
     form{
       display: flex;
       justify-content: center;
@@ -173,7 +161,7 @@ const ColoredGeneratorWrapper = styled.div`
         border-top-right-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
         font-size: 1rem;
-        color: var(--primaryBlack2);
+        color: var(--primaryBlack);
         cursor: pointer;
         outline-color: var(--primaryColor); 
         padding: 0.5rem 1rem;
