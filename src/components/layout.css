@@ -38,6 +38,11 @@
   margin: 0;
   padding: 0;
 }
+*,
+:before,
+:after{
+  outline-color: transparent;
+}
 body {
   background-color: var(--themeLt);
   color: var(--primaryBlack);
