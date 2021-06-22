@@ -28,7 +28,7 @@ export default styled(Banner)`
     width: 100%;
     text-align: center;
     letter-spacing: var(--mainSpacing);
-    color: var(--digitalColor);
+    color: ${props => props.color || 'var(--digitalColor)`'};
     position: relative;
     padding-top: 2rem;
     /*padding-bottom: 1.5rem;*/
