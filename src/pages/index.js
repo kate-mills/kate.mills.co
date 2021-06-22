@@ -21,6 +21,7 @@ const IndexPage = ({ data, className }) => {
       <div className={className}>
       <HeroTall>
         <Banner
+          color={`var(--themeLt)`}
           title={t1}
           info={t2}>
           <Btn to="/contact-us/" bgColor="light" text="Let's Chat"/>
