@@ -3,11 +3,11 @@
 :root {
   --primaryBlack: #121212;
   --primaryBlack2:#2a2a2a; /*hover black*/
-  --primaryColor: #EDF0F2; /* #E4D9D5 */
+  --primaryColor: #EDF0F2;
   --primaryWhite: #ffffff;
   --digitalColor: #909197;
-  --solutionsColor:#D0D1D5;
-  --themeLt: #fcfafa;
+  --solutionsColor: #D6D5D3;
+  --themeLt: #fcfafa; /* body bg */
   --themeMd: #e9d9d9;
 
   --mainTransition: all 0.2s linear;
@@ -41,7 +41,7 @@
 *,
 :before,
 :after{
-  outline-color: transparent;
+  outline-color: var(--themeMd);
 }
 body {
   background-color: var(--themeLt);

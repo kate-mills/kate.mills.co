@@ -128,7 +128,6 @@ const ImageSearchWrapper = styled.section`
   }
   .form-input {
     width: 100%;
-    outline-color: var(--solutionsColor);
     outline: none;
   }
   .form-input,
@@ -139,7 +138,7 @@ const ImageSearchWrapper = styled.section`
     color: var(--digitalColor);
     font-size: 1.5rem;
     letter-spacing: var(--altSpacing);
-    outline-color: var(--solutionsColor);
+    outline-color: var(--primaryColor);
     padding: 0.75rem 1.25rem;
     text-transform: capitalize;
   }
