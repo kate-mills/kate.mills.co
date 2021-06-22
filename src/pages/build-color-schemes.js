@@ -54,7 +54,7 @@ const ColorSchemes = () => {
           <div className="app-nav">
             <button
               tabIndex="0"
-              className={`btn generate`}
+              className={`${(clickCount <1)? 'pulse':''} btn generate`}
               onClick={handleGenerate}
               aria-label="generate color scheme"
               id="generator"/>
@@ -70,6 +70,7 @@ const ColorSchemes = () => {
 export default ColorSchemes
 
 const ColorSchemeWrapper = styled.div`
+  background: var(--primaryWhite);
   & div.app-nav{
     align-content: center;
     align-items: center;
