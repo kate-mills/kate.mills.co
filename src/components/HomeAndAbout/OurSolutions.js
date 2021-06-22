@@ -48,11 +48,6 @@ const OurSolutionsWrapper = styled.section`
         margin: 0 auto;
       }
     }
-    .design-p{
-      margin: 0 auto;
-      padding: 0 0 1rem;
-      font-size: 1.1rem;
-    }
     div.center{
       background: var(--primaryBlack);
       display: grid;
