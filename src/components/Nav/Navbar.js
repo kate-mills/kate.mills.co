@@ -128,8 +128,6 @@ const NavWrapper = styled.nav`
   }
   .show-nav {
     border-color: transparent;
-    border-top: 1px solid var(--primaryBlack0);
-    border-bottom: 1px solid var(--primaryBlack0);
     height: 420px;
   }
   .nav-links a,
@@ -196,7 +194,6 @@ const NavWrapper = styled.nav`
       color: var(--primaryColor);
     }
     .nav-links li.active{
-      background: var(--primaryBlack0);/*styles while hovering over submenu*/
       a {
         color: var(--primaryWhite);
       }
