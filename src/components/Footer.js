@@ -60,7 +60,7 @@ const FooterWrapper =styled.footer`
     transition: var(--mainTransition);
   }
   .links a:hover{
-    color: var(--digitalColor) !important;
+    color: var(--footerGold) !important;
   }
   .icons{
     padding: 1.5rem;
@@ -73,8 +73,8 @@ const FooterWrapper =styled.footer`
     transition: var(--mainTransition);
   }
   .icons a:hover {
-    transform: translateY(-1px);
-    color: var(--digitalColor) !important;
+    transform: translateY(-5px);
+    color: var(--footerGold) !important;
   }
   .phone{
     color: var(--primaryWhite);

@@ -5,7 +5,7 @@ export default [
   {
     icon: <FaFacebookF />,
     label: 'Go to Ally Digital Solutions Facebook Page',
-    url: 'https://facebook.com/allydigitalsolutions',
+    url: 'https://facebook.com/allydigitalprojects',
   },
   {
     icon: <FaInstagram />,
