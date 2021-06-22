@@ -122,7 +122,7 @@ const ColorGeneratorPage = ()=> {
 }
 
 const ColoredGeneratorWrapper = styled.div`
-  background: var(--themeLt);
+  background: var(--primaryWhite);
   & .container {
     margin: 0 auto;
     text-align: center;
@@ -144,7 +144,6 @@ const ColoredGeneratorWrapper = styled.div`
         border: none;
         border-bottom: 4px solid var(--digitalColor);
         letter-spacing: var(--midSpacing);
-        letter-spacing: var(--midSpacing);
         padding: 0.5rem 2rem 0.5rem 1rem;
         font-size: 1rem;
         ::placeholder{
@@ -156,8 +155,8 @@ const ColoredGeneratorWrapper = styled.div`
       .btn-dt{display:block;}
       .btn-mb{display:none;}
       .btn {
-        background: var(--solutionsColor);
-        border: 1px solid var(--digitalColor);
+        background: var(--primaryColor);
+        border: 1px solid var(--primaryBlack);
         border-top-right-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
         font-size: 1rem;
@@ -173,8 +172,8 @@ const ColoredGeneratorWrapper = styled.div`
         border-color: red;
       }
       .clear-btn{
-        background: var(--digitalColor);
-        color: var(--primaryWhite);
+        background: var(--primaryBlack);
+        color: var(--primaryColor);
         transform: translateX(12px) translateY(0);
       }
     }
