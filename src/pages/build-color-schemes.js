@@ -91,7 +91,7 @@ const ColorSchemeWrapper = styled.div`
       line-height: normal;
       margin: 0;
       min-width:33.3333%; 
-      outline-color: var(--themeMd);
+      outline: none;
       overflow-wrap: break-word;
       text-align: center;
       white-space: pre-line;
@@ -102,7 +102,7 @@ const ColorSchemeWrapper = styled.div`
       color: var(--primaryBlack);
       cursor: pointer;
       letter-spacing: var(--altSpacing);
-      outline-color:var(--themeLt);
+      outline: none;
     }
     button.btn.generate{ transform: translateX(0);min-width:40%;}
     button.btn.copy{ transform: translateX(0); min-width:40%;}
