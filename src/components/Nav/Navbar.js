@@ -194,6 +194,7 @@ const NavWrapper = styled.nav`
       color: var(--primaryColor);
     }
     .nav-links li.active{
+      background:var(--primaryBlack2); /* styles while hovering over submenu */
       a {
         color: var(--primaryWhite);
       }
