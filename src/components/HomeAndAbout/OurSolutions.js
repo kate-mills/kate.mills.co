@@ -25,7 +25,7 @@ const query = graphql`
 const OurSolutions = () => {
   const {solutions:{nodes:solutions}} = useStaticQuery(query)
   return (
-    <OurSolutionsWrapper className={`section-center`}>
+    <OurSolutionsWrapper className={`section-center polka-dots`}>
       <Title title="Digital" subtitle="Options" className="design design-title"/>
       <div className="center">
         {solutions.map(({id, data}) => {
@@ -49,17 +49,17 @@ const OurSolutionsWrapper = styled.section`
       }
     }
     div.center{
-      background: var(--primaryBlack);
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-column-gap: 1rem;
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
       margin: 0 auto;
-      padding:1rem;
+      padding:2rem;
     }
   }
   @media(min-width: 768px){
     & div.center{
-      width: 85%;
+      width: 100%;
     }
   }
 `
