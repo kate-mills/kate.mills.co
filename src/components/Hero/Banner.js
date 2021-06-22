@@ -25,10 +25,10 @@ const Banner = ({ title, info, children, className}) => {
 
 export default styled(Banner)`
   &{
+    color: ${props => props.color || 'var(--digitalColor)'};
     width: 100%;
     text-align: center;
     letter-spacing: var(--mainSpacing);
-    color: ${props => props.color || 'var(--digitalColor)`'};
     position: relative;
     padding-top: 2rem;
     /*padding-bottom: 1.5rem;*/
