@@ -21,7 +21,7 @@ const SingleSolution  = ({name, slug, description}) => {
 
 const SingleSolutionWrapper = styled.article`
   &{
-    background: var(--themeLt);
+    background: var(--primaryWhite);
     border-left: 5px solid var(--primaryMd);
     border-right: 5px solid var(--primaryMd);
     border-radius: var(--radius);
@@ -82,12 +82,13 @@ const SingleSolutionWrapper = styled.article`
     }
     p.description{
       color: var(--primaryBlack);
-      font-size: 1.1rem;
+      font-size: 1rem;
       min-height: fit-content;
       margin: 0 auto;
       padding-bottom: 1rem;
+      padding-left: 1rem;
       padding-top: 1rem;
-      text-align: center;
+      text-align: left;
       white-space: pre-wrap;
       width: 80%;
     }
@@ -96,7 +97,6 @@ const SingleSolutionWrapper = styled.article`
     &:nth-child(2),
     &:nth-child(1){
       margin-bottom: 1rem;
-      /*border-bottom: 5px solid var(--themeLt);*/
     }
   }
   @media(max-width: 668px){
