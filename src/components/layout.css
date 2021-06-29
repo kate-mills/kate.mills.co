@@ -7,7 +7,6 @@
   --primaryWhite: #ffffff;
   --digitalColor: #909197;
   --solutionsColor: #D6D5D3;
-  --themeLt: #fcfafa; /* body bg */
   --themeMd: #C1AEA8; /*#e9d9d9;*/
   --footerGold: #BAA674;
 
@@ -45,7 +44,7 @@
   outline-color: var(--themeMd);
 }
 body {
-  background-color: var(--themeLt);
+  background-color: var(--primaryWhite);
   color: var(--primaryBlack);
   font-family: var(--mainFF);
   font-size: 1rem;
