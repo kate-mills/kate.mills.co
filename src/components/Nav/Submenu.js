@@ -53,13 +53,13 @@ const SubmenuWrapper = styled.aside`
     width: 150px;
     z-index: 3;
     .submenu-center {
-      background-color: var(--solutionsColor);
+      background-color:var(--navHoverGrey);
       :hover{
         .sub-link:hover{
           cursor: pointer !important;
           color: var(--primaryBlack) !important;
           text-decoration: none;
-          background-color: var(--primaryColor);
+          background-color:var(--navHoverBlue);
         }
       }
       .sub-link {
@@ -68,7 +68,7 @@ const SubmenuWrapper = styled.aside`
         align-items: center;
         justify-content: center;
         text-align: left;
-        color: var(--primaryBlack);
+        color: var(--primaryWhite);
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: var(--altSpacing);

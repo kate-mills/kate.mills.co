@@ -59,11 +59,11 @@ export default styled(Btn)`
     animation-duration: 800ms;
   }
   &.btn--light {
-    background-color: var(--themeMd);
+    background-color: var(--primaryColor);
     color: var(--primaryBlack);
   }
   &.btn--dark {
-    background-color: var(--themeMd);
+    background-color: var(--primaryColor);
     color: var(--primaryBlack);
   }
   &.btn--light::after,

@@ -1,14 +1,16 @@
 @import url("https://use.typekit.net/igr8zjs.css") rel="preload" as="styles";
 
 :root {
-  --primaryBlack: #121212;
-  --primaryBlack2:#2a2a2a; /*hover black*/
-  --primaryColor: #EDF0F2;
-  --primaryWhite: #ffffff;
-  --digitalColor: #909197;
-  --solutionsColor: #D6D5D3;
-  --themeMd: #C1AEA8; /*#e9d9d9;*/
-  --footerGold: #BAA674;
+  /* START Up Shore Theme*/
+  --primaryWhite:#F9FAFD;
+  --digitalColor:#8C756A;/*brown */
+  --primaryColor:#1AC8DB;/*blue-mid */
+  --solutionsColor:#0292B7;/*blue-dark*/
+  --navHoverBlue: #99DFEC;/*blue-lite*/
+  --navHoverGrey: #78787C;/*slate-grey*/
+  --primaryBlack:#090908;
+  --primaryBlack2:#131313; /*hover black*/
+  /* END Up Shore*/
 
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
@@ -41,7 +43,7 @@
 *,
 :before,
 :after{
-  outline-color: var(--themeMd);
+  outline-color: inherit;
 }
 body {
   background-color: var(--primaryWhite);
@@ -59,6 +61,7 @@ p, div{
   font-weight: 300;
 }
 nav a {
+  outline: none;
   color: var(--primaryWhite);
   font-family: var(--mainFF);
   font-style: normal;
@@ -125,13 +128,15 @@ nav .phone{
   color: var(--primaryWhite) !important;
 }
 .short-page{  /* 404-page, thankyou-page */
-  background: var(--primaryColor);
   color: var(--digitalColor);
   min-height: calc(100vh - 252px);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--primaryBlack);
+  background: var(--primaryBlack2);
+}
+.short-page  div > a{
+  background-color: var(--primaryWhite) !important;
 }
 .footer-btn{
   text-align: center;

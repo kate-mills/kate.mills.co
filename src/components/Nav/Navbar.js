@@ -142,7 +142,6 @@ const NavWrapper = styled.nav`
   }
   .nav-links a:hover{
     background: var(--primaryBlack2);
-    color: var(--primaryColor);
   }
   .nav-links a.allow-pointer{
     opacity: 1;

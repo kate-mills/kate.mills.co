@@ -139,8 +139,7 @@ const ColoredGeneratorWrapper = styled.div`
         background: transparent;
         min-width: 300px;
         outline: none;
-        outline-bottom: 2px solid var(--primaryColor);
-        outline-color: transparent; 
+        outline-color: transparent;
         border: none;
         border-bottom: 4px solid var(--digitalColor);
         letter-spacing: var(--midSpacing);
@@ -155,14 +154,14 @@ const ColoredGeneratorWrapper = styled.div`
       .btn-dt{display:block;}
       .btn-mb{display:none;}
       .btn {
-        background: var(--primaryColor);
+        background: var(--primaryWhite);
         border: 1px solid var(--primaryBlack);
         border-top-right-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
         font-size: 1rem;
         color: var(--primaryBlack);
         cursor: pointer;
-        outline-color: var(--primaryColor); 
+        outline-color: var(--primaryWhite);
         padding: 0.5rem 1rem;
         text-transform: capitalize;
         transform: translateX(10px) translateY(0);
@@ -173,7 +172,7 @@ const ColoredGeneratorWrapper = styled.div`
       }
       .clear-btn{
         background: var(--primaryBlack);
-        color: var(--primaryColor);
+        color: var(--primaryWhite);
         transform: translateX(12px) translateY(0);
       }
     }
