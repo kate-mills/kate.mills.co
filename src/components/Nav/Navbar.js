@@ -102,7 +102,7 @@ const NavWrapper = styled.nav`
     padding: .3rem 0;
   }
   .toggle-btn {
-    color: var(--solutionsColor);
+    color: var(--navHoverBlue);
     background: inherit !important;
     border: unset;
     margin-left: 10px;
