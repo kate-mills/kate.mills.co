@@ -33,7 +33,7 @@ const ScrollButtonWrapper = styled.div`
       right: 1.5rem;
       bottom: 1.5rem;
       background:transparent; 
-      color: var(--navHoverBlue);
+      color: var(--navHoverPrimary);
       z-index: -100;
       opacity: 0;
       transition: var(--mainTransition);

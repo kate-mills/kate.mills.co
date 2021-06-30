@@ -60,7 +60,7 @@ const FooterWrapper =styled.footer`
     transition: var(--mainTransition);
   }
   .links a:hover{
-    color: var(--navHoverBlue) !important;
+    color: var(--navHoverPrimary) !important;
   }
   .icons{
     padding: 1.5rem;

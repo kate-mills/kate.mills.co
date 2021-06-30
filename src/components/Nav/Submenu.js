@@ -59,7 +59,7 @@ const SubmenuWrapper = styled.aside`
           cursor: pointer !important;
           color: var(--primaryBlack) !important;
           text-decoration: none;
-          background-color:var(--navHoverBlue);
+          background-color:var(--navHoverPrimary);
         }
       }
       .sub-link {
