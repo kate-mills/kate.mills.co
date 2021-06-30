@@ -1,15 +1,16 @@
 @import url("https://use.typekit.net/igr8zjs.css") rel="preload" as="styles";
 
 :root {
+  --trueBlack: #000000;
   /* START Up Shore Theme*/
   --primaryWhite:#F9FAFD;
-  --digitalColor:#8C756A;/*brown */
+  --digitalColor:#5D4F4B;/*brown*/
   --primaryColor:#1AC8DB;/*blue-mid */
   --solutionsColor:#0292B7;/*blue-dark*/
   --navHoverPrimary: #99DFEC;/*blue-lite*/
   --navHoverGrey: #78787C;/*slate-grey*/
-  --primaryBlack:#090908;
-  --primaryBlack2:#131313; /*hover black*/
+  --primaryBlack:#333330;
+  --primaryBlack2:#1c1715; /*hover black #131313 */
   /* END Up Shore*/
 
   --mainTransition: all 0.2s linear;
@@ -59,7 +60,7 @@
 }
 body {
   background-color: var(--primaryWhite);
-  color: var(--primaryBlack);
+  color: var(--trueBlack);
   font-family: var(--mainFF);
   font-size: 1rem;
   font-style: normal;
@@ -162,7 +163,7 @@ ul  {
   list-style: none;
 }
 ul[data-bullet-list] {
-  color: var(--primaryBlack);
+  color: var(--trueBlack);
   display: block;
   font-style: normal;
   font-size: 15px;
@@ -184,7 +185,7 @@ ul[data-bullet-list] > li:first-child  p{
 }
 ul[data-bullet-list] li>*:first-child::before{
   box-sizing: border-box;
-  color: var(--primaryBlack);
+  color: var(--trueBlack);
   content: "\2022";
   display: inline-block;
   margin-left: -40px;
