@@ -90,7 +90,7 @@ const ImageSearchPage = ({data:seoData})=>{
       />
       <Banner title="Get Images" className="polka-dots">
       <ImageSearchWrapper>
-        <h2 className="h2-sm">Download high quality images for your next website or social media post.</h2>
+        <h2 className="h2-sm">Download free high quality images for your next website or social media post.</h2>
         <form className="search-form">
           <input
             tabIndex={0}
@@ -143,7 +143,8 @@ const ImageSearchWrapper = styled.section`
     text-transform: capitalize;
   }
   .form-input::placeholder {
-    color: var(--solutionsColor);
+    color: var(--digitalColor);
+    opacity: 0.5;
   }
   .submit-btn {
     border-bottom: none;

@@ -36,10 +36,11 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
         <div className="benefit-list">
           <ul data-bullet-list>
             {
-              why_list.map((s, index) =>{
-                return(<li key={index}><p>{s}.</p></li>)
+              why_list.slice(0, -1).map((s, index) =>{
+                return(<li key={index}><p>{s}</p></li>)
               })
             }
+            <li><p>{why_list.pop().slice(0, -1)}</p></li>
           </ul>
         </div>
         </div>
