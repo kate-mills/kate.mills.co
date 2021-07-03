@@ -77,6 +77,10 @@ module.exports = {
         tables: [
           {
             baseId: process.env.GATSBY_AIRTABLE_ALLY_BASE_ID,
+            tableName: `Packages`,
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_ALLY_BASE_ID,
             tableName: `Services`,
           },
           {
