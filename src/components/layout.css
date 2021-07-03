@@ -190,7 +190,7 @@ ul[data-bullet-list] li>*:first-child::before{
   display: inline-block;
   margin-left: -40px;
   min-width: 40px;
-  padding-right: 10px;
+  padding-right: 5px;
   text-align: right;
   white-space: pre;
 }
