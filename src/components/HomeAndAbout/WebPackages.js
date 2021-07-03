@@ -2,15 +2,15 @@ import React from 'react'
 import Title from '../Title'
 import styled from 'styled-components'
 
-const WebPackages = ({cls, packages, name, serviceNotes}) => {
+const WebPackages = ({cls, packages, name}) => {
   return (
     <WebPackagesWrapper className={`${cls}`} id="packages">
         <Title title={name} subtitle="Packages" />
-        <div className="service-notes polka-dots">{serviceNotes}</div>
         <div className="div-wrapper">
           {packages.map((item, index) => {
             const {data} = item
             const detail_list = data.details.split('.').filter((item)=>item.length!==0)
+            const note_list = data.note ? data.note.split('. ').filter((item)=>item.length!==0): null
             return (
               <article key={index} className="package-article">
                 <div className="name">{data.name}</div>
@@ -21,9 +21,13 @@ const WebPackages = ({cls, packages, name, serviceNotes}) => {
                 <div className="flex-details">
                   <ul data-bullet-list className="details">
                     {detail_list.map((item, idx)=><li key={idx}><p>{item}</p></li>)}
-                    {data.note &&(<p className="note">{data.note}</p>)}
                   </ul>
                 </div>
+                {note_list &&(<div className="note-list">{
+                  note_list.map((item, idx)=>{
+                    return <p className="note" key={idx}>{item}</p>
+                  })
+                }</div>)}
               </article>
             )
           })}
@@ -41,13 +45,13 @@ const WebPackagesWrapper = styled.section`
     .div-wrapper{
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
-      grid-column-gap: 2rem;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 400px));
+      grid-column-gap: 1rem;
       .package-article{
         background: var(--primaryWhite);
         border: 1px solid var(--navHoverGrey);
         margin: 1rem 0;
-        padding: 0;
         text-align: center;
         border-radius: var(--radius);
         .name,.price-info,.price{
@@ -69,7 +73,7 @@ const WebPackagesWrapper = styled.section`
         }
         .price-info{
           color:var(--digitalColor);
-          font-size: 1rem;
+          font-size: .95rem;
           letter-spacing: var(--altSpacing);
           font-family: var(--mainFF);
         }
@@ -95,27 +99,46 @@ const WebPackagesWrapper = styled.section`
           justify-content: space-around;
           align-items: center;
           margin: 0 auto;
+          padding: 0 3rem;
+
           ul.details{
             font-family: var(--mainFF);
-            font-size: .9rem;
-            letter-spacing: var(--altSpacing);
+            font-size: 1rem;
             margin: 0 auto;
-            padding-left: 1rem;/*dont remove*/
-            width: fit-content;
             li{
+              *:first-child::before{}
               text-align: left;
               text-indent:-5px;
               padding-left:5px;
-              margin: 0 auto;
-              :first-line{text-indent:0;}
-            }
-            .note{
-              font-style: italic;
-              font-weight: 100;
-              text-align: left;
+              letter-spacing:var(--altSpacing);
+              margin: 1rem auto;
+              width: 100%;
+              line-height: 1.7rem;
+              p{
+                :first-line{
+                  text-indent:0;
+                }
+              }
             }
           }
         }
+        /* This is how to do it */
+          .note-list{
+            max-width: fit-content;
+            margin: -1rem auto 0;
+            text-align: left;
+            padding-bottom: 1rem;
+            .note{
+              margin-bottom: .4rem;
+              font-size: .8rem;
+            }
+            .note:before{
+              content: "*";
+              padding-right: .2rem;
+              margin-left: -.2rem;
+            }
+          }
+        /* This is how to do it */
       }
     }
     .service-notes{
@@ -132,8 +155,27 @@ const WebPackagesWrapper = styled.section`
   }
   @media(min-width: 768px){
     &{
-      .service-notes{
-        width: 70%;
+      .div-wrapper{
+        .package-article{
+          .flex-details{
+            padding: 0 2rem;
+          }
+          /* This is how to do it */
+          .note-list{
+            margin: -1rem auto 0;
+            text-align: left;
+            padding-bottom: 1rem;
+            .note{
+              margin-bottom: .4rem;
+              font-size: .8rem;
+            }
+            .note:before{
+              padding-right: 1rem;
+              margin-left: -1rem;
+            }
+          }
+          /* This is how to do it */
+        }
       }
     }
   }

@@ -19,7 +19,6 @@ const ServiceTemplate = ({ data:{service, projects, packages, defaultBg} }) => {
     whyTitle,
     whyList,
     metaDesc,
-    serviceNotes,
   } = service.nodes[0].data
 
   const why_list = whyList.split('. ').filter((item)=>item.length !== 0)
@@ -34,7 +33,7 @@ const ServiceTemplate = ({ data:{service, projects, packages, defaultBg} }) => {
       </HeroShort>
       <ServiceTemplateWrapper>
         <SearchProjects projects={projects.nodes}/>
-        <WebPackages cls={`section-center web-packages polka-dots`} serviceNotes={serviceNotes} name={packages.nodes[0].data.service} packages={packages.nodes}/>
+        <WebPackages cls={`section-center web-packages polka-dots`} name={packages.nodes[0].data.service} packages={packages.nodes}/>
 
         <div className='benefit-container polka-dots'>
           <Title title={`${why_list.length} benefits of `} subtitle={whyTitle}/>
@@ -99,7 +98,6 @@ export const query = graphql`
           featured
           slug
           metaDesc
-          serviceNotes
         }
       }
     }
