@@ -11,7 +11,7 @@ const SingleSolution  = ({name, slug, description}) => {
     <SingleSolutionWrapper className="solution" >
       <span className="solution-name">{name}</span>
       <span className="packages">Packages</span>
-      <Link to={`/${slug}`}>Learn More</Link>
+      <Link to={`/${slug}#packages`}>Learn More</Link>
       <div className="underline"></div>
       <p className="description">{description}</p>
     </SingleSolutionWrapper>

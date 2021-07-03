@@ -7,10 +7,11 @@ import Btn from '../components/Btn'
 import FullSeo from '../components/FullSeo'
 import Title from '../components/Title'
 import SearchProjects from '../components/Projects/SearchProjects'
+import WebPackages from '../components/HomeAndAbout/WebPackages'
 
 import styled from 'styled-components'
 
-const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
+const ServiceTemplate = ({ data:{service, projects, packages, defaultBg} }) => {
   const {
     name,
     bannerTitle,
@@ -18,7 +19,9 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
     whyTitle,
     whyList,
     metaDesc,
+    serviceNotes,
   } = service.nodes[0].data
+
   const why_list = whyList.split('. ').filter((item)=>item.length !== 0)
 
   return (
@@ -31,6 +34,8 @@ const ServiceTemplate = ({ data:{service, projects, defaultBg} }) => {
       </HeroShort>
       <ServiceTemplateWrapper>
         <SearchProjects projects={projects.nodes}/>
+        <WebPackages cls={`section-center web-packages polka-dots`} serviceNotes={serviceNotes} name={packages.nodes[0].data.service} packages={packages.nodes}/>
+
         <div className='benefit-container polka-dots'>
           <Title title={`${why_list.length} benefits of `} subtitle={whyTitle}/>
         <div className="benefit-list">
@@ -82,7 +87,7 @@ const ServiceTemplateWrapper = styled.section`
 `
 export const query = graphql`
   query ($slug: String) {
-    service:allAirtable(filter: {data: {slug: {eq: $slug}}}) {
+    service: allAirtable(filter: {table: {eq: "Services"}, data: {slug: {eq: $slug}}}){
       nodes {
         data {
           name
@@ -94,6 +99,7 @@ export const query = graphql`
           featured
           slug
           metaDesc
+          serviceNotes
         }
       }
     }
@@ -117,7 +123,20 @@ export const query = graphql`
        }
      }
    }
+    packages: allAirtable(filter: {table: {eq: "Packages"}, data: {slugs: {eq: $slug}}}, sort: {order: ASC, fields: data___number}) {
+     nodes {
+       data {
+         name
+         service
+         price
+         priceInfo
+         slugs
+         details
+         detailsInfo
+         note
+       }
+     }
+  }
   } 
 `
-
 export default ServiceTemplate

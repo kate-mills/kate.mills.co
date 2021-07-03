@@ -1,124 +1,140 @@
 import React from 'react'
 import Title from '../Title'
-import WebPackageList from '../../constants/web-package-list'
-import {Link} from 'gatsby'
-import FadeIn from '../Animations/CustomFadeIn'
-
 import styled from 'styled-components'
 
-const WebPackages = () => {
+const WebPackages = ({cls, packages, name, serviceNotes}) => {
   return (
-    <WebPackagesWrapper className={`circles-squares section-center`}
-    >
-      <Title title="Basic" subtitle="Packages" />
-      <p className="we-offer-p">We offer various website design solutions for you to choose from, including Websites, Blogs, and E-Commerce Stores for estheticians, spas, salons, and beauty professionals at a rate that fits your budget and is delivered promptly. With our knowledge & experience with the beauty industry, our web design process is straightforward for you.</p>
-      <FadeIn time="3s" className="center">
-
-        {WebPackageList.map((item, index) => {
-          return (
-            <article key={index} className="service"
-            >
-              <span
-              data-sal="fade-in"
-              data-sal-duration="800"
-              >
-                <Link to={item.path}>{item.title}</Link>
-              </span>
-              <span className="price">{item.price}</span>
-              <div className="underline"/>
-              <ul data-bullet-list
-              data-sal="fade-in"
-              data-sal-duration="800"
-              >
-                  {item.pkgDetails.map((item, idx)=>{
-                    return(
-                      <li key={idx}><p>{item}</p></li>
-                    )
-                  })}
-                </ul>
-              {item.finePrint.map((txt, index)=>{
-                return<p className="fine-print" key={index}>{txt}</p>
-              })}
-            </article>
-          )
-        })}
-      </FadeIn>
+    <WebPackagesWrapper className={`${cls}`} id="packages">
+        <Title title={name} subtitle="Packages" />
+        <div className="service-notes polka-dots">{serviceNotes}</div>
+        <div className="div-wrapper">
+          {packages.map((item, index) => {
+            const {data} = item
+            const detail_list = data.details.split('.').filter((item)=>item.length!==0)
+            return (
+              <article key={index} className="package-article">
+                <div className="name">{data.name}</div>
+                <span className="price">{data.price}</span>
+                <div className="price-info">{data.priceInfo?<>{data.priceInfo}</>:<></>}</div>
+                <div className="underline"/>
+                {data.detailsInfo &&(<div className="details-info">{data.detailsInfo}</div>)}
+                <div className="flex-details">
+                  <ul data-bullet-list className="details">
+                    {detail_list.map((item, idx)=><li key={idx}><p>{item}</p></li>)}
+                    {data.note &&(<p className="note">{data.note}</p>)}
+                  </ul>
+                </div>
+              </article>
+            )
+          })}
+        </div>
     </WebPackagesWrapper>
   )
 }
-
 const WebPackagesWrapper = styled.section`
   &{
-    color: var(--primaryBlack);
-    padding: 4rem 0;
     border-radius: var(--radius);
-    .heading,
-    .we-offer-p{
+    color: var(--trueBlack);
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    .div-wrapper{
       margin: 0 auto;
-      background-color: var(--primaryWhite);
-    }
-  }
-  & div{
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 2rem;
-    .service {
-      margin: 2rem 0;
-      padding: 1.5rem 0;
-      text-align: center;
-      background: var(--primaryWhite);
-      border-radius: var(--radius);
-      span{
-        align-items: center;
-        border-radius: 10px;
-        color: var(--primaryBlack);
-        display: flex;
-        font-size: 1.2rem;
-        justify-content: center;
-        margin: 1rem auto;
-        a{
-          font-family: var(--altFF);
-          font-weight: 400;
-          font-style: italic;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+      grid-column-gap: 2rem;
+      .package-article{
+        background: var(--primaryWhite);
+        border: 1px solid var(--navHoverGrey);
+        margin: 1rem 0;
+        padding: 0;
+        text-align: center;
+        border-radius: var(--radius);
+        .name,.price-info,.price{
+          min-height: 2rem;
+          align-items: center;
+          border-radius: 10px;
+          color: var(--digitalColor);
+          display: flex;
+          font-size: 1.6rem;
+          font-family: sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          justify-content: center;
+          margin: .5rem auto;
+        }
+        .name{
+          color:var(--digitalColor);
           font-size: 1.5rem;
-          text-transform: capitalize;
+        }
+        .price-info{
+          color:var(--digitalColor);
+          font-size: 1rem;
           letter-spacing: var(--altSpacing);
+          font-family: var(--mainFF);
+        }
+        .underline{
+          height: 3px;
+          background-color: var(--solutionsColor);
+          width: 50%;
+          margin: 0 auto;
+        }
+        .details-info{
+          width: fit-content;
+          margin: 1rem auto 0;
+          text-transform: capitalize;
+          font-size: 1rem;
+          font-family: sans-serif;
+          font-style: normal;
+          font-weight: 700;
+        }
+        .flex-details{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center;
+          margin: 0 auto;
+          ul.details{
+            font-family: var(--mainFF);
+            font-size: .9rem;
+            letter-spacing: var(--altSpacing);
+            margin: 0 auto;
+            padding-left: 1rem;/*dont remove*/
+            width: fit-content;
+            li{
+              text-align: left;
+              text-indent:-5px;
+              padding-left:5px;
+              margin: 0 auto;
+              :first-line{text-indent:0;}
+            }
+            .note{
+              font-style: italic;
+              font-weight: 100;
+              text-align: left;
+            }
+          }
         }
       }
-      .underline{
-        height: 3px;
-        background-color: var(--solutionsColor);
-        width: 50%;
-        margin: 0 auto;
-      }
-      div{
-        font-family: var(--mainFF);
-        font-size: 1.1rem;
-        letter-spacing: 0.01rem;
-        margin-bottom: 1.25rem;
-        text-transform: uppercase;
-      }
-      ul{
-        text-align: center;
-        margin: 1rem 3rem 1.5rem;
-        font-family: var(--mainFF);
-        letter-spacing: var(--altSpacing);
-      }
-      a:hover{
-        color: var(--digitalColor);
-        text-decoration: none;
-      }
     }
-    p.fine-print{
-      font-size: .8rem;
-      margin: .5rem auto;
-            width: 100%;
+    .service-notes{
+      background: var(--primaryWhite);
+      width: 100%;
+      max-width: fit-content;
+      margin: 0 auto;
+      text-align: left;
+      font-size: .9rem;
+      text-indent: -15px;
+      padding-left: 15px;
+      :first-line{text-indent:0;}
     }
   }
   @media(min-width: 768px){
-    & div{
-      width: 80%;
+    &{
+      .service-notes{
+        width: 70%;
+      }
     }
   }
 `
