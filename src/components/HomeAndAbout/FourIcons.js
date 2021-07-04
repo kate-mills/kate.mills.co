@@ -1,6 +1,7 @@
 import React from 'react'
 import FourIconList from '../../constants/four-icon-list'
 import styled from 'styled-components'
+import {Link} from 'gatsby'
 
 const FourIcons  = () => {
   return (
@@ -13,7 +14,7 @@ const FourIcons  = () => {
               data-sal-easing="ease"
               data-sal-duration="500">
               <span>{item.icon}</span>
-              <div>{item.title}</div>
+              <div><Link to={item.slug}>{item.title}</Link></div>
               <p>{item.text}</p>
             </article>
           )
