@@ -7,7 +7,7 @@ const WebPackages = ({cls, packages, name}) => {
   return (
     <WebPackagesWrapper className={`${cls}`} id="packages">
         <Title title={name} subtitle="Packages" />
-        <div className="div-wrapper">
+      <div className="div-wrapper" >
           {packages.map((item, index) => {
             const {data} = item
             return <SingleWebPackage key={index} data={data}/>

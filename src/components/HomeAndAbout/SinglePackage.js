@@ -12,7 +12,8 @@ const SingleWebPackage = ({data}) => {
   return (
     <SingleWebPackageWrapper
       data-sal="zoom-in"
-      data-sal-delay="2000"
+      data-sal-delay="300"
+      data-sal-easing="ease"
     >
       <div className="name">{data.name}</div>
       <span className="price">{data.price}</span>

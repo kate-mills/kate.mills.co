@@ -24,6 +24,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve:`gatsby-plugin-scroll-reveal`, 
+      options: {
+        threshold: .5,
+      }
+    },
+
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-189043609-2`,
@@ -130,7 +137,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-scroll-reveal`,
   ],
 }
 
