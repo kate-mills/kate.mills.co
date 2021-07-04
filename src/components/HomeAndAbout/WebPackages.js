@@ -25,7 +25,7 @@ const WebPackagesWrapper = styled.section`
       display: grid;
       grid-column-gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(360px, 400px));
-      justify-content: space-around;
+      justify-content: center;
       margin: 0 auto;
       width: 100%;
     }

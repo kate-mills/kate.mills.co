@@ -5,10 +5,13 @@ import Banner from '../components/Hero/Banner'
 import SearchProjects from '../components/Projects/SearchProjects'
 import Btn from '../components/Btn'
 import FullSeo from '../components/FullSeo'
+import WebPackages from '../components/HomeAndAbout/WebPackages'
+
 
 const portfolio = ({ data }) => {
   const {
-    allAirtable: { nodes: projects },
+    projectTable: { nodes: projects },
+    packageTable: { nodes: allypackages },
   } = data
   return (
     <Layout>
@@ -19,6 +22,8 @@ const portfolio = ({ data }) => {
       <section className="section section-center" style={{marginTop: 0, paddingTop: '1rem'}}>
       <SearchProjects projects = {projects} showSearchBtns />
     </section>
+      <WebPackages packages={allypackages} cls={""} name={'Digital'}/>
+
       <div className="footer-btn">
         <Btn to="/contact-us/" text="contact us" bgColor="dark"/>
       </div>
@@ -29,7 +34,7 @@ export default portfolio
 
 export const query = graphql`
   query {
-    allAirtable(
+    projectTable:allAirtable(
       filter: { table: { eq: "Projects" } }
       sort: { order: ASC, fields: data___number }
     ) {
@@ -54,5 +59,20 @@ export const query = graphql`
         }
       }
     }
+  packageTable: allAirtable(filter: {table: {eq: "Packages"}}, sort: {fields: data___number, order: ASC}) {
+    nodes {
+      id
+      data {
+        name
+        service
+        price
+        priceInfo
+        slugs
+        details
+        detailsInfo
+        note
+      }
+    }
+  }
   }
 `

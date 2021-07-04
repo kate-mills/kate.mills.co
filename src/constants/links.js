@@ -14,6 +14,7 @@ const sublinks = [
     links: [
       { label: 'About Us', url: '/about-us', cls:'show-mobile no-dt'},
       { label: 'Contact Us', url: '/contact-us', cls:'show-mobile'},
+      { label: 'Our Packages', url: '/portfolio#packages', cls:'show-mobile'},
     ],
   },
   {
