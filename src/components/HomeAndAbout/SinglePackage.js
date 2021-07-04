@@ -1,8 +1,7 @@
 import React from 'react'
 import PhoneNumber from '../PhoneNumber'
 
-import styled, {keyframes} from 'styled-components'
-import { zoomIn } from 'react-animations'
+import styled from 'styled-components'
 
 
 
@@ -32,13 +31,9 @@ const SingleWebPackage = ({data}) => {
     </SingleWebPackageWrapper>
   )
 }
-const zoomInAnimation = keyframes`${zoomIn}`;
-
 
 const SingleWebPackageWrapper = styled.article`
   &{
-    animation: 1s ${zoomInAnimation};
-    animation-duration:2s;
     background: var(--primaryWhite);
     border: 1px solid var(--navHoverGrey);
     margin: 1rem 0;
