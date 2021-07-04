@@ -179,6 +179,36 @@ const WebPackagesWrapper = styled.section`
       }
     }
   }
+  @media(max-width: 400px){
+    &{
+      .div-wrapper{
+        .package-article{
+          .flex-details{
+            padding-left: 3rem;
+          }
+          .note-list{
+            .note:before{
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media(max-width: 359px){
+    &{
+      .div-wrapper{
+        .package-article{
+          border-color: transparent;
+          .flex-details{
+          }
+          }
+        }
+      }
+    }
+  }
+
+
 `
 
 export default WebPackages
