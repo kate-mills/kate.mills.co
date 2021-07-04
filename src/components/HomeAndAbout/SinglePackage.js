@@ -1,7 +1,9 @@
 import React from 'react'
 import PhoneNumber from '../PhoneNumber'
 
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+import { zoomIn } from 'react-animations'
+
 
 
 const SingleWebPackage = ({data}) => {
@@ -9,7 +11,10 @@ const SingleWebPackage = ({data}) => {
   const note_list = data.note ? data.note.split('.').filter((item)=>item.length!==0): null
 
   return (
-    <SingleWebPackageWrapper>
+    <SingleWebPackageWrapper
+      data-sal="zoom-in"
+      data-sal-delay="2000"
+    >
       <div className="name">{data.name}</div>
       <span className="price">{data.price}</span>
       <div className="price-info">{data.priceInfo?<>{data.priceInfo}</>:<></>}</div>
@@ -27,9 +32,13 @@ const SingleWebPackage = ({data}) => {
     </SingleWebPackageWrapper>
   )
 }
+const zoomInAnimation = keyframes`${zoomIn}`;
+
 
 const SingleWebPackageWrapper = styled.article`
   &{
+    animation: 1s ${zoomInAnimation};
+    animation-duration:2s;
     background: var(--primaryWhite);
     border: 1px solid var(--navHoverGrey);
     margin: 1rem 0;
