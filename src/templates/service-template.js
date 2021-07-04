@@ -33,7 +33,7 @@ const ServiceTemplate = ({ data:{service, projects, packages, defaultBg} }) => {
       </HeroShort>
       <ServiceTemplateWrapper>
         <SearchProjects projects={projects.nodes}/>
-        <WebPackages cls={`section-center web-packages polka-dots`} name={packages.nodes[0].data.service} packages={packages.nodes}/>
+        <WebPackages cls={`section-center web-packages`} name={packages.nodes[0].data.service} packages={packages.nodes}/>
 
         <div className='benefit-container polka-dots'>
           <Title title={`${why_list.length} benefits of `} subtitle={whyTitle}/>

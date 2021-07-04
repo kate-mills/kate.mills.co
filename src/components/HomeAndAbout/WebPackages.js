@@ -37,6 +37,7 @@ const WebPackages = ({cls, packages, name}) => {
 }
 const WebPackagesWrapper = styled.section`
   &{
+    background: var(primaryWhite);
     border-radius: var(--radius);
     color: var(--trueBlack);
     margin: 3rem auto;
