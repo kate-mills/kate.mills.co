@@ -103,6 +103,7 @@ const SingleWebPackageWrapper = styled.article`
           letter-spacing:var(--altSpacing);
           margin: 1rem auto;
           line-height: 1.7rem;
+          text-transform: capitalize;
           p{
             :first-line{text-indent:0;}
           }
@@ -116,8 +117,8 @@ const SingleWebPackageWrapper = styled.article`
       padding: 0 1rem 1rem 2rem;
       text-align: left;
       .note{
-        margin-bottom: .4rem;
         font-size: .8rem;
+        margin-bottom: .4rem;
         :last-of-type{margin-bottom:0;}
       }
       .note:before{
