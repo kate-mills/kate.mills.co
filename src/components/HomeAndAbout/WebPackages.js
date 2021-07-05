@@ -27,7 +27,7 @@ const WebPackagesWrapper = styled.section`
       grid-template-columns: repeat(auto-fit, minmax(360px, 400px));
       justify-content: center;
       margin: 0 auto;
-      width: 100%;
+      width: 80%;
     }
   }
   @media(max-width: 400px){

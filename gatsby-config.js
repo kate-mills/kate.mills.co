@@ -29,7 +29,6 @@ module.exports = {
         threshold: .5,
       }
     },
-
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
