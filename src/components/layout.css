@@ -1,16 +1,17 @@
-@import url("https://use.typekit.net/igr8zjs.css") rel="preload" as="styles";
+@import url("https://use.typekit.net/igr8zjs.css");
 
 :root {
   --trueBlack: #000000;
   /* START Up Shore Theme*/
-  --primaryWhite:#F9FAFD;
-  --digitalColor:#5D4F4B;/*brown*/
-  --primaryColor:#1AC8DB;/*blue-mid */
-  --solutionsColor:#0292B7;/*blue-dark*/
-  --navHoverPrimary: #99DFEC;/*blue-lite*/
-  --navHoverGrey: #78787C;/*slate-grey*/
-  --primaryBlack:#333330;
-  --primaryBlack2:#1c1715; /*hover black #131313 */
+  --primaryWhite:#FFF;/*#F9FAFD;*/
+  --primaryBlack:#000;/*#333330;*/
+  --primaryBlack2:#110e03;/*#1c1715;hover black*/
+
+  --digitalColor:#5D4F4B;
+  --primaryColor:#ae8d1a;/*1AC8DB;blue-mid*/
+  --solutionsColor: #d1bd7c;/*#0292B7;blue-dark*/
+  --navHoverPrimary: #d1bd7c;/*#99DFEC;blue-lite*/
+  --navHoverGrey:#3d3109;/*#78787C;slate-grey*/
   /* END Up Shore*/
 
   --mainTransition: all 0.2s linear;
@@ -227,62 +228,9 @@ div.border{
 }
 
 
-
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-40rem);
-  }
-  70%{
-    transform: translateX(2rem);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(40rem);
-  }
-  70%{
-    transform: translateX(-2rem);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInBtn {
-  0% {
-    opacity: 0;
-    transform: translateY(20rem);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 /* Background Patterns */
-.bg-circles{
-  background-color:var(--primaryWhite);
-  background-image:var(--circles);
-}
-.bg-squares{
-  background-color:var(--primaryWhite);
-  background-image:var(--squares);
-}
-.circles-squares{
-  background-color:var(--primaryWhite);
-  background-image:var(--circlesSquares);
-}
-.heavy-rain{
-  background-color:var(--primaryWhite);
-  background-image:var(--rain);
-}
-.polka-dots{
-  background-color:var(--primaryWhite);
-  background-image:var(--dots);
-}
+/*.bg-circles{ background-color:var(--primaryWhite); background-image:var(--circles); }
+.bg-squares{ background-color:var(--primaryWhite); background-image:var(--squares); }
+.circles-squares{ background-color:var(--primaryWhite); background-image:var(--circlesSquares); }
+.heavy-rain{ background-color:var(--primaryWhite); background-image:var(--rain); }
+.polka-dots{ background-color:var(--primaryWhite); background-image:var(--dots); }*/

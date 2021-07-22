@@ -34,7 +34,7 @@ const ColorGeneratorPage = ()=> {
   };
 
   React.useEffect(()=>{
-    let colors = getValues('#C7A0A1')
+    let colors = getValues('#ae8d1a')
     let uniqueColors = getUniqueColors(colors)
     setSlicedColors(uniqueColors)
     focusMethod()
