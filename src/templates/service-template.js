@@ -26,7 +26,7 @@ const ServiceTemplate = ({ data:{service, projects, packages, defaultBg} }) => {
   return (
     <Layout>
       <FullSeo title={name} description={metaDesc}/>
-      <HeroShort className="circles-squares">
+      <HeroShort className="">
         <Banner title={`Latest Beauty ${bannerTitle}`} info={bannerInfo}>
           <Btn to="/portfolio/" text="View all projects" />
         </Banner>
@@ -35,7 +35,7 @@ const ServiceTemplate = ({ data:{service, projects, packages, defaultBg} }) => {
         <SearchProjects projects={projects.nodes}/>
         <WebPackages cls={`section-center web-packages`} name={packages.nodes[0].data.service} packages={packages.nodes}/>
 
-        <div className='benefit-container polka-dots'>
+        <div className='benefit-container'>
           <Title title={`${why_list.length} benefits of `} subtitle={whyTitle}/>
         <div className="benefit-list">
           <ul data-bullet-list>

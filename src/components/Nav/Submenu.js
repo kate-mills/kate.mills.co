@@ -42,18 +42,18 @@ const Submenu = () => {
 const SubmenuWrapper = styled.aside`
   &{
     border-radius:0;
-    font-size: 0.80rem;
     position: absolute;
     top: 77px;
     display: none;
   }
   &.show {
     display: block;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(-5px);
     width: 150px;
     z-index: 3;
     .submenu-center {
       background-color:var(--navHoverGrey);
+      background-color:var(--primaryBlack2);
       :hover{
         .sub-link:hover{
           cursor: pointer !important;
@@ -63,6 +63,7 @@ const SubmenuWrapper = styled.aside`
         }
       }
       .sub-link {
+        font-family: var(--altFF);
         min-height: 60px;
         display: flex;
         align-items: center;

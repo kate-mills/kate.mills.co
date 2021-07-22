@@ -18,7 +18,7 @@ const portfolio = ({ data }) => {
       <FullSeo title="Portfolio" 
         description={`We specialize in websites & social media content for small beauty businesses. Learn more about boosting your business in ${new Date().getFullYear()} now.`}
       />
-      <Banner title="Web Designs" info="Browse through some of our latest websites." className="circles-squares"/>
+      <Banner title="Web Designs" info="Browse through some of our latest websites." className=""/>
       <section className="section section-center" style={{marginTop: 0, paddingTop: '1rem'}}>
       <SearchProjects projects = {projects} showSearchBtns />
     </section>

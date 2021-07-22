@@ -6,6 +6,7 @@ import Footer from './Footer'
 import ScrollButton from './ScrollButton'
 
 import  FadeIn from './Animations/FadeIn'
+import "@fontsource/oswald"
 
 const Layout = ({children }) => {
 

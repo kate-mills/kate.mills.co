@@ -88,7 +88,7 @@ const ImageSearchPage = ({data:seoData})=>{
         title="Search Unlimited Beauty Images For Your Website"
         description="Search and download unlimited Beauty Images for your website or social media post."
       />
-      <Banner title="Get Images" className="polka-dots">
+      <Banner title="Get Images" className="">
       <ImageSearchWrapper>
         <h2 className="h2-sm">Download free high quality images for your next website or social media post.</h2>
         <form className="search-form">

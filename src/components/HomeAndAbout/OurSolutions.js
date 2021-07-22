@@ -25,7 +25,7 @@ const query = graphql`
 const OurSolutions = () => {
   const {solutions:{nodes:solutions}} = useStaticQuery(query)
   return (
-    <OurSolutionsWrapper className={`section-center polka-dots`}>
+    <OurSolutionsWrapper className={`section-center`}>
       <Title title="Digital" subtitle="Options" className="design design-title"/>
       <div className="center">
         {solutions.map(({id, data}) => {

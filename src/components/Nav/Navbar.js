@@ -89,6 +89,9 @@ const Navbar = (props) => {
 
 const NavWrapper = styled.nav`
   &{
+    font-size: .8rem !important;
+    font-weight: 400;
+    letter-spacing: var(--altSpacing);
     background: var(--primaryBlack);
     width: 100vw;
   }
@@ -134,7 +137,6 @@ const NavWrapper = styled.nav`
   .nav-links span{
     color: var(--primaryWhite);
     display: block;
-    font-size: 0.95rem;
     letter-spacing: var(--altSpacing);
     padding: 1rem 1.25rem;
     height: 100%;

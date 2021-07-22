@@ -40,7 +40,10 @@ const Footer = () => {
 
 const FooterWrapper =styled.footer`
   &{
-    font-family: var(--mainFF);
+    font-family: var(--tallFF);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
     background-color: var(--primaryBlack);
     padding: 4rem;
     margin-top: auto;
@@ -53,7 +56,6 @@ const FooterWrapper =styled.footer`
   .links a {
     color: var(--primaryWhite) !important;
     display: inline-block;
-    font-size: .8rem;
     letter-spacing: var(--altSpacing);
     margin: 1rem 2.5rem;
     text-decoration: none;

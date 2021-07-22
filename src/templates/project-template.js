@@ -23,7 +23,7 @@ const ProjectTemplate = ({ data:{projects} } ) => {
   return (
     <Layout>
       <FullSeo title={name} noindex/>
-      <HeroShort className="bg-circles">
+      <HeroShort className="">
         <Banner title={name} info={desc || " "}> </Banner>
         </HeroShort>
       <ProjectTemplateWrapper className={``}>
@@ -31,7 +31,7 @@ const ProjectTemplate = ({ data:{projects} } ) => {
           <a href={url} className="url">Go to<br/>{name}</a>
         </p>
         <div className="project">
-          <div className="single-project-img bg-circles">
+          <div className="single-project-img">
             {
               projectImages.map((img, index)=>{
                 return(
@@ -85,7 +85,7 @@ const ProjectTemplateWrapper = styled.section`
     max-width: 300px;
   }
   a.url:hover{
-    color: var(--primaryColor);
+    color: var(--navHoverPrimary);
   }
   .hide-mobile {
     display: none;

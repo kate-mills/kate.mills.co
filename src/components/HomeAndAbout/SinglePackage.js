@@ -65,7 +65,7 @@ const SingleWebPackageWrapper = styled.article`
       letter-spacing: var(--altSpacing);
     }
     .underline{
-      background-color: var(--solutionsColor);
+      background-color: var(--primaryColor);
       height: 3px;
       margin: 0 auto;
       width: 50%;

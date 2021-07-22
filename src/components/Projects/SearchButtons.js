@@ -54,7 +54,10 @@ const Wrapper = styled.div`
     margin: 0.5rem;
     text-transform: capitalize;
     letter-spacing: var(--altSpacing);
+    font-family: var(--altFF);
+    font-weight: 400;
     font-size: 1.3rem;
+    font-style: normal;
     padding: 0.25rem;
     cursor: pointer;
     border: none;

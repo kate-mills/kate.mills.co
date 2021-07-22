@@ -56,9 +56,12 @@ const SingleProjectWrapper = styled.article`
     border: 2px solid var(--primaryBlack);
     border-radius: 10rem;
     color: var(--primaryWhite);
+    font-family: var(--tallFF);
+    font-weight: 400;
+    font-style: normal;
     opacity: 1;
     text-transform: uppercase;
-    letter-spacing: var(--mainSpacing);
+    letter-spacing: var(--altSpacing);
     padding: 0.9rem 1.6rem;
     display: inline-block;
     transition: var(--mainTransition);
