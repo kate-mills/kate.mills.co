@@ -16,13 +16,21 @@ import Img from 'gatsby-image'
 
 const query = graphql`
   {
-    logo: file(relativePath: {eq: "ally-digital-logo.png"}) {
+    logo: file(relativePath: {eq: "aileron-w.png"}) {
       childImageSharp {
         fixed(height: 37, quality: 10) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
+    mobile: file(relativePath: {eq: "aileron.png"}) {
+      childImageSharp {
+        fixed(height: 30, quality: 10) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+
   }
 `
 
@@ -51,8 +59,12 @@ const Navbar = (props) => {
     <NavWrapper>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to={`/`} className="logo">
+          <Link to={`/`} className="logo desktop">
             <Img fixed={data.logo.childImageSharp.fixed} alt="ally digital solutions text logo"/>
+          </Link>
+
+          <Link to={`/`} className="logo mobile">
+            <Img fixed={data.mobile.childImageSharp.fixed} alt="ally digital solutions text logo"/>
           </Link>
           <button type="button" className="toggle-btn" onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className="toggle-icon"/>
@@ -91,6 +103,14 @@ const NavWrapper = styled.nav`
   &{
     background: var(--primaryBlack);
     width: 100vw;
+  }
+  & .nav-center{
+    .logo.desktop{
+      display:none;
+    }
+    .logo.mobile{
+
+    }
   }
   .nav-header {
     align-items: center;
@@ -158,9 +178,13 @@ const NavWrapper = styled.nav`
     .navbar {
       padding: 0 1rem;
     }
-    .logo{
-      max-height: 53px;
-      padding: .3rem 0;
+    & .nav-center{
+      .logo.mobile{ display:none; }
+      .logo.desktop{
+        display:unset;
+        max-height: 53px;
+        padding: .3rem 0;
+      }
     }
     .nav-header{
       padding: 1rem 1.25rem 0.5rem;
