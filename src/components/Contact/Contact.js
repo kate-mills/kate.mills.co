@@ -63,7 +63,7 @@ const Contact = () => {
             <textarea
               name="message"
               id="message"
-              rows="10"
+              rows="12"
               className="form-control"
               placeholder="Tell us about your project..."
             />
@@ -79,13 +79,33 @@ const Contact = () => {
 
 const ContactWrapper = styled.section`
   &{
+    span.title{
+      /*color: var(--primaryWhite);*/
+    }
+    /**{color: var(--primaryWhite);}*/
     padding: 1rem 0;
+    max-width: 90%;
+    margin: 0 auto;
   }
   & .center{
+    textarea, input:not([type="submit"]) {
+      background-color: var(--primaryWhite);
+      color: var(--primaryBlack);
+    }
     margin: 0 auto;
-    width: 80vw;
-    .instructions p:nth-child(2){
-      margin-bottom: 2.5rem;
+    max-width: 90%;
+    .instructions {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 70%;
+      margin: 0 auto;
+      *{ width: 100%;}
+      p:nth-child(1){
+        margin: 0 auto;
+      }
+      p:nth-child(2){
+        margin: 1.5rem auto 2.5rem;
     }
   }
   label {
@@ -95,7 +115,7 @@ const ContactWrapper = styled.section`
     text-transform: capitalize;
   }
   .required {
-    color: var(--digitalColor);
+    color: var(--primaryWhite);
     font-size: 1.5rem;
     padding-right: 2px;
   }
@@ -126,7 +146,7 @@ const ContactWrapper = styled.section`
   }
   .submit:hover,
   .submit:focus{
-    background: transparent;
+    background-color: var(--primaryWhite);
     color: var(--primaryBlack);
   }
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -144,9 +164,12 @@ const ContactWrapper = styled.section`
 
 
   @media(min-width: 992px){
+    &{
+      max-width: 70%;
+    }
     & .center{
       margin: 0 auto;
-      width: 50vw;
+      width: 80%;
     }
   }
 `

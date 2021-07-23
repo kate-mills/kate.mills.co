@@ -16,21 +16,13 @@ import Img from 'gatsby-image'
 
 const query = graphql`
   {
-    logo: file(relativePath: {eq: "aileron-w.png"}) {
+    logo: file(relativePath: {eq: "fashion-lg2.png"}) {
       childImageSharp {
         fixed(height: 37, quality: 10) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
-    mobile: file(relativePath: {eq: "aileron.png"}) {
-      childImageSharp {
-        fixed(height: 36, quality: 10) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    }
-
   }
 `
 
@@ -59,12 +51,8 @@ const Navbar = (props) => {
     <NavWrapper>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to={`/`} className="logo desktop">
+          <Link to={`/`} className="logo">
             <Img fixed={data.logo.childImageSharp.fixed} alt="ally digital solutions text logo"/>
-          </Link>
-
-          <Link to={`/`} className="logo mobile">
-            <Img fixed={data.mobile.childImageSharp.fixed} alt="ally digital solutions text logo"/>
           </Link>
           <button type="button" className="toggle-btn" onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className="toggle-icon"/>
@@ -105,11 +93,7 @@ const NavWrapper = styled.nav`
     width: 100vw;
   }
   & .nav-center{
-    .logo{
-      line-height: 0;
-    }
-    .logo.desktop{ display:none; }
-    .logo.mobile{}
+    padding: 0 1rem 0;
   }
   .nav-header {
     align-items: center;
@@ -118,15 +102,13 @@ const NavWrapper = styled.nav`
     padding: 1rem 1.25rem 0.5rem 1rem;
   }
   .toggle-btn {
-    color: var(--primaryColor);
     background: inherit !important;
     border: unset;
+    color: var(--primaryColor);
+    cursor: pointer;
+    font-size: 1.5rem;
     margin-left: 10px;
     outline: unset;
-  }
-  .toggle-btn {
-    font-size: 1.5rem;
-    cursor: pointer;
   }
   .nav-links {
     border: 1px solid transparent;
@@ -134,7 +116,7 @@ const NavWrapper = styled.nav`
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     margin: 0 auto;
-    height: 0;
+    height: 0; /* keep for transition*/
     overflow: hidden;
     transition: height .29s linear, border 1s linear;
 
@@ -144,7 +126,7 @@ const NavWrapper = styled.nav`
   }
   .show-nav {
     border-color: transparent;
-    height: 420px;
+    height: 450px;
   }
   .nav-links a,
   .nav-links span{
@@ -175,11 +157,8 @@ const NavWrapper = styled.nav`
       padding: 0 1rem;
     }
     & .nav-center{
-      .logo.mobile{ display:none; }
-      .logo.desktop{
-        display:unset;
+      .logo{
         max-height: 53px;
-        padding: .3rem 0;
       }
     }
     .nav-header{
@@ -201,7 +180,6 @@ const NavWrapper = styled.nav`
       height: auto;
       display: flex;
       padding-left: 1.25rem;
-
       .mobile-link{display:none;}/* KEEP HERE */
     }
     .nav-links li{
@@ -233,8 +211,10 @@ const NavWrapper = styled.nav`
   }
   @media screen and (max-width: 320px){
     .nav-header{
-      padding: 1rem 1.5rem .5rem .35rem;
+      padding: 1rem 0 .5rem 0;
     }
   }
 `
 export default Navbar
+
+//&::after{ width: 100%; background: var(--primaryBlack2); content: ''; position: absolute; width: 100vw; height: 1px; opacity: .2; }

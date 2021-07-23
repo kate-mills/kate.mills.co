@@ -15,7 +15,6 @@ export default styled(NavMobileSubLink)`
   &.mobile-link {
     display:unset;
     padding-left: 1.25rem;
-    background-color: var(--primaryBlack);
   }
   &.mobile-link:hover{
     background: var(--primaryBlack2);
