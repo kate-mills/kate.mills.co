@@ -25,7 +25,7 @@ const query = graphql`
     }
     mobile: file(relativePath: {eq: "aileron.png"}) {
       childImageSharp {
-        fixed(height: 30, quality: 10) {
+        fixed(height: 36, quality: 10) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }
@@ -105,21 +105,17 @@ const NavWrapper = styled.nav`
     width: 100vw;
   }
   & .nav-center{
-    .logo.desktop{
-      display:none;
+    .logo{
+      line-height: 0;
     }
-    .logo.mobile{
-
-    }
+    .logo.desktop{ display:none; }
+    .logo.mobile{}
   }
   .nav-header {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.25rem 0.5rem 1rem;
-  }
-  .logo{
-    padding: .3rem 0;
   }
   .toggle-btn {
     color: var(--navHoverPrimary);
