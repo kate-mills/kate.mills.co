@@ -148,7 +148,7 @@ const ColoredGeneratorWrapper = styled.div`
         ::placeholder{
           width: fit-content;
           font-size: 1.1rem;
-          color:#b1b2b6;
+          color:#252c5878;/*hsl(232deg 41% 25% / 57%);*/
         }
       }
       .btn-dt{display:block;}
