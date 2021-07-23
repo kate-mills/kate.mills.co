@@ -20,7 +20,9 @@ const Btn = ({to, text, color, bgColor, className}) => {
 export default styled(Btn)`
   &:link,
   &:visited{
-    font-size: 1rem;
+    font-family: var(--fashionFF);
+    font-weight: 500;
+    font-size: 1.09rem;
     letter-spacing: var(--altSpacing);
     text-transform: uppercase;
     text-decoration: none;
@@ -68,7 +70,7 @@ export default styled(Btn)`
   }
   &.btn--light::after,
   &.btn--dark::after{
-    background-color: var(--solutionsColor);
+    background-color: var(--navHoverPrimary);
   }
   @media(min-width: 768px){ margin: 1rem; }
 `

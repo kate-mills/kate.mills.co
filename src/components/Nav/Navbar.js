@@ -118,7 +118,7 @@ const NavWrapper = styled.nav`
     padding: 1rem 1.25rem 0.5rem 1rem;
   }
   .toggle-btn {
-    color: var(--navHoverPrimary);
+    color: var(--primaryColor);
     background: inherit !important;
     border: unset;
     margin-left: 10px;

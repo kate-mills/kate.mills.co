@@ -3,8 +3,6 @@ import PhoneNumber from '../PhoneNumber'
 
 import styled from 'styled-components'
 
-
-
 const SingleWebPackage = ({data}) => {
   const detail_list = data.details.split('.').filter((item)=>item.length!==0)
   const note_list = data.note ? data.note.split('.').filter((item)=>item.length!==0): null
@@ -36,20 +34,21 @@ const SingleWebPackage = ({data}) => {
 
 const SingleWebPackageWrapper = styled.article`
   &{
+    background: var(--primaryBlack);
     display:flex;
     flex-direction:column;
     justify-content: space-between;
     align-content: space-around;
     align-items:stretch;
+    *{ color: var(--primaryWhite); }
     .top-half{width: 100%; display:block;}
     .bottom-half{width: 100%; display:block;}
-    border: 1px solid var(--navHoverGrey);
+    border: 1px solid var(--navHoverPrimary);
     margin: 1rem 0;
     text-align: center;
     border-radius: var(--radius);
     .name,.price-info,.price{
       align-items: center;
-      color: var(--digitalColor);
       display: flex;
       font-size: 1.6rem;
       font-family: sans-serif;
@@ -65,13 +64,13 @@ const SingleWebPackageWrapper = styled.article`
       letter-spacing: var(--altSpacing);
     }
     .underline{
-      background-color: var(--solutionsColor);
+      background-color: var(--navHoverPrimary);
       height: 3px;
       margin: 0 auto;
       width: 50%;
     }
     .footer-underline{
-      background-color: var(--navHoverGrey);
+      background-color: var(--navHoverPrimary);
       height:1px;
       margin: 0 auto;
       width: 75%;
