@@ -20,15 +20,14 @@
   --altSpacing: 0.0620rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --radius: 0.25rem;
+  --radius: 0.25rem;jjj
   --max-width: 1170px;
   --fixed-width: 620px;
   --wordSpacing: 1.5px;
 
   /* START FONTS */
-  --mainFF:aileron, sans-serif; /*300 normal*/
+  --mainFF:aileron, sans-serif; /*300normal,italic 400normal 600normal*/
   --altFF: 'neue-haas-grotesk-text', sans-serif; /*400 italic - 700 normal*/
-  --fashionFF: akagi-pro, sans-serif;/*500 normal*/
 
   /* background-image */
   --circlesSquares:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm20 0a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM10 37a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm10-17h20v20H20V20zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14z' fill='%23909197' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
