@@ -9,10 +9,7 @@ const FourIcons  = () => {
       <div className="center">
         {FourIconList.map((item, index) => {
           return (
-            <article key={index} className="service"
-              data-sal="zoom-in"
-              data-sal-easing="ease"
-              data-sal-duration="500">
+            <article key={index} className="service">
               <span>{item.icon}</span>
               <div><Link to={item.slug}>{item.title}</Link></div>
               <p>{item.text}</p>
@@ -27,7 +24,7 @@ const FourIcons  = () => {
 
 const FourIconsWrapper = styled.section`
   &{
-    padding: 4rem 1rem;
+    padding: 1rem 0;
   }
   & .center{
     width: 80vw; 

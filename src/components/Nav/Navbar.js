@@ -126,14 +126,14 @@ const NavWrapper = styled.nav`
   }
   .show-nav {
     border-color: transparent;
-    height: 450px;
+    height: 460px;
   }
   .nav-links a,
   .nav-links span{
     color: var(--primaryWhite);
     display: block;
-    font-size: 0.95rem;
-    letter-spacing: var(--altSpacing);
+    font-size: 1rem;
+    letter-spacing: var(--midSpacing);
     padding: 1rem 1.25rem;
     height: 100%;
     text-decoration: none;

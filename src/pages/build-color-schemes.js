@@ -5,9 +5,9 @@ import { useColorsContext } from '../context/state-colorgen/context/colors_conte
 import {copyColorScheme} from '../context/state-colorgen/helpers'
 import ColorList from '../components/ColorSchemeGenerator/ColorList'
 import styled, { keyframes } from 'styled-components';
-import { pulse } from 'react-animations';
+import { flash } from 'react-animations';
 
-const pulseAnimation = keyframes`${pulse}`;
+const flashAnimation = keyframes`${flash}`;
 
 
 const ColorSchemes = () => {
@@ -40,7 +40,7 @@ const ColorSchemes = () => {
     focusMethod()
     copyColorScheme(all_colors)
     setAlert(true)
-    setClickCount(prevCount => prevCount+=1)
+    setClickCount(prevCount => 'clicked')
   }
   const handleGenerate = ()=>{
     updatePendingColors([...all_colors])
@@ -54,12 +54,12 @@ const ColorSchemes = () => {
           <div className="app-nav">
             <button
               tabIndex="0"
-              className={`${(clickCount <1)? 'pulse':''} btn generate`}
+              className={`${(clickCount <1)? 'flash':''} btn generate`}
               onClick={handleGenerate}
               aria-label="generate color scheme"
               id="generator"/>
             {alert ? <span className="alert">COPIED</span>:<span className="alert general"></span>}
-            <button tabIndex="0" className={`btn copy ${(clickCount > 3)?'pulse':''}`} onClick={handleClickCopyColors} aria-label="copy color scheme"></button>
+            <button tabIndex="0" className={`btn copy ${(clickCount > 3 && clickCount!=='clicked')?'flash':''}`} onClick={handleClickCopyColors} aria-label="copy color scheme"></button>
           </div>
             <ColorList colors={all_colors}/>
         </ColorSchemeWrapper>
@@ -80,8 +80,8 @@ const ColorSchemeWrapper = styled.div`
     margin: 0;
     padding: 0 2rem;
     width: 100%;
-    >.pulse{
-      animation: 1s ${pulseAnimation};
+    >.flash{
+      animation: 3s ${flashAnimation};
       animation-iteration-count: infinite;
     }
     > span,> button{

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from "gatsby"
 import styled, {keyframes} from 'styled-components'
-import {pulse} from 'react-animations'
+import {flash} from 'react-animations'
 
-const pulseA = keyframes`${pulse}`
+const flashA = keyframes`${flash}`
 
 
 const SingleSolution  = ({name, slug, description}) => {
@@ -30,8 +30,9 @@ const SingleSolutionWrapper = styled.article`
     padding: 1rem 0 0;
     text-align: center;
     :hover{
+      a:hover,
       a{
-        animation: 1s ${pulseA};
+        animation: 1s ${flashA};
         animation-iteration-count: infinite;
         white-space: pre-wrap;
       }
@@ -68,7 +69,7 @@ const SingleSolutionWrapper = styled.article`
       text-transform: uppercase;
       width: 100%;
       :hover{
-        animation: 1s ${pulseA};
+        animation: 1s ${flashA};
         color: var(--primaryBlack);
       }
     }

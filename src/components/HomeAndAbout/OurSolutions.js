@@ -2,9 +2,11 @@ import React from 'react'
 import Title from '../Title'
 import SingleSolution from './SingleSolution'
 import styled from 'styled-components'
-
-
 import { useStaticQuery, graphql } from "gatsby"
+
+
+
+
 
 const query = graphql`
   {
@@ -25,7 +27,8 @@ const query = graphql`
 const OurSolutions = () => {
   const {solutions:{nodes:solutions}} = useStaticQuery(query)
   return (
-    <OurSolutionsWrapper className={`section-center polka-dots`}>
+    <OurSolutionsWrapper
+      className={`section-center polka-dots`}>
       <Title title="Digital" subtitle="Options" className="design design-title"/>
       <div className="center">
         {solutions.map(({id, data}) => {
@@ -54,7 +57,6 @@ const OurSolutionsWrapper = styled.section`
       grid-column-gap: 2rem;
       grid-row-gap: 2rem;
       margin: 0 auto;
-      padding:2rem;
     }
   }
   @media(min-width: 768px){

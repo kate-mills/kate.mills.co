@@ -62,15 +62,18 @@ export default styled(Btn)`
   }
   &.btn--light {
     background-color: var(--primaryColor);
-    color: var(--primaryBlack);
+    color: var(--primaryBlack2);
   }
   &.btn--dark {
-    background-color: var(--primaryColor);
-    color: var(--primaryBlack);
+    background-color: var(--primaryBlack2);
+    color: var(--primaryWhite);
   }
-  &.btn--light::after,
   &.btn--dark::after{
-    background-color: var(--navHoverPrimary);
+    background-color: var(--primaryBlack);
   }
+  &.btn--light::after{
+    background-color: var(--primaryWhite);
+  }
+
   @media(min-width: 768px){ margin: 1rem; }
 `
