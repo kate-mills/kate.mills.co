@@ -7,7 +7,7 @@ import links from '../../constants/links'
 import PhoneNumber from '../PhoneNumber'
 import {useGlobalContext} from '../../context/context'
 import NavSubmenu from './Submenu'
-import NavSubLink from './NavSubLink'
+import MobileLink from './MobileLink'
 import NavHeadLink from './NavHeadLink'
 import styled from 'styled-components'
 
@@ -74,7 +74,7 @@ const Navbar = (props) => {
                   <NavHeadLink lnk={item} className={item.cls} hoverFn={displaySubmenu}/>
                 { item.links.length &&(
                   <React.Fragment key={index}>
-                    {item.links.map((lnk,idx)=><NavSubLink key={idx} lnk={lnk} />)}
+                    {item.links.map((lnk,idx)=><MobileLink key={idx} lnk={lnk} />)}
                   </React.Fragment>
                 )} 
                 </li>
@@ -93,93 +93,91 @@ const NavWrapper = styled.nav`
     width: 100vw;
   }
   & .nav-center{
-    padding: 0 1rem 0;
+    padding: 0 1rem;
+    .nav-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1rem 0.5rem;
+      .logo{
+        padding: .3rem 0;
+      }
+      .toggle-btn{
+        background: inherit !important;
+        border: unset;
+        color: var(--primaryColor);
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-left: 10px;
+        outline: unset;
+      }
+    }
   }
-  .nav-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 1.25rem 0.5rem 1rem;
-  }
-  .toggle-btn {
-    background: inherit !important;
-    border: unset;
-    color: var(--primaryColor);
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    outline: unset;
-  }
-  .nav-links {
+  /* mobile */
+  & .nav-links {
     border: 1px solid transparent;
     list-style-type: none;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
     margin: 0 auto;
     height: 0; /* keep for transition*/
     overflow: hidden;
     transition: height .29s linear, border 1s linear;
-
     .show-mobile{
       display:block;
     }
   }
-  .show-nav {
+  & .nav-links.show-nav {
     border-color: transparent;
-    height: 460px;
+    height: 480px;
   }
-  .nav-links a,
-  .nav-links span{
+  & .nav-links a,
+  & .nav-links span{
     color: var(--primaryWhite);
     display: block;
-    font-size: 1rem;
-    letter-spacing: var(--midSpacing);
+    font-size: .95rem;
+    letter-spacing: var(--altSpacing);
     padding: 1rem 1.25rem;
     height: 100%;
     text-decoration: none;
   }
-  .nav-links a:hover{
+  & .nav-links a:hover{
     background: var(--primaryBlack2);
   }
-  .nav-links a.allow-pointer{
+  & .nav-links a.allow-pointer{
     opacity: 1;
   }
-  .nav-links a.current-page{
+  & .nav-links a.current-page{
     opacity: 1;
     pointer-events: none;
     background: var(--primaryColor);
   }
-  .nav-links .show-mobile{
+  & .nav-links .show-mobile{
     display: block;
   }
   @media screen and (min-width: 576px) {
-    .navbar {
-      padding: 0 1rem;
-    }
-    & .nav-center{
-      .logo{
-        max-height: 53px;
-      }
-    }
-    .nav-header{
+    & .nav-header{
       padding: 1rem 1.25rem 0.5rem;
+      .nav-center{
+        .logo{
+          max-height: 53px;
+        }
+      }
     }
   }
   @media screen and (min-width: 1200px) {
-    .toggle-btn {
-      display: none;
-    }
     & .nav-center {
       align-items: flex-end;
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
       max-width: 1170px;
+      .nav-header{
+        .toggle-btn { display: none; }
+      }
     }
     .nav-links {
       height: auto;
       display: flex;
-      padding-left: 1.25rem;
+      padding-left: 1.25rem; /* Desktop needs left padding*/
       .mobile-link{display:none;}/* KEEP HERE */
     }
     .nav-links li{
@@ -199,9 +197,6 @@ const NavWrapper = styled.nav`
     .nav-links li.hide-mobile{
       display:none;
     }
-    .logo{
-      padding: .3rem 0;
-    }
     .nav-links a,
     .nav-links span{
       margin-left: 0;   
@@ -209,9 +204,9 @@ const NavWrapper = styled.nav`
       padding-top: 1.9rem;
     }
   }
-  @media screen and (max-width: 320px){
-    .nav-header{
-      padding: 1rem 0 .5rem 0;
+  @media screen and (max-width: 375px){
+    & .nav-center{
+      .nav-header{ padding: 1rem .1rem .5rem; }
     }
   }
 `

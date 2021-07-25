@@ -5,16 +5,16 @@ import {Link} from 'gatsby'
 import styled from 'styled-components'
 
 
-const NavMobileSubLink = ({className, lnk}) =>{
+const MobileLink= ({className, lnk}) =>{
   return (
     <Link to={lnk.url} className={`mobile-link ${lnk.cls} ${className}`}>{lnk.label}</Link>
   )
 }
 
-export default styled(NavMobileSubLink)`
+export default styled(MobileLink)`
   &.mobile-link {
     display:unset;
-    padding-left: 1.25rem;
+    margin-left: 0;
   }
   &.mobile-link:hover{
     background: var(--primaryBlack2);
