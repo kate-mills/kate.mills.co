@@ -8,7 +8,7 @@ const SingleWebPackage = ({data}) => {
   const note_list = data.note ? data.note.split('.').filter((item)=>item.length!==0): null
 
   return (
-    <SingleWebPackageWrapper data-sal="zoom-in" data-sal-easing="ease">
+    <SingleWebPackageWrapper>
       <div className="top-half">
       <div className="name">{data.name}</div>
       <span className="price">{data.price}</span>
