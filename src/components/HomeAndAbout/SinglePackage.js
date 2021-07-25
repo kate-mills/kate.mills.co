@@ -152,8 +152,7 @@ const SingleWebPackageWrapper = styled.article`
   }
   @media(max-width: 400px){
     &{
-      border-left: none;
-      border-right: none;
+      min-width: 100%;
       .detail-list-wrapper{
         padding-left: 3rem;
         padding-right: 1rem;

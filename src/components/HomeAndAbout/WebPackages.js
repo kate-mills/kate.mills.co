@@ -38,6 +38,10 @@ const WebPackagesWrapper = styled.section`
   }
   @media(max-width: 400px){
     &{
+      .packages-wrapper{
+        grid-row-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+      }
       *{
         margin: auto;
         padding: 0 0 0 0;
