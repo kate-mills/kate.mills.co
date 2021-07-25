@@ -6,9 +6,6 @@ import SingleWebPackage from './SinglePackage'
 const WebPackages = ({cls, packages, name}) => {
   return (
     <WebPackagesWrapper
-      data-sal="slide-right"
-      data-sal-delay="300"
-      data-sal-easing="ease"
       className={`${cls}`} id="packages">
       <Title title={name} subtitle="Packages" className="packages-title"/>
       <div className="packages-wrapper" >
