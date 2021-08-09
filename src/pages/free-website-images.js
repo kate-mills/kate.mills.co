@@ -84,13 +84,13 @@ const ImageSearchPage = ({data:seoData})=>{
   return(
     <Layout>
       <FullSeo
-        image="/images/search-download-free-website-images.jpg"
+        image="/images/free-website-images.jpg"
         title="Search Unlimited Beauty Images For Your Website"
         description="Search and download unlimited Beauty Images for your website or social media post."
       />
-      <Banner title="Get Images" className="polka-dots">
+      <Banner title="Search Images & Unlimited Downloads"/>
       <ImageSearchWrapper>
-        <h2 className="h2-sm">Download free high quality images for your next website or social media post.</h2>
+        <h2 className="h2-sm">Explore high quality images with unlimited free downloads for your next website or social media post.</h2>
         <form className="search-form">
           <input
             tabIndex={0}
@@ -105,7 +105,6 @@ const ImageSearchPage = ({data:seoData})=>{
           ><FaSearch/></button>
         </form>
       </ImageSearchWrapper>
-      </Banner>
         <DisplayImages loading={loading} photos={photos} query={query}/>
     </Layout>
   )
@@ -118,8 +117,10 @@ const ImageSearchWrapper = styled.section`
     padding: 0 0 0;
     width: 90vw;
     h2{
+      max-width: var(--max-width);
       font-size: 1.5rem;
       letter-spacing: var(--altSpacing);
+      margin: 0 auto 3rem;
       padding: 0 0 0;
     }
   }
@@ -143,8 +144,9 @@ const ImageSearchWrapper = styled.section`
     text-transform: capitalize;
   }
   .form-input::placeholder {
-    color: var(--digitalColor);
-    opacity: 0.5;
+    color: var(--primaryBlack);
+    font-style: italic;
+    opacity: .5;
   }
   .submit-btn {
     border-bottom: none;
