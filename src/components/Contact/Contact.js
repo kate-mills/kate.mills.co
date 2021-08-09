@@ -80,9 +80,7 @@ const Contact = () => {
 const ContactWrapper = styled.section`
   &{
     span.title{
-      /*color: var(--primaryWhite);*/
     }
-    /**{color: var(--primaryWhite);}*/
     padding: 1rem 0;
     max-width: 90%;
     margin: 0 auto;
@@ -91,6 +89,7 @@ const ContactWrapper = styled.section`
     textarea, input:not([type="submit"]) {
       background-color: var(--primaryWhite);
       color: var(--primaryBlack);
+      outline: none;
     }
     margin: 0 auto;
     max-width: 90%;
