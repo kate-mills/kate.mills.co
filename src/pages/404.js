@@ -9,8 +9,8 @@ const error = () => {
     <Layout>
       <FullSeo title="Oops"/>
       <header className="short-page">
-        <Banner title="oops it's a dead end">
-          <Btn to="/" text="back to home page"/>
+        <Banner title="Oops! It's a dead end.">
+          <Btn to="/" text="back to home page" />
         </Banner>
       </header>
     </Layout>

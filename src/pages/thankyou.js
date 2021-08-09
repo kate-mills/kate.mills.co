@@ -9,11 +9,11 @@ const Thankyou = () => {
     <Layout>
       <FullSeo title="Thank You"
         noindex />
-      <header className="short-page">
+      <div className="short-page">
         <Banner title="Thank you!" info=" Your submission was received.  We'll be in contact shortly.">
           <Btn to="/" text="back to home page"/>
         </Banner>
-      </header>
+      </div>
     </Layout>
   )
 }

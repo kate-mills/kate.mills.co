@@ -148,10 +148,10 @@ nav .phone{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--primaryBlack2);
+  background: var(--primaryColor);
 }
 .short-page  div > a{
-  background-color: var(--primaryWhite) !important;
+  /*background-color: var(--primaryWhite) !important;*/
 }
 .footer-btn{
   text-align: center;
