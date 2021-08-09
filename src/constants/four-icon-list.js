@@ -6,14 +6,14 @@ const FourIconList = [
   {
     icon: <GiDandelionFlower className="icon" />,
     slug: 'blogs',
-    title: "Blogs",
+    title: "Blog packages",
     text: "Increase your online visibility with a blog.  More content means more opportunities to show up in search engines and drive new visitors to your website.",
     info:
       "Highlight your small beauty business with a website, e-commerce store, or blog.",
   },
   {
     icon: <GiSunflower className="icon" />,
-    title: "E-Commerce Shop",
+    title: "E-Commerce packages",
     slug: 'e-commerce',
     info: "Find a Range of Website Design Solutions and Choose One That Fits Your Budget and Goals!",
     text:
@@ -21,7 +21,7 @@ const FourIconList = [
   },
   {
     icon: <GiDandelionFlower className="icon" />,
-    title: "Website Design",
+    title: "Website packages",
     slug: 'websites',
     text: "Grow your business, build credibility, save time, engage with clients, and the list goes on.",
     info:
@@ -29,7 +29,7 @@ const FourIconList = [
   },
   {
     icon: <GiSunflower className="icon" />,
-    title: "Social Media",
+    title: "Social Media packages",
     slug: 'social-media',
     text:
       "Establish a social presence and actively engage with users through top social media channels and networks. ",

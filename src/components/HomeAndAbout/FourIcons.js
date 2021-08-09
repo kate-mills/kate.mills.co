@@ -11,7 +11,7 @@ const FourIcons  = () => {
           return (
             <article key={index} className="service">
               <span>{item.icon}</span>
-              <div><Link to={item.slug}>{item.title}</Link></div>
+              <div><Link to={`/${item.slug}/#packages`}>{item.title}</Link></div>
               <p>{item.text}</p>
             </article>
           )
@@ -44,10 +44,14 @@ const FourIconsWrapper = styled.section`
         line-height:0;
       }
       div {
+        a {
+          border-bottom: 1px solid black;
+          text-transform: capitalize;
+        }
         font-size: 1.1rem;
         letter-spacing: 0.01rem;
         margin-bottom: 1.25rem;
-        text-transform: uppercase;
+        
       }
       p{
         margin-left: 10%;

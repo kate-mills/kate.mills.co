@@ -109,7 +109,7 @@ const ColorSchemeWrapper = styled.div`
     button.btn.copy{ transform: translateX(0); min-width:40%;}
     button.btn.generate:before{content:'Press the spacebar to generate color palettes!';}
     button.btn.copy:before{ content:'Copy color palette!';}
-    span.alert{font-weight:600;min-width:20%;}
+    span.alert{color: var(--primaryBlack);font-family: var(--mainFF);font-weight:600;min-width:20%;}
   }
   @media screen and (max-width:1200px){
     & div.app-nav{

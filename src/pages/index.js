@@ -8,7 +8,6 @@ import HeroTall from '../components/Hero/Tall'
 import Btn from '../components/Btn'
 import Banner from '../components/Hero/Banner'
 import FourIcons from '../components/HomeAndAbout/FourIcons'
-import OurSolutions  from '../components/HomeAndAbout/OurSolutions'
 import Contact from '../components/Contact/Contact'
 
 
@@ -29,7 +28,6 @@ const IndexPage = ({ data, className }) => {
       </HeroTall>
       <div className="digital-marketing-services">
         <h2 className="digital-marketing-services-h2">Give Your Small Business a Competitive Advantage with a Professionally Done Website.</h2>
-        <OurSolutions/>
         <FourIcons/>
       </div>
       <Contact/>

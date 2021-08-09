@@ -20,8 +20,8 @@ const Btn = ({to, text, color, bgColor, className}) => {
 export default styled(Btn)`
   &:link,
   &:visited{
-    font-family: var(--fashionFF);
-    font-weight: 500;
+    font-family: var(--mainFF);
+    font-weight: 400;
     font-size: 1.09rem;
     letter-spacing: var(--altSpacing);
     text-transform: uppercase;

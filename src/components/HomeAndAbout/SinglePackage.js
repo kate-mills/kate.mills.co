@@ -34,53 +34,52 @@ const SingleWebPackage = ({data}) => {
 
 const SingleWebPackageWrapper = styled.article`
   &{
-    background: var(--primaryBlack);
+    *{ color: var(--primaryBlack); }
+    background: rgb(189 160 106 / 10%);/* var(--primaryColor) */
     display:flex;
     flex-direction:column;
     justify-content: space-between;
     align-content: space-around;
     align-items:stretch;
-    *{ color: var(--primaryWhite); }
-    .top-half{width: 100%; display:block;}
-    .bottom-half{width: 100%; display:block;}
-    border: 1px solid var(--navHoverPrimary);
+    border: 1px solid rgb(189 160 106 / 80%); /* var(--primaryColor) */
     margin: 1rem 0;
     text-align: center;
     border-radius: var(--radius);
+    .top-half{width: 100%; display:block;}
+    .bottom-half{width: 100%; display:block;}
     .name,.price-info,.price{
       align-items: center;
       display: flex;
       font-size: 1.6rem;
-      font-family: sans-serif;
+      font-family: var(--altFF);
       font-style: normal;
-      font-weight: 700;
+      font-weight: 600;
       justify-content: center;
       min-height: 2rem;
       margin: .5rem auto;
     }
     .price-info{
-      font-family: var(--mainFF);
       font-size: .95rem;
-      letter-spacing: var(--altSpacing);
+      letter-spacing: 0.01rem;
     }
     .underline{
-      background-color: var(--navHoverPrimary);
+      background-color: var(--primaryBlack);
       height: 3px;
       margin: 0 auto;
       width: 50%;
     }
     .footer-underline{
-      background-color: var(--navHoverPrimary);
+      background-color: var(--primaryColor);
       height:1px;
       margin: 0 auto;
       width: 75%;
-      opacity:.2;
+      opacity: .9;
     }
     .details-info{
-      font-family: sans-serif;
+      font-family: var(--altFF);
       font-size: 1rem;
       font-style: normal;
-      font-weight: 700;
+      font-weight: 600;
       margin: 1rem auto 0;
       text-align:center;
       text-transform: capitalize;
@@ -91,7 +90,6 @@ const SingleWebPackageWrapper = styled.article`
       padding: 0 1rem 0 3rem;
 
       ul.details{
-        font-family: var(--mainFF);
         font-size: 1rem;
         margin: 0 auto;
         max-width: fit-content;

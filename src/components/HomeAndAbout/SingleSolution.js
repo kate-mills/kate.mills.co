@@ -32,6 +32,7 @@ const SingleSolutionWrapper = styled.article`
     :hover{
       a:hover,
       a{
+        font-weight: 100;
         animation: 1s ${flashA};
         animation-iteration-count: infinite;
         white-space: pre-wrap;
@@ -45,7 +46,7 @@ const SingleSolutionWrapper = styled.article`
       font-family: var(--altFF);
       font-size: 1.5rem;
       font-style: italic;
-      font-weight: 400;
+      font-weight: 600;
       line-height:1.25;
       margin: 0 auto;
       padding: .25rem 1rem;
@@ -53,8 +54,8 @@ const SingleSolutionWrapper = styled.article`
       width: fit-content;
     }
     span.packages{
-      font-size: 1rem;
-      font-weight: 300;
+      font-size: 1.2rem;
+      font-weight: 400;
       padding-top: 0;
       margin-bottom: 1rem;
       white-space: pre-wrap;
