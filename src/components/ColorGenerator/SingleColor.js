@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 const SingleColor = ({rgb, weight, index, hex, textColor }) => {
-  console.log('textColor', textColor)
   const [alert,setAlert] = React.useState(false)
   const bcg = rgb.join(', ')
   const hexValue = `#${hex}`
