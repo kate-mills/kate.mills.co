@@ -10,7 +10,7 @@ module.exports = {
     dateModified: `${new Date().toISOString()}`,
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
-    image: `/DefaultImg.jpg`,
+    image: `/ally-digital-solutions.jpg`,
     url: `https://allydigitalsolutions.com`,
     baseUrl: `https://allydigitalsolutions.com`,
     siteUrl: `https://allydigitalsolutions.com`,//keep for sitemap-plugin
