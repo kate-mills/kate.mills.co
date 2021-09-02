@@ -87,8 +87,8 @@ const ContactWrapper = styled.section`
   }
   & .center{
     textarea, input:not([type="submit"]) {
-      background-color: var(--primaryWhite);
-      color: var(--primaryBlack);
+      background-color: var(--clr-primary-light);
+      color: var(--clr-black);
       outline: none;
     }
     margin: 0 auto;
@@ -114,13 +114,13 @@ const ContactWrapper = styled.section`
     text-transform: capitalize;
   }
   .required {
-    color: var(--primaryWhite);
+    color: var(--clr-primary-dark);
     font-size: 1.5rem;
     padding-right: 2px;
   }
   .form-control,
   .submit {
-    border: 1px solid var(--primaryBlack);
+    border: 1px solid var(--clr-black);
     border-radius: 0.25rem;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -129,11 +129,11 @@ const ContactWrapper = styled.section`
     transition: var(--mainTransition);
   }
   .submit {
-    background-color: var(--primaryBlack);
+    background-color: var(--clr-black);
     outline: none;
-    border-color: var(--primaryBlack);
+    border-color: var(--clr-black);
     text-transform: uppercase;
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
     transition: var(--mainTransition);
     cursor: pointer;
     padding: 0.65rem 0.75rem;
@@ -141,23 +141,23 @@ const ContactWrapper = styled.section`
   }
   input:focus,
   textarea:focus{
-    outline-color: var(--primaryColor);
+    outline-color: var(--clr-primary-medium);
   }
   .submit:hover,
   .submit:focus{
-    background-color: var(--primaryWhite);
-    color: var(--primaryBlack);
+    background-color: var(--clr-primary-light);
+    color: var(--clr-black);
   }
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--primaryBlack);
+    color: var(--clr-black);
     opacity: 0.8; /* Firefox */
   }
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--primaryBlack);
+    color: var(--clr-black);
     opacity: 0.8;
   }
   ::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--primaryBlack);
+    color: var(--clr-black);
     opacity: 0.8;
   }
 

@@ -14,7 +14,7 @@ const Projects = ({
 
   const headerAndBtns = (
     <div>
-      <p className="center-info">Click below to filter projects by category</p>
+      <p className="center-info">Click below to filter designs</p>
         <SearchButtons
           projects={data}
           setProjects={setProjects}
@@ -40,6 +40,8 @@ const Wrapper = styled.section`
   & .center-info{
     text-align: center;
     margin-bottom: 0;
+    letter-spacing: var(--altSpacing);
+    font-size: inherit;
   }
   .section-center {
     display: grid;
@@ -47,7 +49,7 @@ const Wrapper = styled.section`
     /* safari workaround */
     grid-gap: 2rem;
     .container {
-      background: var(--primaryWhite);
+      background: var(--clr-primary-light);
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);

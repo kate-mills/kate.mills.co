@@ -62,7 +62,7 @@ const AboutKateWrapper = styled.section`
   }
   .about-img {
     margin: 3rem 0;
-    background: var(--primaryBlack);
+    background: var(--clr-black);
     box-shadow: var(--lightShadow);
   }
   .about-info {
@@ -85,8 +85,6 @@ const AboutKateWrapper = styled.section`
     font-size: 2rem;
     letter-spacing: var(--midSpacing);
     font-family: var(--altFF);
-    font-weight: 400;
-    font-style: italic;
     text-transform: capitalize;
   }
   .img-container::before {
@@ -94,7 +92,7 @@ const AboutKateWrapper = styled.section`
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 3px solid var(--primaryBlack);
+    border: 3px solid var(--clr-black);
     box-sizing: border-box;
     top: -16px;
     left: -16px;

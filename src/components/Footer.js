@@ -41,17 +41,17 @@ const Footer = () => {
 const FooterWrapper =styled.footer`
   &{
     font-family: var(--mainFF);
-    background-color: var(--primaryBlack);
+    background-color: var(--clr-black);
     padding: 4rem;
     margin-top: auto;
     text-align: center;
     width: 100%;
   }
   & > div{
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
   }
   .links a {
-    color: var(--primaryWhite) !important;
+    color: var(--clr-primary-light) !important;
     display: inline-block;
     font-size: .8rem;
     letter-spacing: var(--altSpacing);
@@ -60,13 +60,13 @@ const FooterWrapper =styled.footer`
     transition: var(--mainTransition);
   }
   .links a:hover{
-    color: var(--navHoverPrimary) !important;
+    color: var(--clr-primary-medium) !important;
   }
   .icons{
     padding: 1.5rem;
   }
   .icons a {
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
     display: inline-block;
     font-size: 1.3rem;
     margin: 1rem;
@@ -74,10 +74,10 @@ const FooterWrapper =styled.footer`
   }
   .icons a:hover {
     transform: translateY(-5px);
-    color: var(--primaryColor) !important;
+    color: var(--clr-primary-medium) !important;
   }
   .phone{
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
   }
   .phone:hover{
     cursor: pointer;
@@ -87,7 +87,7 @@ const FooterWrapper =styled.footer`
     letter-spacing: 1px;
     font-size: 0.65rem;
     margin: 0 0;
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
     padding: .5rem .5rem 0;
     text-align: center;
   }

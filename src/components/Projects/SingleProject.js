@@ -17,7 +17,7 @@ const SingleProject = ({project, showDetailLink=false })=>{
 }
 const SingleProjectWrapper = styled.article`
   &{
-    background: var(--primaryWhite);
+    background: var(--clr-black);
     border-radius: var(--radius);
     box-shadow: var(--lightShadow);
     transition: all 0.3s linear;
@@ -27,7 +27,7 @@ const SingleProjectWrapper = styled.article`
   }
   .img-container {
     position: relative;
-    background: var(--primaryWhite);
+    background: var(--clr-primary-light);
     transition: var(--mainTransition);
     opacity: 0.55;
   }
@@ -52,10 +52,10 @@ const SingleProjectWrapper = styled.article`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--primaryBlack);
-    border: 2px solid var(--primaryBlack);
+    background: var(--clr-black);
+    border: 2px solid var(--clr-black);
     border-radius: 10rem;
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
     opacity: 1;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
@@ -67,9 +67,9 @@ const SingleProjectWrapper = styled.article`
   }
   .img-container:hover .link {
     opacity: 1;
-    background: var(--primaryWhite);
-    border-color: var(--primaryWhite);
-    color: var(--primaryBlack);
+    background: var(--clr-primary-light);
+    border-color: var(--clr-primary-light);
+    color: var(--clr-black);
   }
 `
 export default SingleProject

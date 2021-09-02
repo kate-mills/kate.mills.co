@@ -21,18 +21,17 @@ const SingleSolution  = ({name, slug, description}) => {
 
 const SingleSolutionWrapper = styled.article`
   &{
-    background: var(--primaryWhite);
+    background: var(--clr-primary-light);
     border-left: 5px solid var(--primaryMd);
     border-right: 5px solid var(--primaryMd);
     border-radius: var(--radius);
-    color: var(--primaryBlack);
+    color: var(--clr-black);
     margin: 0 auto;
     padding: 1rem 0 0;
     text-align: center;
     :hover{
       a:hover,
       a{
-        font-weight: 100;
         animation: 1s ${flashA};
         animation-iteration-count: infinite;
         white-space: pre-wrap;
@@ -41,12 +40,11 @@ const SingleSolutionWrapper = styled.article`
     span.packages,
     span.solution-name{
       border-radius: 10px;
-      color: var(--primaryBlack);
+      color: var(--clr-black);
       display:block;
       font-family: var(--altFF);
       font-size: 1.5rem;
       font-style: italic;
-      font-weight: 600;
       line-height:1.25;
       margin: 0 auto;
       padding: .25rem 1rem;
@@ -55,13 +53,12 @@ const SingleSolutionWrapper = styled.article`
     }
     span.packages{
       font-size: 1.2rem;
-      font-weight: 400;
       padding-top: 0;
       margin-bottom: 1rem;
       white-space: pre-wrap;
     }
     a{
-      color: var(--primaryBlack);
+      color: var(--clr-black);
       display: inline-block;
       font-size: 1.2rem;
       letter-spacing: var(--altSpacing);
@@ -71,11 +68,11 @@ const SingleSolutionWrapper = styled.article`
       width: 100%;
       :hover{
         animation: 1s ${flashA};
-        color: var(--primaryBlack);
+        color: var(--clr-black);
       }
     }
     .underline{
-      background: var(--primaryBlack);
+      background: var(--clr-black);
       height: 3px;
       margin: 0 auto;
       text-align: center;
@@ -83,7 +80,7 @@ const SingleSolutionWrapper = styled.article`
       width: 50%;
     }
     p.description{
-      color: var(--primaryBlack);
+      color: var(--clr-black);
       font-size: 1rem;
       min-height: fit-content;
       margin: 0 auto;

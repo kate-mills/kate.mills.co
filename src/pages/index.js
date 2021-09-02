@@ -20,7 +20,7 @@ const IndexPage = ({ data, className }) => {
       <div className={className}>
       <HeroTall>
         <Banner
-          color={`var(--primaryWhite)`}
+          color={`var(--clr-primary-light)`}
           title={t1}
           info={t2}>
           <Btn to="/contact-us/" bgColor="light" text="Let's Chat"/>
@@ -53,7 +53,7 @@ export const query = graphql`
 `
 export default styled(IndexPage)`
   h2.digital-marketing-services-h2{
-    color: var(--primaryBlack);
+    color: var(--clr-black);
     font-size: 2rem;
     line-height: 1.5;
     margin: 0 auto;

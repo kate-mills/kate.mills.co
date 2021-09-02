@@ -21,10 +21,9 @@ export default styled(Btn)`
   &:link,
   &:visited{
     font-family: var(--mainFF);
-    font-weight: 400;
     font-size: 1.09rem;
     letter-spacing: var(--altSpacing);
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
     padding: 1.5rem 3.5rem;
     display: inline-block;
@@ -61,18 +60,18 @@ export default styled(Btn)`
     animation-duration: 800ms;
   }
   &.btn--light {
-    background-color: var(--primaryColor);
-    color: var(--primaryBlack2);
+    background-color: var(--clr-primary-medium);
+    color: var(--clr-black2);
   }
   &.btn--dark {
-    background-color: var(--primaryBlack2);
-    color: var(--primaryWhite);
+    background-color: var(--clr-black2);
+    color: var(--clr-primary-light);
   }
   &.btn--dark::after{
-    background-color: var(--primaryBlack);
+    background-color: var(--clr-black);
   }
   &.btn--light::after{
-    background-color: var(--primaryWhite);
+    background-color: var(--clr-primary-light);
   }
 
   @media(min-width: 768px){ margin: 1rem; }

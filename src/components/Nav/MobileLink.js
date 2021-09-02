@@ -17,7 +17,7 @@ export default styled(MobileLink)`
     margin-left: 0;
   }
   &.mobile-link:hover{
-    background: var(--primaryBlack2);
+    background: var(--clr-primary-darkest);
   }
   &.mobile-link.no-mobile{
     display:none;

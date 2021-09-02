@@ -69,7 +69,7 @@ const PhotoWrapper = styled.article`
     font-size: 1rem;
     margin-bottom: 0.5rem;
     a{
-      color: var(--primaryWhite);
+      color: var(--clr-primary-light);
     }
     .unsplash{
       margin-left: 5px;
@@ -83,7 +83,7 @@ const PhotoWrapper = styled.article`
     margin-bottom: 0;
   }
   .download-img {
-    fill: var(--primaryWhite);
+    fill: var(--clr-primary-light);
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -97,7 +97,7 @@ const PhotoWrapper = styled.article`
     .download-img-arrow{
       position: relative;
       left: 90%;
-      fill: var(--primaryWhite);
+      fill: var(--clr-primary-light);
       width: 2rem;
       height: 2rem;
       border-radius: 50%;

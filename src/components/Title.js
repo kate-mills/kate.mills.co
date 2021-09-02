@@ -16,28 +16,20 @@ const Title = ({ title, subtitle, className}) => {
 }
 
 export default styled(Title)`
-  font-size: 3rem;
-  letter-spacing: var(--altSpacing);
-  margin: 0 auto;
-  margin-bottom: 1.25rem;
-  text-align: center;
-  text-transform: capitalize;
-  text-shadow: 0 0 var(--primaryBlack2);
+    font-size: 3rem;
+    letter-spacing: var(--altSpacing);
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    text-align: center;
 
-  .title {
-    font-family: var(--altFF);
-    font-weight: 400;
-    font-style: italic;
-    color: ${props => props.titleColor || 'var(--primaryBlack2)'};
-    text-shadow: 0 0 var(--primaryBlack2);
+  .title, .subtitle {
+    color: ${props => props.titleColor || 'var(--clr-primary-dark)'};
+    font-family: var(--lustBold);
+    font-weight: 700;
+    text-transform: capitalize;
+    /*text-shadow: 0 0 var(--clr-primary-darkest);*/
   }
-  .subtitle {
-    font-family: var(--altFF);
-    font-weight: 400;
-    font-style: italic;
-    color: var(--primaryColor);
-    text-shadow: 0 0 var(--primaryBlack2);
-  }
+
   span {
     display: inline-block;
     margin: 0 0.35rem;

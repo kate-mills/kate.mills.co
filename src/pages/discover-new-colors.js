@@ -122,7 +122,7 @@ const ColorGeneratorPage = ()=> {
 }
 
 const ColoredGeneratorWrapper = styled.div`
-  background: var(--primaryWhite);
+  background: var(--clr-primary-light);
   & .container {
     margin: 0 auto;
     text-align: center;
@@ -141,7 +141,7 @@ const ColoredGeneratorWrapper = styled.div`
         outline: none;
         outline-color: transparent;
         border: none;
-        border-bottom: 4px solid var(--digitalColor);
+        border-bottom: 4px solid var(--clr-primary-dark);
         letter-spacing: var(--midSpacing);
         padding: 0.5rem 2rem 0.5rem 1rem;
         font-size: 1rem;
@@ -154,14 +154,14 @@ const ColoredGeneratorWrapper = styled.div`
       .btn-dt{display:block;}
       .btn-mb{display:none;}
       .btn {
-        background: var(--primaryWhite);
-        border: 1px solid var(--primaryBlack);
+        background: var(--clr-primary-light);
+        border: 1px solid var(--clr-black);
         border-top-right-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
         font-size: 1rem;
-        color: var(--primaryBlack);
+        color: var(--clr-black);
         cursor: pointer;
-        outline-color: var(--primaryWhite);
+        outline-color: var(--clr-primary-light);
         padding: 0.5rem 1rem;
         text-transform: capitalize;
         transform: translateX(10px) translateY(0);
@@ -171,8 +171,8 @@ const ColoredGeneratorWrapper = styled.div`
         border-color: red;
       }
       .clear-btn{
-        background: var(--primaryBlack);
-        color: var(--primaryWhite);
+        background: var(--clr-black);
+        color: var(--clr-primary-light);
         transform: translateX(12px) translateY(0);
       }
     }

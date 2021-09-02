@@ -59,13 +59,9 @@ const Navbar = (props) => {
           </button>
         </div>
         <NavSubmenu/>
-        <ul onClick={alwaysCloseNavAfterClick}
-          className={
-            isOpen
+        <ul onClick={alwaysCloseNavAfterClick} className={ isOpen
               ? `nav-links show-nav`
-              : `nav-links`
-          }
-        >
+              : `nav-links`}>
           { links.map((item, index) => {
             return (
                 <li key={index}
@@ -89,9 +85,11 @@ const Navbar = (props) => {
 
 const NavWrapper = styled.nav`
   &{
-    background: var(--primaryBlack);
+    background: var(--clr-black);
     width: 100vw;
   }
+  li.no-mobile.show-dt{ color:transparent; }
+
   & .nav-center{
     padding: 0 1rem;
     .nav-header {
@@ -105,7 +103,7 @@ const NavWrapper = styled.nav`
       .toggle-btn{
         background: inherit !important;
         border: unset;
-        color: var(--primaryColor);
+        color: var(--clr-primary-medium);
         cursor: pointer;
         font-size: 1.5rem;
         margin-left: 10px;
@@ -131,7 +129,7 @@ const NavWrapper = styled.nav`
   }
   & .nav-links a,
   & .nav-links span{
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
     display: block;
     font-size: .95rem;
     letter-spacing: var(--altSpacing);
@@ -140,7 +138,7 @@ const NavWrapper = styled.nav`
     text-decoration: none;
   }
   & .nav-links a:hover{
-    background: var(--primaryBlack2);
+    background: var(--clr-black2);
   }
   & .nav-links a.allow-pointer{
     opacity: 1;
@@ -148,7 +146,7 @@ const NavWrapper = styled.nav`
   & .nav-links a.current-page{
     opacity: 1;
     pointer-events: none;
-    background: var(--primaryColor);
+    background: var(--clr-primary-medium);
   }
   & .nav-links .show-mobile{
     display: block;
@@ -185,13 +183,13 @@ const NavWrapper = styled.nav`
       text-align: center;
     }
     .nav-links a.phone:hover{
-      background:var(--primaryBlack);
-      color: var(--primaryColor);
+      background:var(--clr-black);
+      color: var(--clr-primary-medium);
     }
     .nav-links li.active{
-      background:var(--primaryBlack2); /* styles while hovering over submenu */
+      background:var(--clr-black2); /* styles while hovering over submenu */
       a {
-        color: var(--primaryWhite);
+        color: var(--clr-primary-light);
       }
     }
     .nav-links li.hide-mobile{
@@ -212,4 +210,4 @@ const NavWrapper = styled.nav`
 `
 export default Navbar
 
-//&::after{ width: 100%; background: var(--primaryBlack2); content: ''; position: absolute; width: 100vw; height: 1px; opacity: .2; }
+//&::after{ width: 100%; background: var(--clr-black2); content: ''; position: absolute; width: 100vw; height: 1px; opacity: .2; }

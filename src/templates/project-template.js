@@ -74,9 +74,9 @@ const ProjectTemplateWrapper = styled.section`
     transition: var(--mainTransition);
   }
   a.url{
-    background: var(--digitalColor);
+    background: var(--clr-primary-dark);
     border-radius: 10rem;
-    color: var(--primaryWhite);
+    color: var(--clr-primary-light);
     display: inline-block;
     letter-spacing: var(--altSpacing);
     padding: 0.5rem 1.25rem;
@@ -85,7 +85,7 @@ const ProjectTemplateWrapper = styled.section`
     max-width: 300px;
   }
   a.url:hover{
-    color: var(--primaryColor);
+    color: var(--clr-primary-medium);
   }
   .hide-mobile {
     display: none;

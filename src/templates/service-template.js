@@ -77,7 +77,7 @@ const ServiceTemplateWrapper = styled.section`
     justify-content: center;
     padding: 0;
     padding-left: 10px;
-    background-color: var(--primaryWhite);
+    background-color: var(--clr-primary-light);
     transform: translateY(-10px);
     li{
       letter-spacing: .1rem;

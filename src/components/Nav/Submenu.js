@@ -47,19 +47,20 @@ const SubmenuWrapper = styled.aside`
     top: 77px;
     display: none;
   }
+
   &.show {
     display: block;
     transform: translateX(-50%) translateY(0);
     width: 150px;
     z-index: 3;
     .submenu-center {
-      background-color:var(--navHoverGrey);
+      background-color:var(--clr-black);
       :hover{
         .sub-link:hover{
           cursor: pointer !important;
-          color: var(--primaryBlack) !important;
+          color: var(--clr-black) !important;
           text-decoration: none;
-          background-color:var(--navHoverPrimary);
+          background-color:var(--clr-primary-medium);
         }
       }
       .sub-link {
@@ -68,9 +69,9 @@ const SubmenuWrapper = styled.aside`
         align-items: center;
         justify-content: center;
         text-align: left;
-        color: var(--primaryWhite);
+        color: var(--clr-primary-light);
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: capitalize;
         letter-spacing: var(--altSpacing);
       }
     }
