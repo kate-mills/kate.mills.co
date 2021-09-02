@@ -16,7 +16,7 @@ const Title = ({ title, subtitle, className}) => {
 }
 
 export default styled(Title)`
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: var(--altSpacing);
     margin: 0 auto;
     margin-bottom: 1.25rem;

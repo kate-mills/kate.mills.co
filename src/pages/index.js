@@ -55,6 +55,7 @@ export default styled(IndexPage)`
   h2.digital-marketing-services-h2{
     color: var(--clr-black);
     font-size: 2rem;
+    font-style: italic;
     line-height: 1.5;
     margin: 0 auto;
     padding: 4rem 1.5rem 0;

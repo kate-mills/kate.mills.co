@@ -67,6 +67,9 @@ export default styled(Btn)`
     background-color: var(--clr-black2);
     color: var(--clr-primary-light);
   }
+  &.btn--dark:hover{
+    color: var(--clr-primary-darkest);
+  }
   &.btn--dark::after{
     background-color: var(--clr-black);
   }

@@ -83,7 +83,7 @@ const AboutKateWrapper = styled.section`
   }
   .about-info .heading {
     font-size: 2rem;
-    letter-spacing: var(--midSpacing);
+    font-style: italic;
     font-family: var(--altFF);
     text-transform: capitalize;
   }
