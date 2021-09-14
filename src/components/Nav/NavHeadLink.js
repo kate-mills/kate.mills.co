@@ -4,8 +4,7 @@ import {useGlobalContext} from '../../context/context'
 
 import styled from 'styled-components'
 
-const noClk=(e)=>{e.preventDefault()}
-
+//const noClk=(e)=>{e.preventDefault()}
 
 const NavDesktopHeadLink = ({className, lnk, hoverFn}) =>{
   return (
@@ -30,7 +29,7 @@ const HeadLinkPlus = ({className, lnk, hoverFn}) => {
     <PlusWrapper
       to={lnk.path}
       onMouseOver={hoverFn}
-      onClick={noClk}
+      /*onClick={noClk}*/
       className={`${className} head-link-plus`}>
       {lnk.page}
     </PlusWrapper>

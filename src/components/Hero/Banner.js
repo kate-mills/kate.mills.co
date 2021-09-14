@@ -25,7 +25,7 @@ const Banner = ({ title, info, children, className}) => {
 
 export default styled(Banner)`
   &{
-    color: ${props => props.color || 'var(--clr-primary-dark)'};
+    color: ${props => props.color || 'var(--clr-secondary-dark)'};
     width: 100%;
     text-align: center;
     letter-spacing: var(--mainSpacing);
@@ -43,11 +43,10 @@ export default styled(Banner)`
     }
     span.title-l2 {
       display: block;
-      font-family: var(--altFF);
       font-style: italic;
       font-size: 1.5rem;
       letter-spacing: var(--midSpacing);
-      width: 95%;
+      max-width: 60%;
       margin: 0 auto;
       margin-bottom: 2rem;
     }

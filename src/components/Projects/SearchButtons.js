@@ -50,8 +50,8 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   button {
     background: transparent;
-    color: var(--clr-primary-darkest);
-    font-family: var(--lustBold);
+    color: var(--clr-secondary-dark);
+    font-family: var(--displayFF);
     margin: 0.5rem;
     text-transform: capitalize;
     letter-spacing: var(--altSpacing);
@@ -64,8 +64,8 @@ const Wrapper = styled.div`
   }
   button:hover,
   button.active {
-    box-shadow: 0px 1.5px 0 var(--clr-black);
-    color: var(--clr-black);
+    box-shadow: 0px 1.5px 0 var(--bg-light-txt);
+    color: var(--bg-light-txt);
   }
 `
 export default SearchButtons

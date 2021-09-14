@@ -70,7 +70,9 @@ const ColorSchemes = () => {
 export default ColorSchemes
 
 const ColorSchemeWrapper = styled.div`
-  background: var(--clr-primary-light);
+  background: var(--bg-dark);
+  color: var(--bg-dark-txt);
+
   & div.app-nav{
     align-content: center;
     align-items: center;
@@ -97,9 +99,9 @@ const ColorSchemeWrapper = styled.div`
       white-space: pre-line;
     }
     button.btn{
-      background: transparent;
+      background: inherit;
       border: none;
-      color: var(--clr-black);
+      color: inherit;
       cursor: pointer;
       letter-spacing: var(--altSpacing);
       outline: none;
@@ -108,7 +110,7 @@ const ColorSchemeWrapper = styled.div`
     button.btn.copy{ transform: translateX(0); min-width:40%;}
     button.btn.generate:before{content:'Press the spacebar to generate color palettes!';}
     button.btn.copy:before{ content:'Copy color palette!';}
-    span.alert{color: var(--clr-black);font-family: var(--mainFF);min-width:20%;}
+    span.alert{color: inherit;font-family: var(--mainFF);min-width:20%;}
   }
   @media screen and (max-width:1200px){
     & div.app-nav{

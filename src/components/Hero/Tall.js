@@ -12,7 +12,7 @@ const TallHero = ({ img, className, children }) => {
 }
 export default styled(TallHero)`
   min-height: calc(100vh - 76px);
-  background: var(--clr-black);
+  background: var(--clr-secondary-light);
   opacity: 1 !important;
   transition: var(--mainTransition);
   display: flex;

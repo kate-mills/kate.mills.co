@@ -17,7 +17,8 @@ export default styled(MobileLink)`
     margin-left: 0;
   }
   &.mobile-link:hover{
-    background: var(--clr-primary-darkest);
+    background: var(--clr-secondary-light);
+    color: var(--clr-secondary-light-txt);
   }
   &.mobile-link.no-mobile{
     display:none;

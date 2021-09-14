@@ -122,7 +122,7 @@ const ColorGeneratorPage = ()=> {
 }
 
 const ColoredGeneratorWrapper = styled.div`
-  background: var(--clr-primary-light);
+  background: var(--bg-light);
   & .container {
     margin: 0 auto;
     text-align: center;
@@ -141,27 +141,28 @@ const ColoredGeneratorWrapper = styled.div`
         outline: none;
         outline-color: transparent;
         border: none;
-        border-bottom: 4px solid var(--clr-primary-dark);
+        border-bottom: 4px solid var(--black);
+        border-color: var(--black);
         letter-spacing: var(--midSpacing);
         padding: 0.5rem 2rem 0.5rem 1rem;
         font-size: 1rem;
         ::placeholder{
           width: fit-content;
           font-size: 1.1rem;
-          color:#252c5878;/*hsl(232deg 41% 25% / 57%);*/
+          color:var(--clr-secondary-light);/*hsl(232deg 41% 25% / 57%);*/
         }
       }
       .btn-dt{display:block;}
       .btn-mb{display:none;}
       .btn {
-        background: var(--clr-primary-light);
-        border: 1px solid var(--clr-black);
+        background: var(--clr-secondary-light);
+        border: 1px solid var(--clr-secondary-color);
         border-top-right-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
-        font-size: 1rem;
-        color: var(--clr-black);
+        color: var(--clr-secondary-light-color);
         cursor: pointer;
-        outline-color: var(--clr-primary-light);
+        font-size: 1rem;
+        outline-color: var(--clr-secondary-color-txt);
         padding: 0.5rem 1rem;
         text-transform: capitalize;
         transform: translateX(10px) translateY(0);
@@ -171,8 +172,8 @@ const ColoredGeneratorWrapper = styled.div`
         border-color: red;
       }
       .clear-btn{
-        background: var(--clr-black);
-        color: var(--clr-primary-light);
+        background: var(--clr-secondary-dark);
+        color: var(--clr-secondary-dark-txt);
         transform: translateX(12px) translateY(0);
       }
     }

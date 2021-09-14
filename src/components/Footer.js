@@ -41,32 +41,31 @@ const Footer = () => {
 const FooterWrapper =styled.footer`
   &{
     font-family: var(--mainFF);
-    background-color: var(--clr-black);
+    background-color: var(--clr-secondary-dark);
+    color: var(--clr-secondary-dark-txt);
     padding: 4rem;
     margin-top: auto;
     text-align: center;
     width: 100%;
   }
   & > div{
-    color: var(--clr-primary-light);
+    color: inherit;
   }
   .links a {
-    color: var(--clr-primary-light) !important;
+    color: inherit;
     display: inline-block;
-    font-size: .8rem;
     letter-spacing: var(--altSpacing);
     margin: 1rem 2.5rem;
     text-decoration: none;
     transition: var(--mainTransition);
   }
   .links a:hover{
-    color: var(--clr-primary-medium) !important;
+    color: var(--clr-secondary-50);
   }
   .icons{
     padding: 1.5rem;
   }
   .icons a {
-    color: var(--clr-primary-light);
     display: inline-block;
     font-size: 1.3rem;
     margin: 1rem;
@@ -74,10 +73,11 @@ const FooterWrapper =styled.footer`
   }
   .icons a:hover {
     transform: translateY(-5px);
-    color: var(--clr-primary-medium) !important;
+    color: var(--clr-primary-color);
+
   }
   .phone{
-    color: var(--clr-primary-light);
+    color: inherit;
   }
   .phone:hover{
     cursor: pointer;
@@ -87,7 +87,7 @@ const FooterWrapper =styled.footer`
     letter-spacing: 1px;
     font-size: 0.65rem;
     margin: 0 0;
-    color: var(--clr-primary-light);
+    color: inherit;
     padding: .5rem .5rem 0;
     text-align: center;
   }

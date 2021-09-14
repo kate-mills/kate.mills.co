@@ -58,10 +58,10 @@ const SingleColorWrapper = styled.article`
     margin-bottom: 0;
   }
   &.group-1-lightest-txt p{
-    color: var(--clr-black) !important;
+    color: var(--bg-light-txt) !important;
   }
   &.group-2-md-txt p{
-    color: var(--clr-primary-darkest) !important;
+    color: var(--bg-light-txt) !important;
   }
   &.group-3-darkest-txt p{
     color: var(--clr-primary-light) !important;

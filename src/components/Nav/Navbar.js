@@ -85,7 +85,8 @@ const Navbar = (props) => {
 
 const NavWrapper = styled.nav`
   &{
-    background: var(--clr-black);
+    background: var(--clr-secondary-color);
+    color: var(--clr-secondary-color-txt);
     width: 100vw;
   }
   li.no-mobile.show-dt{ color:transparent; }
@@ -103,7 +104,7 @@ const NavWrapper = styled.nav`
       .toggle-btn{
         background: inherit !important;
         border: unset;
-        color: var(--clr-primary-medium);
+        /*color: var(--clr-primary-color);*/
         cursor: pointer;
         font-size: 1.5rem;
         margin-left: 10px;
@@ -129,7 +130,7 @@ const NavWrapper = styled.nav`
   }
   & .nav-links a,
   & .nav-links span{
-    color: var(--clr-primary-light);
+    color: var(--clr-secondary-color-txt);
     display: block;
     font-size: .95rem;
     letter-spacing: var(--altSpacing);
@@ -138,15 +139,15 @@ const NavWrapper = styled.nav`
     text-decoration: none;
   }
   & .nav-links a:hover{
-    background: var(--clr-black2);
+    cursor: pointer;
+    color: var(--bg-dark-txt);
   }
   & .nav-links a.allow-pointer{
     opacity: 1;
   }
   & .nav-links a.current-page{
     opacity: 1;
-    pointer-events: none;
-    background: var(--clr-primary-medium);
+    background: var(--clr-primary-color);
   }
   & .nav-links .show-mobile{
     display: block;
@@ -183,14 +184,12 @@ const NavWrapper = styled.nav`
       text-align: center;
     }
     .nav-links a.phone:hover{
-      background:var(--clr-black);
-      color: var(--clr-primary-medium);
+      background:inherit;
+      color: inherit;
     }
     .nav-links li.active{
-      background:var(--clr-black2); /* styles while hovering over submenu */
-      a {
-        color: var(--clr-primary-light);
-      }
+      background:inherit;
+      a {}
     }
     .nav-links li.hide-mobile{
       display:none;
@@ -209,5 +208,3 @@ const NavWrapper = styled.nav`
   }
 `
 export default Navbar
-
-//&::after{ width: 100%; background: var(--clr-black2); content: ''; position: absolute; width: 100vw; height: 1px; opacity: .2; }

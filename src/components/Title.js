@@ -24,10 +24,8 @@ export default styled(Title)`
 
   .title, .subtitle {
     color: ${props => props.titleColor || 'var(--clr-primary-dark)'};
-    font-family: var(--lustBold);
-    font-weight: 700;
     text-transform: capitalize;
-    /*text-shadow: 0 0 var(--clr-primary-darkest);*/
+    text-shadow: 0 0 rgba(0,0,0,0.2);
   }
 
   span {

@@ -54,13 +54,14 @@ const SubmenuWrapper = styled.aside`
     width: 150px;
     z-index: 3;
     .submenu-center {
-      background-color:var(--clr-black);
+      background-color:var(--clr-secondary-color);
+      color: var(--clr-secondary-color-txt);
       :hover{
         .sub-link:hover{
           cursor: pointer !important;
-          color: var(--clr-black) !important;
           text-decoration: none;
-          background-color:var(--clr-primary-medium);
+          background-color:var(--clr-primary-color);
+          color: var(--clr-primary-color-txt);
         }
       }
       .sub-link {
@@ -69,7 +70,6 @@ const SubmenuWrapper = styled.aside`
         align-items: center;
         justify-content: center;
         text-align: left;
-        color: var(--clr-primary-light);
         text-decoration: none;
         text-transform: capitalize;
         letter-spacing: var(--altSpacing);

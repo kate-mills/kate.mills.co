@@ -37,7 +37,6 @@ const FourIconsWrapper = styled.section`
       margin: 2rem 0;
       text-align: center;
       span{
-        color: var(--clr-black);
         display: inline-block;
         font-size: 3rem;
         margin-bottom: 1.5rem;
@@ -45,7 +44,8 @@ const FourIconsWrapper = styled.section`
       }
       div {
         a {
-          font-family: var(--lustBold);
+          font-family: var(--displayFF);
+          font-weight: var(--displayFFWeight);
           border-bottom: 1px solid black;
           text-transform: capitalize;
         }

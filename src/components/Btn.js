@@ -60,21 +60,23 @@ export default styled(Btn)`
     animation-duration: 800ms;
   }
   &.btn--light {
-    background-color: var(--clr-primary-medium);
-    color: var(--clr-black2);
+    background-color: var(--clr-primary-dark);
+    color: var(--clr-primary-txt) !important;
   }
   &.btn--dark {
-    background-color: var(--clr-black2);
-    color: var(--clr-primary-light);
+    background-color: var(--clr-secondary-color);
+    color: var(--clr-secondary-txt);
   }
   &.btn--dark:hover{
-    color: var(--clr-primary-darkest);
+    color: var(--clr-secondary-txt);
+
   }
   &.btn--dark::after{
-    background-color: var(--clr-black);
+    background-color: var(--clr-secondary-dark);
   }
   &.btn--light::after{
     background-color: var(--clr-primary-light);
+    color: var(--clr-primary-light-txt);
   }
 
   @media(min-width: 768px){ margin: 1rem; }
