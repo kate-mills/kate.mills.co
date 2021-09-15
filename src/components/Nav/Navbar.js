@@ -16,7 +16,7 @@ import Img from 'gatsby-image'
 
 const query = graphql`
   {
-    logo: file(relativePath: {eq: "fashion-lg2.png"}) {
+    logo: file(relativePath: {eq: "AllyDigitalSolutions.png"}) {
       childImageSharp {
         fixed(height: 37, quality: 10) {
           ...GatsbyImageSharpFixed_withWebp
