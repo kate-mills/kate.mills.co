@@ -50,9 +50,6 @@ module.exports = {
         theme_color: `#e9d9d9`,
         display: `standalone`,
         icon: `src/images/icon.png`,
-        icon_options: {
-          purpose: `any maskable`,
-        },
         crossOrigin: `use-credentials`,
       },
     },
