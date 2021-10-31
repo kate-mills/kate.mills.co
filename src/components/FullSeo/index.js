@@ -61,7 +61,8 @@ const SEO = ({ title, description, image, article, snippet, noindex}) => {
       >
       <meta name="google-site-verification" content="NqiWJfj8nH2YaaWWihNoSAlErS_v97xTDmFcRkLUGHU" />
       <meta name="google-site-verification" content="aS5BlTYYa6OIBC7WjfeTN_LQKKWvYXZWHvWGTyv6XAU" />
-      <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>
+        <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>
+        <meta name="facebook-domain-verification" content="srx6e7hm6luuiqkt144we60g77s7mu" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {noindex && (<meta name="robots" content="noindex" />)}
