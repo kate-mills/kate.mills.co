@@ -61,7 +61,7 @@ module.exports = {
         background_color:`#dcdcdc`,
         theme_color: `#e9d9d9`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/monogram.png`,
         crossOrigin: `use-credentials`,
       },
     },
