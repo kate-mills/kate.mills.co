@@ -23,11 +23,23 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-top-layout`,
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve:`gatsby-plugin-scroll-reveal`, 
+      resolve: 'gatsby-plugin-material-ui',
+      // If you want to use styled components you should change the injection order.
       options: {
-        threshold: .3,
-      }
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
+        disableAutoprefixing: true,
+        disableMinification: true,
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -127,12 +139,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify`,
   ],
 }
 
