@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const currentUrl = 'https://katemillsco.com'
+
 module.exports = {
   siteMetadata: {
     title: `Ally Digital Solutions`,
@@ -11,13 +13,13 @@ module.exports = {
     author: `Ally Digital Solutions`,
     twitterUsername: `@katie_napa`,
     image: `/ally-digital-solutions.jpg`,
-    url: `https://allydigitalsolutions.com`,
-    baseUrl: `https://allydigitalsolutions.com`,
-    siteUrl: `https://allydigitalsolutions.com`,//keep for sitemap-plugin
+    url: `${currentUrl}`,
+    baseUrl: `${currentUrl}`,
+    siteUrl: `${currentUrl}`,//keep for sitemap-plugin
     organization: {
       name: `Ally Digital Solutions`,
-      url: `https://allydigitalsolutions.com`,
-      logo: `https://allydigitalsolutions.com/images/logo.jpg`,
+      url: `${currentUrl}`,
+      logo: `${currentUrl}/images/logo.jpg`,
       telephone: `707-266-8106`,
       priceRange: `$$$`,
     }
@@ -61,7 +63,7 @@ module.exports = {
         background_color:`#dcdcdc`,
         theme_color: `#e9d9d9`,
         display: `standalone`,
-        icon: `src/images/black-monogram.png`,
+        icon: `src/images/3dAD.png`,
         crossOrigin: `use-credentials`,
       },
     },
@@ -75,8 +77,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://allydigitalsolutions.com',
-        sitemap: 'https://allydigitalsolutions.com/sitemap.xml',
+        host: `${currentUrl}`,
+        sitemap:`${currentUrl}/sitemap.xml`,
         policy: [
           { userAgent: '*', allow: '/' },
           {userAgent: '*', disallow: '/thankyou'},
