@@ -59,9 +59,9 @@ const SEO = ({ title, description, image, article, snippet, noindex}) => {
       <Helmet title={seo.title}
         htmlAttributes={{ lang: 'en' }}
       >
-      <meta name="google-site-verification" content="NqiWJfj8nH2YaaWWihNoSAlErS_v97xTDmFcRkLUGHU" />
+        {/*<meta name="google-site-verification" content="NqiWJfj8nH2YaaWWihNoSAlErS_v97xTDmFcRkLUGHU" />
       <meta name="google-site-verification" content="aS5BlTYYa6OIBC7WjfeTN_LQKKWvYXZWHvWGTyv6XAU" />
-        <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>
+        <meta name="p:domain_verify" content="f1fa26b212532759ecbfbc6161fde057"/>*/}
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="facebook-domain-verification" content="5ebqill113nayj0tomnlii6luehjko" />
