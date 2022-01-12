@@ -8,8 +8,8 @@ import FullSeo from '../components/FullSeo'
 const snippet = `{
     "@context": "https://schema.org",
     "@type": "Organization",
-    "url": "https://allydigitalsolutions.com",
-    "name": "Ally Digital Solutions",
+    "url": "https://katemillsco.com",
+    "name": "Kate Mills Company, LLC",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-707-266-8106",
@@ -20,7 +20,7 @@ const snippet = `{
 const contact = props => {
   return (
     <Layout>
-      <FullSeo title="Contact" snippet={snippet} description={'Contact a local Napa web designer specializing in websites, blogs, eCommerce, and social media for estheticians, beauticians, salons, spas & beauty companies.'}/>
+      <FullSeo title="Contact" snippet={snippet} description={'We are a national Digital Marketing & Web Development Agency located in Napa, CA.'}/>
         <Banner className="smallText heavy-rain" title="We make it easy" info="Are you drained from trying to make your website look professional?"/>
       <Contact />
     </Layout>

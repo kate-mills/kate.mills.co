@@ -12,7 +12,7 @@ const copyColorScheme = (lst)=>{
       hexes.push(clr.hex)
     }
   })
-  hexes.push('\nCome back!\nallydigitalsolutions.com/build-color-schemes\n')
+  hexes.push('\nCome back!\nkatemillsco.com/build-color-schemes\n')
   hexes = hexes.join('\n')
   navigator.clipboard.writeText(hexes)
   return
