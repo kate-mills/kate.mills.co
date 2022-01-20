@@ -7,8 +7,7 @@ import {navigate} from 'gatsby'
 
 const SingleProject = ({project, showDetailLink=false })=>{
   return(
-
-    <SingleProjectWrapper onClick={()=> navigate(`${project.url}`)}>
+    <SingleProjectWrapper onClick={()=> navigate(`${project.slug}`)}>
       <div className="img-container container">
         <Image className="img" fluid={project.images.localFiles[0].childImageSharp.fluid}/>
         {showDetailLink && (<span className="link">Details</span>)}

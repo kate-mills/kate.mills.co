@@ -112,6 +112,7 @@ export const query = graphql`
           desc
           type
           url
+          slug
           mainImgAlt
           images {
             localFiles {
