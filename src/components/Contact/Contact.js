@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../Title'
-import PhoneNumber from '../PhoneNumber'
+//import PhoneNumber from '../PhoneNumber'
 import styled from 'styled-components'
 
 
@@ -8,11 +8,10 @@ const Contact = () => {
   const asterisk = <span className="required">&lowast;</span>;
   return (
     <ContactWrapper>
-      <Title title="contact" subtitle="us" />
+      <Title title="contact" subtitle="Me" />
       <div className="center">
         <div className="instructions">
-          <p>Call/text us at<PhoneNumber/>or contact us via the submission form and we'll get back to you as soon as we can.</p>
-          <p> Thank you!</p>
+          <p>Call/text me at (415) 988-1102, or via the form below.</p>
         </div>
         <form
           className="form"
@@ -65,7 +64,7 @@ const Contact = () => {
               id="message"
               rows="12"
               className="form-control"
-              placeholder="Tell us about your project..."
+              placeholder=""
             />
           </div>
           <div>
@@ -102,9 +101,11 @@ const ContactWrapper = styled.section`
       *{ width: 100%;}
       p:nth-child(1){
         margin: 0 auto;
+        text-align: center;
       }
       p:nth-child(2){
-        margin: 1.5rem auto 2.5rem;
+        margin: 1rem auto 2.5rem;
+        text-align: center;
     }
   }
   label {

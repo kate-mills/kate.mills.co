@@ -29,7 +29,7 @@ const Footer = () => {
             {item.icon}</a>
         })}
       </div>
-        <p className="phone">(707) 266 - 8106</p>
+        <p className="phone">(415) 988 - 1102</p>
       <div className="small-font">
         Copyright &copy; {new Date().getFullYear()} All Rights Reserved
       </div>

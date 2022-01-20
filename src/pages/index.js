@@ -12,8 +12,8 @@ import Contact from '../components/Contact/Contact'
 
 
 const IndexPage = ({ data, className }) => {
-  const t1=`Boost your beauty business in ${new Date().getFullYear()}`
-  const t2=`with a pro website designer.`
+  const t1=`My Latest Projects`
+  const t2=`Kate Mills, Front End Developer`
   return (
     <Layout>
       <FullSeo title={`${t1} ${t2}`} image={data.defaultBg.childImageSharp.fluid.src}/>
@@ -23,17 +23,18 @@ const IndexPage = ({ data, className }) => {
           color={`var(--clr-primary-dark)`}
           title={t1}
           info={t2}>
-          <Btn to="/contact-us/"  text="Let's Chat"/>
+          <Btn to="/contact-kate/"  text="Let's Chat"/>
         </Banner>
       </HeroTall>
       <div className="digital-marketing-services">
-        <h2 className="digital-marketing-services-h2">Give Your Small Business a Competitive Advantage with a Professionally Done Website.</h2>
+        <p className="digital-marketing-services-h2"/>
         <FourIcons/>
+        <p className="digital-marketing-services-h2"/>
       </div>
       <Contact/>
       </div>
       <div className="footer-btn">
-        <Btn to="/portfolio/" bgColor="dark" text="View Our Portfolio"/>
+        <Btn to="/build-color-schemes/" bgColor="dark" text="Generate Color Schemes"/>
         <div style={{height:'2rem'}}/>
         <Btn to="/free-website-images/" bgColor="dark" text="Free Website Images" className="btn2"/>
       </div>
@@ -52,17 +53,8 @@ export const query = graphql`
   }
 `
 export default styled(IndexPage)`
-  h2.digital-marketing-services-h2{
-    font-size: 2rem;
-    font-style: italic;
-    line-height: 1.5;
-    margin: 0 auto;
-    padding: 4rem 1.5rem 0;
-    text-align: center;
-    white-space: pre-wrap;
-    word-spacing: unset;
-  }
-  div.digital-marketing-services{
+  p.digital-marketing-services-h2{
+    margin: 2.5rem auto;
   }
   @media(min-width: 768px){
     div.digital-marketing-services{

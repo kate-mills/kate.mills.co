@@ -5,9 +5,7 @@ import HeroShort from '../components/Hero/Short'
 import Banner from '../components/Hero/Banner'
 import Btn from '../components/Btn'
 import FullSeo from '../components/FullSeo'
-import Title from '../components/Title'
 import SearchProjects from '../components/Projects/SearchProjects'
-import WebPackages from '../components/HomeAndAbout/WebPackages'
 
 import styled from 'styled-components'
 
@@ -16,38 +14,20 @@ const ServiceTemplate = ({ data:{service, projects, packages, defaultBg} }) => {
     name,
     bannerTitle,
     bannerInfo,
-    whyTitle,
-    whyList,
     metaDesc,
   } = service.nodes[0].data
 
-  const why_list = whyList.split('. ').filter((item)=>item.length !== 0)
 
   return (
     <Layout>
       <FullSeo title={name} description={metaDesc}/>
       <HeroShort className="circles-squares">
-        <Banner title={`Latest Beauty ${bannerTitle}`} info={bannerInfo}>
+        <Banner title={`Latest ${bannerTitle}`} info={bannerInfo}>
           <Btn to="/portfolio/" text="View all projects" />
         </Banner>
       </HeroShort>
       <ServiceTemplateWrapper>
         <SearchProjects projects={projects.nodes}/>
-        <WebPackages cls={`section-center web-packages`} name={packages.nodes[0].data.service} packages={packages.nodes}/>
-
-        <div className='benefit-container polka-dots'>
-          <Title title={`${why_list.length} benefits of `} subtitle={whyTitle}/>
-        <div className="benefit-list">
-          <ul data-bullet-list>
-            {
-              why_list.slice(0, -1).map((s, index) =>{
-                return(<li key={index}><p>{s}</p></li>)
-              })
-            }
-            <li><p>{why_list.pop().slice(0, -1)}</p></li>
-          </ul>
-        </div>
-        </div>
       </ServiceTemplateWrapper>
         <div className="footer-btn"><Btn to="/portfolio/" text="view all projects" colorful color/></div>
     </Layout>

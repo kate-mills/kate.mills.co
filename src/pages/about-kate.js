@@ -8,15 +8,15 @@ import FullSeo from '../components/FullSeo'
 const AboutPage = () => {
   return (
     <Layout>
-      <FullSeo title="About Us" description="Set yourself apart with a custom website built by a local Napa Valley web designer specializing in beauty website design and social media for estheticians, beauticians, salons, spas & beauty companies."/>
+      <FullSeo title="About Kate" description="Kate Mills is a Web Developer in Napa, Ca. "/>
         <Banner
           className="polka-dots"
           title="Meet Kate"
-          info="Home office in Napa Valley" >
+          info="Napa Valley, CA" >
         </Banner>
         <AboutKate />
         <div className="footer-btn">
-          <Btn to="/portfolio" bgColor="dark" text="latest websites"/>
+          <Btn to="/build-color-schemes/" color colorful text="Latest Apps" />
        </div>
     </Layout>
   )

@@ -5,27 +5,22 @@ import Banner from '../components/Hero/Banner'
 import SearchProjects from '../components/Projects/SearchProjects'
 import Btn from '../components/Btn'
 import FullSeo from '../components/FullSeo'
-import WebPackages from '../components/HomeAndAbout/WebPackages'
-
 
 const portfolio = ({ data }) => {
   const {
     projectTable: { nodes: projects },
-    packageTable: { nodes: allypackages },
   } = data
   return (
     <Layout>
       <FullSeo title="Portfolio" 
         description={`We specialize in websites & social media content for small beauty businesses. Learn more about boosting your business in ${new Date().getFullYear()} now.`}
       />
-      <Banner title="Web Designs" info="Browse through some of our latest websites." className="circles-squares"/>
+      <Banner title="Web Designs" info="Browse through some of my latest websites." className="circles-squares"/>
       <section className="section section-center" style={{marginTop: 0, paddingTop: '1rem'}}>
       <SearchProjects projects = {projects} showSearchBtns />
     </section>
-      <WebPackages packages={allypackages} cls={""} name={'Digital'}/>
-
       <div className="footer-btn">
-        <Btn to="/contact-us/" text="contact us" bgColor="dark"/>
+        <Btn to="/contact-kate/" text="contact Me" bgColor="dark"/>
       </div>
     </Layout>
   )

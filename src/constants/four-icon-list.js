@@ -1,40 +1,27 @@
 import React from "react"
-
-import {GiDandelionFlower, GiSunflower } from "react-icons/gi"
+import {GiDandelionFlower } from "react-icons/gi"
 
 const FourIconList = [
   {
     icon: <GiDandelionFlower className="icon" />,
-    slug: 'blogs',
-    title: "Blog packages",
-    text: "Increase your online visibility with a blog.  More content means more opportunities to show up in search engines and drive new visitors to your website.",
-    info:
-      "Highlight your small beauty business with a website, e-commerce store, or blog.",
-  },
-  {
-    icon: <GiSunflower className="icon" />,
-    title: "E-Commerce packages",
-    slug: 'e-commerce',
-    info: "Find a Range of Website Design Solutions and Choose One That Fits Your Budget and Goals!",
-    text:
-      "Keep your retail business open 24 hours a day.  An online store makes shopping easier for existing clients and finds new ones that may never enter your physical location.",
+    slug: 'build-color-schemes',
+    title: "Color Palette Generator",
+    text: "My version of the Coolors app.",
+    info:"",
   },
   {
     icon: <GiDandelionFlower className="icon" />,
-    title: "Website packages",
-    slug: 'websites',
-    text: "Grow your business, build credibility, save time, engage with clients, and the list goes on.",
-    info:
-    "Build and enhance an everlasting bond between you and your customer via innovative web solutions.",
+    title: "Tints & Shades",
+    slug: 'discover-new-colors',
+    text: "Get tints & shades of any color to build a gorgeous color scheme.",
+    info: "",
   },
   {
-    icon: <GiSunflower className="icon" />,
-    title: "Social Media packages",
-    slug: 'social-media',
-    text:
-      "Establish a social presence and actively engage with users through top social media channels and networks. ",
-    info:
-      "We value a true partnership with all of our clients and treat your success as necessary as our own.",
+    icon: <GiDandelionFlower className="icon" />,
+    title: "Search & Save Images",
+    slug: 'free-website-images',
+    text: "Built using unsplash api",
+    info: "",
   },
 ]
 export default FourIconList

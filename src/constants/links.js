@@ -7,15 +7,11 @@ const sublinks = [
     links: [],
   },
   {
-    page: 'Why ADS?',
-    path: '/about-us',
+    page: 'About Kate',
+    path: '/about-kate',
     id: 2,
-    cls:'no-mobile',
-    links: [
-      { label: 'About Us', url: '/about-us', cls:'show-mobile no-dt'},
-      { label: 'Contact Us', url: '/contact-us', cls:'show-mobile'},
-      { label: 'Our Packages', url: '/portfolio#packages', cls:'show-mobile'},
-    ],
+    cls:'no-mobile show-dt',
+    links: [],
   },
   {
     page: 'Designs',
@@ -25,8 +21,7 @@ const sublinks = [
     links: [
       { label: 'Portfolio', url: '/portfolio', cls:'no-dt'},
       { label: 'Websites', url: '/websites', cls: 'no-mobile' },
-      { label: 'Social', url: '/social-media', cls: 'no-mobile' },
-      { label: 'E-commerce', url: '/e-commerce', cls:'no-mobile' },
+      { label: 'Ecommere', url: '/ecommerce', cls: 'no-mobile' },
       { label: 'Blogs', url: '/blogs', cls: 'no-mobile' },
     ],
   },

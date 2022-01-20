@@ -2,10 +2,12 @@ import React from 'react'
 import FourIconList from '../../constants/four-icon-list'
 import styled from 'styled-components'
 import {Link} from 'gatsby'
+import Title from '../Title'
 
 const FourIcons  = () => {
   return (
     <FourIconsWrapper>
+        <Title title="Latest" subtitle="Apps"/>
       <div className="center">
         {FourIconList.map((item, index) => {
           return (
@@ -56,7 +58,8 @@ const FourIconsWrapper = styled.section`
       }
       p{
         margin-left: 10%;
-        text-align: left;
+        margin-right: 10%;
+        text-align: center;
       }
     }
   }
