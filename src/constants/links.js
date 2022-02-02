@@ -11,20 +11,11 @@ const sublinks = [
     path: '/about-kate',
     id: 2,
     cls:'no-mobile show-dt',
-    links: [],
-  },
-  {
-    page: 'Designs',
-    path: '/portfolio',
-    id: 3,
-    cls:'no-mobile',
     links: [
-      { label: 'Portfolio', url: '/portfolio', cls:'no-dt'},
-      { label: 'Websites', url: '/websites', cls: 'no-mobile' },
-      { label: 'Ecommere', url: '/ecommerce', cls: 'no-mobile' },
-      { label: 'Blogs', url: '/blogs', cls: 'no-mobile' },
+      { label: 'Contact Me', url: '/contact-kate', cls: '' },
     ],
   },
+  //{ page: 'Designs', path: '/portfolio', id: 3, cls:'no-mobile', links: [ { label: 'Portfolio', url: '/portfolio', cls:'no-dt'}, { label: 'Websites', url: '/websites', cls: 'no-mobile' }, { label: 'Ecommere', url: '/ecommerce', cls: 'no-mobile' }, { label: 'Blogs', url: '/blogs', cls: 'no-mobile' }, ], },
   {
     page: 'Apps',
     path: '/free-website-images',

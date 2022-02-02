@@ -37,7 +37,7 @@ const AboutKate = () => {
           <p>From 2016 to 2019, while employed with Michele Corley Clinical Skincare,  I was a volunteer developer for the non-profit Rebuilding Together Peninsula in Redwood City. Our team of three developers debugged and added features to their internal web app.
           </p>
           <p>By the end of 2019, my focus became building Michele Corley Clinical Skincare website. First, I took product pictures and edited them in Photoshop. After that, I gathered data and decided on Contentful for CMS. Finally, I started building the website using the framework Gatsby.</p>
-          <p>In 2021, Ally Digital Solutions became the solution to continue working with Michele Corley as COVID drew her across the country.
+          <p>In 2021, Ally Digital Solutions became the solution to continue working with Michele Corley as COVID drew her business across the country.
             <span style={{display: 'block',marginTop: '1rem', marginBottom: '1rem' }}>
               Presently I continue to work with Michele as I look for a full-time remote position as a Front End Developer.
             </span>
