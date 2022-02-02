@@ -6,14 +6,21 @@ import {navigate} from 'gatsby'
 
 
 const SingleProject = ({project, showDetailLink=false })=>{
-  return(
- <SingleProjectWrapper onClick={()=>navigate(`/${project.type}/${project.slug}`)} >
+  return((project.url?.length > 0)
+    ?<SingleProjectWrapper>
+     <a href={`${project.url}`} target="_blank" rel="noreferrer">
+      <div className="img-container container">
+        <Image className="img" fluid={project.images.localFiles[0].childImageSharp.fluid}/>
+        {showDetailLink && (<span className="link">Details</span>)}
+      </div></a>
+    </SingleProjectWrapper>
+   :<SingleProjectWrapper onClick={()=>navigate(`/${project.type}/${project.slug}`)}>
       <div className="img-container container">
         <Image className="img" fluid={project.images.localFiles[0].childImageSharp.fluid}/>
         {showDetailLink && (<span className="link">Details</span>)}
       </div>
-    </SingleProjectWrapper>
-  )
+     </SingleProjectWrapper>
+   )
 }
 const SingleProjectWrapper = styled.article`
   &{

@@ -5,8 +5,6 @@ import SingleProject from './SingleProject'
 
 const Projects = ({
   projects:data,mainImageAlt,
-  url,
-  slug,
   showSearchBtns,
 }) => {
   const [projects, setProjects] = React.useState(data)

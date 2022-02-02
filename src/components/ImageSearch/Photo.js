@@ -106,6 +106,7 @@ const PhotoWrapper = styled.article`
   }
   &:hover .mobile-download-info{
     .download-img-arrow{
+      display:none;
     }
   }
   .photo-info {

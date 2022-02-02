@@ -37,6 +37,7 @@ export const query = graphql`
         id
         data {
           name
+          url
           slug
           date
           type
