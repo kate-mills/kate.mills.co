@@ -1,15 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+import Typed from 'react-typed';
 
-const Banner = ({ title, info, children, className}) => {
+const Banner = ({ title, overrideTxt, children, className}) => {
+  const typeit = overrideTxt || [
+    `ES6, HTML, CSS`,
+    `Create React App, Gatsby`,
+    `Photoshop, Illustrator`,
+  ]
   return (
     <div className={className}>
       <h1>
         <span className="title-l1">{title}</span>
-        <span className="title-l2"
-          data-sal="zoom-in"
-          data-sal-easing="ease"
-          data-sal-duration="100">{info}</span>
+          <span className="title-l2"
+            data-sal="zoom-in"
+            data-sal-easing="ease"
+            data-sal-duration="100">
+            {(typeit.length > 0)
+              ?<Typed strings={typeit} typeSpeed={40} backSpeed={50} loop/>
+              :null
+            }
+          </span>
       </h1>
       <div
           className="child-div"
