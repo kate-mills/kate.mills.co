@@ -10,9 +10,7 @@ const AboutPage = () => {
     <Layout>
       <FullSeo title="About Kate" description="Kate Mills is a Web Developer in Napa, Ca. "/>
         <Banner
-          className="polka-dots"
-          title="Meet Kate"
-          info="Napa Valley, CA" >
+          title="Kate Mills">
         </Banner>
         <AboutKate />
         <div className="footer-btn">
