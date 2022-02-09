@@ -12,7 +12,7 @@ import Contact from '../components/Contact/Contact'
 
 
 const IndexPage = ({ data, className }) => {
-  const title=`Front End Developer`
+  const title=`Frontend Developer`
   return (
     <Layout>
       <FullSeo title={`${title}`} image={data.defaultBg.childImageSharp.fluid.src}/>
@@ -20,8 +20,11 @@ const IndexPage = ({ data, className }) => {
       <HeroTall>
         <Banner
           color={`var(--clr-primary-dark)`}
-          title={title}>
-          <Btn to="/contact-kate/"  text="Let's Chat"/>
+          title={title}
+          showTyping={true}>
+          <div>
+            <Btn to="/contact-kate/" text="Let's Chat"/>
+          </div>
         </Banner>
       </HeroTall>
       <div className="digital-marketing-services">

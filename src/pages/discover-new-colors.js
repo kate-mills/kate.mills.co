@@ -82,6 +82,7 @@ const ColorGeneratorPage = ()=> {
           className="polka-dots"
           title="Find the perfect Color"
           info="Get tints & shades of any color to build a gorgeous color scheme."
+          overrideTxt={'Get tints & shades of any color to build a gorgeous color scheme.'}
         >
         </Banner>
         <section className="container">

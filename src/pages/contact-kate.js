@@ -9,7 +9,7 @@ const contact = props => {
   return (
     <Layout>
       <FullSeo title="Contact" description={'Kate is a Web Developer in Napa, Ca.'}/>
-        <Banner className="smallText heavy-rain" title="Let's Chat" info="Are you looking for a motivated, JavaScript-focused developer to join your team?"/>
+        <Banner className="smallText heavy-rain" title="Let's Chat" info="Are you looking for a motivated, JavaScript-focused developer to join your team?" showTyping={true}/>
       <Contact />
     </Layout>
   )
