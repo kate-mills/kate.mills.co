@@ -38,23 +38,15 @@ const AboutKate = () => {
             in challenging spaces that require learning new things.
           </p>
 
-          <p>
-            With a background in Dermatology and Aesthetics, I enjoy details and
-            the value of UX/UI-centered ideas and designs.
-          </p>
 
           <p>
             In 2014, my boyfriend dared me to learn Python - and I
             loved it! Since then, I've passed the{' '}
-            <a
-              className="underline"
-              title="Kate Mills Linux Essentials Certification Verification"
-              href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000406922/a9evpz7evs">
-              Linux Essentials
-            </a>{' '}
-            certification test through LPI and learned JavaScript, HTML, CSS,
+            <a className="underline bold" title="Kate Mills Linux Essentials Certification Verification" href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000406922/a9evpz7evs">Linux Essentials Certification</a>{' '}
+            test through LPI and learned JavaScript, HTML, CSS,
             Bootstrap, JQuery, React, C, Sass, Node, and more.
           </p>
+          <p> With a background in Dermatology and Aesthetics, I enjoy details and the value of UX/UI-centered ideas and designs.</p>
           <p>
             Presently I work for Michele Corley Clinical Skin Care as a Web
             Developer and Digital Content Creator.
@@ -111,7 +103,8 @@ const AboutKateWrapper = styled.section`
   }
   .underline {
     text-decoration: underline;
-    color: var(--clr-primary-dark);
+    color: var(--clr-primary-color);
+    letter-spacing: -0.01rem;
   }
 
   @media (min-width: 768px) {

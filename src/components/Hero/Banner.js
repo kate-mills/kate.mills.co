@@ -34,14 +34,15 @@ export default styled(Banner)`
     align-items: center;
     flex-direction: column;
     color: ${props => props.color || 'var(--clr-primary-dark)'};
-    width: 100%;
+    width: 90%;
+    margin: auto auto;
     height: ${props => props.height || 'fit-content'};
     text-align: center;
     letter-spacing: var(--mainSpacing);
     h1.title-heading {
       position: relative;
       display: block;
-      font-size: 3.3rem;
+      font-size: 2.3rem;
       text-transform: capitalize;
       letter-spacing: var(--altSpacing);
     }
@@ -50,7 +51,7 @@ export default styled(Banner)`
       font-style: italic;
       font-size: 1.5rem;
       letter-spacing: var(--midSpacing);
-      max-width: 90%;
+      max-width: 85%;
       margin: 0 auto;
       position: relative;
     }
@@ -68,10 +69,10 @@ export default styled(Banner)`
     &{
       h1.title-heading {
         margin-top: 3rem;
-        font-size: 4.5rem;
+        font-size: 3.5rem;
       }
       .title-typing {
-        width: 100%;
+        width: 70%;
       }
     }
   }

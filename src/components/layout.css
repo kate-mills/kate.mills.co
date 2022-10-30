@@ -8,13 +8,13 @@
 
 
   /* PRIMARY COLORS */
-  --clr-primary-light:#c746a5;
+  --clr-primary-light:#cbdaea;/*#c746a5;*/
   --clr-primary-light-txt: var(--black);
 
-  --clr-primary-color:#930076;
+  --clr-primary-color:#933131; /*#930076;*/
   --clr-primary-color-txt: var(--white);
 
-  --clr-primary-dark:#61004a;
+  --clr-primary-dark:#354149; /*#61004a*/
   --clr-primary-dark-txt: var(--white);
   /* END-PRIMARY COLORS */
 
@@ -168,9 +168,6 @@ a{
   line-height: inherit !important;
   padding: 0 0.5rem;
   white-space: pre-line;
-}
-nav .phone{
-  /*color: var(--clr-primary-light) !important;*/
 }
 .short-page{  /* 404-page, thankyou-page */
   color: var(--bg-dark-txt);

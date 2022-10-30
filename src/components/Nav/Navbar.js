@@ -126,7 +126,9 @@ const NavWrapper = styled.nav`
   }
   & .nav-links.show-nav {
     border-color: transparent;
-    height: 480px;
+    min-height: max-content;
+    height: 300px;
+    max-height: fit-content;
   }
   & .nav-links a,
   & .nav-links span{
@@ -177,7 +179,7 @@ const NavWrapper = styled.nav`
       height: auto;
       display: flex;
       padding-left: 1.25rem; /* Desktop needs left padding*/
-      .mobile-link{display:none;}/* KEEP HERE */
+      .mobile-link{display:inline;}/* KEEP HERE */
     }
     .nav-links li{
       min-width: 150px;

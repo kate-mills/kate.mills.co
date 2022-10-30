@@ -1,8 +1,22 @@
 const sublinks = [
-  { page: 'Color Schemes', path: '/build-color-schemes', id: 1, cls:'no-mobile show-dt', links: [], }, 
-  { page: 'Tints & Shades', path: '/tints-and-shades', id: 2, cls:'no-mobile show-dt', links: [], },
-  { page: 'Search Images', path: '/search-images', id: 3, cls:'no-mobile show-dt', links: [], },
-  { page: 'Let\'s Chat', path: '/lets-chat', id: 4, cls:'no-mobile show-dt', links: [], }, 
-];
+  {
+    page: "Let's Chat",
+    path: '/lets-chat',
+    id: 2,
+    cls: 'no-mobile show-dt',
+    links: [],
+  },
+  {
+    page: 'Latest Apps',
+    path: '/',
+    id: 1,
+    cls: 'no-mobile show-dt',
+    links: [
+      { label: 'Color Schemes', url: '/build-color-schemes', cls: '' },
+      { label: 'Tints & Shades', url: '/tints-and-shades', cls: '' },
+      { label: 'Search Images', url: '/search-images', cls: '' },
+    ],
+  },
+]
 
-export default sublinks;
+export default sublinks

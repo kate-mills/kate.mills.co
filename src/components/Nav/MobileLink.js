@@ -15,9 +15,9 @@ export default styled(MobileLink)`
   &.mobile-link {
     display:unset;
     margin-left: 0;
+    width: 100%;
   }
   &.mobile-link:hover{
-    background: var(--clr-secondary-light);
     color: var(--clr-secondary-light-txt);
   }
   &.mobile-link.no-mobile{
