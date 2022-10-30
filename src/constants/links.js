@@ -1,32 +1,7 @@
 const sublinks = [
-  {
-    page: 'Home',
-    path: '/',
-    id: 1,
-    cls:'no-mobile show-dt',
-    links: [],
-  },
-  {
-    page: 'About Kate',
-    path: '/about-kate',
-    id: 2,
-    cls:'no-mobile show-dt',
-    links: [
-      { label: 'Contact Me', url: '/contact-kate', cls: '' },
-    ],
-  },
-  //{ page: 'Designs', path: '/portfolio', id: 3, cls:'no-mobile', links: [ { label: 'Portfolio', url: '/portfolio', cls:'no-dt'}, { label: 'Websites', url: '/websites', cls: 'no-mobile' }, { label: 'Ecommere', url: '/ecommerce', cls: 'no-mobile' }, { label: 'Blogs', url: '/blogs', cls: 'no-mobile' }, ], },
-  {
-    page: 'Apps',
-    path: '/free-website-images',
-    id: 4,
-    cls:'no-mobile',
-    links: [
-      { label: 'Search Images', url: '/free-website-images', cls: 'no-dt' },
-      { label: 'Find Colors', url: '/discover-new-colors', cls: '' },
-      { label: 'Color Schemes', url: '/build-color-schemes', cls: '' },
-    ],
-  }
+  { page: 'Color Schemes', path: '/build-color-schemes', id: 1, cls:'no-mobile show-dt', links: [], }, 
+  { page: 'Tints & Shades', path: '/tints-and-shades', id: 2, cls:'no-mobile show-dt', links: [], },
+  { page: 'Search Images', path: '/search-images', id: 3, cls:'no-mobile show-dt', links: [], },
 ];
 
 export default sublinks;

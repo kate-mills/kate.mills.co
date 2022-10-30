@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const getKate = graphql`
   query AboutKate {
-    aboutKate: file(relativePath: { eq: "meet-kate.png" }) {
+    aboutKate: file(relativePath: { eq: "kate-mills.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 634, maxHeight: 547, cropFocus: ATTENTION) {
           ...GatsbyImageSharpFluid_withWebp
@@ -27,22 +27,40 @@ const AboutKate = () => {
       <div className="about-center">
         <article className="about-img">
           <div className="img-container">
-            <Img fluid={fluid} alt="Profile photo of website designer & developer Kate Mills, owner of Ally Digital Solutions." />
+            <Img fluid={fluid} alt="Kate Mills Web Developer" />
           </div>
         </article>
         <article className="about-info">
-          <p className="heading">Web Developer</p>
-          <p>I executed my first program (from the command line) around eight years ago with Zed Shaw's book, Learn Python The Hard Way, and I've been programming every day since.
+          <p className="heading">Kate Mills, San Francisco Bay Area</p>
+          <p>
+            I'm Kate, a solutions-oriented Web Developer passionate about all
+            things new and innovative. I embrace change and feel most fulfilled
+            in challenging spaces that require learning new things.
           </p>
-          <p>From 2016 to 2019, while employed with Michele Corley Clinical Skincare,  I was a volunteer developer for the non-profit Rebuilding Together Peninsula in Redwood City. Our team of three developers debugged and added features to their internal web app.
+
+          <p>
+            With a background in Dermatology and Aesthetics, I enjoy details and
+            the value of UX/UI-centered ideas and designs.
           </p>
-          <p>By the end of 2019, my focus became building Michele Corley Clinical Skincare website. First, I took product pictures and edited them in Photoshop. After that, I gathered data and decided on Contentful for CMS. Finally, I started building the website using the framework Gatsby.</p>
-          <p>In 2021, Ally Digital Solutions became the solution to continue working with Michele Corley as COVID drew her business across the country.
-            <span style={{display: 'block',marginTop: '1rem', marginBottom: '1rem' }}>
-              Presently I continue to work with Michele as I look for a full-time remote position as a Front End Developer.
-            </span>
+
+          <p>
+            Fun fact: In 2014, my boyfriend dared me to learn Python - and I
+            loved it! Since then, I have passed the{' '}
+            <a
+              className="underline"
+              title="Kate Mills Linux Essentials Certification Verification"
+              href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000406922/a9evpz7evs"
+            >
+              Linux Essentials
+            </a>{' '}
+            certification test through LPI, and learned JavaScript, HTML, CSS,
+            Bootstrap, JQuery, React, C, Sass, Node, and more.
           </p>
-          <Btn to="/contact-kate/" color colorful text="Contact Me" />
+
+          <p>
+            Finally, I am ready to help diversify tech and apply my unique
+            background and interpersonal skills to the digital space.
+          </p>
         </article>
       </div>
     </AboutKateWrapper>
@@ -50,7 +68,7 @@ const AboutKate = () => {
 }
 
 const AboutKateWrapper = styled.section`
-  &{
+  & {
     max-width: 80vw;
     margin: 0 auto;
   }
@@ -84,7 +102,7 @@ const AboutKateWrapper = styled.section`
     text-transform: capitalize;
   }
   .img-container::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -93,10 +111,21 @@ const AboutKateWrapper = styled.section`
     top: -16px;
     left: -16px;
   }
-  
+  .underline {
+    text-decoration: underline;
+    color: var(--clr-primary-dark);
+  }
+
   @media (min-width: 768px) {
-    .about-img, .about-info { margin: 3rem auto 1rem; }
-    .about-img, .about-img img, .img-container { max-width:  500px;}
+    .about-img,
+    .about-info {
+      margin: 3rem auto 1rem;
+    }
+    .about-img,
+    .about-img img,
+    .img-container {
+      max-width: 500px;
+    }
   }
   @media (min-width: 1200px) {
     .about-center {
@@ -104,9 +133,14 @@ const AboutKateWrapper = styled.section`
       align-items: flex-start;
       grid-template-columns: 1fr 1fr;
     }
-    .about-img,.about-img img,.img-container{max-width:634px;}
-    .about-img{margin: 3rem;}
+    .about-img,
+    .about-img img,
+    .img-container {
+      max-width: 634px;
+    }
+    .about-img {
+      margin: 3rem;
+    }
   }
-
 `
 export default AboutKate

@@ -10,41 +10,41 @@ import Banner from '../components/Hero/Banner'
 import FourIcons from '../components/HomeAndAbout/FourIcons'
 import Contact from '../components/Contact/Contact'
 
+import AboutKate from '../components/HomeAndAbout/AboutKate'
 
 const IndexPage = ({ data, className }) => {
-  const title=`Frontend Developer`
+  const title = `Web Developer`
   return (
     <Layout>
-      <FullSeo title={`${title}`} image={data.defaultBg.childImageSharp.fluid.src}/>
+      <FullSeo
+        title={`${title}`}
+        image={data.defaultBg.childImageSharp.fluid.src}
+      />
       <div className={className}>
-      <HeroTall>
         <Banner
           color={`var(--clr-primary-dark)`}
           title={title}
-          showTyping={true}>
-          <div>
-            <Btn to="/contact-kate/" text="Let's Chat"/>
-          </div>
-        </Banner>
-      </HeroTall>
-      <div className="digital-marketing-services">
-        <p className="digital-marketing-services-h2"/>
-        <FourIcons/>
-        <p className="digital-marketing-services-h2"/>
-      </div>
-      <Contact/>
-      </div>
-      <div className="footer-btn">
-        <Btn to="/build-color-schemes/" bgColor="dark" text="Generate Color Schemes"/>
-        <div style={{height:'2rem'}}/>
-        <Btn to="/free-website-images/" bgColor="dark" text="Free Website Images" className="btn2"/>
+          showTyping={true}
+    className={className}
+        >
+
+    </Banner>
+        <AboutKate />
+
+        <div className="digital-marketing-services">
+          <p className="digital-marketing-services-h2" />
+          <FourIcons />
+          <p className="digital-marketing-services-h2" />
+        </div>
       </div>
     </Layout>
   )
 }
 export const query = graphql`
   query {
-    defaultBg: file(relativePath: { eq: "ally-digital-solutions-website-designers.jpg" }) {
+    defaultBg: file(
+      relativePath: { eq: "ally-digital-solutions-website-designers.jpg" }
+    ) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
@@ -54,11 +54,11 @@ export const query = graphql`
   }
 `
 export default styled(IndexPage)`
-  p.digital-marketing-services-h2{
+  p.digital-marketing-services-h2 {
     margin: 2.5rem auto;
   }
-  @media(min-width: 768px){
-    div.digital-marketing-services{
+  @media (min-width: 768px) {
+    div.digital-marketing-services {
     }
   }
 `

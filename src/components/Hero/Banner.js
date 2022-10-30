@@ -4,7 +4,7 @@ import Typed from 'react-typed';
 
 const Banner = ({ title, showTyping, overrideTxt, children, className}) => {
   const typeit = [
-    `CSS, Node.js,  HTML, JavaScript, React, jQuery, Bootstrap`,
+    `Python, Javascript, HTML5, CSS3, Node.js, React, Gatsby, jQuery, Bootstrap, Sass, Linux Essentials Certified, and more`,
   ]
   return (
     <div className={className}>
@@ -35,7 +35,7 @@ export default styled(Banner)`
     flex-direction: column;
     color: ${props => props.color || 'var(--clr-primary-dark)'};
     width: 100%;
-    height: ${props => props.height || '30vh'};
+    height: ${props => props.height || 'fit-content'};
     text-align: center;
     letter-spacing: var(--mainSpacing);
     h1.title-heading {
@@ -61,7 +61,7 @@ export default styled(Banner)`
     div.child-div{
       width: 100vw;
       padding: 1rem;
-      margin-bottom: 5rem;
+      margin-bottom: 1rem;
     }
   }
   @media screen and (min-width: 768px) {

@@ -40,7 +40,8 @@ const FourIconsWrapper = styled.section`
       text-align: center;
       span{
         display: inline-block;
-        font-size: 3rem;
+        font-size: 2rem;
+        color: var(--clr-secondary-color);
         margin-bottom: 1.5rem;
         line-height:0;
       }

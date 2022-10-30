@@ -1,15 +1,15 @@
 import React from 'react'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export default [
   {
-    icon: <FaFacebookF />,
-    label: 'Go to Ally Digital Solutions Facebook Page',
-    url: 'https://facebook.com/allydigitalprojects',
+    icon: <FaLinkedin />,
+    label: 'Kate Mills on Linkedin',
+    url: 'https://www.linkedin.com/in/katescottmills/',
   },
   {
-    icon: <FaInstagram />,
-    label: 'Go to Ally Digital Solutions Instagram Page',
-    url: 'https://instagram.com/allydigitalsolutions',
+    icon: <FaGithub />,
+    label: 'Kate Mills on GitHub',
+    url: 'https://github.com/kate-mills',
   },
 ]
