@@ -44,22 +44,20 @@ const AboutKate = () => {
           </p>
 
           <p>
-            Fun fact: In 2014, my boyfriend dared me to learn Python - and I
-            loved it! Since then, I have passed the{' '}
+            In 2014, my boyfriend dared me to learn Python - and I
+            loved it! Since then, I've passed the{' '}
             <a
               className="underline"
               title="Kate Mills Linux Essentials Certification Verification"
-              href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000406922/a9evpz7evs"
-            >
+              href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000406922/a9evpz7evs">
               Linux Essentials
             </a>{' '}
-            certification test through LPI, and learned JavaScript, HTML, CSS,
+            certification test through LPI and learned JavaScript, HTML, CSS,
             Bootstrap, JQuery, React, C, Sass, Node, and more.
           </p>
-
           <p>
-            Finally, I am ready to help diversify tech and apply my unique
-            background and interpersonal skills to the digital space.
+            Presently I work for Michele Corley Clinical Skin Care as a Web
+            Developer and Digital Content Creator.
           </p>
         </article>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Title from '../Title'
-//import PhoneNumber from '../PhoneNumber'
 import styled from 'styled-components'
 
 
@@ -77,13 +76,10 @@ const Contact = () => {
 }
 
 const ContactWrapper = styled.section`
-  &{
-    span.title{
-    }
-    padding: 1rem 0;
+    padding: 1rem 2rem 3rem;
     max-width: 90%;
-    margin: 0 auto;
-  }
+    margin: auto auto;
+
   & .center{
     textarea, input:not([type="submit"]) {
       background-color: var(--clr-secondary-50);
