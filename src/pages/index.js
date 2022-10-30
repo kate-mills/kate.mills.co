@@ -5,27 +5,33 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
 import Banner from '../components/Hero/Banner'
-import FourIcons from '../components/HomeAndAbout/FourIcons'
+import LatestApps from '../components/HomeAndAbout/LatestApps'
 
 import AboutKate from '../components/HomeAndAbout/AboutKate'
 
 const IndexPage = ({ data, className }) => {
   return (
     <Layout>
-      <FullSeo
-        title={'Kate Mills - Web Developer'}
-        image={data.defaultBg.childImageSharp.fluid.src}
-      />
-      <div className={className}>
+      <article className={className}>
+        <FullSeo
+          title={'Kate Mills - Web Developer'}
+          image={data.defaultBg.childImageSharp.fluid.src}
+        />
+
         <Banner
           color={`var(--clr-primary-dark)`}
-          title={'Kate Mills - Web Developer'}
+          title={'Kate Mills - San Francisco, Bay Area'}
           showTyping={true}
-          className={className}
         ></Banner>
-      </div>
-      <AboutKate />
-      <FourIcons />
+
+        <div id="kate-mills-container">
+          <AboutKate />
+        </div>
+
+        <div id="latest-apps-container">
+          <LatestApps />
+        </div>
+      </article>
     </Layout>
   )
 }
@@ -41,11 +47,10 @@ export const query = graphql`
   }
 `
 export default styled(IndexPage)`
-  p.digital-marketing-services-h2 {
-    margin: 2.5rem auto;
+  #latest-apps-container{
+    background: #cbdaea34;
+    margin-top: 1.5rem;
+    padding: 2rem;
   }
-  @media (min-width: 768px) {
-    div.digital-marketing-services {
-    }
-  }
+  @media (min-width: 768px) { }
 `

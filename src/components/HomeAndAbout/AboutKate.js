@@ -31,26 +31,25 @@ const AboutKate = () => {
           </div>
         </article>
         <article className="about-info">
-          <p className="heading">Kate Mills, San Francisco Bay Area</p>
+          <p className="heading">Web Developer</p>
           <p>
             I'm Kate, a solutions-oriented Web Developer passionate about all
             things new and innovative. I embrace change and feel most fulfilled
             in challenging spaces that require learning new things.
           </p>
-
-
           <p>
-            In 2014, my boyfriend dared me to learn Python - and I
+            In 2014, my boyfriend dared me to learn python - and I
             loved it! Since then, I've passed the{' '}
             <a className="underline bold" title="Kate Mills Linux Essentials Certification Verification" href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000406922/a9evpz7evs">Linux Essentials Certification</a>{' '}
-            test through LPI and learned JavaScript, HTML, CSS,
+            test and learned Javascript, HTML, CSS,
             Bootstrap, JQuery, React, C, Sass, Node, and more.
           </p>
           <p> With a background in Dermatology and Aesthetics, I enjoy details and the value of UX/UI-centered ideas and designs.</p>
           <p>
-            Presently I work for Michele Corley Clinical Skin Care as a Web
+            Presently I work remotely for Michele Corley Clinical Skin Care as a Web
             Developer and Digital Content Creator.
           </p>
+<Btn to="/lets-chat/" color colorful text="Let's Chat" />
         </article>
       </div>
     </AboutKateWrapper>
@@ -60,7 +59,8 @@ const AboutKate = () => {
 const AboutKateWrapper = styled.section`
   & {
     max-width: 80vw;
-    margin: 0 auto;
+    margin: auto auto;
+    padding: 1rem .5rem;
   }
   .about-center {
     max-width: 95%;
