@@ -84,7 +84,7 @@ const ImageSearchPage = ({ data: seoData }) => {
   return (
     <Layout>
       <FullSeo
-        image="/images/free-website-images.jpg"
+        image="/images/app-search-and-save-images.jpg"
         title="Search Unlimited Beauty Images For Your Website"
         description="Search and download unlimited Beauty Images for your website or social media post."
       />

@@ -73,7 +73,7 @@ const ColorGeneratorPage = ()=> {
   return(
     <Layout>
       <FullSeo
-        image="/images/color-generator.jpg"
+        image="/images/app-tints-and-shades.jpg"
         title="Tints & Shades"
         description="Get 40+ tints & shades of any color & build gorgeous color schemes for your next digital project."
       />
