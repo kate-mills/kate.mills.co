@@ -74,14 +74,13 @@ const ColorGeneratorPage = ()=> {
     <Layout>
       <FullSeo
         image="/images/app-tints-and-shades.jpg"
-        title="Tints & Shades"
-        description="Get 40+ tints & shades of any color & build gorgeous color schemes for your next digital project."
+        title="Tints & Shades App"
+        description="Get 40+ tints & shades of any color to help perfect your color palette."
       />
       <ColoredGeneratorWrapper>
         <Banner
-          className="polka-dots"
           title="Tints & Shades"
-          overrideTxt={'Get 40+ tints & shades of a color to help perfect any color scheme.'}
+          overrideTxt={'Get 40+ tints & shades of any color to help perfect your color palette.'}
         >
         </Banner>
         <section className="container">
