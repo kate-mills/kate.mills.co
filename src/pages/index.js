@@ -48,7 +48,7 @@ export const query = graphql`
 `
 export default styled(IndexPage)`
   #latest-apps-container{
-    background: #cbdaea34;
+    background: #d4d4d4;
     margin-top: 1.5rem;
     padding: 2rem;
   }

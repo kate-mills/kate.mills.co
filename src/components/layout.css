@@ -1,6 +1,11 @@
 @import url("https://use.typekit.net/igr8zjs.css");
 
+
 :root {
+
+
+
+
   /* new colors */
   --black: rgb(0 0 0 / 0.95);
   --white:rgb(255 255 255 / 85%);
@@ -69,13 +74,17 @@
 
   --displayFF:lust-didone-fine, sans-serif;
   --displayFFWeight: 100;
+
+
+    --clr-primary-light: #c746a5;
+    --clr-primary-light-txt: var(--black);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline-color: transparent !important;
+  /*outline-color: transparent !important;*/
   outline: none;
 }
 *,
