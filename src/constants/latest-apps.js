@@ -6,12 +6,12 @@ const latestReactApps = [
   },
   {
     title: "Tints & Shades",
-    slug: 'discover-new-colors',
+    slug: 'tints-and-shades',
     details: ["Get 40+ tints & shades from any single color to build a gorgeous color scheme.", "For example, enter grey to get 40+ tints and shades of grey!"],
   },
   {
     title: "Search & Save Images",
-    slug: 'free-website-images',
+    slug: 'search-images',
     details: ["Search & Download images. Built using the unsplash api."],
   },
 ]
