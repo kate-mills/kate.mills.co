@@ -12,9 +12,9 @@ const sublinks = [
     id: 1,
     cls: 'no-mobile show-dt',
     links: [
-      { label: 'Color Schemes', url: '/build-color-schemes', cls: '' },
-      { label: 'Tints & Shades', url: '/tints-and-shades', cls: '' },
-      { label: 'Search Images', url: '/search-images', cls: '' },
+      { label: 'Color Schemes', url: '/build-color-schemes-app', cls: '' },
+      { label: 'Tints & Shades', url: '/tints-and-shades-app', cls: '' },
+      { label: 'Search Images', url: '/search-and-save-images-app', cls: '' },
     ],
   },
 ]
