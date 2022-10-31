@@ -12,7 +12,7 @@ const ColorGeneratorPage = ()=> {
   const [color,setColor] = React.useState('');
   const [error,setError] = React.useState(false);
   const [list, setList ] = React.useState([]);
-  const [placeValue, setPlaceValue] = React.useState('yellow')
+  const [placeValue, setPlaceValue] = React.useState('grey')
   const focusMethod = () =>{document.getElementById('hex-input').focus()};
   const getValues = (clr) => {return new Values(clr).all(5)};
   const setSlicedColors = (clrs) =>{setList(clrs.slice(0))};
@@ -34,7 +34,7 @@ const ColorGeneratorPage = ()=> {
   };
 
   React.useEffect(()=>{
-    let colors = getValues('#BDA06A')
+    let colors = getValues('grey')
     let uniqueColors = getUniqueColors(colors)
     setSlicedColors(uniqueColors)
     focusMethod()
@@ -74,15 +74,15 @@ const ColorGeneratorPage = ()=> {
     <Layout>
       <FullSeo
         image="/images/color-generator.jpg"
-        title="Build Gorgeous Color Schemes"
-        description="Get tints & shades of any color & build gorgeous color schemes for your next digital project."
+        title="Tints & Shades"
+        description="Get 40+ tints & shades of any color & build gorgeous color schemes for your next digital project."
       />
       <ColoredGeneratorWrapper>
         <Banner
           className="polka-dots"
-          title="Find the perfect Color"
-          info="Get tints & shades of any color to build a gorgeous color scheme."
-          overrideTxt={'Get tints & shades of any color to build a gorgeous color scheme.'}
+          title="Tints & Shades"
+          info="Get 40+ tints & shades of a color to help perfect any color scheme."
+          overrideTxt={'Get 40+ tints & shades of a color to help perfect any color scheme.'}
         >
         </Banner>
         <section className="container">

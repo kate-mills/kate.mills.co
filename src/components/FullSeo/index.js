@@ -38,16 +38,11 @@ const SEO = ({ title, description, image, article, snippet, noindex}) => {
     organization,
     dateModified,
   } = site.siteMetadata
-  const formatTitle = ()=>{
-    let plain = `${title||defaultTitle}`; 
-    let fancy = `${title||defaultTitle} | Ally Digital Solutions`;
-    return (plain.length < 46)?fancy:plain;
-  }
 
   let defaultSeoImage = `${baseUrl}${defaultImage}`
 
   const seo = {
-    title: formatTitle(),
+    title:`${title||defaultTitle}`,
     dateModified: dateModified,
     description: description || defaultDescription,
     image: `${image || defaultSeoImage}`,
@@ -85,8 +80,8 @@ const SEO = ({ title, description, image, article, snippet, noindex}) => {
     </Helmet>
 
     <SchemaOrg
-      compoundTitle={`${seo.title} | Ally Digital Solutions`}
-      defaultTitle={'Ally Digital Solutions'}
+      compoundTitle={`${seo.title}`}
+      defaultTitle={seo.title}
       pageTitle={seo.title}
       description={seo.description}
       baseUrl={baseUrl}
