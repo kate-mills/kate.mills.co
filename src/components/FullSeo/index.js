@@ -19,7 +19,6 @@ const query = graphql`
           name
           url
           logo
-          priceRange
           telephone
         }
       }

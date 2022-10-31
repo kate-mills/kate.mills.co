@@ -6,22 +6,21 @@ const currentUrl = 'https://katemillsco.com'
 
 module.exports = {
   siteMetadata: {
-    title: `Ally Digital Solutions`,
-    titleTemplate: `%s | Ally Digital Solutions`,
-    description: `Learn more about boosting your beauty business in 2021 with a custom website designed by an aesthetic industry expert.`,
+    title: `Kate Mills - Web Developer`,
+    titleTemplate: `%s | Kate Mills - Web Developer`,
+    description: `Kate Mills - Web Developer`,
     dateModified: `${new Date().toISOString()}`,
-    author: `Ally Digital Solutions`,
+    author: `Kate Mills`,
     twitterUsername: `@katie_napa`,
-    image: `/ally-digital-solutions.jpg`,
+    image: `/seoimg.jpg`,
     url: `${currentUrl}`,
     baseUrl: `${currentUrl}`,
     siteUrl: `${currentUrl}`,//keep for sitemap-plugin
     organization: {
-      name: `Ally Digital Solutions`,
+      name: `Kate Mills`,
       url: `${currentUrl}`,
-      logo: `${currentUrl}/images/logo.jpg`,
-      telephone: `707-266-8106`,
-      priceRange: `$$$`,
+      logo: `${currentUrl}/images/kate-mills.jpg`,
+      telephone: `415-988-1102`,
     }
   },
   plugins: [
@@ -55,9 +54,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `%s | Ally Digital Solutions`,
-        short_name: `allydigital`,
-        description: `Web solutions for beauty specialists by industry experts. Elevate your online presence with specialized web design for the beauty industry.`,
+        name: `%s | Kate Mills - Web Developer`,
+        short_name: `kate mills`,
+        description: `Kate Mills - Web Developer Latest Apps`,
         lang: `en`,
         start_url: `/`,
         background_color:`#dcdcdc`,

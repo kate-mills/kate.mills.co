@@ -35,7 +35,6 @@ export default React.memo(
         image: image,
         logo: organization.logo,
         name: organization.name,
-        priceRange: organization.priceRange,
         sameAs: organization.otherUrls,
         telephone: organization.telephone,
         url: organization.url,

@@ -10,7 +10,7 @@ const Contact = () => {
       <Title title="contact" subtitle="Me" />
       <div className="center">
         <div className="instructions">
-          <p>Call/text me at (415) 988-1102, or via the form below.</p>
+          <p>Please contact me via the submission form and I'll get back to you as soon as possible.</p>
         </div>
         <form
           className="form"
@@ -76,8 +76,8 @@ const Contact = () => {
 }
 
 const ContactWrapper = styled.section`
-    padding: 1rem 2rem 3rem;
-    max-width: 90%;
+    padding: 0 1rem 3rem;
+    max-width: 100%;
     margin: auto auto;
 
   & .center{
@@ -92,8 +92,8 @@ const ContactWrapper = styled.section`
       display:flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 70%;
-      margin: 0 auto;
+      max-width: 85%;
+      margin: 0 auto .5rem;
       *{ width: 100%;}
       p:nth-child(1){
         margin: 0 auto;
