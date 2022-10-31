@@ -52,7 +52,7 @@ const Navbar = (props) => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to={`/`} className="logo">
-            <Img fixed={data.logo.childImageSharp.fixed} alt="Ally Digital Solutions"/>
+            <Img fixed={data.logo.childImageSharp.fixed} alt="Kate Mills Portfolio"/>
           </Link>
           <button type="button" className="toggle-btn" onClick={toggleNav}>
             <FaAlignRight aria-label="Right align" className="toggle-icon"/>
