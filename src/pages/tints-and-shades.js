@@ -81,7 +81,6 @@ const ColorGeneratorPage = ()=> {
         <Banner
           className="polka-dots"
           title="Tints & Shades"
-          info="Get 40+ tints & shades of a color to help perfect any color scheme."
           overrideTxt={'Get 40+ tints & shades of a color to help perfect any color scheme.'}
         >
         </Banner>

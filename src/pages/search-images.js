@@ -4,44 +4,44 @@ import Layout from '../components/Layout'
 import FullSeo from '../components/FullSeo'
 import DisplayImages from '../components/ImageSearch/DisplayImages'
 import styled from 'styled-components'
-import {FaSearch} from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa'
 import Banner from '../components/Hero/Banner'
 
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 
-import {UseUnsplashContext} from '../context/unsplash'
+import { UseUnsplashContext } from '../context/unsplash'
 
-const ImageSearchPage = ({data:seoData})=>{
-  const {unsplash} = UseUnsplashContext()
+const ImageSearchPage = ({ data: seoData }) => {
+  const { unsplash } = UseUnsplashContext()
   const [loading, setLoading] = React.useState(false)
   const [page, setPage] = React.useState(1)
   const [query, setQuery] = React.useState('')
   const [photos, setPhotos] = React.useState([])
 
-  const focusInput = ()=>{
+  const focusInput = () => {
     const el = document.getElementsByTagName('input')[0] // input[0] is search
     el.focus()
     return
   }
-  const fetchImages = async ()=>{
+  const fetchImages = async () => {
     let searchQ = query || 'beauty'
-    if(searchQ && page<=50){
+    if (searchQ && page <= 50) {
       setLoading(true)
       unsplash.search
         .getPhotos({
           page,
-          query:searchQ,
+          query: searchQ,
         })
-        .then(result =>{
-          setPhotos((oldPhotos)=>{
+        .then(result => {
+          setPhotos(oldPhotos => {
             let tempPhotos = []
-            if(page>1){
+            if (page > 1) {
               let newPhotos = result.response.results.reverse()
 
               tempPhotos = [...oldPhotos, ...newPhotos]
               console.log(`fetch-${tempPhotos.length}`)
               return tempPhotos
-            } else{
+            } else {
               tempPhotos = result.response.results.reverse()
               console.log(`fetch-${tempPhotos.length}`)
               return tempPhotos
@@ -50,73 +50,82 @@ const ImageSearchPage = ({data:seoData})=>{
           focusInput()
           setLoading(false)
         })
-        .catch((err)=>{
+        .catch(err => {
           console.log(err)
           focusInput()
           setLoading(false)
         })
     }
   }
-  React.useEffect(()=>{
+  React.useEffect(() => {
     fetchImages()
   }, [page])
 
   React.useEffect(() => {
     const event = window.addEventListener('scroll', () => {
-      const footerHeight =291
+      const footerHeight = 291
       if (
         (!loading && window.innerHeight + window.scrollY) >=
         document.body.scrollHeight - footerHeight
       ) {
-        setPage((oldPage) => {
+        setPage(oldPage => {
           return oldPage + 1
         })
       }
     })
-    return()=>window.removeEventListener('scroll', event)
+    return () => window.removeEventListener('scroll', event)
   }, [])
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = e => {
     e.preventDefault()
-    setPage((oldPage)=>1)
+    setPage(oldPage => 1)
     fetchImages()
   }
-  return(
+  return (
     <Layout>
       <FullSeo
         image="/images/free-website-images.jpg"
         title="Search Unlimited Beauty Images For Your Website"
         description="Search and download unlimited Beauty Images for your website or social media post."
       />
-      <Banner title="Search Images & Unlimited Downloads"/>
       <ImageSearchWrapper>
-        <h2 className="h2-sm">Explore high quality images with unlimited free downloads for your next website or social media post.</h2>
+        <Banner
+          title="Search & Save Images"
+          overrideTxt="This app was built using React, Gatsby, the unsplash api, & Netlify functions."
+          info="This app was built using React, Gatsby, the unsplash api, & Netlify functions."
+        />
         <form className="search-form">
           <input
             tabIndex={0}
-            type='text'
-            placeholder='search images'
+            type="text"
+            placeholder="search images"
             value={query}
-            onChange={(e)=>setQuery(e.target.value)}
-            className='form-input'
+            onChange={e => setQuery(e.target.value)}
+            className="form-input"
           />
-          <button className="submit-btn" type="submit" aria-label="search"
+          <button
+            className="submit-btn"
+            type="submit"
+            aria-label="search"
             onClick={handleSubmit}
-          ><FaSearch/></button>
+          >
+            <FaSearch />
+          </button>
         </form>
       </ImageSearchWrapper>
-        <DisplayImages loading={loading} photos={photos} query={query}/>
+      <DisplayImages loading={loading} photos={photos} query={query} />
     </Layout>
   )
 }
 
 const ImageSearchWrapper = styled.section`
-  &{
+  & {
     margin: 0 auto;
     max-width: var(--max-width);
     padding: 0 0 0;
     width: 90vw;
-    h2{
+    h2 {
+      text-align: center;
       max-width: var(--max-width);
       font-size: 1.5rem;
       letter-spacing: var(--altSpacing);
@@ -146,24 +155,24 @@ const ImageSearchWrapper = styled.section`
   .form-input::placeholder {
     color: var(--clr-primary-dark);
     font-style: italic;
-    opacity: .4;
+    opacity: 0.4;
   }
   .submit-btn {
     border-bottom: none;
   }
-  .submit-btn:hover{
+  .submit-btn:hover {
     cursor: pointer;
   }
 `
 export const query = graphql`
-  query{
+  query {
     defaultBg: file(relativePath: { eq: "image-search.png" }) {
       childImageSharp {
-      fluid(quality: 100, maxWidth: 4160){
-        ...GatsbyImageSharpFluid_withWebp
+        fluid(quality: 100, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
   }
-}
 `
 export default ImageSearchPage

@@ -5,7 +5,6 @@ import FullSeo from '../components/FullSeo'
 import DisplayImages from '../components/ImageSearch/DisplayImages'
 import styled from 'styled-components'
 import {FaSearch} from 'react-icons/fa'
-import Banner from '../components/Hero/Banner'
 
 import {graphql} from 'gatsby'
 
@@ -84,13 +83,13 @@ const ImageSearchPage = ({data:seoData})=>{
   return(
     <Layout>
       <FullSeo
-        image="/images/free-website-images.jpg"
-        title="Search Unlimited Beauty Images For Your Website"
-        description="Search and download unlimited Beauty Images for your website or social media post."
+        image="/images/app-search-and-save-images.jpg"
+        title="Search & Save Images React App"
+        description="Built with the unsplash API, React.js & Gatsby.js"
       />
-      <Banner title="Search Images & Unlimited Downloads"/>
       <ImageSearchWrapper>
-        <h2 className="h2-sm">Explore high quality images with unlimited free downloads for your next website or social media post.</h2>
+    <h1>Search & Save Images React App</h1>
+        <h2 className="h2-sm">Built with React, Gatsby, and the unsplash API.</h2>
         <form className="search-form">
           <input
             tabIndex={0}
@@ -116,12 +115,19 @@ const ImageSearchWrapper = styled.section`
     max-width: var(--max-width);
     padding: 0 0 0;
     width: 90vw;
+    h1{
+    color: var(--clr-primary-dark);
+    margin: 2rem auto 1rem;
+    text-align: center;
+    max-width: 100%;
+    }
     h2{
       max-width: var(--max-width);
       font-size: 1.5rem;
       letter-spacing: var(--altSpacing);
       margin: 0 auto 3rem;
       padding: 0 0 0;
+      text-align: center;
     }
   }
   .search-form {
