@@ -85,7 +85,7 @@ const ImageSearchPage = ({ data: seoData }) => {
     <Layout>
       <FullSeo
         image="/images/search-and-save-images-react-app.jpg"
-        title="Search & Save Images React App"
+        title="Search & Save Images App"
         description="This app was built with react, gatsby, unsplash API, and netlify functions."
       />
       <ImageSearchWrapper>
