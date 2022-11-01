@@ -24,7 +24,7 @@ const ImageSearchPage = ({ data: seoData }) => {
     return
   }
   const fetchImages = async () => {
-    let searchQ = query || 'beauty'
+    let searchQ = query || 'javascript'
     if (searchQ && page <= 50) {
       setLoading(true)
       unsplash.search
@@ -84,15 +84,15 @@ const ImageSearchPage = ({ data: seoData }) => {
   return (
     <Layout>
       <FullSeo
-        image="/images/search-and-save-images-app.jpg"
+        image="/images/search-and-save-images-react-app.jpg"
         title="Search & Save Images React App"
-        description="This app was built with React, Gatsby, the unsplash api, and Netlify functions."
+        description="This app was built with react, gatsby, unsplash API, and netlify functions."
       />
       <ImageSearchWrapper>
         <Banner
           title="Search & Save Images"
-          overrideTxt="This app was built using React, Gatsby, the unsplash api, & Netlify functions."
-          info="This app was built using React, Gatsby, the unsplash api, & Netlify functions."
+          overrideTxt="This app was built with react, gatsby, the unsplash API, and netlify functions."
+          info="This app was built with react, gatsby, the unsplash API, and netlify functions."
         />
         <form className="search-form">
           <input
@@ -159,9 +159,6 @@ const ImageSearchWrapper = styled.section`
   }
   .submit-btn {
     border-bottom: none;
-  }
-  .submit-btn:hover {
-    cursor: pointer;
   }
 `
 export const query = graphql`
