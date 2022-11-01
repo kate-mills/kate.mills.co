@@ -13,8 +13,8 @@ const sublinks = [
     cls: 'no-mobile show-dt',
     links: [
       { label: 'Color Schemes', url: '/build-color-schemes-app', cls: '' },
-      { label: 'Tints & Shades', url: '/tints-and-shades-app', cls: '' },
-      { label: 'Search Images', url: '/search-and-save-images-app', cls: '' },
+      { label: 'Forty Tints & Shades', url: '/forty-tints-and-shades', cls: '' },
+      { label: 'Search Pic Keep Pic!', url: '/search-pic-keep-pic', cls: '' },
     ],
   },
 ]

@@ -84,14 +84,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*outline-color: transparent !important;*/
-  outline: none;
+  outline-color:var(--clr-secondary-light);
+  /*outline: none;*/
 }
 *,
 :before,
 :after{
-  outline-color: transparent !important;
-  outline: none;
+  /*outline-color: transparent !important;*/
+  /*outline: none;*/
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--bg-light-txt);
@@ -143,7 +143,7 @@ h1, h2{
 h3, h4, h5, h6{
   font-size: 3.2rem;
   font-style: normal;
-  letter-spacing: var(--mainSpacing) !important;
+  letter-spacing: var(--altSpacing);
   margin-bottom: 1.25rem;
 }
 section {

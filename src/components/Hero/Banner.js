@@ -47,10 +47,10 @@ export default styled(Banner)`
     flex-direction: column;
     color: ${props => props.color || 'var(--clr-primary-dark)'};
     width: 90%;
+    letter-spacing: var(--altSpacing);
     margin: auto auto;
     height: ${props => props.height || 'fit-content'};
     text-align: center;
-    letter-spacing: var(--mainSpacing);
     h1.title-heading {
       position: relative;
       display: block;

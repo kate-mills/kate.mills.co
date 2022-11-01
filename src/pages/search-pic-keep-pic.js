@@ -84,21 +84,21 @@ const ImageSearchPage = ({ data: seoData }) => {
   return (
     <Layout>
       <FullSeo
-        image="/images/search-and-save-images-react-app.jpg"
-        title="Search & Save Images App"
-        description="This app was built with react, gatsby, unsplash API, and netlify functions."
+        image="/images/search-pic-keep-pic.jpg"
+        title="Search Pic Keep Pic!"
+        description="This app was built with React.js, the Unsplash API, and Netlify functions."
       />
       <ImageSearchWrapper>
         <Banner
-          title="Search & Save Images"
-          overrideTxt="This app was built with react, gatsby, the unsplash API, and netlify functions."
-          info="This app was built with react, gatsby, the unsplash API, and netlify functions."
+          title="Search Pic Keep Pic!"
+          overrideTxt="This app was built with React.js, the Unsplash API, and Netlify functions."
+          info="This app was built with React.js, the Unsplash API, and Netlify functions."
         />
         <form className="search-form">
           <input
             tabIndex={0}
             type="text"
-            placeholder="search images"
+            placeholder="Search pics!"
             value={query}
             onChange={e => setQuery(e.target.value)}
             className="form-input"
