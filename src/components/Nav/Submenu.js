@@ -42,7 +42,7 @@ const Submenu = () => {
 const SubmenuWrapper = styled.aside`
   &{
     border-radius:0;
-    font-size: 0.80rem;
+    font-size: 1rem;
     position: absolute;
     top: 77px;
     display: none;
@@ -51,14 +51,13 @@ const SubmenuWrapper = styled.aside`
   &.show {
     display: block;
     transform: translateX(-50%) translateY(0);
-    width: 150px;
+    min-width: fit-content;
     z-index: 3;
     .submenu-center {
       background-color:var(--clr-secondary-color);
       color: var(--clr-secondary-color-txt);
       :hover{
         .sub-link:hover{
-          cursor: pointer !important;
           text-decoration: none;
           background-color:var(--clr-primary-color);
           color: var(--clr-primary-color-txt);
@@ -69,10 +68,11 @@ const SubmenuWrapper = styled.aside`
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: left;
+        text-align: center;
         text-decoration: none;
-        text-transform: capitalize;
         letter-spacing: var(--altSpacing);
+        padding 1rem;
+
       }
     }
   }

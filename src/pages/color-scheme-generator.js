@@ -49,7 +49,7 @@ const ColorSchemes = () => {
   
   return (
     <Layout>
-      <FullSeo title="Color Schemes" image="/images/app-build-color-schemes.jpg"/>
+      <FullSeo title="Color Scheme Generator" image="/images/color-scheme-generator.jpg"/>
       <ColorSchemeWrapper ref={refContainer}>
           <div className="app-nav">
             <button

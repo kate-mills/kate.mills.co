@@ -1,67 +1,50 @@
-@import url("https://use.typekit.net/igr8zjs.css");
-
+@import url('https://use.typekit.net/igr8zjs.css');
 
 :root {
-
-
-
-
   /* new colors */
   --black: rgb(0 0 0 / 0.95);
-  --white:rgb(255 255 255 / 85%);
-
-
+  --white: rgb(255 255 255 / 85%);
 
   /* PRIMARY COLORS */
-  --clr-primary-light:#cbdaea;/*#c746a5;*/
+  --clr-primary-light: #cbdaea; /*#c746a5;*/
   --clr-primary-light-txt: var(--black);
 
-  --clr-primary-color:#933131; /*#930076;*/
+  --clr-primary-color: #933131; /*#930076;*/
   --clr-primary-color-txt: var(--white);
 
-  --clr-primary-dark:#354149; /*#61004a*/
+  --clr-primary-dark: #354149; /*#61004a*/
   --clr-primary-dark-txt: var(--white);
   /* END-PRIMARY COLORS */
 
-
   /* 2NDARY COLORS */
-  --clr-secondary-light:#d4d4d4;
-  --clr-secondary-light-txt:  var(--black);
+  --clr-secondary-light: #d4d4d4;
+  --clr-secondary-light-txt: var(--black);
 
-  --clr-secondary-color:#a3a3a3;
+  --clr-secondary-color: #a3a3a3;
   --clr-secondary-color-txt: var(--black);
 
-  --clr-secondary-dark:#747474;
+  --clr-secondary-dark: #747474;
   --clr-secondary-dark-txt: var(--white);
 
-  --clr-secondary-50:#fbfbfb;
+  --clr-secondary-50: #fbfbfb;
   --clr-secondary-50-txt: var(--black);
   /* END-2NDARY COLORS */
-
-
 
   --clr-primary-txt: var(--bg-light-txt); /* black txt */
   --clr-secondary-txt: var(--bg-dark-txt); /*white txt*/
 
-
   --bg-light: var(--white);
-  --bg-light-txt:var(--black);
+  --bg-light-txt: var(--black);
 
   --bg-dark: var(--clr-secondary-dark);
   --bg-dark-txt: var(--white);
 
   /* new colors */
 
-  
-
-
-
-
-
   --mainTransition: all 0.2s linear;
   --mainSpacing: 0.3rem;
   --midSpacing: 0.2rem;
-  --altSpacing: 0.0620rem;
+  --altSpacing: 0.062rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --radius: 0.25rem;
@@ -70,43 +53,45 @@
   --wordSpacing: 1.5px;
 
   /* START FONTS */
-  --mainFF: aileron, sans-serif;/* */
+  --mainFF: aileron, sans-serif; /* */
 
-  --displayFF:lust-didone-fine, sans-serif;
+  --displayFF: lust-didone-fine, sans-serif;
   --displayFFWeight: 100;
 
-
-    --clr-primary-light: #c746a5;
-    --clr-primary-light-txt: var(--black);
+  --clr-primary-light: #c746a5;
+  --clr-primary-light-txt: var(--black);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline-color:var(--clr-secondary-light);
+  outline-color: var(--clr-secondary-light);
   /*outline: none;*/
 }
 *,
 :before,
-:after{
+:after {
   /*outline-color: transparent !important;*/
   /*outline: none;*/
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--bg-light-txt);
   opacity: 0.8; /* Firefox */
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: var(--bg-light-txt);
   opacity: 0.8;
 }
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: var(--bg-light-txt);
   opacity: 0.8;
 }
-::selection{
-  background-color:var(--clr-secondary-light);
+::selection {
+  background-color: var(--clr-secondary-light);
   color: var(--bg-dark-txt);
 }
 body {
@@ -119,15 +104,21 @@ body {
   line-height: 1.5;
   opacity: 1;
 }
-p, div{
+p,
+div {
   font-family: var(--mainFF);
-  font-style:normal;
+  font-style: normal;
 }
 nav a {
   font-family: var(--mainFF);
   font-style: normal;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--mainFF);
   font-weight: 300;
   font-style: normal;
@@ -136,11 +127,15 @@ h1,h2,h3,h4,h5,h6{
   white-space: pre-wrap;
   word-spacing: var(--wordSpacing);
 }
-h1, h2{
+h1,
+h2 {
   font-size: 3.2rem;
   margin-bottom: 1.25rem;
 }
-h3, h4, h5, h6{
+h3,
+h4,
+h5,
+h6 {
   font-size: 3.2rem;
   font-style: normal;
   letter-spacing: var(--altSpacing);
@@ -153,16 +148,16 @@ p {
   margin-bottom: 1.15rem;
   white-space: pre-wrap;
 }
-p.heading > *{
+p.heading > * {
   font-family: var(--displayFF) !important;
   font-weight: var(--displayFFWeight) !important;
 }
-main{
+main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-a{
+a {
   color: inherit;
   font-family: var(--mainFF);
   letter-spacing: var(--altSpacing);
@@ -171,14 +166,15 @@ a{
   text-decoration: none;
   transition: var(--mainTransition);
 }
-.phone{
+.phone {
   font-style: italic;
   letter-spacing: var(--altSpacing) !important;
   line-height: inherit !important;
   padding: 0 0.5rem;
   white-space: pre-line;
 }
-.short-page{  /* 404-page, thankyou-page */
+.short-page {
+  /* 404-page, thankyou-page */
   color: var(--bg-dark-txt);
   min-height: calc(100vh - 252px);
   display: flex;
@@ -186,13 +182,13 @@ a{
   align-items: center;
   background: var(--bg-dark);
 }
- .short-page *{
+.short-page * {
   color: var(--bg-dark-txt);
 }
 a.btn--animation.btn--light {
   color: var(--clr-primary-dark);
 }
-.footer-btn{
+.footer-btn {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -200,7 +196,7 @@ a.btn--animation.btn--light {
 img {
   width: 100%;
 }
-ul  {
+ul {
   list-style: none;
 }
 ul[data-bullet-list] {
@@ -209,24 +205,24 @@ ul[data-bullet-list] {
   font-style: normal;
   font-size: 15px;
   line-height: 27px;
-  list-style:none;
+  list-style: none;
   margin: 0 20px;
   padding-bottom: 1rem;
 }
-ul[data-bullet-list] > li p{
+ul[data-bullet-list] > li p {
   margin: 7.5px auto;
   font-family: var(--mainFF);
   font-style: normal;
-  padding: 0 0 .2rem;
+  padding: 0 0 0.2rem;
   white-space: pre-line;
 }
-ul[data-bullet-list] > li:first-child  p{ 
-  padding: .4rem 0 .2rem;
+ul[data-bullet-list] > li:first-child p {
+  padding: 0.4rem 0 0.2rem;
 }
-ul[data-bullet-list] li>*:first-child::before{
+ul[data-bullet-list] li > *:first-child::before {
   box-sizing: border-box;
   color: inherit;
-  content: "\2022";
+  content: '\2022';
   display: inline-block;
   margin-left: -40px;
   min-width: 40px;
@@ -255,7 +251,7 @@ ul[data-bullet-list] li>*:first-child::before{
   margin: 0 auto;
   max-width: var(--max-width);
 }
-div.border{
+div.border {
   border-bottom: calc(5vh) solid var(--clr-primary-txt);
 }
 

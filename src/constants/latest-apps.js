@@ -1,7 +1,7 @@
 const latestReactApps = [
   {
-    slug: 'build-color-schemes-app',
-    title: "Color Palette Generator",
+    slug: 'color-scheme-generator',
+    title: "Color Scheme Generator",
     details: ["Generate the perfect palette by toggling your favorite colors and pressing the space bar.", "Then, copy a single color or the entire scheme with a single click!"],
   },
   {

@@ -79,9 +79,6 @@ const FooterWrapper =styled.footer`
   .phone{
     color: inherit;
   }
-  .phone:hover{
-    cursor: pointer;
-  }
   .small-font{
     font-family: var(--mainFF);
     letter-spacing: 1px;

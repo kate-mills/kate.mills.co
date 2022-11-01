@@ -29,7 +29,6 @@ const HeadLinkPlus = ({className, lnk, hoverFn}) => {
     <PlusWrapper
       to={lnk.path}
       onMouseOver={hoverFn}
-      /*onClick={noClk}*/
       className={`${className} head-link-plus`}>
       {lnk.page}
     </PlusWrapper>
@@ -42,7 +41,6 @@ const SimpleWrapper = styled(Link)`
   }
   @media screen and (min-width:1200px){
     &{
-      cursor: pointer;
       display:block !important;
     }
   }
@@ -54,7 +52,6 @@ const PlusWrapper = styled(Link)`
   }
   @media screen and (min-width:1200px){
     &{
-      cursor: default;
       display:block !important;
     }
   }
