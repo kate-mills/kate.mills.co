@@ -74,7 +74,7 @@ const ColorGeneratorPage = () => {
   return (
     <Layout>
       <FullSeo
-        image="/images/app-tints-and-shades.jpg"
+        image="/images/forty-tints-and-shades.jpg"
         title="Forty Tints & Shades"
         description="Monochromatic Colors Generator. Get 20 hues and 20 shades by entering a valid CSS color name, RGB, or hex value."
       />
