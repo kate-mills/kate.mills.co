@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
         <p className="phone">(415) 988 - 1102</p>
       <div className="small-font">
-        Copyright &copy; {new Date().getFullYear()} All Rights Reserved
+        Apps built in 2021 - {new Date().getFullYear()}
       </div>
     </FooterWrapper>
     </>

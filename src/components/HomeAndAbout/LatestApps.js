@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Title from '../Title'
-import { SiProbot } from 'react-icons/si'
 
 import latestReactApps from '../../constants/latest-apps'
 
@@ -15,9 +14,6 @@ const LatestApps = () => {
           return (
             <article key={index} className="app">
               <Link to={`/${item.slug}/`} key={index}>
-                <span className="app_icon">
-                  <SiProbot />
-                </span>
                 <p className="app_title ">{item.title}</p>
 
                 {item.details.map((txt, txt_idx) => {

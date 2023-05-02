@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Typed from 'react-typed'
 
 const Banner = ({ title, showTyping, overrideTxt, children, className }) => {
-  const typeit = [` Sass, Linux Essentials Certified, and more`]
+  const typeit = [`React, Gatsby, JavaScript, HTML, CSS, Node, Sass, and more`]
   return (
     <div className={className}>
       <div className="parent-div">
@@ -11,11 +11,6 @@ const Banner = ({ title, showTyping, overrideTxt, children, className }) => {
 
         {!!showTyping ? (
           <>
-            {' '}
-            <span className="title-typing">
-              Python, Javascript, HTML5, CSS3, Node.js, React, Gatsby, jQuery,
-              Bootstrap,
-            </span>
             <Typed
               className="title-typing"
               strings={typeit}
@@ -54,6 +49,7 @@ export default styled(Banner)`
     h1.title-heading {
       position: relative;
       display: block;
+      min-height: 2.3rem;
       font-size: 2.3rem;
       text-transform: capitalize;
       letter-spacing: var(--altSpacing);
