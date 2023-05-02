@@ -27,17 +27,25 @@ const AboutKate = () => {
       <div className="about-center">
         <article className="about-img">
           <div className="img-container">
-            <Img fluid={fluid} alt="Kate Mills Web Developer" />
+            <Img fluid={fluid} alt="Kate Mills Front-End Developer" />
           </div>
         </article>
         <article className="about-info">
-          <p className="heading">Web Developer</p>
+          <p className="heading">Front-End Developer</p>
           <p>
-            I'm Kate, a solutions-oriented Web Developer passionate about all
-            things new and innovative. I embrace change and feel most fulfilled
-            in challenging spaces that require learning new things.
+            I'm Kate, a Front-End Developer passionate about innovation and
+            solving problems. I thrive in challenging environments where I can
+            learn new things and grow.
           </p>
-<Btn to="/lets-chat/" color colorful text="Let's Chat" />
+          <p>
+            With over six years of experience, I specialize in creating
+            responsive web applications using React.js, Gatsby, GraphQL, Styled
+            Components, and CMS. I strive to adhere to best practices and enjoy
+            pushing the boundaries of what's possible with web development and
+            React.js.
+          </p>
+
+          <Btn to="/lets-chat/" color colorful text="Let's Chat" />
         </article>
       </div>
     </AboutKateWrapper>
@@ -48,7 +56,7 @@ const AboutKateWrapper = styled.section`
   & {
     max-width: 80vw;
     margin: auto auto;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
   }
   .about-center {
     max-width: 95%;
