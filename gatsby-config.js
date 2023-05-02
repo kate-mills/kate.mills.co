@@ -6,9 +6,9 @@ const currentUrl = 'https://katemillsco.com'
 
 module.exports = {
   siteMetadata: {
-    title: `Kate Mills - Web Developer`,
-    titleTemplate: `%s | Kate Mills - Web Developer`,
-    description: `Kate Mills - Web Developer`,
+    title: `Kate Mills - Front-End Developer`,
+    titleTemplate: `%s | Kate Mills - Front-End Developer`,
+    description: `Kate Mills - Front-End Developer`,
     dateModified: `${new Date().toISOString()}`,
     author: `Kate Mills`,
     twitterUsername: `@katie_napa`,
