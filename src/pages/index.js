@@ -14,7 +14,7 @@ const IndexPage = ({ data, className }) => {
     <Layout>
       <article className={className}>
         <FullSeo
-          title={'Kate Mills - Web Developer'}
+          title={'Kate Mills - Front-End Developer'}
           image={data.defaultBg.childImageSharp.fluid.src}
         />
 
