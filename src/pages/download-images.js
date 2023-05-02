@@ -85,12 +85,12 @@ const ImageSearchPage = ({ data: seoData }) => {
     <Layout>
       <FullSeo
         image="/images/search-pic-keep-pic.jpg"
-        title="Search Pic Keep Pic!"
+        title="Download Images"
         description="This app was built with React.js, the Unsplash API, and Netlify functions."
       />
       <ImageSearchWrapper>
         <Banner
-          title="Search Pic Keep Pic!"
+          title="Download Images"
           overrideTxt="This app was built with React.js, the Unsplash API, and Netlify functions."
           info="This app was built with React.js, the Unsplash API, and Netlify functions."
         />

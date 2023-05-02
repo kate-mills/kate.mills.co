@@ -75,11 +75,11 @@ const ColorGeneratorPage = () => {
     <Layout>
       <FullSeo
         image="/images/forty-tints-and-shades.jpg"
-        title="Forty Tints & Shades"
+        title="Tints & Shades"
         description="Monochromatic Colors Generator. Get 20 hues and 20 shades by entering a valid CSS color name, RGB, or hex value."
       />
       <ColoredGeneratorWrapper>
-        <Banner title="Forty Tints & Shades">
+        <Banner title="Tints & Shades">
           <h6 className="banner-text">Monochromatic Colors Generator</h6>
           Get 20 hues and 20 shades by entering a valid CSS color name, RGB, or
           hex value.
